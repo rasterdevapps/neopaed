@@ -701,18 +701,18 @@ class TranscribtionIntegrationController extends Controller
         return array_merge($input, $mapped);
     }
 
-    public function storeTranscribedNeonatalProformaData(Request $request)
-    {
-        $input = $request->all();
-        $input = $this->mapNeonatalInput($input);
-        $baby_details = $this->createUpdateBabyDetails($input);
-        if ($this->createUpdateNeonatalProforma($input, $baby_details)) {
-            return \Response::json(['type' => 'success', 'message' => 'Neonatal Proforma details updated'], 200);
-        } else {
-            return \Response::json(['type' => 'success', 'message' => 'error while store the neonatal proforma details'], 500);
-        }
+    // public function storeTranscribedNeonatalProformaData(Request $request)
+    // {
+    //     $input = $request->all();
+    //     $input = $this->mapNeonatalInput($input);
+    //     $baby_details = $this->createUpdateBabyDetails($input);
+    //     if ($this->createUpdateNeonatalProforma($input, $baby_details)) {
+    //         return \Response::json(['type' => 'success', 'message' => 'Neonatal Proforma details updated'], 200);
+    //     } else {
+    //         return \Response::json(['type' => 'success', 'message' => 'error while store the neonatal proforma details'], 500);
+    //     }
 
-    }
+    // }
     public function createUpdateNeonatalProforma($input, $baby_data)
     {
 
