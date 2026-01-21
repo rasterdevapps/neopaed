@@ -1,0 +1,13 @@
+.question-option, .daily-option {
+    margin-bottom: 10px !important;
+    min-width: 145px;
+}
+.close > span {
+    font-size: 30px !important;
+}
+#tab3 > div:nth-child(2) {
+    overflow: auto;
+}
+.flow-control-modal .modal-header .close {
+    margin-top: -32px !important;
+}

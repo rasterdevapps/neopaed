@@ -1,0 +1,200 @@
+@extends('app')
+@section('content')
+<style type="text/css">
+    #score-data-container #score-block {
+        display: inline-block;
+        background: black;
+        font-size: 24px;
+        color: white;
+        padding: 5px 15px;
+        margin: 5px;
+        border-radius: 4px;
+    }
+    th.active, td.active {
+        /* background-color: #ffb3b3 !important; */ /* Removed active highlighting for readability in 3-col layout, or keep it differently */
+    }
+    .score-value {
+        font-weight: bold;
+    }
+    .score-points {
+        color: #888;
+        font-size: 0.9em;
+    }
+</style>
+<!-- Breadcrumbs line -->
+<div class="crumbs bread-crumbs-shadow">
+	<ul id="breadcrumbs" class="breadcrumb">
+		<li><i class="icon-home"></i><a href="{{url('/')}}">Dashboard</a></li>
+		<li class="current"><a href="{{ action('Reports\MSNSController@index') }}">MSNS Report</a></li>       
+	</ul>
+</div>
+<!-- /Breadcrumbs line -->
+<!--=== Page Content ===-->
+<div class="row row-spacing" id="msns-block">
+    <div class="col-md-12">
+        <div class="widget box">
+            <div class="widget-header">
+                <h4>MSNS Report</h4> 
+            </div>
+            <div class="widget-content">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="row mb-15">
+                            {!! Form::model(null, ['method'=>'GET', 'id'=>'msns-filter']) !!}
+                            <div class="col-md-5">
+                                <label>Select Baby:</label>
+                                {!! Form::select('baby', ['N/A' => '-- Select Admission --']+$babies, $baby_id, ['class'=>'full-width', 'required']) !!}
+                                <p class="error-message hide" id="baby-error">Baby name is required !</p>
+                            </div>
+                           
+                            <div class="col-md-2" style="margin-top: 25px;">
+                                <button type="button" class="btn btn-primary" id="generate-score">Generate Report</button>
+                            </div>
+                             <div class="col-md-5 text-right" id="patient-info" style="margin-top: 25px; display: none;">
+                                <strong>DOB:</strong> <span id="display-dob"></span> | 
+                                <strong>LoS:</strong> <span id="display-los"></span>
+                            </div>
+                            {!! Form::close() !!}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="widget box" id="report-container" style="display: none;">
+            <div class="widget-content">
+                <div class="row">
+                    <div class="col-md-12" id="msns-container">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th width="25%">Parameter</th>
+                                    <th width="25%">On Admission</th>
+                                    <th width="25%">24 Hours</th>
+                                    <th width="25%">72 Hours</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Rows will be simpler now, just showing value (score) -->
+                                @php
+                                    $params = [
+                                        'rr' => 'Respiratory rate (cycles/minute)',
+                                        'hr' => 'Heart rate (beats/minute)',
+                                        'temp' => 'Temperature (C)',
+                                        'cft' => 'Capillary refill time (seconds)',
+                                        'rbs' => 'Random blood sugar (mg/dL)',
+                                        'os' => 'Oxygen saturation (%)',
+                                        'ga' => 'Gestational age (weeks)',
+                                        'bw' => 'Birth weight (kg)'
+                                    ];
+                                @endphp
+                                @foreach($params as $key => $label)
+                                <tr>
+                                    <td>{{ $label }}</td>
+                                    <td id="td-{{$key}}-admission"></td>
+                                    <td id="td-{{$key}}-24h"></td>
+                                    <td id="td-{{$key}}-72h"></td>
+                                </tr>
+                                @endforeach
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <th><strong>Total MSNS Score</strong></th>
+                                    <th><div id="score-admission" class="text-center" style="font-size: 1.5em; font-weight: bold;">-</div></th>
+                                    <th><div id="score-24h" class="text-center" style="font-size: 1.5em; font-weight: bold;">-</div></th>
+                                    <th><div id="score-72h" class="text-center" style="font-size: 1.5em; font-weight: bold;">-</div></th>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@endsection
+@section('scripts')
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('select[name="baby"]').select2();
+
+        // If baby_id is present (from redirect/controller), trigger load
+        if ($('select[name="baby"]').val() != 'N/A') {
+             // Optional: Auto trigger or wait for click? User usually expects click.
+             // But if specific baby selected from list, maybe auto? Let's wait for click to be safe/standard.
+        }
+
+        $('#generate-score').on('click', function() {
+            var id = $('select[name="baby"]').val();
+
+            if (id == 'N/A') {
+                $('#baby-error').removeClass('hide');
+                return;
+            } else {
+                $('#baby-error').addClass('hide');                
+            }
+
+            var button_content = $('#generate-score').html();
+            var site_url = $('input[name="site_base_url"]').val();
+
+            $.ajax({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                },
+                type: 'GET',
+                data: {
+                    id: id
+                },
+                url: site_url + '/msns-report-view',
+                beforeSend: function() {
+                    $('#generate-score').html('<i class="fa fa-spinner fa-spin"></i> ' + button_content);
+                    $('#report-container').hide();
+                    $('#patient-info').hide();
+                },
+                success: function(response) {
+                    // Update Patient Info
+                    $('#display-dob').text(response.dob);
+                    $('#display-los').text(response.los);
+                    $('#patient-info').show();
+
+                    // Render Columns
+                    renderColumn('admission', response.scores.admission);
+                    renderColumn('24h', response.scores['24h']);
+                    renderColumn('72h', response.scores['72h']);
+
+                    $('#report-container').show();
+                },
+                error: function() {
+                    alert('Error generating report. Please check if the baby has a valid admission.');
+                },
+                complete: function() {
+                    $('#generate-score').html(button_content);
+                }
+            });
+        });
+
+        function renderColumn(suffix, data) {
+            var keys = ['rr', 'hr', 'temp', 'cft', 'rbs', 'os', 'ga', 'bw'];
+            
+            if (data == null) {
+                // Future time or no data
+                keys.forEach(function(key) {
+                    $('#td-' + key + '-' + suffix).html('<span class="text-muted">-</span>');
+                });
+                $('#score-' + suffix).text('-');
+            } else {
+                keys.forEach(function(key) {
+                    var item = data.breakdown[key];
+                    var html = '';
+                    if (item && item.value != null && item.value != 'N/A') {
+                        html = '<span class="score-value">' + item.value + '</span> <br> <span class="score-points">(' + item.score + ')</span>';
+                    } else {
+                        html = '<span class="text-muted">N/A</span>';
+                    }
+                    $('#td-' + key + '-' + suffix).html(html);
+                });
+                $('#score-' + suffix).text(data.total_score);
+            }
+        }
+    });
+</script>
+@endsection

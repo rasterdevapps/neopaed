@@ -1,0 +1,2 @@
+INSERT INTO "users" ("id", "RoleId", "name", "email", "password", "remember_token", "created_at", "updated_at", "masters_id") VALUES
+(16,	2,	'shayan',	'shayan.doc@gmail.com',	'$2y$10$7d/vQfDZPBr0M3Am..u0cOO6xnw8Z/dP4swHXNcKY3kfS4.vpY.2a',	'Xz02GB3wsXx6AcTaRXbnYQQglc3zGhAQ8TjcS3UMZVt6aoYxYdlKc7PEzKsT',	'2018-05-23 19:55:21',	'2018-05-24 09:33:33',	NULL);

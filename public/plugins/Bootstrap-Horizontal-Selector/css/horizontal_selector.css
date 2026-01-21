@@ -1,0 +1,319 @@
+body {
+	
+}
+
+
+#selectorContainer{
+background: #EDEDED;
+	padding: 30px;
+	width: 900px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#headerTop{
+	margin-top: 16px;
+	width: 900px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+#buttonContainer{
+	
+    margin-top: 30px;
+    right: 0px;
+    width: 300px;
+}
+
+.colorBlue {
+	color: rgba(66,139,202,1.00);
+}
+
+#sizeMe {
+	width: 94px;
+	height: 40px;
+	position: absolute;
+	margin-top: -30px;
+	right: 0px;
+	background: url("../img/size_me.png");
+   background-repeat:no-repeat;
+
+}
+/*
+#logoAccow{
+	background: url("http://www.accow.nl/website/wp-content/themes/twentyfifteen/img/Logo_Accow_homepage.fw_.png") no-repeat;
+	filter:alpha(opacity=30);
+	background-size: 124px;
+	width: 260px;
+	height: 200px;
+}
+*/
+#headerTopTitle{
+  font-family: "chaparral-pro", sans-serif;
+  font-weight: 600;
+  font-size: 1.9em;
+}
+
+#headerTopTitle p {
+	margin: 0 0 -5px;
+}
+
+#headerTopRight {
+
+}
+
+
+
+.maxWidthSmall {
+	max-width: 400px;
+}
+
+.maxWidthMedium {
+	max-width: 900px;
+}
+
+.maxWidthLarge {
+	max-width: 2560px;
+}
+
+.fixedWidth{
+	width: 50px;
+	max-width: 50px;
+	min-width: 50px;
+	height: 50px;
+	max-height: 50px;
+	min-height: 50px;
+}
+
+th > h6 {
+	/*color: rgba(66,139,202,1.00);*/
+    font-weight: bold;
+    min-width: 85px;
+    text-align: left;
+}
+
+.first-hole{
+/*	background: url("../img/slider_1_off.png");
+*/    width: 40px;
+    height: 40px !important;
+
+    background-color:silver ; 
+    border-radius: 50%; 
+	cursor: pointer;
+	background-repeat:no-repeat;
+	
+}
+
+.between-hole{
+/*    background: url("../img/slider_2_off.png");
+*/    width: 40px;
+    height: 40px !important;
+    background-color:silver ; 
+    border-radius: 50%; 
+	cursor: pointer;
+	background-repeat:no-repeat;
+	
+}
+
+.last-hole{
+/*    background: url("../img/slider_5_off.png");
+*/    width: 40px;
+    height: 40px !important;
+    background-color:silver ; 
+    border-radius: 50%; 
+    cursor: pointer;
+	  margin: auto;
+	
+}
+
+.first-hole.selected-hole{
+/*	background: url("../img/slider_1_on.png");
+*/
+    width: 40px;
+    height: 40px !important;
+	background-color:#2F9AD3 ; 
+    border-radius: 50%; 
+    cursor: pointer;
+	  margin: auto;
+
+	
+}
+
+.between-hole.selected-hole{
+/*	background: url("../img/slider_2_on.png");
+*/	
+    width: 40px;
+    height: 40px !important;
+    background-color:#2F9AD3 ; 
+    border-radius: 50%; 
+    cursor: pointer;
+	margin: auto;
+	
+}
+
+.last-hole.selected-hole{
+/*	background: url("../img/slider_5_on.png");
+*/	
+    width: 40px;
+    height: 40px !important;
+    background-color:#2F9AD3 ; 
+    border-radius: 50%; 
+    cursor: pointer;
+	margin: auto;
+	
+}
+
+.hole-spacer{
+	background: url("../img/slider_repeat.png");
+	background-repeat: repeat-x;
+	width: 60px;
+
+	position: relative;
+    top: -4px;
+    
+}
+
+.between-holes{
+	background: url("../img/slider_2_off.png");
+}
+
+#selectorOptions > td{
+	height: 54px;
+} 
+
+.daile-pade-box .odd-server {
+	border: 0px solid #000;
+	/*width: 40px;
+	height: 40px;*/
+    width: 34px;
+	height: 36px;
+	border-radius: 50px;
+	/*padding: 6px;*/
+	padding: 5px;
+}
+
+.daile-pade-box .odd-parent-node {
+
+ padding:5px 0px;
+	
+}
+.number-selected {
+	background-color:red ; 
+}
+.odd-server {
+	background: #2F9AD3;
+	color:white;
+	font-size: 1.5em;
+}
+.odd-server:hover{
+	cursor: pointer;
+	background-color:#bab7b7;
+}
+
+.dial-box-popup td {
+	padding: 30px;
+	line-height: 1.42857143;
+	vertical-align: top;
+	border: 1px solid #ddd;
+
+}
+.dial-pade-boxing {
+	z-index: 187;
+	position: absolute;
+	margin-top: 0px;
+	margin-left: 50px;
+	background: white;
+	width: auto;
+	box-shadow: 5px 17px 10px 5px rgba(0,0,0,0.4);
+	cursor: pointer;
+
+}
+
+.close-pade {
+	position: absolute;
+	right: -20px;
+	top: -18px;
+
+}
+
+/*Ratio(:) button field only*/
+.ratio-pad .odd-server {
+	width: 36px;
+    height: 36px;
+}
+
+
+@media screen and (device-width: 1024px) {
+	.daile-pade-box .odd-server {
+	    width: 50px;
+    	height: 50px;
+	}	
+	.ratio-pad .odd-server {
+		width: 45px;
+	    height: 45px;
+	}
+}
+
+@media screen and (device-width: 768px) {
+	.daile-pade-box .odd-server {
+	    width: 44px;
+    	height: 44px;
+	}
+	.ratio-pad .odd-server {
+		width: 40px;
+	    height: 40px;
+	}
+}
+
+@media screen and (device-width: 812px) and (device-width: 1366px) and (orientation: landscape) {
+	.daile-pade-box .odd-server {
+	    width: 40px;
+    	height: 40px;
+    }
+}
+@media screen and (min-width: 100px) and (max-width: 1366px) {
+	.odd-server {
+		font-size: 1.5em !important;
+	}
+	/*Instance of padding we use flex concept*/
+	.daile-pade-box .odd-server {
+		display: flex;
+	    justify-content: center;
+	    align-items: center;
+	}
+}
+
+.speech-record-play {
+   position: relative;
+   top: 0px;
+}
+.speech-record-stop {
+    position: relative;
+    top: 10px;
+    float: right;
+}
+@media screen and (max-width: 376px) and (min-width: 300px) {
+	th.fixedWidth > h6 {
+		font-size: 10px !important;
+		min-width: unset;
+	}
+}
+    
+
+
+/*ipad*/
+
+/*.navbar .nav > li > a {
+    font-size: 9px;
+}*/
+
+/*ipad pro*/
+/*@media screen and (max-width: 1024px) and (min-width: 768px) and (orientation: portrait) {
+	td, th, h4, span, label {
+	    font-size: 9px !important;
+	}
+}*/
+
+
+

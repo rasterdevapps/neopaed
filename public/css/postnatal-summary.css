@@ -1,0 +1,350 @@
+.pl-10 {
+    padding-left: 10px;
+}
+
+label,
+label span {
+    margin: 0px !important;
+}
+
+.generated-content {
+    padding: 5px 15px 10px 10px;
+}
+
+.parent-generated-content-container {
+    padding: 0px 15px;
+}
+
+.parent-generated-content .editor-align {
+    padding-left: 30px;
+}
+
+.parent-generated-content-container .parent-generated-content {
+    padding: 0px 30px;
+}
+
+.parent-generated-content-container .parent-generated-content h6 {
+    margin-bottom: 0px;
+}
+
+.generated-content-container,
+.parent-generated-content-container .parent-generated-content .generated-content-container {
+    display: flex;
+    align-items: flex-start;
+    padding: 0px 15px;
+}
+
+.parent-generated-content-container .parent-generated-content .generated-content-container .generated-content {
+    display: inline-block;
+    width: 100%;
+    padding: 5px 15px 10px 10px;
+}
+
+.parent-generated-content-container .custom-heading {
+    font-size: 12px;
+}
+
+.editor {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    padding-left: 10px;
+}
+
+.editor-align {
+    display: flex;
+    overflow-wrap: break-word;
+    padding-left: 30px;
+    padding-right: 30px;
+    page-break-inside: avoid;
+}
+
+.editor-align-content {
+    position: relative;
+    left: -5px;
+    display: inline-block;
+    width: 100%;
+    padding: 5px 15px 0px 0px;
+}
+
+.parent-generated-content-container .editor-align {
+    padding-left: 60px;
+}
+
+.parent-generated-content-container .editor-align-content {
+    padding: 5px 15px 0px 8px;
+}
+
+.fa-plus {
+    color: #22b61f;
+    border: 1px solid #12d54e;
+    border-radius: 18px;
+    padding: 2px 3px;
+}
+
+.fa-pencil {
+    color: #ff0000;
+    padding: 2px 3px;
+    font-weight: bold;
+    border: 1px solid #ff0000;
+    border-radius: 18px;
+    float: right;
+    font-size: 12px;
+}
+
+.fa-check {
+    color: #ff0000;
+    padding: 2px 2px;
+    font-weight: bold;
+    border: 1px solid #ff0000;
+    border-radius: 18px;
+    float: right;
+}
+
+.problem_created_fields .fa-pencil,
+.newly-added .fa-pencil {
+    color: #9100ff;
+    padding: 2px 3px;
+    font-weight: bold;
+    border: 1px solid #9100ff;
+    border-radius: 18px;
+    float: right;
+    font-size: 12px;
+}
+
+.problem_created_fields .fa-check,
+.newly-added .fa-check {
+    color: #9100ff;
+    padding: 2px 2px;
+    font-weight: bold;
+    border: 1px solid #9100ff;
+    border-radius: 18px;
+    float: right;
+}
+
+.check-box-div {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    position: relative;
+    left: -20px;
+    top: -5px;
+    vertical-align: top;
+    width: 10px;
+    display: inline-block;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+input[type="checkbox"]~label {
+    display: inline-block;
+    color: #005CC8;
+    cursor: pointer;
+    position: relative;
+}
+
+input[type="checkbox"]~label span {
+    display: inline-block;
+    position: relative;
+    background-color: transparent;
+    width: 20px;
+    height: 20px;
+    transform-origin: center;
+    border: 2px solid #005CC8;
+    border-radius: 50%;
+    vertical-align: -6px;
+    transition: background-color 150ms 200ms, transform 350ms cubic-bezier(0.78, -1.22, 0.17, 1.89);
+    margin: 3px;
+}
+
+input[type="checkbox"]~label span::before {
+    content: "";
+    width: 0px;
+    height: 2px;
+    border-radius: 2px;
+    background: #005CC8;
+    position: absolute;
+    transform: rotate(45deg);
+    top: 8px;
+    left: 4px;
+    transition: width 50ms ease 50ms;
+    transform-origin: 0% 0%;
+}
+
+input[type="checkbox"]~label span::after {
+    content: "";
+    width: 0;
+    height: 2px;
+    border-radius: 2px;
+    background: #005CC8;
+    position: absolute;
+    transform: rotate(305deg);
+    top: 11px;
+    left: 6px;
+    transition: width 50ms ease;
+    transform-origin: 0% 0%;
+}
+
+input[type="checkbox"]:checked+label span::before {
+    width: 5px;
+    background: #00000091;
+    transition: width 150ms ease 100ms;
+}
+
+input[type="checkbox"]:checked+label span::after {
+    width: 10px;
+    background: #00000091;
+    transition: width 150ms ease 100ms;
+}
+
+h5 input[type=checkbox]~label {
+    left: 9px;
+}
+
+.generated-content input[type=checkbox]~label {
+    left: 16px;
+    top: -8px;
+}
+
+.generated-content-container input[type="checkbox"]~label span {
+    border: 2px solid #29b647;
+}
+
+.generated-content input[type="checkbox"]~label span,
+.parent-generated-content-container .generated-content-container input[type="checkbox"]~label span {
+    border: 2px solid #29b647;
+}
+
+.generated-content ol input[type=checkbox]~label {
+    left: -34px;
+    top: 16px;
+}
+
+.print .generated-content td input[type=checkbox]~label span {
+    left: -11px;
+}
+
+.editor-align input[type=checkbox]~label {
+    left: -15px;
+}
+
+.editor-align input[type="checkbox"]~label span {
+    border: 2px solid #c89400;
+}
+
+input[name="hide"]~label,
+.check-box-div {
+    height: 0px;
+}
+
+input[name="hide"]~label span {
+    border: 0px;
+}
+
+input[name="hide"]:checked+label span::before,
+input[name="hide"]:checked+label span::after {
+    background: transparent;
+}
+
+.custom-heading {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+@media screen {
+    .print .postnatal-summary .episode-list table td.plr-must-0 {
+        padding-left: 12px !important;
+        padding-right: 12px !important;
+    }
+    .parent-generated-content-container .parent-generated-content h6 {
+        border-bottom: 1px solid #80808014;
+    }
+    .editor-align {
+        margin-top: 10px;
+        background-color: #0027ff0d;
+    }
+    .editor-align>p {
+        margin-left: -11px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .newborn-details .col-xs-6,
+    .admission-details .col-xs-6,
+    .maternal-details .col-xs-6,
+    .delivery-details .col-xs-6,
+    .discharge-details .col-xs-6 {
+        width: 100%;
+    }
+    .plr-must-0-print {
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
+}
+
+@media print {
+    .check-box-div {
+        display: none;
+    }
+    body.print {
+        margin-top: 0.5cm !important;
+        margin-bottom: 0.5cm !important;
+        margin-left: 0px !important;
+        margin-right: 0px !important;
+    }
+    .plr-must-0-print {
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
+    .parent-generated-content-container .parent-generated-content {
+        padding: 0px 15px;
+    }
+    .parent-generated-content-container .parent-generated-content .generated-content-container .generated-content {
+        padding: 5px 15px 10px 0px;
+    }
+    .parent-generated-content .editor-align {
+        padding-left: 20px;
+    }
+    .generated-content {
+        padding: 5px 15px 10px 0px;
+    }
+    .parent-generated-content-container .editor-align {
+        padding-left: 35px;
+    }
+    .editor-align {
+        padding-left: 20px;
+    }
+}
+
+.fa-check,
+.fa-copy {
+    float: right;
+    font-size: 20px;
+}
+
+.fa-copy {
+    margin-right: 8px;
+}
+
+h5 .fa-copy {
+    color: #ff8f00;
+    padding: 2px 2px;
+    font-weight: bold;
+    border: 1px solid #ff8f00;
+    border-radius: 18px;
+}
+
+h6 .fa-copy {
+    color: #ff8f00;
+    padding: 2px 2px;
+    font-weight: bold;
+    border: 1px solid #ff8f00;
+    border-radius: 18px;
+}
+
+.page-break-page {
+    page-break-before: unset;
+    page-break-inside: avoid;
+}

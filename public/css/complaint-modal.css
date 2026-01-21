@@ -1,0 +1,48 @@
+    #complaints-modal .modal-content {
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+    }
+    #complaints-modal .modal-header {
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+        background-color: #4d7496;
+        border-bottom: 4px solid #2a4053;
+        color: white;
+    }
+    #complaints-modal .modal-footer {
+        border-bottom-left-radius: 12px;
+        border-bottom-right-radius: 12px;
+    }
+    #complaints-modal .modal-header .close {
+        margin-top: -38px;
+        font-size: 30px !important;
+        color: white;
+    }
+    #complaints-modal .modal-body {
+        padding: 20px;
+    }
+    #complaints-modal .form-control.sub {
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        box-shadow: none;
+        padding: 0 !important;
+    }
+    #complaints-modal label,#complaints-modal .form-control {
+        margin: 6px 0;
+    }
+    #complaints-modal .remove-padding {
+        padding: 0;
+    }
+    #complaints-modal #form_save,#complaints-modal #close,#complaints-modal #form_update {
+        border-radius: 6px;
+        box-shadow: 0px 17px 10px -10px rgba(0,0,0,0.4);
+    }
+    #complaints-modal textarea{
+       width:100% !important;
+    }
+    #complaints h4 {
+        margin: 13px 0 !important;
+    }

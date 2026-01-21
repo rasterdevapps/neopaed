@@ -1,0 +1,246 @@
+/*Admission*/
+.nicu-list.discharge-color-code, .nicu-list.discharge-color-code1 {
+    display: inline-flex;
+}
+.nicu-list.discharge-color-code > li {
+    padding: 10px;
+    display: flex;
+    align-items: flex-end;
+}
+.nicu-list.discharge-color-code1 > li {
+    padding: 4px 10px;
+    display: flex;
+    align-items: flex-end;
+}
+/*.nicu-list.discharge-color-code {
+    list-style: none; 
+    display: inline-flex;
+    }*/
+/*.nicu-list.discharge-color-code  > li:not(:first-child) {
+    padding: 10px;
+}
+.nicu-list.discharge-color-code  > li:first-child {
+    padding: 4px 0px;
+    }*/
+    #historyform .medi + .medi_add, .ivantibitic_add, .additional_diagnosis_add {
+        margin-left: 0px;
+    }
+
+    /*Admission*/
+
+    /*Daily entry form*/
+    .daycare-search {
+        margin: 4px 20px;
+    }
+    .sep_drugs_add, .organizam_add {
+        margin-left: 0px;
+    }
+    .product-hidden .product_add, .antibiotic_add {
+        margin-left: 0px;
+    }
+    /*Daily entry form*/
+
+    /*Problem Base Daycare*/
+    .problem-based-container .main-title {
+        border-bottom: 1px solid #d9d9d9;
+        margin-bottom: 1em;
+    }
+    .problem-based-container .single-problem {
+        display: inline-block;
+        width: 100%;
+        padding: 0px;
+        margin-bottom: 1em;
+        box-shadow: 0px 0px 5px #3F444454;
+        /*background: #eeeeee;*/
+        border: 1px solid #1e1e2d;
+    }
+    .problem-based-container .single-problem .color-white, .problem-based-container .single-problem .color-white:hover,.problem-based-container .single-problem .color-white:focus, .single-problem .edit-episode, .single-problem .remove-episode {
+        color: black;
+    }
+    .problem-based-container .single-problem h5 {
+        /*border-top: 1px solid #1e1e2d;*/
+        /*background: #1e1e2dad;*/
+        border-bottom-color: #d9d9d9;
+        line-height: 35px;
+        padding: 0 12px;
+        margin: 0;
+        /*box-shadow: 0px 0px 10px #4444447d;*/
+        color: white;
+    }
+    .problem-based-container .single-problem .problem-contents {
+        margin-left: 15px;
+        margin-right: 15px;
+    } 
+    .problem-based-container .single-problem .problem-contents .col-md-6 {
+        padding: 10px;
+        position: relative;
+        background-color: transparent;
+        padding: 0px;
+        width: 49%;
+        border: 1px solid #d9d9d9;
+        box-shadow: 0px 0px 5px #3F444454;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        float: left;
+    }
+    .problem-based-container .single-problem .problem-contents .col-md-6 .form-group {
+        padding-left: 15px;
+        padding-right: 15px;
+    } 
+    .problem-based-container .single-problem .problem-contents .col-md-6:last-child {
+        margin-left: 2%;
+    } 
+    .problem-based-container .single-problem .problem-contents .col-md-6::before {
+        font-family: "Font Awesome 5 Free";
+        content: "\f0c9";
+        color: white;
+        font-weight: bold;
+        font-size: 9px;
+        background-color: var(--theme-color);
+        border-bottom-color: #d9d9d9;
+        line-height: 36px;
+        padding: 0px 15px;
+        margin-bottom: 5px;
+        width: 100%;
+        display: block;
+        font-size: 14px;
+    }  
+    .problem-based-container .single-problem .problem-contents .col-md-12 {
+        padding: 10px;
+        position: relative;
+        background-color: transparent;
+        padding: 0px;
+        border: 1px solid #d9d9d9;
+        box-shadow: 0px 0px 5px #3F444454;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    } 
+    .problem-based-container .single-problem .problem-contents .col-md-12::before {
+        font-family: "Font Awesome 5 Free";
+        content: "\f0c9";
+        color: white;
+        font-weight: bold;
+        font-size: 9px;
+        background-color: #1e1e2d;
+        border-bottom-color: #d9d9d9;
+        line-height: 42px;
+        padding: 0px 15px;
+        margin-bottom: 5px;
+        width: 100%;
+        display: block;
+        font-size: 14px;
+    }
+    .problem-based-container .single-problem .problem-contents .col-md-12 .form-group {
+        padding-left: 15px;
+        padding-right: 15px;
+    } 
+    .single-problem .edit-episode {
+        margin-right: 3px;
+    }
+    .problem-basics .remove-episode, .problem-basics .edit-episode,
+    .problem-lists .remove-episode, .problem-lists .edit-episode {
+        margin: 0px 10px;
+    }
+    .problem-lists a.info-tick {
+        display: inline-block;
+        text-align: center;
+        vertical-align: middle;
+    }
+    .problem-lists a.info-tick .fa-info {
+        vertical-align: super;
+    }
+    .expande-title i {
+        font-size: 24px !important;
+        top: -2px;
+        position: relative;
+        color: white;
+    }
+    .expande-title i:hover {
+        color: white;
+    }
+    .problem-basics .add-episode {
+        margin: 0px 15px 10px 0px;
+    }
+    .add-episode {
+        margin: 0px 15px 10px 0px;
+    }
+    /*Problem Base Daycare*/
+
+    /*Discharge Detail*/
+    .dischargeList.discharge-color-code {
+        display: inline-flex;
+    }
+    .dischargeList.discharge-color-code > li {
+        padding: 9px 10px;
+        display: flex;
+        align-items: flex-end;
+    }
+    .vaccine_add {
+        margin-left: 0px;
+    }
+    /*Discharge Detail*/
+
+    /*Discharge Summary*/
+    .nicu-summary-list.discharge-color-code {
+        list-style: none; 
+        display: inline-flex;
+    }
+    .nicu-summary-list.discharge-color-code {
+        padding-left: 9px;
+    }
+    .nicu-summary-list.discharge-color-code li {
+        display: flex;
+        align-items: flex-end;
+    }
+    .nicu-summary-list.discharge-color-code > li:first-child {
+        padding-right: 20px;
+    }
+    .nicu-summary-list.discharge-color-code > li:not(:first-child) {
+        padding-top: 9px;
+        padding-bottom: 9px;
+    }
+    .nicu-summary-list.discharge-color-code > li:last-child {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    /*Discharge Summary*/
+
+    /*Problem Base Discharge Summary*/
+    /*Problem Base Discharge Summary*/
+
+    /*Search*/
+    .reset-btn {
+        margin: 3px 12px;
+    }
+    .reset-btn2 {
+        margin: 3px 6px;
+    }
+    .fields-search-list-sidebar .tab-view-shadow {
+        margin-bottom: 0px;
+    }
+    .nicu-daycare-search .p-10 {
+        padding: 10px 5px;
+    }
+    /*Search*/
+
+    /*Summary search*/
+    .margin-top-half-percentage {
+        margin-top: 50%;
+    }
+    /*Summary search*/
+    @media screen and (max-width: 991px) {    
+        .nicu-edit .drugs .form-control {
+            min-width: 100px;
+        }
+    }
+    @media screen and (min-width: 768px) and (max-width: 992px) {
+        .advance-search input[name="Medications[]"], .advance-search select[name="Problems[]"] {
+            width: 210px !important;
+        }    
+    }
+    @media screen and (min-width: 1750px) {
+        #admissionProforma-form .ip_number {
+            display: inline-block;  
+            width: inherit; 
+        }
+    }

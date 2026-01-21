@@ -1,0 +1,175 @@
+.container-fluid {
+	padding-right: 32px;
+}
+body.print .nurse-sheet .content-block {
+    margin-top: 0px; 
+    padding: 0px;
+}
+.nurse-sheet .table > thead > tr > th, .nurse-sheet .table > tbody > tr > th,
+    .nurse-sheet .table > tfoot > tr > th, .nurse-sheet .table > thead > tr > td,
+    .nurse-sheet .table > tbody >tr > td, .nurse-sheet .table > tfoot > tr > td {
+	   	vertical-align: middle;
+}
+@media print {
+	.output .landscape,.observation .landscape,.replacement .landscape,
+		.infusions .landscape,.blood-value .landscape,
+		.milk-feeds .landscape,.respiratory .landscape {
+		overflow-x: hidden !important;
+	}
+	.print .nurse-sheet table td, .print .nurse-sheet table th {
+		padding: 5px 0 !important;
+	}	
+	.rotate-observations,.rotate {
+		transform: unset;
+		font-size: 0.9em;
+	}
+	.observation tbody td:first-child,.respiratory tbody td:first-child,.output tbody td:first-child,.blood-value tbody td:first-child,.entered tbody td:first-child,
+		.observation thead th:first-child,.respiratory thead th:first-child,.output thead th:first-child,.blood-value thead th:first-child,.entered thead th:first-child,
+		.antibiotic-drugs thead th,.antibiotic-drugs tbody td,
+		.entered thead th, .entered tbody td {
+		padding-left: 5px !important;
+	}
+	/*.nurse-sheet .note > div {
+		background-color: red !important;
+	}*/
+}
+@media screen and (max-width: 1000px) {
+	.container-fluid {
+		padding-right: 0px !important;
+	}
+}
+@media print and (orientation: landscape) {		
+	.nurse-sheet .col-md-12,.nurse-sheet .col-sm-12,.nurse-sheet .col-xs-12 {
+		padding: 0;
+	}
+	.nurse-sheet tbody td:first-child, .nurse-sheet thead th:first-child {
+		position: unset !important;
+		display: table-cell !important;
+	}
+	.nurse-sheet.chrome tbody td:nth-child(2),.nurse-sheet.chrome thead th:nth-child(2) {
+		border-left: none !important;
+	}
+	.nurse-sheet table {
+		border-left: none !important;
+	}
+	.nurse-sheet .landscape,.nurse-sheet .invert .portrait {
+		display: none;
+	}
+	.nurse-sheet .invert .landscape {
+		display: block;
+	}
+	.nurse-sheet .rotate-observations,.nurse-sheet .rotate {
+		transform: unset !important;
+		font-size: 13px !important;
+	}
+	@page {
+		margin: 7mm 3.7mm;
+	}
+	@page:first {
+		margin-top: 0;
+	}
+}
+@media print and (orientation: portrait) {
+	.nurse-sheet tbody td:first-child, .nurse-sheet thead th:first-child {
+		position: unset !important;
+		display: table-cell !important;
+	}
+	.nurse-sheet.chrome tbody td:first-child,.nurse-sheet.chrome thead th:first-child {
+		border-right: none !important;
+		border-left: none !important;
+	}
+	.nurse-sheet.chrome tbody td:nth-child(2),.nurse-sheet.chrome thead th:nth-child(2) {
+		border-left: 1px solid black !important;
+	}
+	.nurse-sheet table {
+		border-left: 1px solid black !important;
+	}
+	.nurse-sheet .text-wrap {
+	    white-space: nowrap !important;
+	}	
+	.nurse-sheet .rotate-observations,.nurse-sheet .rotate {
+		transform: unset !important;
+		font-size: 0.9em;
+	}
+	.nurse-sheet .landscape {
+		display: none;
+	}	
+	.nurse-sheet .table {
+		margin-top: 15px;
+	}
+	.container-fluid {
+		font-size: 10px;
+	}
+	.nurse-sheet .note {
+		padding-bottom: 0px !important;	
+	}
+	@page {
+		margin: 7mm 3.7mm;
+		margin-left: 0;
+	}
+	@page:first {
+		margin-top: 0;
+	}
+}
+	
+/*firefox*/
+
+@-moz-document url-prefix() {
+ 	@page {
+		margin-top: 7mm;
+		margin-bottom: 7mm;			
+	}
+	.nurse-sheet table {
+		border: 1px solid black !important;
+	}
+	@media print and (orientation: landscape) {
+		@page {
+			margin-left: 6mm;
+			margin-right: 6mm;
+		}	
+		@page:first {
+			margin-top: 0;
+		}
+	}
+	@media print and (orientation: portrait) {
+		@page {
+			margin-left: 2mm;
+		}
+		.container-fluid .mozilla {
+			font-size: 10px;
+		}	
+		@page:first {
+			margin-top: 0;
+		}
+		.temp-row {
+	        position: absolute;
+	    }
+	}
+}
+
+/*safari*/
+
+@media print and (min-color-index:0) and (-webkit-min-device-pixel-ratio:0) and (orientation: portrait) {	
+	/*@page {
+		margin-left: 7mm;
+		margin-right: 7mm;
+	}*/
+	.safari .activity {
+		font-size: 0.9em !important;
+	}
+	.container-fluid .safari {
+		font-size: 12px;
+	}
+	.container-fluid {
+		padding-right: 0 !important;
+	}
+}
+@media print and (min-color-index:0) and (-webkit-min-device-pixel-ratio:0) and (orientation: landscape) {
+	/*@page {
+		margin-left: 8mm;
+		margin-right: 8mm;
+	}*/
+	.container-fluid .safari {
+		font-size: 12px;
+	}
+}

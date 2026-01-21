@@ -1,0 +1,17 @@
+.new-list {
+    background-color: white;
+    border-style: solid;
+    border-width: 0px 1px 1px 1px;
+    max-height: 140px;
+    overflow: scroll;
+    position: absolute;
+    width: 362px;
+    z-index: initial;
+ }
+.select-values{
+    cursor: pointer;
+}
+.select-values:hover 
+{
+    background: #4D7496;
+}

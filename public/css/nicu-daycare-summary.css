@@ -1,0 +1,315 @@
+h6 {
+    margin-bottom: 0px;
+}
+
+.generated-content-container {
+    display: flex;
+    align-items: flex-start;
+    padding: 5px 15px 10px 15px;
+}
+
+.generated-content-container ol {
+    margin-bottom: 0px
+}
+.generated-content-container:not(.no-table-border) table th, .generated-content-container:not(.no-table-border) table td, 
+.editor-align-content:not(.no-table-border) table th, .editor-align-content:not(.no-table-border) table td{
+    border: 1px solid #555;
+    border-collapse: collapse;
+    padding: 1px 5px !important;
+}
+.fa-pencil {
+    float: right;
+}
+.fa-check, .fa-copy {
+    float: right;
+    font-size: 20px;
+}
+.fa-copy
+{
+    margin-right: 8px;
+}
+.print table td,
+.print table th {
+    padding: 0px 2px !important;
+}
+
+.editor-align {
+    display: flex;
+    align-items: flex-start;
+    padding-left: 13px;
+    padding-right: 15px;
+}
+
+.print .baby-basic-details td {
+    padding: 0px 15px !important;
+}
+
+.print table>tbody>tr>td.check-box-div {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    position: relative;
+    left: -13px;
+    top: 1px;
+    vertical-align: top;
+    width: 18px;
+}
+
+.print table tr.discharge-info td {
+    padding-top: 30px !important;
+}
+
+.custom-heading {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.print table td.pl-15,
+.table-condensed,
+.pl-15,
+.generated-content-container ol {
+    padding-left: 15px !important;
+    display: block;
+}
+
+.new-report-editor {
+    padding-left: 13px;
+    padding-right: 15px;
+}
+
+.mb-0 {
+    margin-bottom: 0px;
+}
+
+.created_fields .check-box-div {
+    padding: 3px 0px !important;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+input[type="checkbox"]~label {
+    display: inline-block;
+    color: #005CC8;
+    cursor: pointer;
+    position: relative;
+    top: 3px;
+}
+
+input[type="checkbox"]~label span {
+    display: inline-block;
+    position: relative;
+    background-color: transparent;
+    width: 20px;
+    height: 20px;
+    transform-origin: center;
+    border: 2px solid #005CC8;
+    border-radius: 50%;
+    vertical-align: -6px;
+    transition: background-color 150ms 200ms, transform 350ms cubic-bezier(0.78, -1.22, 0.17, 1.89);
+    margin: 3px;
+}
+
+input[type="checkbox"]~label span::before {
+    content: "";
+    width: 0px;
+    height: 2px;
+    border-radius: 2px;
+    background: #005CC8;
+    position: absolute;
+    transform: rotate(45deg);
+    top: 8px;
+    left: 4px;
+    transition: width 50ms ease 50ms;
+    transform-origin: 0% 0%;
+}
+
+input[type="checkbox"]~label span::after {
+    content: "";
+    width: 0;
+    height: 2px;
+    border-radius: 2px;
+    background: #005CC8;
+    position: absolute;
+    transform: rotate(305deg);
+    top: 11px;
+    left: 6px;
+    transition: width 50ms ease;
+    transform-origin: 0% 0%;
+}
+
+input[type="checkbox"]:checked+label span::before {
+    width: 5px;
+    background: #00000091;
+    transition: width 150ms ease 100ms;
+}
+
+input[type="checkbox"]:checked+label span::after {
+    width: 10px;
+    background: #00000091;
+    transition: width 150ms ease 100ms;
+}
+
+.generated-content-container input[type=checkbox]~label {
+    left: -8px;
+}
+
+.generated-content-container input[type="checkbox"]~label span {
+    border: 2px solid #29b647;
+}
+
+.editor-align input[type=checkbox]~label {
+    left: -8px;
+}
+
+.generated-content-container ol input[type=checkbox]~label {
+    left: -34px;
+    top: 16px;
+}
+
+.editor-align input[type="checkbox"]~label span {
+    border: 2px solid #c89400;
+}
+
+.print .generated-content-container td input[type=checkbox]~label span {
+    left: -11px;
+}
+
+input[name="hide"]~label span {
+    border: 0px;
+}
+
+input[name="hide"]:checked+label span::before,
+input[name="hide"]:checked+label span::after {
+    background: transparent;
+}
+
+.generated-content,
+.editor-align-content {
+    display: inline-block;
+    width: 100%;
+    padding-top: 7px;
+}
+
+.newly-added {
+    margin-top: 5px;
+}
+
+.newly-added h6 {
+    margin-top: 0px;
+}
+
+.daycare-summary-content {
+    overflow: hidden;
+}
+
+.page-break-page {
+    page-break-before: unset;
+    page-break-inside: avoid;
+}
+
+#project p {
+    margin: 0px 0px 5px 0px;
+}
+@media screen {
+    .generated-content-container {
+        margin-left: 15px;
+    }
+    .editor-align {
+        background-color: #0027ff0d;
+        margin-left: 17px;
+    }
+    .fa-plus {
+        color: #22b61f;
+        border: 1px solid #12d54e;
+        border-radius: 18px;
+        padding: 2px 3px;
+    }
+    h6 .fa-pencil {
+        color: #ff0000;
+        padding: 2px 3px;
+        font-weight: bold;
+        border: 1px solid #ff0000;
+        border-radius: 18px;
+    }
+    h6 .fa-check {
+        color: #ff0000;
+        padding: 2px 2px;
+        font-weight: bold;
+        border: 1px solid #ff0000;
+        border-radius: 18px;
+    }
+    h6 .fa-copy {
+        color: #ff8f00;
+        padding: 2px 2px;
+        font-weight: bold;
+        border: 1px solid #ff8f00;
+        border-radius: 18px;
+    }
+    .created_fields .fa-pencil, .newly-added .fa-pencil {
+        color: #9100ff;
+        padding: 2px 3px;
+        font-weight: bold;
+        border: 1px solid #9100ff;
+        border-radius: 18px;
+        font-size: 12px;
+    }
+    .created_fields .fa-check, .newly-added .fa-check {
+        color: #9100ff;
+        padding: 2px 2px;
+        font-weight: bold;
+        border: 1px solid #9100ff;
+        border-radius: 18px;
+        font-size: 12px;
+    }
+    .plr-must-0-screen {
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
+    .new-report-editor {
+        padding-left: 53px;
+    }
+    body>.row {
+        margin: 0px;
+    }
+    .created_fields .custom-heading {
+        margin-left: 5px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .baby-basic-details .col-xs-6,
+    .mother-basic-detail .col-xs-6 {
+        width: 100%;
+    }
+}
+
+@media print {
+    .col-md-3.pull-right {
+        float: right !important;
+    }
+    .check-box-div {
+        display: none;
+    }
+    .customTableSelector {
+        padding-left: 15px;
+        display: block;
+    }
+    .plr-must-0-print {
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
+    body.print {
+        margin-top: 0px !important;
+        margin-bottom: 0px !important;
+        margin-left: 0px !important;
+        margin-right: 0px !important;
+    }
+}
+.modal-header .close {
+    color: white !important;
+    margin-top: -34px;
+    font-size: 19px !important;
+    margin-right: 7px;
+    opacity: 1;
+}

@@ -1,0 +1,141 @@
+    .main-section{
+        margin:0 auto;
+        padding: 20px;
+        margin-top: 100px;
+        background-color: #fff;
+        box-shadow: 0px 0px 20px #c1c1c1;
+    }
+    .btn-prev {
+        left: 0px;
+    }
+    .btn-next {
+        right: 0px;
+    }
+    .file-zoom-content {
+        margin: 15px;        
+        /*height: unset !important;*/
+    }
+    .file-zoom-dialog .modal-header {
+        flex-direction: column;
+        align-items: normal;
+    }
+    .file-zoom-dialog .modal-title {
+        color: white;
+        text-align: left;
+    }
+    .file-zoom-dialog .kv-zoom-title {
+        color: white;
+        text-align: left;
+    }
+    .file-zoom-dialog .kv-zoom-actions {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        min-width: unset;
+    }
+    .top-unset {
+        top: unset;
+    }
+    .file-drag-handle{
+        display: none !important;
+    }
+    /*.btn-fullscreen,
+    .btn-toggleheader,
+    .btn-borderless, 
+    .kv-file-zoom, 
+    .file-drag-handle,
+    .fileinput-remove,
+    .kv-fileinput-error*/
+    .btn.btn-navigate {
+        position: fixed;
+        top: 50%;
+        background-color: var(--theme-color);
+        color: white;
+        padding: 10px;
+        margin: 0px 10px;
+    }
+    .file-caption-name:not(.file-caption-disabled) {
+        border: 0px;
+    }
+    .file-caption-icon {
+        padding: 1px 5px;
+        left: unset;
+    }
+    .file-caption.form-control.kv-fileinput-caption {
+        height: 32px;
+    }
+    .file-caption-main {
+        display: none;
+    }
+    .krajee-default.file-preview-frame[data-template=audio] .kv-file-content {
+        width: 213px;
+        height: 160px;
+    }
+    #op_media_tab svg {
+        width: unset; 
+        height: unset; 
+    }
+    img {
+        -webkit-user-drag: none;
+        -khtml-user-drag: none;
+        -moz-user-drag: none;
+        -o-user-drag: none;
+        user-drag: none;
+    }
+    .clickable.inactive {
+        pointer-events: none;
+    }
+    .kv-error-close-2 {
+        pointer-events: auto;
+    }
+    .file-preview-other {
+        padding: 25px;
+    }
+    #fileinput-error .modal-header {
+        display: flex;
+        background-color: #ce3f38;
+    }
+    #fileinput-error .modal-header .close, #fileinput-error .modal-header .modal-title {
+        color: white;
+    }
+    #fileinput-error .modal-header .close {
+        position: absolute;
+        right: 15px;
+        font-size: 22px !important;
+    }
+    .file-drop-zone {
+        min-height: 281px;
+    }
+    .file-zoom-dialog .modal-body { 
+        min-height: 300px;
+        max-height: 600px;
+        overflow: auto;
+        margin-bottom: 15px;
+    }
+    .file-zoom-dialog.file-zoom-fullscreen .modal-body {
+        max-height: 92vh;
+    }
+    .file-zoom-dialog.file-zoom-fullscreen .modal-dialog {
+        top: unset;
+    }
+    .btn-file input[type=file], .file-caption-icon, .file-preview .fileinput-remove, .file-zoom-dialog .btn-navigate, .file-zoom-dialog .floating-buttons, .krajee-default .file-thumb-progress {
+        position: fixed;
+    }
+
+    #uploaded-count {
+        position: absolute;
+        top: -8px;
+        display: inline-block;
+        width: 25px;
+        height: 20px;
+        background-color: red;
+        border-radius: 50%;        
+        text-align: center;
+        font-weight: bold;
+        color: white;
+    }
+
+    #empty-loading {
+        border: 1px dashed grey;
+        padding: 100px 48%;
+    }

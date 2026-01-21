@@ -1,0 +1,2347 @@
+.container {
+    padding: 0px;
+}
+
+.crumbs {
+    width: 100%;
+    margin: 0px;
+}
+
+#prescription-content,
+#prescription-data-list {
+    padding: 0px 15px;
+}
+
+th,
+td,
+tr {
+    font-size: 12px;
+}
+
+/*Navbar status*/
+
+.syringe-pump-status-1,
+.syringe-pump-status-2,
+.syringe-pump-status-3,
+.syringe-pump-status-5,
+.syringe-pump-status-4,
+.syringe-pump-status-20 {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid;
+    margin: 0px 3px;
+}
+
+.syringe-pump-status-1:after,
+.syringe-pump-status-2:after,
+.syringe-pump-status-3:after,
+.syringe-pump-status-5:after,
+.syringe-pump-status-4:after,
+.syringe-pump-status-20:after {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    content: '';
+    position: absolute;
+    width: 13px;
+    height: 7px;
+    background: transparent;
+    top: 3px;
+    left: 2px;
+    border: 3px solid black;
+    border-top: none;
+    border-right: none;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.syringe-pump-status-1 {
+    border-color: #e7830a;
+}
+
+.syringe-pump-status-2 {
+    border-color: #00a6ff;
+}
+
+.syringe-pump-status-3 {
+    border-color: #E80D0D;
+}
+
+.syringe-pump-status-5 {
+    border-color: #07b707;
+}
+
+.syringe-pump-status-4 {
+    border-color: #ff009be8;
+}
+
+.syringe-pump-status-20 {
+    border-color: black;
+}
+
+#prescription-body .prescription-nav-header {
+    margin-bottom: 0px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+#prescription-body .prescription-nav-header>li>b {
+    position: relative;
+    top: -5px;
+}
+
+
+/*Navbar status*/
+
+
+/*Basic Details*/
+
+.basic-details>tbody>tr>td {
+    font-size: 14px;
+    padding: 0px;
+    color: #555555;
+    border: none;
+    line-height: 1.53;
+}
+
+.basic-details>tbody>tr>td span {
+    font-weight: normal;
+}
+
+.basic-details {
+    margin-bottom: 0px;
+}
+
+#prescription-body .prescription-info {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+#prescription-body .prescription-info>div>div {
+    box-shadow: 0px 1px 5px -1px rgba(0, 0, 0, 0.4);
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#prescription-body .prescription-info>div>div>.table.basic-details {
+    margin-bottom: 1px !important;
+}
+
+#prescription-body .date-sub-div {
+    display: inline-flex;
+}
+
+#prescription-body .date-sub-div>div {
+    display: inline-flex;
+}
+
+#prescription-body .form-group {
+    margin-bottom: 5px;
+}
+
+#prescription-body .action-btn {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+#prescription-body .order-btn {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#prescription-body #allegries {
+    height: 43px;
+}
+
+#prescription-body .prescription-print,
+#prescription-body .prescription-print:active {
+    margin: 5px;
+    text-align: center;
+    background-image: linear-gradient(#335b71 45%, #03324c 55%);
+    border: 1px solid;
+    border-radius: 0px;
+    background-color: #3968c6;
+    color: white;
+    cursor: pointer;
+    height: 34px;
+    width: 34px;
+    padding: 6px;
+    top: -2px;
+}
+
+
+/*Basic Details*/
+
+
+/*Table design*/
+
+.vertical-align-middle {
+    vertical-align: middle !important;
+}
+
+#intravenous tbody .serial-no {
+    position: relative;
+    width: 50px
+}
+
+#prescription-body .tabbable {
+    min-height: 460px;
+}
+
+#prescription-body .tabbable .tab-pane>table>tbody>tr>td {
+    border: 1px solid black;
+    border-left: 0px;
+    border-bottom: 0px;
+    color: #555555;
+    font-weight: bold !important;
+    font-weight: normal;
+    font-size: 14px;
+    min-height: 25px;
+    height: 50px;
+}
+
+#prescription-body .tabbable .tab-pane td {
+    font-weight: bold !important;
+    font-size: 14px;
+}
+
+#prescription-body .tabbable .tab-pane>table>tbody>tr:not(:first-child)>td:not(:first-child) {
+    min-width: 25px;
+    width: 50px;
+}
+
+@-moz-document url-prefix() {
+    #prescription-body .tabbable .tab-pane>table>tbody>tr:nth-child(4)>td:first-child {
+        height: 100%;
+    }
+}
+
+#prescription-body .tabbable .tab-pane>table>tbody>tr>td>table {
+    table-layout: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+#prescription-body .tabbable .tab-pane table thead th {
+    padding: 0px 2px;
+}
+
+#prescription-body .tabbable .tab-pane>table>tbody>tr>td,
+#prescription-body .tabbable .tab-pane>table>tbody>tr>td>table>tbody>tr>td {
+    position: relative;
+    padding: 0px 5px;
+    vertical-align: middle;
+    height: 59px;
+    max-height: 100%;
+}
+
+#prescription-body .tabbable .tab-pane>table>thead>tr>th>table {
+    height: 100%;
+}
+
+#prescription-body #prescription-data-list .tabbable .tab-pane>table>thead>tr>th {
+    border: 1px solid black;
+    border-left: 0px;
+    padding: 0px 2px;
+    vertical-align: middle;
+    max-height: 100%;
+    height: 30px;
+    background-color: var(--bg-color);
+    border-left: 0px;
+}
+
+#prescription-body #prescription-data-list .tab-pane>table>thead:first-child>tr>th,
+#prescription-body #prescription-data-list .tab-pane>table>tbody:first-child>tr>td {
+    border-top: 0px;
+}
+
+#prescription-body .tabbable .tab-pane>table>thead>tr>th:not(:first-child):not(:nth-child(2)) {
+    width: 60px;
+}
+
+#prescription-body .tabbable .tab-pane>table>tbody>tr>td:first-child {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+#prescription-body .tabbable .table>tbody {
+    border-top: 2px solid black;
+}
+
+#prescription-data-list .time-font {
+    text-align: center;
+    background-color: transparent;
+}
+
+tr th.time-font:not(:first-child) {
+    min-width: 100px;
+}
+
+#prescription-data-list b {
+    font-size: 14px;
+    font-weight: bold;
+    color: #d92550;
+}
+
+#regulardrug .prescription-box:nth-child(2n+3),
+#requireddrug .prescription-box:nth-child(2n),
+#statdrug .prescription-box:nth-child(2n),
+tbody .even-box:not(.time-font),
+#intravenous tbody:nth-child(2n+3),
+#regulardrug thead>tr:first-child th.time-font:nth-child(2n+3),
+#requireddrug thead>tr:first-child th.time-font:nth-child(2n),
+#statdrug thead>tr:first-child th.time-font:nth-child(2n) {
+    background-color: #e7e7eb !important;
+}
+
+#regulardrug tbody:nth-child(2n+3),
+#requireddrug tbody:nth-child(2n+3),
+#statdrug tbody:nth-child(2n+3),
+#prescription-body #regulardrug.tab-pane>table>tbody:nth-child(2n+3)>tr:first-child>td:first-child,
+#prescription-body #regulardrug.tab-pane>table>tbody:nth-child(2n+3)>tr:first-child>td:nth-child(2),
+#prescription-body #regulardrug.tab-pane>table>tbody:nth-child(2n+3)>tr:not(:first-child):not(:nth-child(5)):not(:nth-child(6))>td:first-child,
+#prescription-body #regulardrug.tab-pane>table>tbody:nth-child(2n+3)>tr:not(:first-child):not(:nth-child(5)):not(:nth-child(6))>td:nth-child(2),
+#prescription-body #regulardrug.tab-pane>table>tbody:nth-child(2n+3)>tr:not(:first-child):not(:nth-child(5)):not(:nth-child(6))>td:nth-child(3),
+#prescription-body #regulardrug.tab-pane>table>tbody:nth-child(2n+3)>tr:not(:first-child):not(:nth-child(5)):not(:nth-child(6))>td:nth-child(4),
+#prescription-body #regulardrug.tab-pane>table>tbody:nth-child(2n+3)>tr:not(:first-child):not(:nth-child(5)):not(:nth-child(6))>td:nth-child(5),
+#prescription-body #regulardrug.tab-pane>table>tbody:nth-child(2n+3)>tr:first-child>td:nth-child(3),
+#prescription-body #regulardrug.tab-pane>table>tbody:nth-child(2n+3)>tr:not(:first-child):not(:nth-child(5)):not(:nth-child(6))>td:nth-child(2),
+#prescription-body #regulardrug.tab-pane>table>tbody:nth-child(2n+3)>tr:nth-child(5)>td:first-child,
+#prescription-body #regulardrug.tab-pane>table>tbody:nth-child(2n+3)>tr:nth-child(6)>td:first-child,
+#prescription-body #requireddrug.tab-pane>table>tbody:nth-child(2n+3)>tr:first-child>td:first-child,
+#prescription-body #requireddrug.tab-pane>table>tbody:nth-child(2n+3)>tr:first-child>td:nth-child(2),
+#prescription-body #requireddrug.tab-pane>table>tbody:nth-child(2n+3)>tr:first-child>td:nth-child(3),
+#prescription-body #requireddrug.tab-pane>table>tbody:nth-child(2n+3)>tr:first-child>td:nth-child(4),
+#prescription-body #requireddrug.tab-pane>table>tbody:nth-child(2n+3)>tr:not(:first-child):not(:nth-child(5)):not(:nth-child(6))>td:first-child,
+#prescription-body #requireddrug.tab-pane>table>tbody:nth-child(2n+3)>tr:not(:first-child):not(:nth-child(5)):not(:nth-child(6))>td:nth-child(2),
+#prescription-body #requireddrug.tab-pane>table>tbody:nth-child(2n+3)>tr:not(:first-child):not(:nth-child(5)):not(:nth-child(6))>td:nth-child(3),
+#prescription-body #requireddrug.tab-pane>table>tbody:nth-child(2n+3)>tr:not(:first-child):not(:nth-child(5)):not(:nth-child(6))>td:nth-child(4),
+#prescription-body #requireddrug.tab-pane>table>tbody:nth-child(2n+3)>tr:not(:first-child):not(:nth-child(5)):not(:nth-child(6))>td:nth-child(5),
+#prescription-body #requireddrug.tab-pane>table>tbody:nth-child(2n+3)>tr:not(:first-child):not(:nth-child(5)):not(:nth-child(6))>td,
+#prescription-body #requireddrug.tab-pane>table>tbody:nth-child(2n+3)>tr:nth-child(5)>td:first-child,
+#prescription-body #requireddrug.tab-pane>table>tbody:nth-child(2n+3)>tr:nth-child(6)>td:first-child,
+#prescription-body #statdrug.tab-pane>table>tbody:nth-child(2n+3)>tr:first-child>td:first-child,
+#prescription-body #statdrug.tab-pane>table>tbody:nth-child(2n+3)>tr:first-child>td:nth-child(2),
+#prescription-body #statdrug.tab-pane>table>tbody:nth-child(2n+3)>tr:first-child>td:nth-child(3),
+#prescription-body #statdrug.tab-pane>table>tbody:nth-child(2n+3)>tr:first-child>td:nth-child(4),
+#prescription-body #statdrug.tab-pane>table>tbody:nth-child(2n+3)>tr:not(:first-child):not(:nth-child(5)):not(:nth-child(6))>td:first-child,
+#prescription-body #statdrug.tab-pane>table>tbody:nth-child(2n+3)>tr:not(:first-child):not(:nth-child(5)):not(:nth-child(6))>td:nth-child(2),
+#prescription-body #statdrug.tab-pane>table>tbody:nth-child(2n+3)>tr:not(:first-child):not(:nth-child(5)):not(:nth-child(6))>td:nth-child(3),
+#prescription-body #statdrug.tab-pane>table>tbody:nth-child(2n+3)>tr:not(:first-child):not(:nth-child(5)):not(:nth-child(6))>td:nth-child(4),
+#prescription-body #statdrug.tab-pane>table>tbody:nth-child(2n+3)>tr:not(:first-child):not(:nth-child(5)):not(:nth-child(6))>td:nth-child(5),
+#prescription-body #statdrug.tab-pane>table>tbody:nth-child(2n+3)>tr:not(:first-child):not(:nth-child(5)):not(:nth-child(6))>td,
+#prescription-body #statdrug.tab-pane>table>tbody:nth-child(2n+3)>tr:nth-child(5)>td:first-child,
+#prescription-body #statdrug.tab-pane>table>tbody:nth-child(2n+3)>tr:nth-child(6)>td:first-child {
+    background-color: #f5f5f5;
+}
+
+#prescription-body .tab-pane {
+    border: 2px solid black;
+}
+
+#prescription-body .tab-pane table.table {
+    margin-bottom: 0px !important;
+    border-collapse: separate;
+}
+
+#prescription-body .tabbable .tab-pane#intravenous>table>thead>tr>th:not(:first-child) {
+    width: 100px;
+}
+
+#prescription-body .tab-pane>table>tbody:last-child>tr>td {
+    border-bottom: 0px;
+}
+
+#prescription-body .tab-pane>table>thead>tr>th:first-child,
+#prescription-body .tab-pane>table>tbody>tr>td:first-child {
+    border-left: 0px;
+}
+
+#prescription-body .tab-pane>table>thead>tr>th:last-child,
+#prescription-body .tab-pane>table>tbody>tr>td:last-child {
+    border-right: 0px;
+}
+
+#regulardrug .dose,
+#regulardrug .route,
+#regulardrug .startdate,
+#regulardrug .reviewdate,
+#regulardrug .regfrequency,
+#regulardrug .signature,
+#regulardrug .instruction,
+#requireddrug .dose,
+#statdrug .dose,
+#requireddrug .frequency,
+#statdrug .frequency,
+#requireddrug .route,
+#statdrug .route,
+#requireddrug .startdate,
+#statdrug .startdate,
+#requireddrug .dosetime,
+#statdrug .dosetime,
+#requireddrug .signature,
+#statdrug .signature,
+#requireddrug .reviewdate,
+#statdrug .reviewdate,
+#requireddrug tbody>.main-drug,
+#statdrug tbody>.main-drug,
+#requireddrug .drug-content .main-drug,
+#statdrug .drug-content .main-drug,
+.add-ins,
+#regulardrug .drug-content,
+.stat-list .main-drug {
+    vertical-align: top;
+}
+
+#regulardrug .dose,
+#regulardrug .route,
+#regulardrug .startdate,
+#regulardrug .signature,
+#regulardrug .instruction,
+#requireddrug .dose,
+#statdrug .dose,
+#requireddrug .frequency,
+#statdrug .frequency,
+#requireddrug .route,
+#statdrug .route,
+#requireddrug .startdate,
+#statdrug .startdate,
+#requireddrug .signature,
+#statdrug .signature,
+#requireddrug .reviewdate,
+#statdrug .reviewdate,
+#requireddrug tbody>.main-drug,
+#statdrug tbody>.main-drug,
+#requireddrug .drug-content .main-drug,
+#statdrug .drug-content .main-drug,
+.add-ins,
+.stat-list .main-drug {
+    border-right: 1px solid black;
+}
+
+#prescription-body #requireddrug.tab-pane>table>thead>tr>th:nth-child(4),
+#prescription-body #requireddrug.tab-pane>table>tbody>tr:first-child>td:nth-child(4),
+#prescription-body #requireddrug.tab-pane>table>tbody>tr:nth-child(2)>td:nth-child(6),
+#prescription-body #requireddrug.tab-pane>table>tbody>tr:nth-child(3)>td:nth-child(5),
+#prescription-body #requireddrug.tab-pane>table>tbody>tr:nth-child(4)>td:nth-child(3),
+#prescription-body #requireddrug.tab-pane>table>tbody>tr:nth-child(5)>td:first-child,
+#prescription-body #requireddrug.tab-pane>table>tbody>tr:nth-child(6)>td:first-child,
+#prescription-body #statdrug.tab-pane>table>thead>tr>th:nth-child(4),
+#prescription-body #statdrug.tab-pane>table>tbody>tr:first-child>td:nth-child(4),
+#prescription-body #statdrug.tab-pane>table>tbody>tr:nth-child(2)>td:nth-child(6),
+#prescription-body #statdrug.tab-pane>table>tbody>tr:nth-child(3)>td:nth-child(5),
+#prescription-body #statdrug.tab-pane>table>tbody>tr:nth-child(4)>td:nth-child(3),
+#prescription-body #statdrug.tab-pane>table>tbody>tr:nth-child(5)>td:first-child,
+#prescription-body #statdrug.tab-pane>table>tbody>tr:nth-child(6)>td:first-child {
+    border-right: 2px solid black
+}
+
+#regulardrug tbody tr:first-child td.time-font:first-child,
+#requireddrug tbody tr:first-child td.time-font:first-child,
+#statdrug tbody tr:first-child td.time-font:first-child,
+#intravenous tbody:not(:first-child) tr td.time-font:first-child {
+    vertical-align: middle;
+}
+
+.cross-bottom {
+    border-bottom: 2px solid black;
+    width: 100%;
+    transform: rotate(165deg);
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.dose-time {
+    border-left: 2px solid black;
+}
+
+.drug-content .main-text {
+    font-size: 14px;
+}
+
+.main-text {
+    padding-left: 8px !important;
+    color: black !important;
+    font-weight: bold !important;
+}
+
+.indian-time {
+    font-size: 12px;
+    font-weight: normal;
+    white-space: nowrap;
+    font-weight: bold;
+}
+
+.user-sign {
+    width: 150px;
+    height: 35px;
+}
+
+.sign-block {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    min-width: 130px;
+}
+
+.syringe-pump-status-conformation .sign-block {
+    display: inline-block;
+}
+
+.sign-align img,
+.sign-align1 img,
+.intravenous-list img,
+.alt-image-user {
+    width: 25px;
+    height: 25px;
+}
+
+#regulardrug .sign-align,
+#requireddrug .sign-align,
+#statdrug .sign-align,
+#intravenous .sign-align {
+    border-right: 1px solid black;
+}
+
+#regulardrug .sign-align,
+#regulardrug .sign-align1,
+#requireddrug .sign-align,
+#requireddrug .sign-align1,
+#statdrug .sign-align,
+#statdrug .sign-align1,
+#intravenous .sign-align,
+#intravenous .sign-align1 {
+    display: inline-block;
+    font-size: 12px;
+    height: 100%;
+    width: 50%;
+    max-width: 100px;
+}
+
+#regulardrug .sign-align div,
+#regulardrug .sign-align1 div,
+#requireddrug .sign-align div,
+#requireddrug .sign-align1 div,
+#statdrug .sign-align div,
+#statdrug .sign-align1 div,
+#intravenous .sign-align div,
+#intravenous .sign-align1 div {
+    padding: 0px 15px;
+}
+
+#regulardrug .sign-align div:first-child,
+#regulardrug .sign-align1 div:first-child,
+#requireddrug .sign-align div:first-child,
+#requireddrug .sign-align1 div:first-child,
+#statdrug .sign-align div:first-child,
+#statdrug .sign-align1 div:first-child,
+#intravenous .sign-align div:first-child,
+#intravenous .sign-align1 div:first-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid black;
+    height: 50%;
+}
+
+.syringe-pump-status-cancel .sign-block .text-center,
+.syringe-pump-status-stop .sign-block .text-center {
+    position: relative;
+    display: inline-table;
+    width: 100%;
+    height: 100%;
+}
+
+.sign-align1.full-sign {
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
+.add-ins,
+.stat-list .main-drug,
+.vertical-align-top {
+    vertical-align: top !important;
+}
+
+.additional-instruction {
+    color: #3F51B5;
+    margin-top: 10px;
+    font-weight: normal;
+}
+
+.intra-instruction {
+    width: 300px;
+}
+
+#regulardrug>table>tbody:not(:last-child)>tr:first-child>td:first-child,
+#regulardrug>table>tbody:not(:last-child)>tr:nth-child(4)>td:first-child,
+#regulardrug>table>tbody:not(:last-child)>tr:nth-child(4)>td:nth-child(2),
+#regulardrug>table>tbody:not(:last-child)>tr:last-child>td,
+#requireddrug>table>tbody:not(:last-child)>tr:first-child>td:first-child,
+#requireddrug>table>tbody:not(:last-child)>tr:nth-child(4)>td:first-child,
+#requireddrug>table>tbody:not(:last-child)>tr:nth-child(4)>td:nth-child(2),
+#requireddrug>table>tbody:not(:last-child)>tr:last-child>td,
+#statdrug>table>tbody:not(:last-child)>tr:first-child>td:first-child,
+#statdrug>table>tbody:not(:last-child)>tr:nth-child(4)>td:first-child,
+#statdrug>table>tbody:not(:last-child)>tr:nth-child(4)>td:nth-child(2),
+#statdrug>table>tbody:not(:last-child)>tr:last-child>td,
+#intravenous>table>tbody:not(:last-child)>tr>td {
+    border-bottom: 1px solid black;
+}
+
+
+/*Table design*/
+
+
+/*checkbox & background*/
+
+input[type=checkbox] {
+    visibility: hidden;
+}
+
+.roundedTwo {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.roundedTwo label {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #e7830a;
+    cursor: default;
+    background-color: #7430012b;
+    margin: auto;
+}
+
+.syringe-pump-status-conformation .roundedTwo label {
+    left: 0;
+    right: 0;
+}
+
+.roundedTwo input {
+    width: 20px;
+    height: 20px;
+}
+
+.syringe-pump-status-queue .roundedTwo {
+    top: -20%;
+}
+
+.roundedTwo.syringe-pump-status-send-pump label {
+    border: 2px solid #84a3b3;
+    display: none;
+}
+
+.roundedTwo.syringe-pump-status-completed label {
+    border: 2px solid #00b700;
+}
+
+.roundedTwo.syringe-pump-status-send-pump.addAction label {
+    display: block;
+}
+
+.roundedTwo.syringe-pump-status-stop {
+    width: 100%;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    display: none;
+}
+
+.roundedTwo.syringe-pump-status-stop label {
+    border: 2px solid #00b700;
+    position: absolute;
+    cursor: pointer;
+    float: right;
+    top: unset;
+    left: unset;
+    right: 0px;
+    width: 15px;
+    height: 15px;
+}
+
+.roundedTwo.addAction label {
+    cursor: pointer;
+    background-color: unset;
+}
+
+.roundedTwo.addAction label:after {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    opacity: 0;
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 6px;
+    background: transparent;
+    top: 4px;
+    left: 2px;
+    border: 3px solid black;
+    border-top: none;
+    border-right: none;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.roundedTwo.syringe-pump-status-send-pump.addAction label:after {
+    border: 3px solid black;
+    border-top: none;
+    border-right: none;
+}
+
+.roundedTwo.syringe-pump-status-stop label span {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    content: '';
+    position: absolute;
+    width: 8px !important;
+    height: 5px;
+    background: transparent;
+    top: 2px;
+    left: 2px;
+    border: 2px solid #00b700;
+    border-top: none;
+    border-right: none;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.roundedTwo input[type=checkbox]:checked+label:after {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: alpha(opacity=100);
+    opacity: 1;
+}
+
+#prescription-body .tabbable .tab-pane>table>tbody>tr>td.syringe-pump-status,
+#prescription-body .tabbable .tab-pane>table>tbody>tr>td.syringe-pump-status>table>tbody>tr>td {
+    padding: 0px;
+}
+
+.prescription-interface tbody .syringe-pump-status-send-pump {
+    background-color: #42687e1a !important;
+}
+
+.prescription-interface tbody .syringe-pump-status-queue {
+    background-color: #e80d0d59 !important;
+}
+
+.prescription-interface tbody .syringe-pump-status-executing {
+    background-color: #86ae6a66 !important;
+}
+
+.prescription-interface tbody .syringe-pump-status-pause {
+    background-color: #f0cce1 !important;
+}
+
+.prescription-interface tbody .syringe-pump-status-waiting-cancel {
+    background-color: #d3ea0fc2 !important;
+}
+
+.prescription-interface tbody .syringe-pump-status-cancel {
+    background-color: #4bffff33 !important;
+}
+
+.prescription-interface tbody .syringe-pump-status-completed {
+    background-color: #af6f2d73 !important;
+}
+
+.syringe-pump-status-queue .roundedTwo label {
+    border: 2px solid #84a3b3;
+}
+
+.prescription-interface .syringe-pump-status-conformation .roundedTwo label {
+    border: 2px solid #ff8e00;
+}
+
+.prescription-interface .syringe-pump-status-send-pump .roundedTwo label {
+    border: 2px solid #00a6ff;
+}
+
+.prescription-interface .syringe-pump-status-queue .roundedTwo label {
+    border: 2px solid #E80D0D;
+}
+
+.prescription-interface .syringe-pump-status-executing .roundedTwo label {
+    border: 2px solid #07b707;
+}
+
+.prescription-interface .syringe-pump-status-pause .roundedTwo label {
+    border: 2px solid #ff009be8;
+}
+
+.prescription-interface .syringe-pump-status-completed .roundedTwo label {
+    border: 2px solid black;
+}
+
+.prescription-interface .syringe-pump-status-cancel .roundedTwo label {
+    border: 2px solid black;
+}
+
+.confirm-date {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+#prescription-data-list .confirm-date b {
+    color: #00b700;
+}
+
+.confirm-date b:hover {
+    border-bottom: 1px solid black;
+    cursor: pointer;
+}
+
+.cancel-date {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+#prescription-data-list .cancel-date b {
+    color: #d04721;
+}
+
+.cancel-date b:hover {
+    border-bottom: 1px solid black;
+    cursor: pointer;
+}
+
+.stop-date {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+#prescription-data-list .stop-date b {
+    color: #d04721;
+}
+
+.stop-date b:hover {
+    border-bottom: 1px solid black;
+    cursor: pointer;
+}
+
+#intravenous .stop-date b,
+#intravenous .cancel-date b {
+    white-space: nowrap;
+}
+
+
+/*checkbox & background*/
+
+
+/*Width*/
+
+#prescription-body #regulardrug .dose {
+    width: 160px;
+    min-width: 160px;
+    max-width: 160px;
+}
+
+#prescription-body #regulardrug .route {
+    width: 59px;
+    min-width: 59px;
+    max-width: 59px;
+}
+
+#prescription-body #regulardrug .startdate {
+    width: 84px;
+    min-width: 84px;
+    max-width: 84px;
+}
+
+#prescription-body #regulardrug .reviewdate,
+#prescription-body #regulardrug .regfrequency {
+    width: 105px;
+    min-width: 105px;
+    max-width: 105px;
+}
+
+#prescription-body #requireddrug .dose,
+#prescription-body #statdrug .dose {
+    width: 160px;
+    min-width: 160px;
+    max-width: 160px;
+}
+
+#prescription-body #requireddrug .frequency,
+#prescription-body #statdrug .frequency {
+    width: 83px;
+    min-width: 83px;
+    max-width: 83px;
+}
+
+#prescription-body #requireddrug .route,
+#prescription-body #statdrug .route {
+    width: 96px;
+    min-width: 96px;
+    max-width: 96px;
+}
+
+#prescription-body #requireddrug .startdate,
+#prescription-body #statdrug .startdate {
+    width: 115px;
+    min-width: 115px;
+    max-width: 115px;
+}
+
+#prescription-body #requireddrug .dosetime,
+#prescription-body #statdrug .dosetime {
+    width: 85px;
+    min-width: 85px;
+    max-width: 85px;
+}
+
+#prescription-body #requireddrug .signature,
+#prescription-body #statdrug .signature {
+    width: 243px;
+    min-width: 243px;
+    max-width: 243px;
+}
+
+#prescription-body #requireddrug .reviewdate,
+#prescription-body #statdrug .reviewdate {
+    width: 96px;
+    min-width: 96px;
+    max-width: 96px;
+}
+
+#prescription-body #requireddrug .terminate-btn,
+#prescription-body #statdrug .terminate-btn {
+    width: 115px;
+    min-width: 115px;
+    max-width: 115px;
+}
+
+#prescription-body #requireddrug thead>.main-drug,
+#prescription-body #statdrug thead>.main-drug {
+    width: 222px !important;
+    min-width: 222px !important;
+    max-width: 222px !important;
+}
+
+#prescription-body #requireddrug tbody>.main-drug,
+#prescription-body #statdrug tbody>.main-drug {
+    width: 222px !important;
+    min-width: 222px !important;
+    max-width: 222px !important;
+}
+
+
+/*Width*/
+
+
+/*Drop down*/
+
+.pdropbtn {
+    background-color: transparent;
+    color: black;
+    font-size: 16px;
+    border: none;
+}
+
+.pdropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.pdropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f4ea91;
+    box-shadow: 0px 0px 0px 2px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    top: -41px;
+    left: -54px;
+}
+
+.pdropdown-content {
+    top: -21px;
+}
+
+.pdropdown-content a {
+    color: black;
+    padding: 2px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.pdropdown-content a:hover {
+    background-color: #266476;
+    color: white;
+}
+
+.pdropdown:hover .pdropdown-content {
+    display: block;
+}
+
+.pdropdown:hover .pdropbtn {
+    color: #34a7c8;
+}
+
+#intravenous .pdropdown {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+#intravenous .pdropdown-content {
+    top: 0px;
+    left: 18px;
+}
+
+
+/*Drop down*/
+
+
+/*Discontinue*/
+
+.discontinue-drug {
+    vertical-align: middle !important;
+    cursor: pointer;
+}
+
+.discontinue-drug div {
+    background-color: #840808;
+    display: inline-block;
+    padding: 5px;
+    color: white;
+    font-weight: bold;
+    border: 1px solid black;
+}
+
+
+/*Discontinue*/
+
+
+/*Discontinued*/
+
+.terminate-imgicon img {
+    display: none;
+}
+
+.cancelled_icon {
+    width: 100px;
+    height: 30px;
+}
+
+.terminate-imgicon:after {
+    content: 'Discontinued';
+    -webkit-transform: translate(-50%, -50%) scaleX(1.2);
+    transform: translate(-50%, -50%) scaleX(1.2);
+    color: #fe000073;
+    font-weight: bold;
+    border-width: 3px;
+    border-style: double;
+    padding: 3px;
+    border-color: #fe0000b8;
+}
+
+
+/*Discontinued*/
+
+
+/*Review Warning*/
+
+
+tbody:not(.terminate-bg) .reviewdate {
+    cursor: pointer;
+}
+
+
+.review_warning {
+    background-color: #ecbd08 !important;
+    cursor: pointer;
+}
+
+.review_warning div {
+    padding-left: 0px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.review_warning div:before {
+    content: '\26A0';
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    padding-right: 3px;
+}
+
+.review-date-update .review-val b {
+    color: #0645ad !important;
+}
+
+.review-date-update .review-val:hover b,
+.review-date-update .review-val:focus b {
+    border-bottom: 1px solid #2a6496;
+    color: #2a6496 !important;
+}
+
+.terminate-prescription .review-date-update .review-val b {
+    border-bottom: none;
+    color: black !important;
+}
+
+.terminate-prescription .review-date-update {
+    cursor: default;
+    pointer-events: none;
+}
+
+.terminate-prescription .review-date-update .review-val {
+    border: none;
+}
+
+
+/*Review Warning*/
+
+
+/*Terminate Icon*/
+
+.terminate-bg div {
+    display: none !important;
+}
+
+.terminate-bg {
+    margin: auto;
+    cursor: default;
+    vertical-align: middle !important;
+    text-align: center;
+}
+
+.terminate-bg:after {
+    content: 'X';
+    color: #0000006e;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+
+/*Terminate Icon*/
+
+
+/*Modal*/
+
+#status-modal {
+    text-align: center;
+    padding: 0 !important;
+}
+
+#status-modal .modal-dialog {
+    display: inline-block;
+    text-align: left;
+    vertical-align: middle;
+    height: 300px;
+}
+
+#status-modal .modal-body {
+    margin: 20px;
+    overflow-y: auto;
+    height: 200px;
+}
+
+#status-modal .modal-body table {
+    width: 100%;
+}
+
+#status-modal th {
+    color: white;
+}
+
+#status-modal .modal-body table>thead>tr>th,
+#status-modal .modal-body table>tbody>tr>th,
+#status-modal .modal-body table>thead>tr>td,
+#status-modal .modal-body table>tbody>tr>td {
+    padding: 4px 2px;
+}
+
+#status-modal .modal-body table>tbody>tr:not(:last-child) {
+    border-bottom: 1px solid black;
+}
+
+#status-modal .modal-body tbody tr:nth-child(even) {
+    background-color: #ffb3b340;
+}
+
+#status-modal .modal-body table thead th {
+    position: sticky;
+    top: 0px;
+    background: #1e1e2d;
+}
+
+#status-modal .modal-body table th {
+    box-shadow: inset 0px 0px #000, 0px 1px #000;
+}
+
+#status-modal .modal-body {
+    border: 1px solid black;
+}
+
+#status-modal .modal-footer {
+    display: flex;
+}
+
+#status-modal .modal-footer .align-btn {
+    align-self: flex-end;
+}
+
+.infused-table td {
+    border: 1px solid black;
+    padding: 2px 5px;
+}
+
+.infused-table td .machine-val {
+    color: green;
+    font-weight: bold;
+}
+
+.infused-table td .manual-val {
+    color: red;
+    font-weight: bold;
+}
+
+#export-excel {
+    float: right;
+    position: relative;
+    top: -25px;
+    background-color: #60c860;
+    right: 28px;
+    box-shadow: 0px 17px 10px -10px rgba(0, 0, 0, 0.4);
+    border-radius: 41%;
+}
+
+#status-modal .close {
+    top: -22px;
+    float: right;
+    right: -37px;
+}
+
+#status-modal .modal-body thead {
+    background-color: #4D7496;
+    color: white;
+}
+
+
+/*Modal*/
+
+
+/*Prescription Modal*/
+
+select:not(.ui-datepicker-month):not(.ui-datepicker-year) {
+    border-radius: 0px;
+    margin-right: 0px;
+}
+
+#create-drug-modal .modal-dialog .prescription {
+    padding: 0px;
+}
+
+#create-drug-modal .modal-dialog .prescription>.col-md-12 {
+    padding: 0px;
+}
+
+.time-selection .input-width-small {
+    width: 100% !important;
+}
+
+#prescription-post .multi-row td:first-child {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+#prescription-edit .multi-row td:first-child {
+    padding-left: 2px;
+}
+
+#prescription-post .multi-row td {
+    padding: 7px;
+}
+
+#prescription-post .start-hour-entry {
+    display: grid;
+}
+
+#prescription-post .prescribed-hour-entry {
+    display: grid;
+}
+
+.hour-session {
+    display: inline-block;
+    padding-left: 5px;
+}
+
+.hour-session label {
+    padding: 5px 15px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.hour-session label input {
+    display: none;
+}
+
+.hour-session label span {
+    border: 2px solid #ccc;
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    overflow: hidden;
+    line-height: 2;
+    text-align: center;
+    border-radius: 100%;
+    left: 0;
+    top: 50%;
+    margin-top: -10.5px;
+}
+
+.hour-session input:checked+span {
+    background: #0b3079;
+    border: 3px solid #ddd9d9;
+    color: white;
+}
+
+.frequency_start_time_num {
+    padding-left: 5px;
+}
+
+.prescribed_date_num {
+    padding-left: 5px;
+}
+
+.pump-session {
+    display: inline-block;
+}
+
+.pump-session label {
+    padding: 5px 10px;
+    position: relative;
+}
+
+.pump-session label input {
+    display: none;
+}
+
+.pump-session label span {
+    border: 2px solid #ccc;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    overflow: hidden;
+    line-height: 2.6;
+    text-align: center;
+    border-radius: 100%;
+    left: 0;
+    top: 50%;
+    margin-top: -2.5px;
+}
+
+.pump-session>span {
+    margin-right: 10px;
+    margin-left: 10px;
+    position: relative;
+    top: 6px;
+}
+
+.pump-session input:checked+span {
+    background: #0b3079;
+    border: 3px solid #ddd9d9;
+    color: white;
+    padding-left: 5px
+}
+
+.prescription-type .pump-session>span {
+    margin-left: 15px;
+    top: 0px;
+}
+
+.prescription-type .pump-session label span {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    overflow: hidden;
+    line-height: 2.6;
+    text-align: center;
+    border-radius: 100%;
+    left: 0px;
+    top: 50%;
+    margin-top: -8.5px;
+}
+
+.prescription-type {
+    align-items: baseline;
+}
+
+.required-width {
+    width: 82px;
+    display: inline-block;
+    top: 9px !important;
+}
+
+.ui-datepicker {
+    z-index: 1050 !important;
+}
+
+select:not(.ui-datepicker-month):not(.ui-datepicker-year) {
+    margin-right: 0px;
+    border-radius: 0px;
+}
+
+#pres-cross-verify table {
+    background-color: #ffb2b238;
+}
+
+#pres-cross-verify td {
+    text-align: left;
+}
+
+#pres-cross-verify td div:first-child {
+    color: #686565;
+    font-weight: bold;
+}
+
+#pres-cross-verify-content {
+    display: flex;
+    border: 1px solid red;
+    background-color: rgb(255 0 0 / 0.3);
+    padding: 15px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: black;
+    font-size: 14px;
+}
+
+#pres-cross-verify-content .fa-exclamation-triangle {
+    color: red;
+    padding-right: 15px;
+}
+
+select:not(.ui-datepicker-month):not(.ui-datepicker-year) {
+    margin-right: 0px;
+    border-radius: 0px;
+}
+
+.custom-design.select2-results li {
+    display: inline-block;
+    padding: 4px;
+}
+
+.custom-design.select2-results ul.select2-result-sub>li .select2-result-label {
+    padding: 5px 15px;
+    border: 2px solid #93C1E3;
+    border-radius: 15px;
+    margin: 0px;
+    font-weight: bold;
+    color: #000000a3;
+}
+
+.custom-design.select2-results>li:not(.select2-result-with-children) .select2-result-label {
+    padding: 5px 15px;
+    border: 2px solid #93C1E3;
+    border-radius: 15px;
+    margin: 0px;
+    font-weight: bold;
+    color: #000000a3;
+}
+
+.custom-design.select2-results .select2-highlighted {
+    background: unset;
+}
+
+.custom-design.select2-results .select2-highlighted .select2-result-label {
+    background: #407AE2;
+    color: white !important;
+}
+
+.sign-align1 .roundedTwo.addAction {
+    position: relative;
+    top: -16%;
+}
+
+.sign-align1 .roundedTwo.addAction>input {
+    margin: 0px !important;
+}
+
+
+/*Prescription Modal*/
+
+
+/*Pump info*/
+
+#pump-info b {
+    position: relative;
+    top: -8px;
+    padding: 10px;
+}
+
+#pump-info table>tbody>tr>td>ul>li {
+    margin: 15px;
+}
+
+#pump-info table>tbody>tr>td>ul>li>span {
+    width: 26px;
+    height: 26px;
+}
+
+#pump-info table>tbody>tr>td>ul>li>span:after {
+    width: 14px;
+    height: 7px;
+    top: 6px;
+    left: 5px;
+}
+
+#pump-info .btn-success.btn[disabled],
+#pump-info .btn-warning.btn[disabled],
+#pump-info .btn-danger.btn[disabled] {
+    background-color: transparent;
+}
+
+#pump-info #create-drug i {
+    color: #335eb2;
+    border: 2px solid #335eb2;
+    padding: 5px 6.8px;
+}
+
+#pump-info .send-to-pump i {
+    color: #51a351;
+    border: 2px solid #51a351;
+    padding: 5px 6.8px;
+}
+
+#pump-info .stop-order i {
+    color: #ffb346;
+    border: 2px solid #ffb346;
+    padding: 5px 6.8px;
+}
+
+#pump-info .cancel-order i {
+    color: #bd362f;
+    border: 2px solid #bd362f;
+    padding: 5px 6.8px;
+}
+
+#pump-info td {
+    border: none;
+    font-weight: bold;
+}
+
+#pump-info .syringe-pump-status-1 {
+    width: 26px;
+    height: 26px;
+}
+
+#pump-info .prescription-nav-header.discharge-color-code>li {
+    display: flex;
+    padding: 0px;
+}
+
+#pump-info .list-none {
+    padding: 0px;
+}
+
+#pump-info .syringe-pump-status-1:after {
+    width: 14px;
+    height: 7px;
+    top: 6px;
+    left: 5px;
+}
+
+#pump-info .syringe-pump-status-2 {
+    width: 26px;
+    height: 26px;
+}
+
+#pump-info .syringe-pump-status-2:after {
+    width: 14px;
+    height: 7px;
+    top: 6px;
+    left: 5px;
+}
+
+
+/*Pump info*/
+
+
+/*Discharge Patient*/
+
+.discharge-patient,
+.connect-patient {
+    position: relative;
+    top: -5px;
+}
+
+.patient_is_discharge .action-btn,
+.patient_is_discharge .pdropdown,
+.patient_is_discharge .discontinue-drug div,
+.patient_is_discharge .discharge-patient,
+.patient_is_discharge .connect-patient {
+    display: none !important;
+}
+
+.patient_is_discharge input[name="working_wgt"],
+.patient_is_discharge textarea[name="allegries"] {
+    pointer-events: none;
+    cursor: default;
+    background-color: rgb(57 104 198 / 0.2);
+    border-radius: 5px;
+}
+
+.patient_is_discharge .review-date-update,
+.patient_is_discharge .confirm-date,
+.patient_is_discharge .stop-date,
+.patient_is_discharge .cancel-date {
+    pointer-events: none;
+    cursor: default;
+    text-decoration: none;
+}
+
+.patient_is_discharge .review-date-update .review-val b {
+    color: unset !important;
+}
+
+
+/*Discharge Patient*/
+
+.margin-auto {
+    margin: auto;
+}
+
+.checkbox-align-center {
+    height: 100% !important;
+    border-bottom: none !important;
+    position: relative !important;
+}
+
+#prescription-post {
+    line-height: 1.1;
+}
+
+#prescription-post .col-md-6.form-group {
+    padding: 0px;
+}
+
+#prescription-post .form-control {
+    height: 30px;
+}
+
+#prescription-post .col-md-4 {
+    padding-right: 0px;
+}
+
+.over-due .over-dose-highlighter {
+    color: red !important;
+}
+
+/*---------------------------------*/
+
+@media screen and (min-width: 767px) {
+    body {
+        position: relative;
+        height: 100% !important;
+        overflow: hidden;
+    }
+
+    #container.fixed-header {
+        margin-top: 0px;
+    }
+
+    #container {
+        position: relative;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    #content {
+        position: relative;
+        overflow: hidden;
+        height: 100%;
+    }
+
+    .container {
+        height: 100%;
+        position: relative;
+    }
+
+    #prescription-body {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .tabbable {
+        position: relative;
+        height: 100%;
+    }
+
+    .tab-content {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        overflow: hidden !important;
+    }
+
+    .tab-pane {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        overflow: auto;
+    }
+
+    #prescription-data-list {
+        margin-bottom: 70px;
+        height: 100%;
+    }
+
+    #prescription-body .tab-pane>table>thead>tr:first-child th {
+        position: sticky;
+        top: 0;
+        z-index: 2;
+    }
+
+    #prescription-body #regulardrug.tab-pane>table>thead>tr>th:first-child,
+    #prescription-body #requireddrug.tab-pane>table>thead>tr>th:first-child,
+    #prescription-body #statdrug.tab-pane>table>thead>tr>th:first-child {
+        left: 0;
+        background-color: var(--bg-color);
+        z-index: 3;
+        width: 36px;
+        max-width: 36px;
+        border-right: 2px solid black;
+    }
+
+    #prescription-body #regulardrug.tab-pane>table>thead>tr:nth-child(2)>th:first-child,
+    #prescription-body #requireddrug.tab-pane>table>thead>tr:nth-child(2)>th:first-child,
+    #prescription-body #statdrug.tab-pane>table>thead>tr:nth-child(2)>th:first-child {
+        position: sticky;
+        z-index: 1;
+        border-right: 2px solid black;
+    }
+
+    #prescription-body #regulardrug.tab-pane>table>thead>tr:first-child>th:nth-child(2),
+    #prescription-body #requireddrug.tab-pane>table>thead>tr:first-child>th:nth-child(2),
+    #prescription-body #statdrug.tab-pane>table>thead>tr:first-child>th:nth-child(2) {
+        position: sticky;
+        left: 36px;
+        background-color: var(--bg-color);
+        z-index: 3;
+    }
+
+    #prescription-body #regulardrug.tab-pane>table>thead>tr:nth-child(2)>th:nth-child(2),
+    #prescription-body #requireddrug.tab-pane>table>thead>tr:nth-child(2)>th:nth-child(2),
+    #prescription-body #statdrug.tab-pane>table>thead>tr:nth-child(2)>th:nth-child(2) {
+        position: sticky;
+        left: 36px;
+        background-color: var(--bg-color);
+        z-index: 1;
+    }
+
+    #prescription-body #regulardrug.tab-pane>table>thead>tr>th:nth-child(3) {
+        position: sticky;
+        left: 444px;
+        background-color: var(--bg-color);
+        z-index: 3;
+        border-left: 1px solid black;
+        border-right: 2px solid black;
+    }
+
+    #prescription-body #regulardrug.tab-pane>table>thead>tr:first-child>th:nth-child(3),
+    #prescription-body #requireddrug.tab-pane>table>thead>tr:first-child>th:nth-child(3),
+    #prescription-body #statdrug.tab-pane>table>thead>tr:first-child>th:nth-child(3) {
+        z-index: 4;
+    }
+
+    #prescription-body #regulardrug.tab-pane>table>tbody>tr:first-child>td:first-child,
+    #prescription-body #requireddrug.tab-pane>table>tbody>tr:first-child>td:first-child,
+    #prescription-body #statdrug.tab-pane>table>tbody>tr:first-child>td:first-child {
+        position: sticky;
+        left: 0;
+        z-index: 1;
+        background-color: var(--bg-color);
+        width: 36px;
+        max-width: 36px;
+    }
+
+    #prescription-body #regulardrug.tab-pane>table>tbody>tr:first-child>td:first-child,
+    #prescription-body #requireddrug.tab-pane>table>tbody>tr:first-child>td:first-child,
+    #prescription-body #statdrug.tab-pane>table>tbody>tr:first-child>td:first-child {
+        position: sticky;
+        left: 0;
+        z-index: 1;
+        background-color: var(--bg-color);
+        border-right: 2px solid black;
+    }
+
+    #prescription-body #regulardrug.tab-pane>table>tbody>tr:first-child>td:nth-child(2),
+    #prescription-body #regulardrug.tab-pane>table>tbody>tr:not(:first-child):not(:nth-child(5)):not(:nth-child(6))>td:first-child,
+    #prescription-body #requireddrug.tab-pane>table>tbody>tr:first-child>td:nth-child(2),
+    #prescription-body #requireddrug.tab-pane>table>tbody>tr:not(:first-child):not(:nth-child(5)):not(:nth-child(6))>td:first-child,
+    #prescription-body #statdrug.tab-pane>table>tbody>tr:first-child>td:nth-child(2),
+    #prescription-body #statdrug.tab-pane>table>tbody>tr:not(:first-child):not(:nth-child(5)):not(:nth-child(6))>td:first-child {
+        position: sticky;
+        left: 36px;
+        z-index: 1;
+        background-color: var(--bg-color);
+    }
+
+    #prescription-body #regulardrug.tab-pane>table>tbody>tr:nth-child(2)>td:nth-child(2) {
+        position: sticky;
+        left: 196px;
+        z-index: 1;
+        background-color: var(--bg-color);
+    }
+
+    #prescription-body #regulardrug.tab-pane>table>tbody>tr:nth-child(2)>td:nth-child(3) {
+        position: sticky;
+        left: 255px;
+        z-index: 1;
+        background-color: var(--bg-color);
+    }
+
+    #prescription-body #regulardrug.tab-pane>table>tbody>tr:nth-child(2)>td:nth-child(4),
+    #prescription-body #regulardrug.tab-pane>table>tbody>tr:nth-child(3)>td:nth-child(2),
+    #prescription-body #regulardrug.tab-pane>table>tbody>tr:nth-child(4)>td:nth-child(2) {
+        position: sticky;
+        left: 339px;
+        z-index: 1;
+        background-color: var(--bg-color);
+    }
+
+    #prescription-body #requireddrug.tab-pane>table>tbody>tr:nth-child(2)>td:nth-child(2),
+    #prescription-body #statdrug.tab-pane>table>tbody>tr:nth-child(2)>td:nth-child(2) {
+        position: sticky;
+        left: 196px;
+        z-index: 1;
+        background-color: var(--bg-color);
+    }
+
+    #prescription-body #requireddrug.tab-pane>table>tbody>tr:nth-child(2)>td:nth-child(3),
+    #prescription-body #requireddrug.tab-pane>table>tbody>tr:nth-child(3)>td:nth-child(2),
+    #prescription-body #statdrug.tab-pane>table>tbody>tr:nth-child(2)>td:nth-child(3),
+    #prescription-body #statdrug.tab-pane>table>tbody>tr:nth-child(3)>td:nth-child(2) {
+        position: sticky;
+        left: 279px;
+        z-index: 1;
+        background-color: var(--bg-color);
+    }
+
+    #prescription-body #requireddrug.tab-pane>table>tbody>tr:nth-child(2)>td:nth-child(4),
+    #prescription-body #requireddrug.tab-pane>table>tbody>tr:nth-child(3)>td:nth-child(3),
+    #prescription-body #statdrug.tab-pane>table>tbody>tr:nth-child(2)>td:nth-child(4),
+    #prescription-body #statdrug.tab-pane>table>tbody>tr:nth-child(3)>td:nth-child(3) {
+        position: sticky;
+        left: 375px;
+        z-index: 1;
+        background-color: var(--bg-color);
+    }
+
+    #prescription-body #regulardrug.tab-pane>table>tbody>tr:first-child>td:nth-child(3),
+    #prescription-body #regulardrug.tab-pane>table>tbody>tr:nth-child(2)>td:nth-child(5),
+    #prescription-body #regulardrug.tab-pane>table>tbody>tr:nth-child(3)>td:nth-child(3),
+    #prescription-body #regulardrug.tab-pane>table>tbody>tr:nth-child(4)>td:nth-child(3),
+    #prescription-body #regulardrug.tab-pane>table>tbody>tr:nth-child(5)>td:first-child,
+    #prescription-body #regulardrug.tab-pane>table>tbody>tr:nth-child(6)>td:first-child {
+        position: sticky;
+        left: 444px;
+        z-index: 1;
+        background-color: var(--bg-color);
+        border-left: 1px solid black;
+        border-right: 2px solid black;
+    }
+
+    #prescription-body #requireddrug.tab-pane>table>thead>tr>th:nth-child(3),
+    #prescription-body #statdrug.tab-pane>table>thead>tr>th:nth-child(3) {
+        position: sticky;
+        left: 490px;
+        background-color: var(--bg-color);
+        z-index: 3;
+        border-left: 1px solid black;
+        border-right: 2px solid black;
+    }
+
+    #prescription-body #requireddrug.tab-pane>table>tbody>tr:first-child>td:nth-child(3),
+    #prescription-body #requireddrug.tab-pane>table>tbody>tr:nth-child(2)>td:nth-child(5),
+    #prescription-body #requireddrug.tab-pane>table>tbody>tr:nth-child(3)>td:nth-child(4),
+    #prescription-body #requireddrug.tab-pane>table>tbody>tr:nth-child(4)>td:nth-child(2),
+    #prescription-body #statdrug.tab-pane>table>tbody>tr:first-child>td:nth-child(3),
+    #prescription-body #statdrug.tab-pane>table>tbody>tr:nth-child(2)>td:nth-child(5),
+    #prescription-body #statdrug.tab-pane>table>tbody>tr:nth-child(3)>td:nth-child(4),
+    #prescription-body #statdrug.tab-pane>table>tbody>tr:nth-child(4)>td:nth-child(2) {
+        position: sticky;
+        left: 490px;
+        z-index: 1;
+        background-color: var(--bg-color);
+        border-left: 1px solid black;
+        border-right: 2px solid black;
+    }
+
+    #prescription-body #requireddrug.tab-pane>table>thead>tr:first-child>th:nth-child(4),
+    #prescription-body #statdrug.tab-pane>table>thead>tr:first-child>th:nth-child(4) {
+        z-index: 3;
+    }
+
+    #prescription-body #requireddrug.tab-pane>table>thead>tr>th:nth-child(4),
+    #prescription-body #requireddrug.tab-pane>table>tbody>tr:first-child>td:nth-child(4),
+    #prescription-body #requireddrug.tab-pane>table>tbody>tr:nth-child(2)>td:nth-child(6),
+    #prescription-body #requireddrug.tab-pane>table>tbody>tr:nth-child(3)>td:nth-child(5),
+    #prescription-body #requireddrug.tab-pane>table>tbody>tr:nth-child(4)>td:nth-child(3),
+    #prescription-body #requireddrug.tab-pane>table>tbody>tr:nth-child(5)>td:first-child,
+    #prescription-body #requireddrug.tab-pane>table>tbody>tr:nth-child(6)>td:first-child,
+    #prescription-body #statdrug.tab-pane>table>thead>tr>th:nth-child(4),
+    #prescription-body #statdrug.tab-pane>table>tbody>tr:first-child>td:nth-child(4),
+    #prescription-body #statdrug.tab-pane>table>tbody>tr:nth-child(2)>td:nth-child(6),
+    #prescription-body #statdrug.tab-pane>table>tbody>tr:nth-child(3)>td:nth-child(5),
+    #prescription-body #statdrug.tab-pane>table>tbody>tr:nth-child(4)>td:nth-child(3),
+    #prescription-body #statdrug.tab-pane>table>tbody>tr:nth-child(5)>td:first-child,
+    #prescription-body #statdrug.tab-pane>table>tbody>tr:nth-child(6)>td:first-child {
+        position: sticky;
+        left: 575px;
+        background-color: var(--bg-color);
+        z-index: 1;
+    }
+
+    @-moz-document url-prefix() {
+
+        /*Prescription Modal*/
+        #oral_dose_required-0,
+        #oral_alt_dose_required-0,
+        #infusion_dose-0,
+        #other_iv_drugs_dose_required-0,
+        #other_iv_drugs_alt_dose-0 {
+            width: 75px;
+        }
+
+        #drug-prescribed-date-0,
+        #start-date-0 {
+            width: 100px;
+        }
+
+        /*Prescription Modal*/
+    }
+}
+
+@media screen and (max-width: 992px) {
+    #frequency_start_time {
+        width: 37px !important;
+    }
+
+    #prescribed_date_num {
+        width: 37px !important;
+    }
+
+    .daile-pade-box .odd-server {
+        width: 27px;
+        height: 27px;
+    }
+
+    /*Basic details & nav bar hide / show*/
+    #prescription-body #prescription-content,
+    #prescription-body .ipad-none,
+    #prescription-body .nature-nav {
+        display: none;
+    }
+
+    #prescription-body #prescription-content-ipad,
+    #prescription-body .changed-nav {
+        display: inline-block;
+    }
+
+    textarea.form-control {
+        height: 32px !important;
+    }
+
+    /*Basic details & nav bar hide / show*/
+}
+
+@media screen and (min-width: 993px) {
+    #create-drug-modal .modal-dialog {
+        width: 900px;
+    }
+
+    #create-drug-modal .modal-dialog .prescription>.col-md-12:not(.start-hour-entry):not(.prescription-type) {
+        width: 50%;
+        line-height: 1.3;
+    }
+
+    #create-drug-modal .modal-dialog .prescription>.col-md-12.dose-required-field {
+        margin-bottom: 8px;
+    }
+
+    #create-drug-modal .modal-dialog .prescription>.col-md-12.prescription-type>.col-md-4 {
+        width: 16.66666667%;
+    }
+
+    #create-drug-modal .modal-dialog .prescription>.col-md-12:not(.start-hour-entry)>.col-md-8 {
+        padding-left: 0px;
+    }
+
+    #create-drug-modal .modal-dialog .prescription>.col-md-12.prescription-type>.col-md-8 {
+        left: -5px;
+    }
+
+    .required-width {
+        width: unset;
+        top: unset !important;
+    }
+
+    .select2-container.full-width {
+        width: 100% !important;
+    }
+
+    #prescription-content-ipad .input-width-medium {
+        width: 150px !important;
+    }
+
+    .pres-date-align {
+        margin-right: 50%;
+    }
+
+    .daile-pade-box .odd-server {
+        width: 40px;
+        height: 40px;
+    }
+
+    .hour-session label span {
+        width: 40px;
+        height: 41px;
+        margin-top: -16.5px;
+        line-height: 3;
+    }
+
+    .hour-session label {
+        padding-left: 30px;
+    }
+
+    #prescription-body #regulardrug.tab-pane>table>thead>tr:nth-child(2)>th:nth-child(2),
+    #prescription-body #regulardrug.tab-pane>table>thead>tr:first-child>th:nth-child(2),
+    #prescription-body #regulardrug.tab-pane>table>tbody>tr:first-child>td:nth-child(2),
+    #prescription-body #regulardrug.tab-pane>table>tbody>tr:not(:first-child):not(:nth-child(5)):not(:nth-child(6))>td:first-child,
+    #prescription-body #requireddrug.tab-pane>table>thead>tr:nth-child(2)>th:nth-child(2),
+    #prescription-body #requireddrug.tab-pane>table>thead>tr:first-child>th:nth-child(2),
+    #prescription-body #requireddrug.tab-pane>table>tbody>tr:first-child>td:nth-child(2),
+    #prescription-body #requireddrug.tab-pane>table>tbody>tr:not(:first-child):not(:nth-child(5)):not(:nth-child(6))>td:first-child,
+    #prescription-body #statdrug.tab-pane>table>thead>tr:nth-child(2)>th:nth-child(2),
+    #prescription-body #statdrug.tab-pane>table>thead>tr:first-child>th:nth-child(2),
+    #prescription-body #statdrug.tab-pane>table>tbody>tr:first-child>td:nth-child(2),
+    #prescription-body #statdrug.tab-pane>table>tbody>tr:not(:first-child):not(:nth-child(5)):not(:nth-child(6))>td:first-child {
+        left: 36px;
+    }
+}
+
+@media screen and (min-width: 720px) and (max-width: 1139px) {
+
+    td,
+    th,
+    h4,
+    span,
+    label {
+        font-size: 12px !important;
+    }
+
+    #prescription-body .changed-nav .breadcrumb {
+        padding: 0px;
+    }
+
+    #prescription-body .changed-nav {
+        padding: 0px 45px 0px 15px;
+    }
+
+    #prescription-content-ipad {
+        padding: 0px 15px;
+    }
+
+    /*Basic details & nav bar hide / show*/
+    #prescription-body #prescription-content,
+    #prescription-body .ipad-none,
+    #prescription-body .nature-nav {
+        display: none;
+    }
+
+    #prescription-body #prescription-content-ipad,
+    #prescription-body .changed-nav {
+        display: inline-block;
+        box-shadow: 0px 1px 5px -1px rgba(0, 0, 0, 0.4);
+        margin: 0px 15px 10px 15px;
+    }
+
+    textarea.form-control {
+        height: 32px !important;
+    }
+
+    /*Basic details & nav bar hide / show*/
+    /*Table*/
+    #regulardrug .dose {
+        width: 69px;
+        min-width: 69px;
+        max-width: 69px;
+    }
+
+    #requireddrug tbody .main-drug,
+    #statdrug tbody .main-drug {
+        width: 312px !important;
+        min-width: 312px !important;
+        max-width: 312px !important;
+    }
+
+    #regulardrug .startdate {
+        width: 78px;
+        min-width: 78px;
+        max-width: 78px;
+    }
+
+    #regulardrug .reviewdate,
+    #regulardrug .regfrequency {
+        width: 104px;
+        min-width: 104px;
+        max-width: 104px;
+    }
+
+    #requireddrug .reviewdate,
+    #statdrug .reviewdate,
+    #requireddrug .terminate-btn,
+    #statdrug .terminate-btn {
+        width: 63px;
+        min-width: 63px;
+        max-width: 63px;
+    }
+
+    #regulardrug .signature,
+    #regulardrug .instruction {
+        width: 206px;
+        min-width: 206px;
+        max-width: 206px;
+    }
+
+    #requireddrug .dose,
+    #statdrug .dose {
+        width: 76px;
+        min-width: 76px;
+        max-width: 76px;
+    }
+
+    #requireddrug .frequency,
+    #statdrug .frequency {
+        width: 76px;
+        min-width: 76px;
+        max-width: 76px;
+    }
+
+    #requireddrug .dosetime,
+    #statdrug .dosetime {
+        width: 56px;
+        min-width: 56px;
+        max-width: 56px;
+    }
+
+    #requireddrug .signature,
+    #statdrug .signature {
+        width: 152px;
+        min-width: 152px;
+        max-width: 152px;
+    }
+
+    #regulardrug .reviewdate,
+    #regulardrug .regfrequency {
+        width: 105px;
+        min-width: 105px;
+        max-width: 105px;
+    }
+
+    #requireddrug .reviewdate,
+    #statdrug .reviewdate {
+        width: 95px;
+        min-width: 95px;
+        max-width: 95px;
+    }
+
+    #requireddrug .terminate-btn,
+    #statdrug .terminate-btn,
+    #requireddrug .startdate,
+    #statdrug .startdate {
+        width: 88px;
+        min-width: 88px;
+        max-width: 88px;
+    }
+
+    #requireddrug .route,
+    #statdrug .route {
+        width: 95px;
+        min-width: 95px;
+        max-width: 95px;
+    }
+
+    #prescription-body #regulardrug.tab-pane>table>thead>tr>th:nth-child(3),
+    #prescription-body #regulardrug.tab-pane>table>tbody>tr:first-child>td:nth-child(3),
+    #prescription-body #regulardrug.tab-pane>table>tbody>tr:nth-child(2)>td:nth-child(5),
+    #prescription-body #regulardrug.tab-pane>table>tbody>tr:nth-child(3)>td:nth-child(3),
+    #prescription-body #regulardrug.tab-pane>table>tbody>tr:nth-child(4)>td:nth-child(3),
+    #prescription-body #regulardrug.tab-pane>table>tbody>tr:nth-child(5)>td:first-child,
+    #prescription-body #regulardrug.tab-pane>table>tbody>tr:nth-child(6)>td:first-child {
+        left: 346px;
+        padding: 0px;
+    }
+
+    #prescription-body #regulardrug.tab-pane>table>thead>tr:nth-child(2)>th:nth-child(2),
+    #prescription-body #regulardrug.tab-pane>table>thead>tr:first-child>th:nth-child(2),
+    #prescription-body #regulardrug.tab-pane>table>tbody>tr:first-child>td:nth-child(2),
+    #prescription-body #regulardrug.tab-pane>table>tbody>tr:not(:first-child):not(:nth-child(5)):not(:nth-child(6))>td:first-child,
+    #prescription-body #requireddrug.tab-pane>table>thead>tr:nth-child(2)>th:nth-child(2),
+    #prescription-body #requireddrug.tab-pane>table>thead>tr:first-child>th:nth-child(2),
+    #prescription-body #requireddrug.tab-pane>table>tbody>tr:first-child>td:nth-child(2),
+    #prescription-body #requireddrug.tab-pane>table>tbody>tr:not(:first-child):not(:nth-child(5)):not(:nth-child(6))>td:first-child,
+    #prescription-body #statdrug.tab-pane>table>thead>tr:nth-child(2)>th:nth-child(2),
+    #prescription-body #statdrug.tab-pane>table>thead>tr:first-child>th:nth-child(2),
+    #prescription-body #statdrug.tab-pane>table>tbody>tr:first-child>td:nth-child(2),
+    #prescription-body #statdrug.tab-pane>table>tbody>tr:not(:first-child):not(:nth-child(5)):not(:nth-child(6))>td:first-child {
+        left: 35px;
+    }
+
+    #prescription-body #regulardrug.tab-pane>table>tbody>tr:nth-child(2)>td:nth-child(4),
+    #prescription-body #regulardrug.tab-pane>table>tbody>tr:nth-child(3)>td:nth-child(2),
+    #prescription-body #regulardrug.tab-pane>table>tbody>tr:nth-child(4)>td:nth-child(2) {
+        left: 241px;
+    }
+
+    #prescription-body #regulardrug.tab-pane>table>tbody>tr:nth-child(2)>td:nth-child(3) {
+        left: 163px;
+    }
+
+    #prescription-body #regulardrug.tab-pane>table>tbody>tr:nth-child(2)>td:nth-child(2) {
+        left: 104px;
+    }
+
+    #prescription-body #requireddrug.tab-pane>table>tbody>tr:nth-child(2)>td:nth-child(2),
+    #prescription-body #statdrug.tab-pane>table>tbody>tr:nth-child(2)>td:nth-child(2) {
+        left: 111px;
+    }
+
+    #prescription-body #requireddrug.tab-pane>table>tbody>tr:nth-child(2)>td:nth-child(3),
+    #prescription-body #requireddrug.tab-pane>table>tbody>tr:nth-child(3)>td:nth-child(2),
+    #prescription-body #statdrug.tab-pane>table>tbody>tr:nth-child(2)>td:nth-child(3),
+    #prescription-body #statdrug.tab-pane>table>tbody>tr:nth-child(3)>td:nth-child(2) {
+        left: 187px;
+    }
+
+    #prescription-body #requireddrug.tab-pane>table>tbody>tr:nth-child(2)>td:nth-child(4),
+    #prescription-body #requireddrug.tab-pane>table>tbody>tr:nth-child(3)>td:nth-child(3),
+    #prescription-body #statdrug.tab-pane>table>tbody>tr:nth-child(2)>td:nth-child(4),
+    #prescription-body #statdrug.tab-pane>table>tbody>tr:nth-child(3)>td:nth-child(3) {
+        left: 282px;
+    }
+
+    #prescription-body #requireddrug.tab-pane>table>thead>tr>th:nth-child(3),
+    #prescription-body #requireddrug.tab-pane>table>tbody>tr:first-child>td:nth-child(3),
+    #prescription-body #requireddrug.tab-pane>table>tbody>tr:nth-child(4)>td:nth-child(2),
+    #prescription-body #requireddrug.tab-pane>table>tbody>tr:nth-child(2)>td:nth-child(5),
+    #prescription-body #requireddrug.tab-pane>table>tbody>tr:nth-child(3)>td:nth-child(4),
+    #prescription-body #statdrug.tab-pane>table>thead>tr>th:nth-child(3),
+    #prescription-body #statdrug.tab-pane>table>tbody>tr:first-child>td:nth-child(3),
+    #prescription-body #statdrug.tab-pane>table>tbody>tr:nth-child(4)>td:nth-child(2),
+    #prescription-body #statdrug.tab-pane>table>tbody>tr:nth-child(2)>td:nth-child(5),
+    #prescription-body #statdrug.tab-pane>table>tbody>tr:nth-child(3)>td:nth-child(4) {
+        left: 370px;
+        vertical-align: top;
+    }
+
+    #prescription-body #requireddrug.tab-pane>table>thead>tr:first-child>th:nth-child(4),
+    #prescription-body #statdrug.tab-pane>table>thead>tr:first-child>th:nth-child(4) {
+        z-index: 3;
+    }
+
+    #prescription-body #requireddrug.tab-pane>table>thead>tr>th:nth-child(4),
+    #prescription-body #requireddrug.tab-pane>table>tbody>tr:first-child>td:nth-child(4),
+    #prescription-body #requireddrug.tab-pane>table>tbody>tr:nth-child(2)>td:nth-child(6),
+    #prescription-body #requireddrug.tab-pane>table>tbody>tr:nth-child(3)>td:nth-child(5),
+    #prescription-body #requireddrug.tab-pane>table>tbody>tr:nth-child(4)>td:nth-child(3),
+    #prescription-body #requireddrug.tab-pane>table>tbody>tr:nth-child(5)>td:first-child,
+    #prescription-body #requireddrug.tab-pane>table>tbody>tr:nth-child(6)>td:first-child,
+    #prescription-body #statdrug.tab-pane>table>thead>tr>th:nth-child(4),
+    #prescription-body #statdrug.tab-pane>table>tbody>tr:first-child>td:nth-child(4),
+    #prescription-body #statdrug.tab-pane>table>tbody>tr:nth-child(2)>td:nth-child(6),
+    #prescription-body #statdrug.tab-pane>table>tbody>tr:nth-child(3)>td:nth-child(5),
+    #prescription-body #statdrug.tab-pane>table>tbody>tr:nth-child(4)>td:nth-child(3),
+    #prescription-body #statdrug.tab-pane>table>tbody>tr:nth-child(5)>td:first-child,
+    #prescription-body #statdrug.tab-pane>table>tbody>tr:nth-child(6)>td:first-child {
+        position: sticky;
+        left: 438px;
+        background-color: var(--bg-color);
+        z-index: 1;
+    }
+
+    .indian-time {
+        font-size: 10px !important;
+    }
+
+    #prescription-data-list b {
+        font-size: 12px;
+    }
+
+    #regulardrug .sign-align,
+    #regulardrug .sign-align1,
+    #requireddrug .sign-align,
+    #requireddrug .sign-align1,
+    #statdrug .sign-align,
+    #statdrug .sign-align1,
+    #intravenous .sign-align,
+    #intravenous .sign-align1 {
+        width: 65px;
+    }
+
+    /*Table*/
+}
+
+@media screen and (min-width: 1140px) {
+
+    /*Basic details & nav bar hide / show*/
+    #prescription-body #prescription-content-ipad,
+    #prescription-body .changed-nav {
+        display: none;
+    }
+
+    #prescription-body #prescription-content,
+    #prescription-body .ipad-none,
+    #prescription-body .nature-nav {
+        display: inline-block;
+    }
+
+    /*Basic details & nav bar hide / show*/
+}
+
+
+/*@supports (-moz-appearance:none) {
+    #prescription-body .tabbable .tab-pane > table > tbody > tr.intravenous-list > td.syringe-pump-status{
+        display: block;
+        width: 100%;
+        height: 100%;
+        min-height: -moz-available;
+        min-height: -webkit-fill-available;
+        min-height: fill-available;
+        -webkit-box-sizing:border-box;
+    }
+}*/
+

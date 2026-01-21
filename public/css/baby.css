@@ -1,0 +1,13 @@
+@media only screen and (max-width: 360px) {
+    .input-width-medium {
+        width: 130px !important;
+    }
+}
+@media only screen and (max-width: 420px) {
+	.input-width-small {
+        width: 78px !important;
+    }
+    .search-align {
+        margin-top: 19px;
+    }
+}

@@ -1,0 +1,26 @@
+table.medi td:first-child, table.medi th:first-child,
+	table.gravida td:first-child, table.gravida th:first-child,
+	table.delivery th:first-child, table.delivery td:first-child {
+	/*padding-left: 0px;*/
+}
+.medi_add, .delivery_add {
+	margin-left: 0px;
+}
+.Indication_add_more {
+	margin-left: 8px;
+}
+.resustation_drug_add {
+	margin-left: 2px;
+}
+#newbornform .tabbable-custom {
+    margin-bottom: 0px; 
+}
+.reset-search .mtb-2 {
+	margin: -2px 2px;
+}
+.form-group-spacing-bottom {
+	padding: 0px 0px 0px 17px;
+}
+.neonatal-search .p-10 {
+    padding: 10px 5px;
+}

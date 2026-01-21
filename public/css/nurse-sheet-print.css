@@ -1,0 +1,578 @@
+.nurse-sheet .hour-wise-table {
+    white-space: nowrap;
+}
+
+.nurse-sheet .note {
+    padding-bottom: 14px !important;
+}
+
+.nurse-sheet h4,
+.nurse-sheet .note {
+    position: sticky;
+    left: 0;
+}
+
+.nurse-sheet .note>div {
+    background-color: #4D749666;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.nurse-sheet th,
+.nurse-sheet td {
+    border: 1px solid black !important;
+    line-height: 1 !important;
+}
+
+.date-col {
+    background-color: #80808030;
+}
+
+.nurse-sheet .observation table>thead>tr>th,
+.nurse-sheet .observation table>tbody>tr>td:not(:first-child),
+.nurse-sheet .respiratory table>thead>tr>th,
+.nurse-sheet .respiratory table>tbody>tr>td:not(:first-child),
+.nurse-sheet .infusions table>thead>tr>th,
+.nurse-sheet .infusions table>tbody>tr>td:not(:first-child),
+.nurse-sheet .replacement table>thead>tr>th,
+.nurse-sheet .replacement table>tbody>tr>td:not(:first-child),
+.nurse-sheet .milk-feeds table>thead>tr>th,
+.nurse-sheet .milk-feeds table>tbody>tr>td:not(:first-child),
+.nurse-sheet .output table>thead>tr>th,
+.nurse-sheet .output table>tbody>tr>td:not(:first-child),
+.nurse-sheet .blood-value table>thead>tr>th,
+.nurse-sheet .blood-value table>tbody>tr>td:not(:first-child),
+.nurse-sheet table.entered-by>thead>tr>th,
+.nurse-sheet table.entered-by>tbody>tr>td:not(:first-child) {
+    text-align: center;
+    vertical-align: middle;
+    font-weight: 600;
+    height: 21px;
+
+}
+
+.print .nurse-sheet table td:not(:first-child),
+.print .nurse-sheet table th {
+    padding: 2px 1px !important;
+}
+
+.print .nurse-sheet table th.sticky:first-child {
+    padding: 5px 2px !important;
+    width: 186px;
+    min-width: 186px;
+}
+
+.print .nurse-sheet table td:first-child {
+    padding: 3px 2px !important;
+}
+
+.print .nurse-sheet .basic-detail .content-block {
+    margin-top: 0px;
+}
+
+.print .nurse-sheet .vol-bg {
+    background-color: #4d74961c;
+    color: #1c8fc7;
+}
+
+.print .nurse-sheet .custom-font {
+    font-size: 12px;
+}
+
+.crossed .part1 {
+    position: relative;
+    top: 0px;
+    left: -9px;
+    padding: 0px 10px;
+}
+
+.crossed .part2 {
+    position: relative;
+    top: 3px;
+    left: 0px;
+    padding-left: 12px;
+}
+
+.crossed-line {
+    width: 34px;
+    margin: auto;
+    border-top: 0.6px solid black;
+    transform: rotate(160deg);
+}
+
+.box {
+    border: 1px solid black;
+    min-width: 40px;
+    padding: 4px;
+    color: #288fc7;
+    font-weight: bold;
+    background-color: #4d74961c;
+    height: 28px;
+}
+
+span.box {
+    float: right;
+}
+
+.print .nurse-sheet h3 {
+    margin: 0px
+}
+
+body.print .nurse-sheet .form-group,
+.nurse-sheet .form-group .print-label,
+.nurse-sheet .form-group .print-value,
+.nurse-sheet .table.hour-wise-table.fixed {
+    margin: 0;
+}
+
+.nurse-sheet .temp-row>.col-md-12 {
+    margin-bottom: 10px;
+}
+
+body.print .nurse-sheet .content-block {
+    margin-top: 0px;
+    /*padding: 0px;*/
+}
+
+.nurse-sheet td span {
+    /*display: block;*/
+}
+
+.nurse-sheet.sheet-auto .infusions table>tbody>tr>td:first-child {
+    /*border-right: 0px !important;*/
+    white-space: normal;
+    /*width: 186px;*/
+
+}
+
+.nurse-sheet .infusions table>tbody>tr>td:nth-child(2) {
+    border-left: 0px !important;
+}
+
+.nurse-sheet-manual th,
+.nurse-sheet-manual td {
+    font-weight: bold;
+}
+
+.print .weekly-observation-table th,
+.print .weekly-observation-table td {
+    font-size: unset;
+}
+
+tr {
+    page-break-inside: avoid;
+    page-break-after: auto;
+}
+
+.entered-by td {
+    width: 58px;
+    max-width: 58px;
+    word-break: break-all;
+}
+
+@media screen {
+    body.print .nurse-sheet .content-block {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .nurse-sheet .observation table,
+    .nurse-sheet .respiratory table,
+    .nurse-sheet .infusions table,
+    .nurse-sheet .replacement table,
+    .nurse-sheet .milk-feeds table,
+    .nurse-sheet .output table,
+    .nurse-sheet .blood-value table,
+    .nurse-sheet .entered table {
+        border-collapse: separate;
+        /* Don't collapse */
+        border-spacing: 0;
+        margin: 0px;
+    }
+
+    .nurse-sheet .observation .table-border,
+    .nurse-sheet .respiratory .table-border,
+    .nurse-sheet .infusions .table-border,
+    .nurse-sheet .replacement .table-border,
+    .nurse-sheet .milk-feeds .table-border,
+    .nurse-sheet .output .table-border,
+    .nurse-sheet .blood-value .table-border,
+    .nurse-sheet .entered .table-border {
+        border: 1px solid black;
+        overflow-x: auto;
+    }
+
+    .nurse-sheet .observation table>thead>tr>th.sticky,
+    .nurse-sheet .respiratory table>thead>tr>th.sticky,
+    .nurse-sheet .infusions table>thead>tr>th.sticky,
+    .nurse-sheet .replacement table>thead>tr>th.sticky,
+    .nurse-sheet .milk-feeds table>thead>tr>th.sticky,
+    .nurse-sheet .output table>thead>tr>th.sticky,
+    .nurse-sheet .blood-value table>thead>tr>th.sticky,
+    .nurse-sheet .entered table>thead>tr>th.sticky {
+        position: sticky;
+        left: 0px;
+        border: 1px solid black;
+        background: white;
+        vertical-align: middle;
+    }
+
+    .nurse-sheet .observation table>tbody>tr>td:first-child,
+    .nurse-sheet .respiratory table>tbody>tr>td:first-child,
+    .nurse-sheet .infusions table>tbody>tr>td:first-child,
+    .nurse-sheet .replacement table>tbody>tr>td:first-child,
+    .nurse-sheet .output table>tbody>tr>td:first-child,
+    .nurse-sheet .milk-feeds table>tbody>tr>td:first-child,
+    .nurse-sheet .blood-value table>tbody>tr>td:first-child,
+    .nurse-sheet .entered-by>tbody>tr>td:first-child {
+        /*width: 100px;*/
+        position: sticky;
+        left: 0px;
+        border: 1px solid black;
+        background: white;
+        height: 35px;
+        vertical-align: middle;
+    }
+
+    .nurse-sheet.sheet-auto .infusions table>tbody>tr>td:nth-child(2) {
+        /*position: sticky;*/
+        /*background: white;*/
+        /*vertical-align: middle;*/
+    }
+
+    .nurse-sheet .observation table>thead>tr>th:first-child,
+    .nurse-sheet .respiratory table>thead>tr>th:first-child,
+    .nurse-sheet .infusions table>thead>tr>th:first-child,
+    .nurse-sheet .replacement table>thead>tr>th:first-child,
+    .nurse-sheet .milk-feeds table>thead>tr>th:first-child,
+    .nurse-sheet .output table>tbody>tr>td:first-child,
+    .nurse-sheet .blood-value table>thead>tr>th:first-child {
+        /*min-width: 134px;*/
+    }
+
+    .nurse-sheet .observation table>tbody>tr>td:first-child,
+    .nurse-sheet .respiratory table>tbody>tr>td:first-child,
+    .nurse-sheet .infusions table>tbody>tr>td:first-child,
+    .nurse-sheet .replacement table>tbody>tr>td:first-child,
+    .nurse-sheet .milk-feeds table>tbody>tr>td:first-child,
+    .nurse-sheet .output table>tbody>tr>td:first-child,
+    .nurse-sheet .blood-value table>tbody>tr>td:first-child {
+        font-weight: bold;
+        /*min-width: 163px;*/
+        height: 25px;
+
+    }
+
+    .nurse-sheet .observation table>thead>tr>th,
+    .nurse-sheet .observation table>tbody>tr>td,
+    .nurse-sheet .respiratory table>thead>tr>th,
+    .nurse-sheet .respiratory table>tbody>tr>td,
+    .nurse-sheet .infusions table>thead>tr>th,
+    .nurse-sheet .infusions table>tbody>tr>td,
+    .nurse-sheet .replacement table>thead>tr>th,
+    .nurse-sheet .replacement table>tbody>tr>td,
+    .nurse-sheet .milk-feeds table>thead>tr>th,
+    .nurse-sheet .milk-feeds table>tbody>tr>td,
+    .nurse-sheet .output table>thead>tr>th,
+    .nurse-sheet .output table>tbody>tr>td,
+    .nurse-sheet .blood-value table>thead>tr>th,
+    .nurse-sheet .blood-value table>tbody>tr>td,
+    .nurse-sheet .entered table>thead>tr>th,
+    .nurse-sheet .entered table>tbody>tr>td {
+        border-left: 0px !important;
+        border-top: 0px !important;
+    }
+
+    .nurse-sheet .observation table>thead>tr>th:last-child,
+    .nurse-sheet .observation table>tbody>tr>td:last-child,
+    .nurse-sheet .respiratory table>thead>tr>th:last-child,
+    .nurse-sheet .respiratory table>tbody>tr>td:last-child,
+    .nurse-sheet .infusions table>thead>tr>th:last-child.sticky,
+    .nurse-sheet .infusions table>tbody>tr>td:last-child,
+    .nurse-sheet .replacement table>thead>tr>th:last-child.sticky,
+    .nurse-sheet .replacement table>tbody>tr>td:last-child,
+    .nurse-sheet .milk-feeds table>thead>tr>th:last-child.sticky,
+    .nurse-sheet .milk-feeds table>tbody>tr>td:last-child,
+    .nurse-sheet .output table>thead>tr>th:last-child.sticky,
+    .nurse-sheet .output table>tbody>tr>td:last-child,
+    .nurse-sheet .blood-value table>thead>tr>th:last-child,
+    .nurse-sheet .blood-value table>tbody>tr>td:last-child,
+    .nurse-sheet .entered table>thead>tr>th:last-child,
+    .nurse-sheet .entered table>tbody>tr>td:last-child {
+        border-right: 0px !important;
+    }
+
+    .nurse-sheet .observation table>tbody>tr:last-child>td,
+    .nurse-sheet .respiratory table>tbody>tr:last-child>td,
+    .nurse-sheet .infusions table>tbody>tr:last-child>td,
+    .nurse-sheet .replacement table>tbody>tr:last-child>td,
+    .nurse-sheet .milk-feeds table>tbody>tr:last-child>td,
+    .nurse-sheet .output table>tbody>tr:last-child>td,
+    .nurse-sheet .blood-value table>tbody>tr:last-child>td,
+    .nurse-sheet .entered table>tbody>tr:last-child>td {
+        border-bottom: 0px !important;
+    }
+
+    .avoid-transparent {
+        z-index: 1;
+    }
+
+    .nurse-sheet.auto .infusions table>thead>tr>th:last-child,
+    .nurse-sheet .infusions table>thead>tr>th.sticky:last-child,
+    .nurse-sheet .milk-feeds table>thead>tr>th.sticky:last-child,
+    .nurse-sheet .output table>thead>tr>th.sticky:last-child {
+        position: sticky;
+        right: 0px;
+        background: white;
+        vertical-align: middle;
+        border-left: 1px solid black !important;
+    }
+
+    .nurse-sheet.auto .infusions table>tbody>tr>td:last-child,
+    .nurse-sheet .infusions table>tbody>tr>td:last-child,
+    .nurse-sheet .output table>tbody>tr>td:last-child,
+    .nurse-sheet .milk-feeds table>tbody>tr>td:last-child {
+        position: sticky;
+        right: 0px;
+        background: white;
+        height: 35px;
+        vertical-align: middle;
+        border-left: 1px solid black !important;
+        width: 48px;
+    }
+
+    .custom-total {
+        display: flex;
+        align-items: center;
+    }
+
+    .display-screen-none {
+        display: none;
+    }
+
+    .display-screen.table-border {
+        border-top: 0px !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .nurse-sheet .col-xs-12.text-center {
+        margin-top: 15px;
+    }
+}
+
+@media (min-width: 576px) {
+    .antibiotic {
+        padding-left: 0px !important;
+        padding-right: 15px !important;
+    }
+
+    .other-drugs {
+        padding-left: 15px !important;
+        padding-right: 0px !important;
+    }
+}
+
+@media only print {
+    body.print .nurse-sheet .content-block {
+        margin-top: 0px;
+        padding: 0px;
+    }
+
+    .table-border {
+        overflow-x: unset;
+    }
+
+    .print .nurse-sheet th,
+    .print .nurse-sheet td,
+    .print .nurse-sheet tr {
+        font-size: 12px;
+    }
+
+    .print .nurse-sheet .infusions table tbody td {
+        font-size: 10px;
+    }
+
+    .nurse-sheet .observation table>tbody>tr>td:first-child,
+    .nurse-sheet .respiratory table>tbody>tr>td:first-child,
+    .nurse-sheet .infusions table>tbody>tr>td:first-child,
+    .nurse-sheet .replacement table>tbody>tr>td:first-child,
+    .nurse-sheet .milk-feeds table>tbody>tr>td:first-child,
+    .nurse-sheet .output table>tbody>tr>td:first-child,
+    .nurse-sheet .blood-value table>tbody>tr>td:first-child,
+    .nurse-sheet .entered table>tbody>tr>td:first-child {
+        font-weight: bold;
+        /*height: 30px;*/
+        vertical-align: middle;
+        height: 21px;
+    }
+
+    /*.nurse-sheet .observation table > thead > tr > th:first-child, 
+	.nurse-sheet .respiratory table > thead > tr > th:first-child,
+	.nurse-sheet .replacement table > thead > tr > th:first-child, 
+	.nurse-sheet .milk-feeds table > thead > tr > th:first-child, 
+	.nurse-sheet .blood-value table > thead > tr > th:first-child {
+		width: 126px;
+	}*/
+    /*	.nurse-sheet .infusions table > thead > tr > th:first-child {
+		min-width: 126px;
+	}*/
+    /*.nurse-sheet .output table > thead > tr > th:first-child {
+		max-width: 126px;
+	}*/
+    @page {
+        margin-top: 5mm;
+        margin-bottom: 5mm;
+    }
+
+    .nurse-sheet .col-md-12 {
+        width: 100%;
+        display: table;
+    }
+
+    body.print .nurse-sheet .form-group,
+    .nurse-sheet .form-group .print-label,
+    .nurse-sheet .form-group .print-value {
+        margin: 0;
+    }
+
+    .nurse-sheet .mt-30-print {
+        margin-top: 30px;
+    }
+
+    .page-break-inside {
+        page-break-inside: avoid !important;
+    }
+}
+
+@media print and (orientation: landscape) and (max-height: 211mm) and (max-width: 298mm) {
+    .nurse-sheet .observation table>tbody>tr>td:first-child {
+        height: 21px;
+    }
+
+    .nurse-sheet .milk-feeds table>tbody>tr>td:first-child,
+    .nurse-sheet .output table>tbody>tr>td:first-child {
+        height: 21px;
+    }
+
+    .nurse-sheet .page-break-land {
+        page-break-before: always !important;
+        page-break-inside: avoid !important;
+    }
+}
+
+@media print and (orientation: portrait) and (max-width: 298mm) and (max-height: 421mm) {
+    .nurse-sheet .blood-value table>tbody>tr>td:first-child {
+        /*height: 27px;*/
+    }
+
+    .nurse-sheet .page-break-portrait-a3-auto {
+        page-break-before: auto !important;
+        page-break-inside: avoid !important;
+    }
+
+    .nurse-sheet .page-break-portrait-a3-always {
+        page-break-before: always !important;
+        page-break-inside: avoid !important;
+    }
+
+    .nurse-sheet .mt-30-print {
+        margin-top: 20px;
+    }
+
+    .nurse-sheet .temp-row>.col-md-12 {
+        margin-bottom: 10px;
+    }
+
+    td span {
+        display: unset;
+    }
+
+    td.custom span {
+        display: block;
+    }
+
+    .nurse-sheet .observation table>thead>tr>th:first-child,
+    .nurse-sheet .respiratory table>thead>tr>th:first-child,
+    .nurse-sheet .milk-feeds table>thead>tr>th:first-child,
+    .nurse-sheet .blood-value table>thead>tr>th:first-child {
+        /*width: 175px;*/
+    }
+
+    .nurse-sheet .replacement table>thead>tr>th:first-child,
+    .nurse-sheet .infusions table>thead>tr>th:first-child,
+    .nurse-sheet .output table>thead>tr>th:first-child {
+        /*min-width: 175px;*/
+    }
+}
+
+@media print and (orientation: landscape) and (min-width: 350mm) {
+    .nurse-sheet .blood-value table>tbody>tr>td:first-child {
+        /*height: 90px;*/
+    }
+
+    td span {
+        display: unset !important;
+    }
+
+    td.custom span {
+        display: block !important;
+    }
+}
+
+.print-label {
+    margin: 2px 0px !important;
+    /*width: 32% !important;*/
+}
+
+.print-value {
+    margin: 2px 0px !important;
+    /*width: 60% !important;*/
+}
+
+.note-box {
+    font-size: 12px;
+    padding: 3px;
+}
+
+.daily-notes {
+    display: inline-block;
+    width: 100%;
+    height: 300px;
+    page-break-inside: avoid;
+    border: 1px solid black;
+}
+
+.daily-notes span {
+    background-color: white;
+    position: relative;
+    top: -6px;
+    left: 10px;
+}
+
+.daily-notes p {
+    padding: 15px;
+}
+
+.nurse-sheet td.bg-warninggg,
+.nurse-sheet td.bg-warninggg-must {
+    background-color: #fbce7a !important;
+}
+
+@media print {
+    div.divFooter {
+        position: fixed;
+        bottom: -10px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .print .nurse-sheet table td:first-child {
+        padding: 1px 2px !important;
+    }
+
+    .print .nurse-sheet table td:not(:first-child),
+    .print .nurse-sheet table th:not(:first-child) {
+        padding: 1px 1px !important;
+    }
+}

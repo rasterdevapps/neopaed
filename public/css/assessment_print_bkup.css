@@ -1,0 +1,350 @@
+table {
+    margin-bottom: 0px !important;
+}
+p {
+    white-space: normal;
+    margin: 0px !important;
+}
+h4 {
+    text-align: center;
+    font-size: 16px;
+}
+h3.mt-0 {
+    margin-bottom: 5px;
+}
+.print table th {
+    padding: 2px 10px !important;
+}
+.print table.table-bordered td {
+    padding: 0px 5px !important;
+    vertical-align: middle;
+    page-break-inside: avoid;
+}
+.print #hnne-container table.table-bordered td, .print #hine-container table.table-bordered td {
+    /*padding: 0px !important;*/
+}
+#hnne-container .row-head strong {
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    white-space: nowrap;
+}
+.basic-details table > tbody > tr > td {
+    width: auto !important;
+}
+#hnne-container table > tbody > tr > td:not(.table-custom-width, .row-head) {
+    width: 14%;
+} 
+#hnne-container table > tbody > tr > td.no-border {
+    width: 14%;
+} 
+#hinescreening1 table > tbody > tr > td:not(.table-custom-width, .row-head), #hinescreening2 table > tbody > tr > td:not(.table-custom-width, .row-head) , #hinescreening4 table > tbody > tr > td:not(.table-custom-width, .row-head), #hinescreening5 table > tbody > tr > td:not(.table-custom-width, .row-head) {
+    width: 20%;
+}
+#hinescreening3 table > tbody > tr > td:not(.table-custom-width, .row-head) {
+    width: 25%;
+} 
+#hinescreening6 table > tbody > tr > td:not(.table-custom-width, .row-head), #hinescreening7 table > tbody > tr > td:not(.table-custom-width, .row-head) {
+    width: 16.7%;
+} 
+#hnne-container .row-head {
+    width: 20px;
+}
+.table-custom-width {
+    max-width: 20px;
+}
+img:not(.expect) {
+    width: 60px;
+    height: 45px !important;
+}
+.sub-table strong {
+    white-space: nowrap;
+}
+.print table.table-bordered td.no-border, .print #hnne-container table.table-bordered td.no-border, .print #hine-container table.table-bordered td.no-border {
+    border: 0px !important;
+    padding: 5px 10px !important;
+}
+.image-container {
+    display: inline-block;
+    position: relative;
+}
+.print table.table-bordered td.no-border td, .print #hnne-container table.table-bordered td.no-border td, .print #hine-container table.table-bordered td.no-border td {
+    padding: 1px 3px !important;    
+}
+.print #m-chat-container table.table-bordered td {
+    padding: 10px !important;
+}
+.print #dasii-container table.table-bordered td {
+    padding: 2px 3px !important;
+}
+.table td.selected-score {
+    box-shadow: 0 0 1px 3px #5EAF5E inset !important;
+}
+i {
+    font-size: 14px;
+    font-weight: bold;
+}
+.table td.bg-secondary {
+    background-color: #d5d5d5 !important;
+}
+.print table.table-bordered td.added-info {
+    text-align: left !important;
+    padding: 0px 15px !important;
+    display: table-cell !important;
+    /*height: 13px;*/
+}
+div > table > tbody > tr > td:not(.row-head, .table-custom-width) {
+    min-width: 50px;
+}
+.table td.selected-cell {
+    background-color: red !important;
+    color: white !important;
+}
+td.bg-secondary.selected-cell {
+    background-color: green !important;
+    color: white;
+}
+.assessment-page-break {
+    margin-top: 15px;
+}
+.print .table>thead>tr>th.unset-bg {
+    background-color: unset;
+    color: black;
+}
+.rest-fail td {
+    background-color: red !important;
+    color: white !important;
+}
+.prior-pass td {
+    background-color: green !important;
+    color: white !important;
+}
+.vertical-align-middle {
+    vertical-align: middle !important;
+}
+
+.status-btn.label-success {
+    background-color: #5cb85c;
+    color: white;
+}
+.status-btn.label-info {
+    background-color: #2f96b4;
+    color: white;
+}
+.status-btn.label-warning {
+    background-color: #f0ad4e;
+    color: white;
+}
+#chart-container {
+    pointer-events: none;
+}
+body.print .table-bordered > thead > tr > th:not(.unset-bg) {
+    background-color: var(--theme-color) !important;
+}
+body.print .table-bordered > thead > tr > th.unset-bg {
+    font-weight: bold;
+}
+body.print .table-bordered > thead > tr > th > h4.m-0 strong, body.print .table-bordered > thead > tr > th h4.m-0 strong span, body.print .table-bordered > thead > tr > th > h4.m-0 b, body.print .table-bordered > thead > tr > th h4.m-0 span, body.print #cluster-container .table-bordered > thead > tr > th b, body.print #cbcl-container .table-bordered > thead > tr > th b, body.print #mental-container .table-bordered > thead > tr > th b, body.print #motor-container .table-bordered > thead > tr > th b, body.print #m-chat-followup-container .table-bordered > thead > tr > th b, body.print #m-chat-container .table-bordered > thead > tr > th b {
+    color: #fff !important;
+}
+table {
+    background-color: white;
+}
+#hnne-container {
+    /*background-color: #d0fffe;*/
+    padding: 5px;
+}
+#hine-container {
+    /*background-color: #fffddb;*/
+    padding: 5px;
+}
+#m-chat-container {
+    /*background-color: #e4ffde;*/
+    padding: 5px;
+}
+#dasii-container {
+    /*background-color: #ffd3fd;*/
+    padding: 5px;
+}
+#ddst-container {
+    /*background-color: #ffe7d3;*/
+    padding: 5px;
+}
+#chart-container {
+    height: 1375px !important;
+}
+.header-align {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.print .basic-details {
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+.print .basic-details table td {
+    padding: 2px 10px !important;
+    font-size: 16px;
+}
+#hnne-container #title:after {
+    content: 'HNNE';
+}
+#hine-container #title:after {
+    content: 'HINE';
+}
+#m-chat-container #title:after {
+    content: 'M-CHAT';
+}
+#dasii-container #title:after {
+    content: 'DASII';
+}
+#ddst-container #title:after {
+    content: 'DDST';
+}
+#cbcl-container #title:after {
+    content: 'CBCL';
+}
+#cbcl-container {
+    padding: 5px;
+}
+input[type=checkbox] {
+    width: 25px;
+    height: 25px;
+}
+#assessment-modal td {
+    padding: 0px 10px !important;
+}
+.assessment-container {
+    display: none;
+}
+.assessement-header img, .assessement-header .basic-details {
+    display: none;
+}
+.image-container i {
+    display: block;
+    text-align: center;
+    font-size: 10px;
+}
+#hnne-container .table td {
+    /*position: relative;*/
+}
+.side-indication:before {
+    position: absolute;
+    bottom: 2px;
+    left: 50px;
+    content: 'L';
+    font-size: 9px;
+    font-weight: 600;
+}
+.side-indication:after {
+    position: absolute;
+    bottom: 2px;
+    right: 50px;
+    content: 'R';
+    font-size: 9px;
+    font-weight: 600;
+}
+.image-container .arrow-font-size {
+    font-size: 20px;
+}
+.leg-traction .side-indication:before {
+    bottom: -5px;
+    left: 60px;
+}
+.leg-traction .side-indication:after {
+    bottom: -5px;
+    right: 64px;
+}
+.leg-traction td[data-cell="leg_traction_score_1"] .side-indication:after {
+    right: 87px;
+}
+.leg_traction_score_field[data-cell="leg_traction_score_5"] .side-indication:after, .arm_traction_score_field[data-cell="arm_traction_score_5"] .side-indication:after {
+    right: 75px;
+}
+.arm-traction .side-indication:before {
+    bottom: -5px;
+    left: 90px;
+}
+.arm-traction .side-indication:after {
+    bottom: -5px;
+    right: 100px;
+}
+td p {
+    text-align: left;
+    /*padding-bottom: 5px;*/
+}
+td[data-cell="hine_head_1"] img, td[data-cell="hine_head_0"] img {
+    width: 80px !important;
+}
+td[data-cell="hine_trunk_0"] img {
+    width: 160px !important;
+}
+td[data-cell="hine_scraf_sign_3"] img, td[data-cell="hine_scraf_sign_1"] img, td[data-cell="hine_scraf_sign_0"] img, td[data-cell="hine_shoulder_elevation_3"] img, td[data-cell="hine_shoulder_elevation_1"] img, td[data-cell="hine_shoulder_elevation_0"] img, td[data-cell="hine_hip_adductors_3"] img, td[data-cell="hine_hip_adductors_2"] img, td[data-cell="hine_hip_adductors_1"] img, td[data-cell="hine_hip_adductors_0"] img, td[data-cell="hine_popliteal_angle_3"] img, td[data-cell="hine_popliteal_angle_1"] img, td[data-cell="hine_ankle_dorsiflexion_3"] img, td[data-cell="hine_ankle_dorsiflexion_1"] img, td[data-cell="hine_ankle_dorsiflexion_1"] img, td[data-cell="hine_pull_to_sit_3"] img, td[data-cell="hine_ventral_suspension_3"] img {
+    width: 100px;
+    height: 60px !important;
+}
+td[data-cell="hine_lateral_tilting_3"] img, td[data-cell="hine_lateral_tilting_2"] img, td[data-cell="hine_lateral_tilting_1"] img, td[data-cell="hine_lateral_tilting_0"] img, td[data-cell="hine_forward_parachute_3"] img, td[data-cell="hine_forward_parachute_1"] img {
+    width: 80px;
+    height: 50px !important;
+}
+.table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td {
+    line-height: 1;
+}
+.display-block-must {
+    display: block !important;
+}
+#assessment-modal .close {
+    color: black;
+    opacity: 1;
+    top: -29px;
+    left: -11px;
+    font-size: 8px !important;
+    box-shadow: unset;
+    padding: 0px;
+}
+.assessment-block {
+    border: 1px solid black;
+}
+#m-chat-container > table > thead > tr > th > h4 > strong, #m-chat-followup-container > table > thead > tr > th > h4 > strong, #mental-container > table > thead > tr > th > h4 > strong, #motor-container > table > thead > tr > th > h4 > strong {
+    margin-top: 20px;
+    display: inline-block;
+}
+#m-chat-container h4 > span > h3, #m-chat-container h4 > strong > sup, #dasii-container h4 > span > h3 {
+    color: white !important;
+}
+#cbcl-container table.table-bordered td {
+    padding: 3px 5px !important;
+}
+@media only print {        
+    .print table.table-bordered td {
+        font-size: 10px;
+    }
+    .assessment-page-break {
+        page-break-before: always;
+        page-break-inside: avoid;
+        margin-top: 5px;
+    }
+    #chart-container {
+        zoom: 70%;
+    }
+    .exeception-page-break {
+        page-break-inside: auto;
+    }
+    table tr td,
+    table tr th {
+        page-break-inside: avoid;
+    }
+    body.print {
+        margin-left: 0cm !important;
+        margin-right: 0cm !important;
+    }
+    .body.print .container.main {
+        padding: 0px; 
+        background-color: red !important;
+    }
+    #hnne-container table {
+        page-break-inside: avoid;
+    }
+}
+@page {
+    margin: 0.5cm !important;
+}

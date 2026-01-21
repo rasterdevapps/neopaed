@@ -1,0 +1,49 @@
+[2025-12-29 10:35:34] local.EMERGENCY: Patient response=================================={
+  "timestamp" : "2025-12-29T05:05:34.310+0000",
+  "status" : 401,
+  "error" : "Unauthorized",
+  "message" : "Unauthorized",
+  "path" : "/api/nicu-patient-by-uhid"
+}  
+[2025-12-29 10:35:34] local.EMERGENCY: Transcripion data error: Unable to get patient information from WEB HIS for UHID:707806 at : 2025-12-29 10:35:34  
+[2025-12-29 10:36:35] local.EMERGENCY: Patient response=================================={
+  "timestamp" : "2025-12-29T05:06:35.018+0000",
+  "status" : 401,
+  "error" : "Unauthorized",
+  "message" : "Unauthorized",
+  "path" : "/api/nicu-patient-by-uhid"
+}  
+[2025-12-29 10:36:35] local.EMERGENCY: Transcripion data error: Unable to get patient information from WEB HIS for UHID:707806 at : 2025-12-29 10:36:35  
+[2025-12-29 10:37:09] local.EMERGENCY: Patient response=================================={
+  "timestamp" : "2025-12-29T05:07:09.314+0000",
+  "status" : 401,
+  "error" : "Unauthorized",
+  "message" : "Unauthorized",
+  "path" : "/api/nicu-patient-by-uhid"
+}  
+[2025-12-29 10:37:09] local.EMERGENCY: Transcripion data error: Unable to get patient information from WEB HIS for UHID:707806 at : 2025-12-29 10:37:09  
+[2025-12-29 10:40:31] local.EMERGENCY: Patient response=================================={"data":{"patient_name":"Integration Baby","surname":"Integration Baby","birth_date":"2025-12-29","mobile":"9999999999","address1":"","address2":"","address3":"","city":"","pincode":"","mrn":"707806","salutation":"Baby","sex":"Female","education":"","occupation":"","spouse_name":"","spouse_mobile":""}}  
+[2025-12-29 17:45:10] local.EMERGENCY: Patient response=================================={"data":{"patient_name":"FullNeo Baby","surname":"FullNeo Baby","birth_date":"2025-12-29","mobile":"9999999999","address1":"","address2":"","address3":"","city":"","pincode":"","mrn":"FULLNEO1767010510","salutation":"Baby","sex":"Male","education":"","occupation":"","spouse_name":"","spouse_mobile":""}}  
+[2025-12-29 17:45:11] local.EMERGENCY: Patient response=================================={"data":{"patient_name":"OP Baby","surname":"OP Baby","birth_date":"2025-12-29","mobile":"6666666666","address1":"","address2":"","address3":"","city":"","pincode":"","mrn":"FULLOP1767010510","salutation":"Baby","sex":"Male","education":"","occupation":"","spouse_name":"","spouse_mobile":""}}  
+[2025-12-29 17:46:47] local.EMERGENCY: Patient response=================================={"data":{"patient_name":"FullNeo Baby","surname":"FullNeo Baby","birth_date":"2025-12-29","mobile":"9999999999","address1":"","address2":"","address3":"","city":"","pincode":"","mrn":"FULLNEO1767010607","salutation":"Baby","sex":"Male","education":"","occupation":"","spouse_name":"","spouse_mobile":""}}  
+[2025-12-29 17:46:47] local.EMERGENCY: Patient response=================================={"data":{"patient_name":"DayCare Baby","surname":"DayCare Baby","birth_date":"2025-12-29","mobile":"8888888888","address1":"","address2":"","address3":"","city":"","pincode":"","mrn":"FULLDAY1767010607","salutation":"Baby","sex":"Male","education":"","occupation":"","spouse_name":"","spouse_mobile":""}}  
+[2025-12-29 17:46:48] local.EMERGENCY: Patient response=================================={"data":{"patient_name":"Discharge Baby","surname":"Discharge Baby","birth_date":"2025-12-29","mobile":"7777777777","address1":"","address2":"","address3":"","city":"","pincode":"","mrn":"FULLDISCH1767010607","salutation":"Baby","sex":"Female","education":"","occupation":"","spouse_name":"","spouse_mobile":""}}  
+[2025-12-29 17:46:48] local.EMERGENCY: FULLDISCH1767010607||IP/IPDISCH1767010607||Discharge Baby||Discharge Baby||Discharge Baby||20251229||F||A03||||||||0||0||  
+[2025-12-29 17:46:49] local.EMERGENCY:   
+[2025-12-29 17:46:49] local.EMERGENCY: NICU Discharged - {"status":"DISCHARGE","admission_id":16159}  
+[2025-12-29 17:46:50] local.EMERGENCY: Patient response=================================={"data":{"patient_name":"OP Baby","surname":"OP Baby","birth_date":"2025-12-29","mobile":"6666666666","address1":"","address2":"","address3":"","city":"","pincode":"","mrn":"FULLOP1767010607","salutation":"Baby","sex":"Male","education":"","occupation":"","spouse_name":"","spouse_mobile":""}}  
+[2025-12-29 17:53:41] local.EMERGENCY: Patient response=================================={"data":{"patient_name":"Baby of Test","surname":"Baby of Test","birth_date":"2025-12-29","mobile":"9876543210","address1":"","address2":"","address3":"","city":"","pincode":"","mrn":"FULLNEO1767011021","salutation":"Baby","sex":"Male","education":"","occupation":"","spouse_name":"","spouse_mobile":""}}  
+[2025-12-29 17:53:41] local.EMERGENCY: Patient response=================================={"data":{"patient_name":"DayCare Baby","surname":"DayCare Baby","birth_date":"2025-12-29","mobile":"8888888888","address1":"","address2":"","address3":"","city":"","pincode":"","mrn":"FULLDAY1767011021","salutation":"Baby","sex":"Male","education":"","occupation":"","spouse_name":"","spouse_mobile":""}}  
+[2025-12-29 17:53:41] local.EMERGENCY: Patient response=================================={"data":{"patient_name":"Discharge Baby","surname":"Discharge Baby","birth_date":"2025-12-29","mobile":"7777777777","address1":"","address2":"","address3":"","city":"","pincode":"","mrn":"FULLDISCH1767011021","salutation":"Baby","sex":"Female","education":"","occupation":"","spouse_name":"","spouse_mobile":""}}  
+[2025-12-29 17:53:42] local.EMERGENCY: Patient response=================================={"data":{"patient_name":"OP Baby","surname":"OP Baby","birth_date":"2025-12-29","mobile":"6666666666","address1":"","address2":"","address3":"","city":"","pincode":"","mrn":"FULLOP1767011021","salutation":"Baby","sex":"Male","education":"","occupation":"","spouse_name":"","spouse_mobile":""}}  
+[2025-12-29 17:55:21] local.EMERGENCY: Patient response=================================={"data":{"patient_name":"Baby of Test","surname":"Baby of Test","birth_date":"2025-12-29","mobile":"9876543210","address1":"","address2":"","address3":"","city":"","pincode":"","mrn":"FULLNEO1767011120","salutation":"Baby","sex":"Male","education":"","occupation":"","spouse_name":"","spouse_mobile":""}}  
+[2025-12-29 17:55:21] local.EMERGENCY: Patient response=================================={"data":{"patient_name":"DayCare Baby","surname":"DayCare Baby","birth_date":"2025-12-29","mobile":"8888888888","address1":"","address2":"","address3":"","city":"","pincode":"","mrn":"FULLDAY1767011120","salutation":"Baby","sex":"Male","education":"","occupation":"","spouse_name":"","spouse_mobile":""}}  
+[2025-12-29 17:55:22] local.EMERGENCY: Patient response=================================={"data":{"patient_name":"Discharge Baby","surname":"Discharge Baby","birth_date":"2025-12-29","mobile":"7777777777","address1":"","address2":"","address3":"","city":"","pincode":"","mrn":"FULLDISCH1767011120","salutation":"Baby","sex":"Female","education":"","occupation":"","spouse_name":"","spouse_mobile":""}}  
+[2025-12-29 17:55:22] local.EMERGENCY: Patient response=================================={"data":{"patient_name":"OP Baby","surname":"OP Baby","birth_date":"2025-12-29","mobile":"6666666666","address1":"","address2":"","address3":"","city":"","pincode":"","mrn":"FULLOP1767011120","salutation":"Baby","sex":"Male","education":"","occupation":"","spouse_name":"","spouse_mobile":""}}  
+[2025-12-29 17:58:22] local.EMERGENCY: Patient response=================================={"data":{"patient_name":"Baby of Test","surname":"Baby of Test","birth_date":"2025-12-29","mobile":"9876543210","address1":"","address2":"","address3":"","city":"","pincode":"","mrn":"FULLNEO1767011302","salutation":"Baby","sex":"Male","education":"","occupation":"","spouse_name":"","spouse_mobile":""}}  
+[2025-12-29 17:58:22] local.EMERGENCY: Patient response=================================={"data":{"patient_name":"DayCare Baby","surname":"DayCare Baby","birth_date":"2025-12-29","mobile":"8888888888","address1":"","address2":"","address3":"","city":"","pincode":"","mrn":"FULLDAY1767011302","salutation":"Baby","sex":"Male","education":"","occupation":"","spouse_name":"","spouse_mobile":""}}  
+[2025-12-29 17:58:22] local.EMERGENCY: Patient response=================================={"data":{"patient_name":"Discharge Baby","surname":"Discharge Baby","birth_date":"2025-12-29","mobile":"7777777777","address1":"","address2":"","address3":"","city":"","pincode":"","mrn":"FULLDISCH1767011302","salutation":"Baby","sex":"Female","education":"","occupation":"","spouse_name":"","spouse_mobile":""}}  
+[2025-12-29 17:58:22] local.EMERGENCY: FULLDISCH1767011302||IP/IPDISCH1767011302||Discharge Baby||Discharge Baby||Discharge Baby||20251229||F||A03||||||||0||0||  
+[2025-12-29 17:58:23] local.EMERGENCY:   
+[2025-12-29 17:58:24] local.EMERGENCY: NICU Discharged - {"status":"DISCHARGE","admission_id":16161}  
+[2025-12-29 17:58:24] local.EMERGENCY: Patient response=================================={"data":{"patient_name":"OP Baby","surname":"OP Baby","birth_date":"2025-12-29","mobile":"6666666666","address1":"","address2":"","address3":"","city":"","pincode":"","mrn":"FULLOP1767011302","salutation":"Baby","sex":"Male","education":"","occupation":"","spouse_name":"","spouse_mobile":""}}  

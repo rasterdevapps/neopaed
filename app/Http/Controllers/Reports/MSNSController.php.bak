@@ -1,0 +1,241 @@
+<?php
+
+namespace App\Http\Controllers\Reports;
+use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use App\User;
+use Carbon\Carbon;
+use App\Models\Baby;
+use App\Models\Daycare;
+use App\Models\Neonatal;
+use App\Models\Nicu;
+
+class MSNSController extends Controller
+{
+    public function __construct()
+    {
+        $this->middleware('role:MSNS,read');
+    }
+
+    /**
+     * DISPLAY THE RECORDS ACCORDING TO THE FILTERS APPLIED
+     *
+     */
+    public function index(Request $request)
+    {
+        $baby_id = $request->baby_id;
+        if (!empty($baby_id)) {
+            $baby_id = \SiteHelpers::decrypt_id($baby_id);
+        } else {
+            $baby_id = null;
+        }
+        $navigate['main_nav'] = '';
+        $navigate['sub_nav'] = '';
+
+        $babies = Baby::babyListData()->pluck('baby_name_mrn', 'BabyId')->toArray();
+
+        for ($i = 0; $i < 24; $i++) {
+            $time = (strlen($i) == 1) ? '0' . $i : $i;
+            $hour_24[$time] = $time;
+        }
+
+        return view('reports.msns.view', compact('babies', 'navigate', 'baby_id', 'hour_24'));
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show(Request $request)
+    {
+        $input = $request->all();
+
+        $baby_id = $input['id'];
+        $selected_date = date('Y-m-d', strtotime($input['date']));
+        $selected_hour = $input['hour'];
+        $starting_time = $selected_date . ' ' . $selected_hour . ':00:00';
+        $ending_time = $selected_date . ' ' . $selected_hour . ':59:59';
+
+        $mode = $rr = $hr = $temp = $rbs = $os = null;
+
+        $baby_basic_dtl = Baby::select('BirthWeight', 'g_weeks')->where('BabyId', $baby_id)->where('IsDeleted', '0')->first();
+
+        $birth_wt = null;
+        if (isset($baby_basic_dtl->BirthWeight)) {
+            $birth_wt = $baby_basic_dtl->BirthWeight;
+            $birth_wt = $birth_wt / 1000;
+            $birth_wt = number_format($birth_wt, 2);
+        }
+        $g_weeks = null;
+        if (isset($baby_basic_dtl->g_weeks)) {
+            $g_weeks = $baby_basic_dtl->g_weeks;
+        }
+
+        $cft = null;
+        $neonatal_cft = Neonatal::select('NbCFT')->leftJoin('newborn_examination', 'neonatal_proforma.BabyId', 'newborn_examination.BabyId')->whereNotNull('NbCFT')->where('NbCFT', '<>', '')->where('neonatal_proforma.BabyId', $baby_id)->where('TestDate', $selected_date)->where('IsDeleted', '0')->first();
+
+        if (isset($neonatal_cft['CFT'])) {
+            $cft = $neonatal_cft['CFT'];
+        } else {
+            $nicu_cft = Nicu::select('CFT')->whereNotNull('CFT')->where('CFT', '<>', '')->where('BabyId', $baby_id)->where('AdmissionDate', $selected_date)->where('IsDeleted', '0')->first();
+
+            if (isset($nicu_cft['CFT'])) {
+                $cft = $nicu_cft['CFT'];
+            } else {
+                $daycare_dtl = Daycare::select('CFT')->whereNotNull('CFT')->where('CFT', '<>', '')->where('BabyId', $baby_id)->where('DayDate', $selected_date)->where('IsDeleted', '0')->first();
+
+                if (isset($daycare_dtl['CFT'])) {
+                    $cft = $daycare_dtl['CFT'];
+                }
+            }
+        }
+
+        // 36  respiratory_rate    Respiratory Rate
+        // 35  hr_rate Heart Rate Trend
+        // 34  peripheral_temp Monitor - Temp
+
+        // 147 blood_sugar_total   Blood Sugar total
+        // 76  blood_sugar Blood Sugar (mg/dl)(Glucometer  
+        // 309 interface_blood_gas_blood_sugar Blood Sugar (mg/dl)(Blood Gas
+
+        $respiratory_rate = 36;
+        $hr_rate = 35;
+        $peripheral_temp = 34;
+        $preductal_sao2 = 44; // Oxygen saturation (%)   
+
+        $blood_sugar = 76;
+        $interface_blood_gas_blood_sugar = 309;
+
+        $mode_of_ventilation = 47;
+        $mode_of_ventilation_invasive = 225;
+
+        // 47,225,366,52,296
+        $non_invasive_list = ['HFNC', 'HHHFNC', 'BiPAP', 'Nasal HFOV', 'NIPPV', 'NIPPV (D)', 'NIPPV Tr', 'nippv tr', 'CPAP', 'nCPAP (D)'];
+
+        $invasive_list = ['SIMV', 'PTV', 'PSV'];
+
+        $mode_list = array_merge($invasive_list, $non_invasive_list);
+
+        $inpatient_ventilator_data = \DB::table('emr_log_hdr')
+        ->select('loinc_local_map_id', 'intf_ref_value', 'result_date_time', 'emr_ventilator_values.create_user_id', 'sender_time', 'log_hdr_id', \DB::raw("TO_CHAR(sender_time,'HH24:00') as hour"))
+        ->leftJoin('emr_ventilator_values', 'emr_log_hdr.id', 'emr_ventilator_values.log_hdr_id')
+        ->whereBetween('sender_time', [$starting_time, $ending_time])   
+        ->whereIn('loinc_local_map_id', [$mode_of_ventilation, $mode_of_ventilation_invasive])
+        ->where('baby_id', $baby_id)
+        ->where('intf_ref_value', '<>', '')
+        ->orderBy('result_date_time', 'desc')
+        ->get()
+        ->toArray();
+
+        $discharge_ventilator_data = \DB::table('emr_log_hdr')
+        ->select('loinc_local_map_id', 'intf_ref_value', 'result_date_time', 'emr_ventilator_values_discharged.create_user_id', 'sender_time', 'log_hdr_id', \DB::raw("TO_CHAR(sender_time,'HH24:00') as hour"))
+        ->leftJoin('emr_ventilator_values_discharged', 'emr_log_hdr.id', 'emr_ventilator_values_discharged.log_hdr_id')
+        ->whereBetween('sender_time', [$starting_time, $ending_time])   
+        ->whereIn('loinc_local_map_id', [$mode_of_ventilation, $mode_of_ventilation_invasive])
+        ->where('baby_id', $baby_id)
+        ->where('intf_ref_value', '<>', '')
+        ->orderBy('result_date_time', 'desc')
+        ->get()
+        ->toArray();
+
+        $ventilator_data_list = array_merge($inpatient_ventilator_data, $discharge_ventilator_data);
+
+        $ventilator_data = collect($ventilator_data_list)->pluck('intf_ref_value', 'loinc_local_map_id');
+
+        if (isset($ventilator_data[$mode_of_ventilation])) {
+            $mode = $ventilator_data[$mode_of_ventilation];
+        }
+
+        if (is_null($mode) && isset($ventilator_data[$mode_of_ventilation_invasive])) {
+            $mode = $ventilator_data[$mode_of_ventilation_invasive];
+        }
+
+        $inpatient_monitor_data = \DB::table('emr_log_hdr')
+        ->select('loinc_local_map_id', 'intf_ref_value', 'result_date_time', 'emr_moniter_values.create_user_id', 'sender_time', 'log_hdr_id', \DB::raw("TO_CHAR(sender_time,'HH24:00') as hour"))
+        ->leftJoin('emr_moniter_values', 'emr_log_hdr.id', 'emr_moniter_values.log_hdr_id')
+        ->whereBetween('sender_time', [$starting_time, $ending_time])   
+        ->whereIn('loinc_local_map_id', [$respiratory_rate, $hr_rate, $peripheral_temp, $preductal_sao2])
+        ->where('baby_id', $baby_id)
+        ->where('intf_ref_value', '<>', '')
+        ->orderBy('result_date_time', 'desc')
+        ->get()
+        ->toArray();
+
+        $discharge_monitor_data = \DB::table('emr_log_hdr')
+        ->select('loinc_local_map_id', 'intf_ref_value', 'result_date_time', 'emr_moniter_values_discharged.create_user_id', 'sender_time', 'log_hdr_id', \DB::raw("TO_CHAR(sender_time,'HH24:00') as hour"))
+        ->leftJoin('emr_moniter_values_discharged', 'emr_log_hdr.id', 'emr_moniter_values_discharged.log_hdr_id')
+        ->whereBetween('sender_time', [$starting_time, $ending_time])   
+        ->whereIn('loinc_local_map_id', [$respiratory_rate, $hr_rate, $peripheral_temp, $preductal_sao2])
+        ->where('baby_id', $baby_id)
+        ->where('intf_ref_value', '<>', '')
+        ->orderBy('result_date_time', 'desc')
+        ->get()
+        ->toArray();
+
+        $monitor_data_list = array_merge($inpatient_monitor_data, $discharge_monitor_data);
+
+        $monitor_data = collect($monitor_data_list)->pluck('intf_ref_value', 'loinc_local_map_id');
+
+
+        if (isset($monitor_data[$respiratory_rate])) {
+            $rr = $monitor_data[$respiratory_rate];
+        }
+
+        if (isset($monitor_data[$hr_rate])) {
+            $hr = $monitor_data[$hr_rate];
+        }
+
+        if (isset($monitor_data[$peripheral_temp])) {
+            $temp = $monitor_data[$peripheral_temp];
+            $temp = 5 / 9 * ($temp - 32);
+            $temp = number_format($temp, 2);
+        }
+
+        if (isset($monitor_data[$preductal_sao2])) {
+            $os = $monitor_data[$preductal_sao2];
+        }
+
+        // $blood_sugar_total = 147;
+        $blood_sugar = 76;
+        $interface_blood_gas_blood_sugar = 309;
+
+        $inpatient_lab_data = \DB::table('emr_log_hdr')
+        ->select('loinc_local_map_id', 'intf_ref_value', 'result_date_time', 'emr_lab_values.create_user_id', 'sender_time', 'log_hdr_id', \DB::raw("TO_CHAR(sender_time,'HH24:00') as hour"))
+        ->leftJoin('emr_lab_values', 'emr_log_hdr.id', 'emr_lab_values.log_hdr_id')
+        // ->where('baby_id', $baby_id)
+        ->whereIn('loinc_local_map_id', [$blood_sugar, $interface_blood_gas_blood_sugar])
+        ->where('intf_ref_value', '<>', '')
+        ->where('result_status', 'final')
+        ->orderBy('result_date_time', 'desc')
+        ->get()
+        ->toArray();
+
+        $discharged_lab_data = \DB::table('emr_log_hdr')
+        ->select('loinc_local_map_id', 'intf_ref_value', 'result_date_time', 'emr_lab_values_discharged.create_user_id', 'sender_time', 'log_hdr_id', \DB::raw("TO_CHAR(sender_time,'HH24:00') as hour"))
+        ->leftJoin('emr_lab_values_discharged', 'emr_log_hdr.id', 'emr_lab_values_discharged.log_hdr_id')
+        // ->where('baby_id', $baby_id)
+        ->whereIn('loinc_local_map_id', [$blood_sugar, $interface_blood_gas_blood_sugar])
+        ->where('intf_ref_value', '<>', '')
+        ->where('result_status', 'final')
+        ->orderBy('result_date_time', 'desc')
+        ->get()
+        ->toArray();
+
+        $lab_data_list = array_merge($inpatient_lab_data, $discharged_lab_data);
+
+        $lab_data = collect($lab_data_list)->pluck('intf_ref_value', 'loinc_local_map_id');
+
+        if (isset($lab_data[$blood_sugar])) {
+            $rbs = $lab_data[$blood_sugar];
+        }
+        if (is_null($rbs) && isset($lab_data[$interface_blood_gas_blood_sugar])) {
+            $rbs = $lab_data[$interface_blood_gas_blood_sugar];
+        }
+
+        return ['mode' => $mode, 'rr' => $rr, 'hr' => $hr, 'temp' => $temp, 'cft' => $cft, 'rbs' => $rbs, 'os' => $os, 'birth_wt' => $birth_wt,  'g_weeks' => $g_weeks];
+
+    }
+
+}

@@ -1,0 +1,155 @@
+.quality .form-control {
+    width: 100%;
+    padding: 6px 12px;
+    font-size: 14px;
+    border-radius: 0px !important;	
+}
+.quality .shadow {
+	box-shadow: 1px 1px 4px #4444444f;
+    display: inline !important;
+    margin-bottom: 15px;
+}
+.quality .border-bottom {
+	/*border-bottom: 1px solid #1e1e2d;*/
+}
+/*.quality input[type="radio"], .quality input[type="checkbox"] {
+	margin-right: 4px;
+    vertical-align: sub;
+}*/
+.quality .plus {
+	padding: 0 6px;
+    top: -8px;
+    position: relative;
+}
+.quality .custom-form-control {
+	border: none !important;
+	border-bottom: 1px solid #1e1e2d !important;	
+	box-shadow: unset !important;
+	background-color: unset !important;
+	margin-bottom: unset !important;
+	border-radius: 0px !important;
+	font-size: 14px !important;
+}
+.quality .custom-form-control:focus {
+	border: none !important;
+	outline: none; 
+	border-bottom: 2px solid #91C3EB !important;
+}
+.quality .tableborder th, .tableborder tr > td {
+    border: 1px solid black !important;
+}
+.quality .tick {
+    padding: 2px 21px;
+    margin: 7px 25px;
+    width: 31%;
+    background-color: #4CAF50;
+    color: white;
+}
+.quality .table > tbody > tr > td {
+	vertical-align: middle;
+}
+.quality .scroll-x {
+    overflow-x: auto;
+}
+.quality .responsive-table {
+    min-width: 600px;
+}
+.quality .pr-2 {
+	padding-right: 2px;
+}
+.quality .title, .quality td, .quality th {
+    /* color: #adaaaa; */
+    /*font-size: 14px !important;*/
+}
+.quality label.title {
+    text-transform: uppercase;
+}
+
+@media screen and (min-width: 576px) and (max-width: 992px) {
+	.display-sm-flex {
+		display: flex;
+	}
+	.display-sm-inline-block {
+		display: inline-block;
+	}
+	.quality .pr-sm-15 {
+		padding-right: 15px;
+	}
+}
+@media screen and (max-width: 767px) {
+	.quality .pl-xs-0 {
+		padding-left: 0px;
+	}
+	.quality .pr-xs-0 {
+		padding-right: 0px;
+	}
+	.quality .plr-xs-0 {
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+	.quality .pl-xs-15 {
+		padding-left: 15px;
+	}
+	.quality .pr-xs-15 {
+		padding-right: 15px;
+	}
+	.quality .plr-xs-15 {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	.quality .pr-xs-5 {
+		padding-right: 5px;
+	}
+	.quality input[type="radio"], .quality input[type="checkbox"] {
+	    vertical-align: sub;
+	}
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+	.quality .pl-1 {
+		padding-left: 1px;
+	}
+	.quality input[type="radio"], .quality input[type="checkbox"] {
+	    vertical-align: sub;
+	}
+	.quality .plr-sm-15 {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	.quality .pl-sm-25 {
+		padding-left: 25px;
+	}
+	.quality .pr-sm-15 {
+		padding-right: 15px;
+	}
+}
+@media screen and (min-width: 992px) {
+	.quality .quality-pl-15 {
+	    padding-left: 15px; 
+	}	
+	label[for="antenatal_MgSO4"] {
+	    width: 100%;
+	    word-wrap: break-word;
+	}
+	.quality .pl-4 {
+		padding-left: 4px;
+	}
+	.quality .pl-6 {
+		padding-left: 6px;
+	}
+	.quality .pl-8 {
+		padding-left: 8px;
+	}
+	.quality .pl-39 {
+		padding-left: 39px;
+	}
+	.quality .border-right {
+		border-right: 2px solid #1e1e2d;
+	}
+	.quality .content-horizontal-center {
+		display: flex;
+		align-items: center;
+	}
+	.quality .pl-md-30 {
+		padding-left: 30px;
+	}
+}

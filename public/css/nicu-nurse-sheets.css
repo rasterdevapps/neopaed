@@ -1,0 +1,350 @@
+.nurse-baby-basic-details-label {
+    font-weight: bold;
+    font-size: 14px;
+    padding: 0px !important;
+}
+.nurse-baby-basic-details-label, .nurse-baby-basic-details-input,
+	.border-replacement {
+    border-top: 0px solid #ddd !important;
+}
+.nurse-sheet-edit .tab-pane > .col-md-12 {
+/*	overflow-x: auto;*/
+}
+
+/*.nurse-sheet-edit #observation table > thead > tr > th:first-child, */
+/*	.nurse-sheet-edit #respiratory_support table > thead > tr > th:first-child, */
+/*	.nurse-sheet-edit #milk_feeds_output table > thead > tr > th:first-child, */
+/*	.nurse-sheet-edit #important-blood-values table > thead > tr > th:first-child, */
+/*	.nurse-sheet-edit #gluco-meter table > thead > tr > th:first-child, */
+.nurse-sheet-edit #observation table > tbody > tr > td:first-child,
+	.nurse-sheet-edit #respiratory_support table > tbody > tr > td:first-child,
+	.nurse-sheet-edit #milk_feeds_output table > tbody > tr > td:first-child,
+	.nurse-sheet-edit #important-blood-values table > tbody > tr > td:first-child,
+	.nurse-sheet-edit #gluco-meter table > tbody > tr > td:first-child {
+    min-width: 236px;
+    position: sticky;
+    left: 0px;
+    vertical-align: middle;
+    background-color: #f9f9f9;
+    /*z-index: 5;*/
+    border-bottom: 1px solid #ddd; 
+}
+
+/*.nurse-sheet-edit #observation table > thead > tr > th:first-child, .nurse-sheet-edit #observation table > tbody > tr > td:first-child:after,
+.nurse-sheet-edit #respiratory_support table > thead > tr > th:first-child, .nurse-sheet-edit #respiratory_support table > tbody > tr > td:first-child:after,
+.nurse-sheet-edit #milk_feeds_output table > thead > tr > th:first-child, .nurse-sheet-edit #milk_feeds_output table > tbody > tr > td:first-child:after,
+.nurse-sheet-edit #important-blood-values table > thead > tr > th:first-child, .nurse-sheet-edit #important-blood-values table > tbody > tr > td:first-child:after,
+.nurse-sheet-edit #gluco-meter table > thead > tr > th:first-child, .nurse-sheet-edit #gluco-meter table > tbody > tr > td:first-child:after {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    height: 2px;
+    background-color: #ddd;
+    content: '';
+    left: 0px;
+}*/
+
+.nurse-sheet .col-md-12 {
+	width: 100%;
+	float: left;
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+	#pn_drugs .input-width-xxlarge {
+		width: 210px !important;
+	}
+}
+
+@media screen and (min-width: 576px) {
+	.nurse-sheet-edit .form-control {
+		min-width: 100px;
+		font-weight: 600 !important;
+	}
+	/*.input-width-xmedium {
+	    width: 495px !important;
+	}*/
+}
+
+@media screen and (max-width: 576px) {
+	.other_drugs {
+		width: 150px;
+	}
+	#nurse-form #important-blood-values .form-control,
+		#nurse-form #gluco-meter .form-control,
+		#nurse-form #pn_drugs .form-control {
+		min-width: 100px;
+	}
+}
+.border-replacement label
+{
+	margin-top:  7px;
+}
+/*.ui-dialog
+{
+	background: #fff;
+	padding: 16px 20px;
+	box-shadow: 0px 0px 4px 1px #444;
+}
+.ui-dialog-titlebar
+{
+	background: #1e1e2d;
+	color: #fff;
+	font-size: 16px;
+	padding: 10px 20px;
+}
+.ui-dialog-titlebar-close
+{
+	float: right;
+	content: 'X';
+}
+.ui-dialog-titlebar-close::after
+{
+	content: 'X';
+	color: #1e1e2d;
+	font-weight: 600;
+}*/
+.ui-dialog-content
+{
+	/*padding: 20px 20px;*/
+	background: #fff;
+	box-shadow: 0px 0px 4px 1px #444;
+}
+.number-pad-table
+{
+	margin: 10px 0px;
+}
+.number-pad-table td
+{
+	/*padding: 10px;*/
+	background-color: #1e1e2d;
+	color: #fff;
+	border: 1px solid #fff;
+	border-collapse: collapse;
+}
+.number-pad-table td button
+{
+	padding: 10px 37px;
+	background-color: #1e1e2d;
+	color: #fff;
+	font-weight: 600;
+	border: none;
+	font-size: 17px !important;
+}
+.dial-pad-toggle
+{
+	padding: 6px 40px 0px 0px;
+}
+@media (max-width: 1024px) 
+{
+	/*.nurse-sheet-edit #observation table > thead > tr > th:first-child, 
+	.nurse-sheet-edit #respiratory_support table > thead > tr > th:first-child, 
+	.nurse-sheet-edit #milk_feeds_output table > thead > tr > th:first-child, 
+	.nurse-sheet-edit #important-blood-values table > thead > tr > th:first-child, 
+	.nurse-sheet-edit #gluco-meter table > thead > tr > th:first-child, */
+	.nurse-sheet-edit #observation table > tbody > tr > td:first-child, 
+	.nurse-sheet-edit #respiratory_support table > tbody > tr > td:first-child, 
+	.nurse-sheet-edit #milk_feeds_output table > tbody > tr > td:first-child, 
+	.nurse-sheet-edit #important-blood-values table > tbody > tr > td:first-child, 
+	.nurse-sheet-edit #gluco-meter table > tbody > tr > td:first-child
+	{
+		min-width: 165px;
+	}
+	/*.container
+	{
+		padding-right: 0px !important;
+	}*/
+	.bacic-info-mobile-view td, .bacic-info-mobile-view th
+	{
+		padding: 5px;
+	}
+	.bacic-info-mobile-view th
+	{
+		padding-bottom: 0px !important;
+		text-align: center;
+	}
+	.nurse-sheet-edit .tab-pane
+	{
+		max-height: 300px;
+		overflow-y: scroll;
+	}
+	
+}
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait)
+{
+	/*.nurse-sheet-edit #observation table > thead > tr > th:first-child, 
+	.nurse-sheet-edit #respiratory_support table > thead > tr > th:first-child, 
+	.nurse-sheet-edit #milk_feeds_output table > thead > tr > th:first-child, 
+	.nurse-sheet-edit #important-blood-values table > thead > tr > th:first-child, 
+	.nurse-sheet-edit #gluco-meter table > thead > tr > th:first-child, */
+	.nurse-sheet-edit #observation table > tbody > tr > td:first-child, 
+	.nurse-sheet-edit #respiratory_support table > tbody > tr > td:first-child, 
+	.nurse-sheet-edit #milk_feeds_output table > tbody > tr > td:first-child, 
+	.nurse-sheet-edit #important-blood-values table > tbody > tr > td:first-child, 
+	.nurse-sheet-edit #gluco-meter table > tbody > tr > td:first-child
+	{
+		min-width: 165px;
+	}
+	./*container
+	{
+		padding-right: 0px !important;
+	}*/
+	.bacic-info-mobile-view td, .bacic-info-mobile-view th
+	{
+		padding: 5px;
+	}
+	.bacic-info-mobile-view th
+	{
+		padding-bottom: 0px !important;
+		text-align: center;
+	}
+	.nurse-sheet-edit .tab-pane
+	{
+		max-height: 500px;
+		overflow-y: scroll;
+	}
+	.hidden-sm
+	{
+		display: none;
+	}
+}
+.nurse-sheet-edit small
+{
+	font-size: 65% !important;
+}
+
+@media (max-width: 1023px){
+	.label-control
+	{
+		text-align: left !important;	
+	}
+} 
+.nurse-sheet-dialpad-control
+{
+	padding: 4px 40px 0px 0px;
+}
+@media (max-width: 569px)
+{
+	.bacic-info-mobile-view
+	{
+		padding: 0px 10px !important; 
+	}
+	
+	#nurse-form .row.row-spacing .col-md-12
+	{
+		padding: 0px !important;
+	}
+	/*.nurse-sheet-edit #observation table > thead > tr > th:first-child, 
+	.nurse-sheet-edit #respiratory_support table > thead > tr > th:first-child, 
+	.nurse-sheet-edit #milk_feeds_output table > thead > tr > th:first-child, 
+	.nurse-sheet-edit #important-blood-values table > thead > tr > th:first-child, 
+	.nurse-sheet-edit #gluco-meter table > thead > tr > th:first-child, */
+	.nurse-sheet-edit #observation table > tbody > tr > td:first-child, 
+	.nurse-sheet-edit #respiratory_support table > tbody > tr > td:first-child, 
+	.nurse-sheet-edit #milk_feeds_output table > tbody > tr > td:first-child, 
+	.nurse-sheet-edit #important-blood-values table > tbody > tr > td:first-child, 
+	.nurse-sheet-edit #gluco-meter table > tbody > tr > td:first-child
+	{
+		min-width: 40px;
+	}
+}
+.dialog-title-container
+{
+	padding: 10px 10px 10px;
+	background: #000;
+}
+.dialog-title
+{
+	display: inline-block;
+	color: #fff;
+	font-weight: 600;
+	margin: 0px !important;
+}
+.dialog-title-container button
+{
+	padding: 2px 7px;
+	float: right;
+	margin-top: -7px;
+}
+.dialog-content-container
+{
+	padding: 10px 20px;
+}
+.highlight-box-dialpad-on
+{
+	box-shadow: 0px 0px 3px 1px #33a5c6;
+}
+.ui-dialog-titlebar-close
+{
+	display: none;
+}
+#input-info-dialpad
+{
+	font-weight: 600;
+}
+
+    .label-control {
+    margin-top: 0px;
+    }
+    /*.nurse-sheet-edit #observation table > thead > tr > th:first-child, 
+    .nurse-sheet-edit #respiratory_support table > thead > tr > th:first-child, 
+    .nurse-sheet-edit #milk_feeds_output table > thead > tr > th:first-child, 
+    .nurse-sheet-edit #important-blood-values table > thead > tr > th:first-child, 
+    .nurse-sheet-edit #gluco-meter table > thead > tr > th:first-child,*/ 
+    .nurse-sheet-edit #observation table > tbody > tr > td:first-child, 
+    .nurse-sheet-edit #respiratory_support table > tbody > tr > td:first-child, 
+    .nurse-sheet-edit #milk_feeds_output table > tbody > tr > td:first-child, 
+    .nurse-sheet-edit #important-blood-values table > tbody > tr > td:first-child, 
+    .nurse-sheet-edit #gluco-meter table > tbody > tr > td:first-child
+    {
+        z-index: 2 !important;
+    }
+    .btn-primary
+    {
+        z-index: 1 !important;
+    }
+    .btn-danger
+    {
+        margin-top: 0px !important;
+    }
+    @media (max-width: 569px)
+    {
+        .container
+        {
+            padding: 0px !important; 
+        }
+    }
+
+.nurse-sheet-edit thead > tr > th {
+	position: sticky;
+	top: 0px;
+    background-color: #f9f9f9 !important;
+	z-index: 2 !important;
+	padding: 15px;
+}
+
+.nurse-sheet-edit > .tab-pane > div > table.table > thead > tr > th:first-child {
+    min-width: 236px !important;
+	position: sticky;
+	left: 0px;
+	top: 0px;
+	z-index: 6 !important;
+}
+
+.tab-content.nurse-sheet-edit >  .tab-pane > div {
+	height: 80vh;
+	overflow: auto;
+}
+
+
+.tabbable-custom>.tab-content.nurse-sheet-edit {
+    padding-top: 0px;
+    padding-left: 0px;    
+    padding-right: 0px;
+}
+
+.btn.nurse-day-nav {
+	background-color: #4d7496;
+	color: white;
+	box-shadow: unset;
+	margin: 3px;
+}

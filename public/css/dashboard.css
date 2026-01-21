@@ -1,0 +1,352 @@
+.homepage-banner {
+    box-shadow: 0px 8px 13px #4444445c;
+
+}
+.homepage-overview-board {
+    box-shadow: 10px 8px 11px -4px rgba(0,0,0,0.4);
+}
+.search-alignment {
+    padding: 10px;
+    margin: 10px;
+    /*background-color: #DEDEDE;    */
+    /*border: 1px solid var(--theme-color);*/
+    box-shadow: 0px 0px 8px #c7c7c7;
+} 
+.search-alignment .search-container {
+    display: flex;
+    flex-direction: row;
+}
+.widget.box .widget-header .toolbar.no-padding {
+  margin: -2px -13px;
+}
+.page-header > div:not(:last-child) {
+    padding-bottom: 9px;
+}
+.page-header .btn.homepage-banner {
+    padding: 15px !important;
+}
+.navbar .nav > li:first-child {
+    border-left: unset;
+}
+.nav.navbar-nav.notify.border-left-none > li  {
+    border-left: 0px !important;    
+}
+.navbar ul:nth-child(7) > li, .nav.navbar-nav.navbar-left, .nav.navbar-nav.notify > li {
+     /*border-left: 1px solid rgba(0, 0, 0, 0.21) !important; */
+}
+.widget {
+    margin-bottom: 10px;
+}  
+.search-pr-0 {
+    padding-right: 0px;
+}
+.nav-home-icon {
+    padding-bottom: 11px !important;
+    padding-top: 11px !important;
+}
+.nav-home-icon-size {
+    font-size: 24px;    
+}
+@media only screen and (max-width: 360px) {
+    .search-alignment > .col-xs-3 {
+        padding-left: 0;
+    }
+    .widget.homepage-overview-board {
+        margin-bottom: 10px;
+    }
+    .widget.box.homepage-overview-board .widget-header {
+        line-height: 29px;
+    }
+    .widget.box.homepage-overview-board .widget-header .toolbar.no-padding .btn {
+        line-height: 29px;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .navbar .notify .dropdown-menu {
+        right: unset;
+    }
+    .search-plr-0 {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .search-pl-0 {
+        padding-left: 0px;
+    }
+}
+@media screen and (max-width: 767px) {
+    .search-xs-pl-0, .search-pr-0 {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}
+@media only screen and (max-width: 320px) {
+    /*.widget.box.homepage-overview-board .widget-header .toolbar.no-padding .btn {
+        line-height: 12px;
+    }*/
+}
+@media only screen and (max-width: 991px) {
+    .page-header > div:not(:last-child) {
+        padding-bottom: 9px;
+    }
+}
+
+.page-header .homepage-banner i:not(.fa-download),  .page-header .homepage-banner img 
+{
+    font-size: 25px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    padding: 5px !important;
+    width: 44px;
+    height: 44px;
+    line-height: 30px;
+    margin-bottom: 10px;
+}
+.page-header .homepage-banner div
+{
+    font-weight: 500;
+    font-size: 15px;
+}
+.page-header a, .page-header i 
+{
+    background-color: #f5f5f5; 
+    color: #444;
+}
+.page-header i, .page-header img 
+{ 
+    border-color: #444 !important;
+}
+.page-header img 
+{ 
+    background-color: #f5f5f5; 
+}
+.page-header #new-patinent-home
+{
+    border-bottom: 8px solid #f07894;
+}
+.page-header #new-patinent-home:hover, .page-header #new-patinent-home:focus
+{
+    border-bottom: 8px solid #44444452;
+    color: #fff;
+    background-color: #f07894;
+    transition: background 1s;
+}
+.page-header #daily-care-home
+{
+    border-bottom: 8px solid #58cc90;
+}
+.page-header #daily-care-home:hover, .page-header #daily-care-home:focus
+{
+    border-bottom: 8px solid #44444452;
+    color: #fff;
+    background-color: #58cc90;
+    transition: background 1s;
+}
+.page-header #nurse-daily-care-home
+{
+    border-bottom: 8px solid #3f6ad8;
+}
+.page-header #nurse-daily-care-home:hover, .page-header #nurse-daily-care-home:focus
+{
+    border-bottom: 8px solid #44444452;
+    color: #fff;
+    background-color: #3f6ad8;
+    transition: background 1s;
+}
+.page-header #nurse-by-registration
+{
+    border-bottom: 8px solid #495057;
+}
+.page-header #nurse-by-registration:hover, .page-header #nurse-by-registration:focus
+{
+    border-bottom: 8px solid #44444452;
+    color: #fff;
+    background-color: #495057;
+    transition: background 1s;
+}
+.page-header #nurse-hour-wise
+{
+    border-bottom: 8px solid #ecab0e;
+}
+.page-header #nurse-hour-wise:hover, .page-header #nurse-hour-wise:focus
+{
+    border-bottom: 8px solid #44444452;
+    color: #fff;
+    background-color: #ecab0e;
+    transition: background 1s;
+}
+
+.page-header #problem-sheet-home
+{
+    border-bottom: 8px solid rgba(114, 116, 15,1);
+}
+.page-header #problem-sheet-home:hover, .page-header #problem-sheet-home:focus
+{
+    border-bottom: 8px solid #44444452;
+    color: #fff;
+    background-color: rgba(114, 116, 15,1);
+    transition: background 1s;
+}
+
+.page-header #discharge-home
+{
+    border-bottom: 8px solid #3ca9e8;
+}
+.page-header #discharge-home:hover, .page-header #discharge-home:focus
+{
+    border-bottom: 8px solid #44444452;
+    color: #fff;
+    background-color: #3ca9e8;
+    transition: background 1s;
+}
+
+.page-header #home-calendar
+{
+    border-bottom: 8px solid rgb(21, 116, 15,1);
+}
+.page-header #home-calendar:hover, .page-header #home-calendar:focus
+{
+    border-bottom: 8px solid #44444452;
+    color: #fff;
+    background-color: rgb(21, 116, 15,1);
+    transition: background 1s;
+}
+
+.page-header #ballard-score
+{
+    border-bottom: 8px solid #4d77cc;
+}
+.page-header #ballard-score:hover, .page-header #ballard-score:focus
+{
+    border-bottom: 8px solid #44444452;
+    color: #fff;
+    background-color: #4d77cc;
+    transition: background 1s;
+}
+.page-header #glucose-rate
+{
+    border-bottom: 8px solid #34a7c8;
+}
+.page-header #glucose-rate:hover, .page-header #glucose-rate:focus
+{
+    border-bottom: 8px solid #44444452;
+    color: #fff;
+    background-color: #34a7c8;
+    transition: background 1s;
+}
+.page-header #age-calculator
+{
+    border-bottom: 8px solid #5eaf5e;
+}
+.page-header #age-calculator:hover, .page-header #age-calculator:focus
+{
+    border-bottom: 8px solid #44444452;
+    color: #fff;
+    background-color: #5eaf5e;
+    transition: background 1s;
+}
+.page-header #tpn-calculator
+{
+    border-bottom: 8px solid #f73d1d9c;
+}
+.page-header #tpn-calculator:hover, .page-header #tpn-calculator:focus
+{
+    border-bottom: 8px solid #44444452;
+    color: #fff;
+    background-color: #f73d1d9c;
+    transition: background 1s;
+}
+.page-header #remove-record
+{
+    border-bottom: 8px solid #009688;
+}
+.page-header #remove-record:hover, .page-header #remove-record:focus
+{
+    border-bottom: 8px solid #44444452;
+    color: #fff;
+    background-color: #009688;
+    transition: background 1s;
+}
+.page-header #ward-management
+{
+    border-bottom: 8px solid #58cc90;
+}
+.page-header #ward-management:hover, .page-header #ward-management:focus
+{
+    border-bottom: 8px solid #44444452;
+    color: #fff;
+    background-color: #58cc90;
+    transition: background 1s;
+}
+.page-header #lab-request
+{
+    border-bottom: 8px solid #5184a3;
+}
+.page-header #lab-request:hover, .page-header #lab-request:focus
+{
+    border-bottom: 8px solid #44444452;
+    color: #fff;
+    background-color: #5184a3;
+    transition: background 1s;
+}
+@media (max-width: 1034px)
+{
+    .page-header .homepage-banner div
+    {
+        font-size: 13px;
+    }
+    .crumbs .breadcrumb li a
+    {
+        font-size: 12px;
+    }
+}
+
+.page-header #hero-score {
+    border-bottom: 8px solid #141414;
+}
+.page-header #hero-score:hover, .page-header #hero-score:focus {
+    border-bottom: 8px solid black;
+    color: #fff;
+    background-color: #14141466;
+    transition: background 1s;
+}
+
+.page-header #nsofa-score {
+    border-bottom: 8px solid #bf5998;
+}
+.page-header #nsofa-score:hover, .page-header #nsofa-score:focus {
+    border-bottom: 8px solid #bf5998;
+    color: #fff;
+    background-color: #bf5998a1;
+    transition: background 1s;
+}
+
+.page-header #nicu-time-line {
+    border-bottom: 8px solid #af653b;
+}
+.page-header #nicu-time-line:hover, .page-header #nicu-time-line:focus {
+    border-bottom: 8px solid #af653b;
+    color: #fff;
+    background-color: #af653ba3;
+    transition: background 1s;
+}
+
+.page-header #msns-score {
+    border-bottom: 8px solid #bf5998;
+}
+.page-header #msns-score:hover, .page-header #msns-score:focus {
+    border-bottom: 8px solid #bf5998;
+    color: #fff;
+    background-color: #bf5998a1;
+    transition: background 1s;
+}
+
+.page-header #nutrition-score {
+    border-bottom: 8px solid #f58a8a;
+}
+.page-header #nutrition-score:hover, .page-header #nutrition-score:focus {
+    border-bottom: 8px solid #f58a8a;
+    color: #fff;
+    background-color: #FFB3B3;
+    transition: background 1s;
+}
+

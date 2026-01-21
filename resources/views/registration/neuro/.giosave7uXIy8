@@ -1,0 +1,471 @@
+<style type="text/css">
+    .carolina-infant-table{
+        overflow-x: scroll;
+    }
+    .carolina-infant-table .row-head
+    {
+        vertical-align: middle !important;
+        transform: rotate(270deg);
+        text-transform: uppercase;
+        font-weight: 600;
+        white-space: nowrap;
+        max-width: 60px;
+    }
+    .carolina-infant-container .table td:not(.no-border), .carolina-infant-container .table th:not(.no-border)
+    {
+        border: 1px solid #888;
+        border-collapse: collapse;
+    }
+    .carolina-infant-container .table th:not(.no-border)
+    {
+        border-top: 1px solid #888 !important;
+    }
+    .carolina-infant-container .table td
+    {
+        position: relative;
+        vertical-align: middle;
+        text-align: center;
+    }
+    .carolina-infant-container .table td strong
+    {
+        text-align: left;
+    }
+    .carolina-infant-container .image-container
+    {
+        display: table-cell;
+        position: absolute;
+        bottom: 7px;
+        left: 15%;
+    }
+    .carolina-infant-container .image-container img
+    {
+        vertical-align: bottom;
+    }
+    .carolina-infant-container .side-indication:before
+    {
+        position: absolute;
+        bottom: -10px;
+        left: -13px;
+        content: 'R';
+        font-size: 13px;
+        font-weight: 600;
+    }
+    .carolina-infant-container .side-indication:after
+    {
+        position: absolute;
+        bottom: -10px;
+        right: -13px;
+        content: 'L';
+        font-size: 13px;
+        font-weight: 600;
+    }
+    .carolina-infant-container .image-container i
+    {
+        display: block;
+        text-align: center;
+        font-size: 20px;
+    }
+    .carolina-infant-container .popliteal-angle .image-container
+    {
+        bottom: 30% !important;
+        left: 30% !important;
+    }
+    .carolina-infant-container .popliteal-angle .image-container i
+    {
+        font-size: 13px;
+    }
+    .carolina-infant-container .arm-recoil td img
+    {
+        min-width: 125%;
+    }
+    .carolina-infant-container .posture td p, .leg-recoil td p 
+    {
+        padding-bottom: 30px !important;
+    }
+    .carolina-infant-container .ventral-suspension td p
+    {
+        padding-bottom: 40px !important;
+    }
+    .carolina-infant-container .head-lag td p
+    {
+        padding-bottom: 50px !important;
+    }
+    .carolina-infant-container .arm-traction td p, .carolina-infant-container .arm-recoil td p
+    {
+        padding-bottom: 70px !important;
+    }
+    .carolina-infant-container .bg-secondary
+    {
+        background-color: #d5d5d5;
+    }
+    .carolina-infant-container .no-border
+    {
+        border: 0px !important;
+    }
+    .carolina-infant-container .sub-table tbody td
+    {
+        padding: 3px 5px !important;
+    }
+    .carolina-infant-container .sub-table
+    {
+        margin-bottom: 0px !important;
+    }
+    /*.carolina-infant-container .selected-score
+    {
+        background-color: #d4f5ff;
+        box-shadow: 0px 0px 10px #999;
+        transition: all .1s ease;
+    }*/
+    .carolina-infant-container .valign-middle td
+    {
+        vertical-align: middle !important;
+    }
+    .carolina-infant-container .table-list
+    {
+        padding-left: 5px !important;
+        padding-bottom: 80px;
+    }
+    .carolina-infant-container .table-responsive {
+        border: 1px solid black;
+        margin-bottom: 15px;
+    } 
+    .carolina-infant-container .table {
+        margin-bottom: 0px !important;
+    } 
+    .carolina-infant-container h3 {
+        color: white;
+        background-color: var(--theme-color);
+        margin: 0px;
+        padding: 15px;
+    }
+    .half-mark.green{
+        height: 100%;
+        background: linear-gradient(90deg, #51a351 50%, #FFFFFF 50%);
+    }
+    .full-mark.green{
+        height: 100%;
+        background: linear-gradient(90deg, #51a351 100%, #51a351 100%);
+    }
+    .half-mark.red{
+        height: 100%;
+        background: linear-gradient(90deg, #bd362f 50%, #FFFFFF 50%);
+        color: #fff !important;
+    }
+    .full-mark.red{
+        height: 100%;
+        background: linear-gradient(90deg, #bd362f 100%, #bd362f 100%);
+        color: #fff !important;
+    }
+</style>
+<div class="row">
+    <div class="col-xs-12 text-right back-to-screeening">
+        <button type="button" class="btn btn-success back_to_screening"><i class="fa fa-chevron-circle-left"></i> BACK TO SCREENING</button>
+    </div>
+    
+</div>
+
+@php
+    $carolina_infants_results = array();
+    if(isset($carolina_infants_details->result_data) && !empty($carolina_infants_details->result_data)){
+        $carolina_infants_results = json_decode($carolina_infants_details->result_data, true);
+    }
+
+@endphp
+
+<div class="col-md-12">
+    <div id="hinescreening1">
+        <div class="row carolina-infant-container">
+            <h3><strong>DEVELOPMENTAL PROGRESS CHART - INFANTS</strong></h3>
+            <div class="table-responsive">
+                <table class="table carolina-infant-table">
+                    <thead>
+                        <tr> 
+                            <th width="10"></th>
+                            <th> <strong>Curriculum Sequence</th>
+                            <th colspan="6">0-3 Months</th>
+                            <th colspan="6">3-6 Months</th>
+                            <th colspan="5">6-9 Months</th>
+                            <th colspan="5">9-12 Months</th>
+                            <th colspan="3">12-15 Months</th>
+                            <th colspan="4">15-18 Months</th>
+                            <th colspan="4">18-21 Months</th>
+                            <th colspan="5">21-24 Months</th>
+                            <th colspan="7">24-30 Months</th>
+                            <th colspan="7">30-36 Months</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                <tr>
+                <td rowspan="7" class="row-head not-score">Personal-Social</td>
+                <td class="not-score"><strong>1. Self-Regulations & Responibility</strong></td>
+                <td colspan="2" onclick="updateInfantScore(event, this, 'self_regulation_responsibility', 'a')" data-main_index="self_regulation_responsibility" data-sub_index="a" class="@if(isset($carolina_infants_results['self_regulation_responsibility']['a']['value']) && $carolina_infants_results['self_regulation_responsibility']['a']['value'] == '0.5') half-mark {{ $carolina_infants_results['self_regulation_responsibility']['a']['color'] }} @elseif(isset($carolina_infants_results['self_regulation_responsibility']['a']['value']) && $carolina_infants_results['self_regulation_responsibility']['a']['value'] == '1') full-mark  {{ $carolina_infants_results['self_regulation_responsibility']['a']['color'] }}  @endif">a</td>
+
+                <td colspan="2" onclick="updateInfantScore(event, this, 'self_regulation_responsibility','b')" data-main_index="self_regulation_responsibility" data-sub_index="b" class="@if(isset($carolina_infants_results['self_regulation_responsibility']['b']['value']) && $carolina_infants_results['self_regulation_responsibility']['b']['value'] == '0.5') half-mark {{ $carolina_infants_results['self_regulation_responsibility']['b']['color'] }} @elseif(isset($carolina_infants_results['self_regulation_responsibility']['b']['value']) && $carolina_infants_results['self_regulation_responsibility']['b']['value'] == '1') full-mark  {{ $carolina_infants_results['self_regulation_responsibility']['b']['color'] }} @endif ">b</td>
+
+                <td colspan="2" onclick="updateInfantScore(event, this, 'self_regulation_responsibility','c')" data-main_index="self_regulation_responsibility" data-sub_index="c" class="@if(isset($carolina_infants_results['self_regulation_responsibility']['c']['value']) && $carolina_infants_results['self_regulation_responsibility']['c']['value'] == '0.5') half-mark {{ $carolina_infants_results['self_regulation_responsibility']['a']['color'] }} @elseif(isset($carolina_infants_results['self_regulation_responsibility']['c']['value']) && $carolina_infants_results['self_regulation_responsibility']['c']['value'] == '1') full-mark  {{ $carolina_infants_results['self_regulation_responsibility']['c']['color'] }} @endif" >c</td>
+
+                <td colspan="6" onclick="updateInfantScore(event, this, 'self_regulation_responsibility','d')" data-main_index="self_regulation_responsibility" data-sub_index="d" class="@if(isset($carolina_infants_results['self_regulation_responsibility']['d']['value']) && $carolina_infants_results['self_regulation_responsibility']['d']['value'] == '0.5') half-mark {{ $carolina_infants_results['self_regulation_responsibility']['d']['color'] }} @elseif(isset($carolina_infants_results['self_regulation_responsibility']['d']['value']) && $carolina_infants_results['self_regulation_responsibility']['d']['value'] == '1') full-mark  {{ $carolina_infants_results['self_regulation_responsibility']['d']['color'] }} @endif">d</td>
+
+                <td colspan="5" onclick="updateInfantScore(event, this, 'self_regulation_responsibility','e')" data-main_index="self_regulation_responsibility" data-sub_index="e" class="@if(isset($carolina_infants_results['self_regulation_responsibility']['e']['value']) && $carolina_infants_results['self_regulation_responsibility']['e']['value'] == '0.5') half-mark {{ $carolina_infants_results['self_regulation_responsibility']['a']['color'] }} @elseif(isset($carolina_infants_results['self_regulation_responsibility']['e']['value']) && $carolina_infants_results['self_regulation_responsibility']['e']['value'] == '1') full-mark  {{ $carolina_infants_results['self_regulation_responsibility']['e']['color'] }} @endif" >e</td>
+
+                <td colspan="5" onclick="updateInfantScore(event, this, 'self_regulation_responsibility','f')" data-main_index="self_regulation_responsibility" data-sub_index="f" class="@if(isset($carolina_infants_results['self_regulation_responsibility']['f']['value']) && $carolina_infants_results['self_regulation_responsibility']['f']['value'] == '0.5') half-mark {{ $carolina_infants_results['self_regulation_responsibility']['f']['color'] }} @elseif(isset($carolina_infants_results['self_regulation_responsibility']['f']['value']) && $carolina_infants_results['self_regulation_responsibility']['f']['value'] == '1') full-mark  {{ $carolina_infants_results['self_regulation_responsibility']['f']['color'] }} @endif">f</td>
+                <td colspan="2" onclick="updateInfantScore(event, this, 'self_regulation_responsibility','g')" data-main_index="self_regulation_responsibility" data-sub_index="g"
+                class="@if(isset($carolina_infants_results['self_regulation_responsibility']['g']['value']) && $carolina_infants_results['self_regulation_responsibility']['g']['value'] == '0.5') half-mark {{ $carolina_infants_results['self_regulation_responsibility']['g']['color'] }} @elseif(isset($carolina_infants_results['self_regulation_responsibility']['g']['value']) && $carolina_infants_results['self_regulation_responsibility']['g']['value'] == '1') full-mark  {{ $carolina_infants_results['self_regulation_responsibility']['g']['color'] }} @endif">g</td>
+                <td colspan="1" onclick="updateInfantScore(event, this, 'self_regulation_responsibility','h')" data-main_index="self_regulation_responsibility" data-sub_index="h" class="@if(isset($carolina_infants_results['self_regulation_responsibility']['h']['value']) && $carolina_infants_results['self_regulation_responsibility']['h']['value'] == '0.5') half-mark {{ $carolina_infants_results['self_regulation_responsibility']['h']['color'] }} @elseif(isset($carolina_infants_results['self_regulation_responsibility']['h']['value']) && $carolina_infants_results['self_regulation_responsibility']['h']['value'] == '1') full-mark  {{ $carolina_infants_results['self_regulation_responsibility']['h']['color'] }} @endif">h</td>
+
+                <td colspan="4" onclick="updateInfantScore(event, this, 'self_regulation_responsibility','i')" data-main_index="self_regulation_responsibility" data-sub_index="i"
+                class="@if(isset($carolina_infants_results['self_regulation_responsibility']['i']['value']) && $carolina_infants_results['self_regulation_responsibility']['i']['value'] == '0.5') half-mark {{ $carolina_infants_results['self_regulation_responsibility']['i']['color'] }} @elseif(isset($carolina_infants_results['self_regulation_responsibility']['i']['value']) && $carolina_infants_results['self_regulation_responsibility']['i']['value'] == '1') full-mark  {{ $carolina_infants_results['self_regulation_responsibility']['i']['color'] }} @endif">i</td>
+
+                <td colspan="2" onclick="updateInfantScore(event, this, 'self_regulation_responsibility','j')" data-main_index="self_regulation_responsibility" data-sub_index="j" class="@if(isset($carolina_infants_results['self_regulation_responsibility']['j']['value']) && $carolina_infants_results['self_regulation_responsibility']['j']['value'] == '0.5') half-mark {{ $carolina_infants_results['self_regulation_responsibility']['j']['color'] }} @elseif(isset($carolina_infants_results['self_regulation_responsibility']['j']['value']) && $carolina_infants_results['self_regulation_responsibility']['j']['value'] == '1') full-mark  {{ $carolina_infants_results['self_regulation_responsibility']['j']['color'] }} @endif">j</td>
+
+                <td colspan="2" onclick="updateInfantScore(event, this, 'self_regulation_responsibility','k')" data-main_index="self_regulation_responsibility" data-sub_index="k" class="@if(isset($carolina_infants_results['self_regulation_responsibility']['k']['value']) && $carolina_infants_results['self_regulation_responsibility']['k']['value'] == '0.5') half-mark {{ $carolina_infants_results['self_regulation_responsibility']['k']['color'] }} @elseif(isset($carolina_infants_results['self_regulation_responsibility']['k']['value']) && $carolina_infants_results['self_regulation_responsibility']['k']['value'] == '1') full-mark  {{ $carolina_infants_results['self_regulation_responsibility']['k']['color'] }} @endif">k</td>
+
+                <td colspan="5" onclick="updateInfantScore(event, this, 'self_regulation_responsibility','l')" data-main_index="self_regulation_responsibility" data-sub_index="l" class="@if(isset($carolina_infants_results['self_regulation_responsibility']['l']['value']) && $carolina_infants_results['self_regulation_responsibility']['l']['value'] == '0.5') half-mark {{ $carolina_infants_results['self_regulation_responsibility']['l']['color'] }} @elseif(isset($carolina_infants_results['self_regulation_responsibility']['l']['value']) && $carolina_infants_results['self_regulation_responsibility']['l']['value'] == '1') full-mark  {{ $carolina_infants_results['self_regulation_responsibility']['l']['color'] }} @endif">l</td>
+
+                <td colspan="4" onclick="updateInfantScore(event, this, 'self_regulation_responsibility','m')" data-main_index="self_regulation_responsibility" data-sub_index="m" class="@if(isset($carolina_infants_results['self_regulation_responsibility']['m']['value']) && $carolina_infants_results['self_regulation_responsibility']['m']['value'] == '0.5') half-mark {{ $carolina_infants_results['self_regulation_responsibility']['m']['color'] }} @elseif(isset($carolina_infants_results['self_regulation_responsibility']['m']['value']) && $carolina_infants_results['self_regulation_responsibility']['m']['value'] == '1') full-mark  {{ $carolina_infants_results['self_regulation_responsibility']['m']['color'] }} @endif">m</td>
+
+                <td colspan="3" onclick="updateInfantScore(event, this, 'self_regulation_responsibility','n')" data-main_index="self_regulation_responsibility" data-sub_index="n" class="@if(isset($carolina_infants_results['self_regulation_responsibility']['n']['value']) && $carolina_infants_results['self_regulation_responsibility']['n']['value'] == '0.5') half-mark {{ $carolina_infants_results['self_regulation_responsibility']['n']['color'] }} @elseif(isset($carolina_infants_results['self_regulation_responsibility']['n']['value']) && $carolina_infants_results['self_regulation_responsibility']['n']['value'] == '1') full-mark  {{ $carolina_infants_results['self_regulation_responsibility']['n']['color'] }} @endif">n</td>
+
+                <td colspan="7" onclick="updateInfantScore(event, this, 'self_regulation_responsibility','o')" data-main_index="self_regulation_responsibility" data-sub_index="o" class="@if(isset($carolina_infants_results['self_regulation_responsibility']['o']['value']) && $carolina_infants_results['self_regulation_responsibility']['o']['value'] == '0.5') half-mark {{ $carolina_infants_results['self_regulation_responsibility']['o']['color'] }} @elseif(isset($carolina_infants_results['self_regulation_responsibility']['o']['value']) && $carolina_infants_results['self_regulation_responsibility']['o']['value'] == '1') full-mark  {{ $carolina_infants_results['self_regulation_responsibility']['o']['color'] }} @endif">o</td>
+            </tr>
+            <tr>
+                <td class="not-score"><strong>2. Interpersonal Skills</strong></td>
+                <td colspan="2" onclick="updateInfantScore(event, this, 'interpersonal_skills','a')" data-main_index="interpersonal_skills" data-sub_index="a" class="@if(isset($carolina_infants_results['interpersonal_skills']['a']['value']) && $carolina_infants_results['interpersonal_skills']['a']['value'] == '0.5') half-mark {{ $carolina_infants_results['interpersonal_skills']['a']['color'] }} @elseif(isset($carolina_infants_results['interpersonal_skills']['a']['value']) && $carolina_infants_results['interpersonal_skills']['a']['value'] == '1') full-mark  {{ $carolina_infants_results['interpersonal_skills']['a']['color'] }} @endif">a</td> 
+
+                <td colspan="2" onclick="updateInfantScore(event, this, 'interpersonal_skills','b')" data-main_index="interpersonal_skills" data-sub_index="b" class="@if(isset($carolina_infants_results['interpersonal_skills']['b']['value']) && $carolina_infants_results['interpersonal_skills']['b']['value'] == '0.5') half-mark {{ $carolina_infants_results['interpersonal_skills']['b']['color'] }} @elseif(isset($carolina_infants_results['interpersonal_skills']['b']['value']) && $carolina_infants_results['interpersonal_skills']['b']['value'] == '1') full-mark  {{ $carolina_infants_results['interpersonal_skills']['b']['color'] }} @endif" >b</td>
+
+                <td colspan="2" onclick="updateInfantScore(event, this, 'interpersonal_skills','c')" data-main_index="interpersonal_skills" data-sub_index="c" class="@if(isset($carolina_infants_results['interpersonal_skills']['c']['value']) && $carolina_infants_results['interpersonal_skills']['c']['value'] == '0.5') half-mark {{ $carolina_infants_results['interpersonal_skills']['c']['color'] }} @elseif(isset($carolina_infants_results['interpersonal_skills']['c']['value']) && $carolina_infants_results['interpersonal_skills']['c']['value'] == '1') full-mark  {{ $carolina_infants_results['interpersonal_skills']['c']['color'] }} @endif">c</td>
+
+                <td colspan="3" onclick="updateInfantScore(event, this, 'interpersonal_skills','d')" data-main_index="interpersonal_skills" data-sub_index="d" class="@if(isset($carolina_infants_results['interpersonal_skills']['d']['value']) && $carolina_infants_results['interpersonal_skills']['d']['value'] == '0.5') half-mark {{ $carolina_infants_results['interpersonal_skills']['d']['color'] }} @elseif(isset($carolina_infants_results['interpersonal_skills']['d']['value']) && $carolina_infants_results['interpersonal_skills']['d']['value'] == '1') full-mark  {{ $carolina_infants_results['interpersonal_skills']['d']['color'] }} @endif">d</td>
+
+                <td colspan="3" onclick="updateInfantScore(event, this, 'interpersonal_skills','e')" data-main_index="interpersonal_skills" data-sub_index="e" class="@if(isset($carolina_infants_results['interpersonal_skills']['e']['value']) && $carolina_infants_results['interpersonal_skills']['e']['value'] == '0.5') half-mark {{ $carolina_infants_results['interpersonal_skills']['e']['color'] }} @elseif(isset($carolina_infants_results['interpersonal_skills']['e']['value']) && $carolina_infants_results['interpersonal_skills']['e']['value'] == '1') full-mark  {{ $carolina_infants_results['interpersonal_skills']['e']['color'] }} @endif">e</td>
+
+                <td colspan="2" onclick="updateInfantScore(event, this, 'interpersonal_skills','f')" data-main_index="interpersonal_skills" data-sub_index="f" class="@if(isset($carolina_infants_results['interpersonal_skills']['f']['value']) && $carolina_infants_results['interpersonal_skills']['f']['value'] == '0.5') half-mark {{ $carolina_infants_results['interpersonal_skills']['f']['color'] }} @elseif(isset($carolina_infants_results['interpersonal_skills']['f']['value']) && $carolina_infants_results['interpersonal_skills']['f']['value'] == '1') full-mark  {{ $carolina_infants_results['interpersonal_skills']['f']['color'] }} @endif">f</td>
+
+                <td colspan="2" onclick="updateInfantScore(event, this, 'interpersonal_skills','g')" data-main_index="interpersonal_skills" data-sub_index="g" class="@if(isset($carolina_infants_results['interpersonal_skills']['g']['value']) && $carolina_infants_results['interpersonal_skills']['g']['value'] == '0.5') half-mark {{ $carolina_infants_results['interpersonal_skills']['g']['color'] }} @elseif(isset($carolina_infants_results['interpersonal_skills']['g']['value']) && $carolina_infants_results['interpersonal_skills']['g']['value'] == '1') full-mark  {{ $carolina_infants_results['interpersonal_skills']['g']['color'] }} @endif">g</td>
+
+                <td colspan="1" onclick="updateInfantScore(event, this, 'interpersonal_skills','h')" data-main_index="interpersonal_skills" data-sub_index="h" class="@if(isset($carolina_infants_results['interpersonal_skills']['h']['value']) && $carolina_infants_results['interpersonal_skills']['h']['value'] == '0.5') half-mark {{ $carolina_infants_results['interpersonal_skills']['h']['color'] }} @elseif(isset($carolina_infants_results['interpersonal_skills']['h']['value']) && $carolina_infants_results['interpersonal_skills']['h']['value'] == '1') full-mark  {{ $carolina_infants_results['interpersonal_skills']['h']['color'] }} @endif">h</td>
+
+                <td colspan="2" onclick="updateInfantScore(event, this, 'interpersonal_skills','i')" data-main_index="interpersonal_skills" data-sub_index="i" class="@if(isset($carolina_infants_results['interpersonal_skills']['i']['value']) && $carolina_infants_results['interpersonal_skills']['i']['value'] == '0.5') half-mark {{ $carolina_infants_results['interpersonal_skills']['i']['color'] }} @elseif(isset($carolina_infants_results['interpersonal_skills']['i']['value']) && $carolina_infants_results['interpersonal_skills']['i']['value'] == '1') full-mark  {{ $carolina_infants_results['interpersonal_skills']['i']['color'] }} @endif">i</td>
+
+                <td colspan="2" onclick="updateInfantScore(event, this, 'interpersonal_skills','j')" data-main_index="interpersonal_skills" data-sub_index="j" class="@if(isset($carolina_infants_results['interpersonal_skills']['j']['value']) && $carolina_infants_results['interpersonal_skills']['j']['value'] == '0.5') half-mark {{ $carolina_infants_results['interpersonal_skills']['j']['color'] }} @elseif(isset($carolina_infants_results['interpersonal_skills']['j']['value']) && $carolina_infants_results['interpersonal_skills']['j']['value'] == '1') full-mark  {{ $carolina_infants_results['interpersonal_skills']['j']['color'] }} @endif">j</td>
+
+                <td colspan="1" onclick="updateInfantScore(event, this, 'interpersonal_skills','k')" data-main_index="interpersonal_skills" data-sub_index="k" class="@if(isset($carolina_infants_results['interpersonal_skills']['k']['value']) && $carolina_infants_results['interpersonal_skills']['k']['value'] == '0.5') half-mark {{ $carolina_infants_results['interpersonal_skills']['k']['color'] }} @elseif(isset($carolina_infants_results['interpersonal_skills']['k']['value']) && $carolina_infants_results['interpersonal_skills']['k']['value'] == '1') full-mark  {{ $carolina_infants_results['interpersonal_skills']['k']['color'] }} @endif">k</td>
+
+                <td colspan="2" onclick="updateInfantScore(event, this, 'interpersonal_skills','l')" data-main_index="interpersonal_skills" data-sub_index="l" class="@if(isset($carolina_infants_results['interpersonal_skills']['l']['value']) && $carolina_infants_results['interpersonal_skills']['l']['value'] == '0.5') half-mark {{ $carolina_infants_results['interpersonal_skills']['l']['color'] }} @elseif(isset($carolina_infants_results['interpersonal_skills']['l']['value']) && $carolina_infants_results['interpersonal_skills']['l']['value'] == '1') full-mark  {{ $carolina_infants_results['interpersonal_skills']['l']['color'] }} @endif">l</td>
+
+                <td colspan="1" onclick="updateInfantScore(event, this, 'interpersonal_skills','m')" data-main_index="interpersonal_skills" data-sub_index="m" class="@if(isset($carolina_infants_results['interpersonal_skills']['m']['value']) && $carolina_infants_results['interpersonal_skills']['m']['value'] == '0.5') half-mark {{ $carolina_infants_results['interpersonal_skills']['m']['color'] }} @elseif(isset($carolina_infants_results['interpersonal_skills']['m']['value']) && $carolina_infants_results['interpersonal_skills']['m']['value'] == '1') full-mark  {{ $carolina_infants_results['interpersonal_skills']['m']['color'] }} @endif">m</td>
+
+                <td colspan="2" onclick="updateInfantScore(event, this, 'interpersonal_skills','n')" data-main_index="interpersonal_skills" data-sub_index="n" class="@if(isset($carolina_infants_results['interpersonal_skills']['n']['value']) && $carolina_infants_results['interpersonal_skills']['n']['value'] == '0.5') half-mark {{ $carolina_infants_results['interpersonal_skills']['n']['color'] }} @elseif(isset($carolina_infants_results['interpersonal_skills']['n']['value']) && $carolina_infants_results['interpersonal_skills']['n']['value'] == '1') full-mark  {{ $carolina_infants_results['interpersonal_skills']['n']['color'] }} @endif">n</td>
+
+                <td colspan="1" onclick="updateInfantScore(event, this, 'interpersonal_skills','o')" data-main_index="interpersonal_skills" data-sub_index="o" class="@if(isset($carolina_infants_results['interpersonal_skills']['o']['value']) && $carolina_infants_results['interpersonal_skills']['o']['value'] == '0.5') half-mark {{ $carolina_infants_results['interpersonal_skills']['o']['color'] }} @elseif(isset($carolina_infants_results['interpersonal_skills']['o']['value']) && $carolina_infants_results['interpersonal_skills']['o']['value'] == '1') full-mark  {{ $carolina_infants_results['interpersonal_skills']['o']['color'] }} @endif">o</td>
+
+                <td colspan="1" onclick="updateInfantScore(event, this, 'interpersonal_skills','p')" data-main_index="interpersonal_skills" data-sub_index="p" class="@if(isset($carolina_infants_results['interpersonal_skills']['p']['value']) && $carolina_infants_results['interpersonal_skills']['p']['value'] == '0.5') half-mark {{ $carolina_infants_results['interpersonal_skills']['p']['color'] }} @elseif(isset($carolina_infants_results['interpersonal_skills']['p']['value']) && $carolina_infants_results['interpersonal_skills']['p']['value'] == '1') full-mark  {{ $carolina_infants_results['interpersonal_skills']['p']['color'] }} @endif">p</td>
+
+                <td colspan="2" onclick="updateInfantScore(event, this, 'interpersonal_skills','q')" data-main_index="interpersonal_skills" data-sub_index="q" class="@if(isset($carolina_infants_results['interpersonal_skills']['q']['value']) && $carolina_infants_results['interpersonal_skills']['q']['value'] == '0.5') half-mark {{ $carolina_infants_results['interpersonal_skills']['q']['color'] }} @elseif(isset($carolina_infants_results['interpersonal_skills']['q']['value']) && $carolina_infants_results['interpersonal_skills']['q']['value'] == '1') full-mark  {{ $carolina_infants_results['interpersonal_skills']['q']['color'] }} @endif">q</td>
+
+                <td colspan="2" onclick="updateInfantScore(event, this, 'interpersonal_skills','r')" data-main_index="interpersonal_skills" data-sub_index="r" class="@if(isset($carolina_infants_results['interpersonal_skills']['r']['value']) && $carolina_infants_results['interpersonal_skills']['r']['value'] == '0.5') half-mark {{ $carolina_infants_results['interpersonal_skills']['r']['color'] }} @elseif(isset($carolina_infants_results['interpersonal_skills']['r']['value']) && $carolina_infants_results['interpersonal_skills']['r']['value'] == '1') full-mark  {{ $carolina_infants_results['interpersonal_skills']['r']['color'] }} @endif">r</td>
+
+                <td colspan="2" onclick="updateInfantScore(event, this, 'interpersonal_skills','s')" data-main_index="interpersonal_skills" data-sub_index="s" class="@if(isset($carolina_infants_results['interpersonal_skills']['s']['value']) && $carolina_infants_results['interpersonal_skills']['s']['value'] == '0.5') half-mark {{ $carolina_infants_results['interpersonal_skills']['s']['color'] }} @elseif(isset($carolina_infants_results['interpersonal_skills']['s']['value']) && $carolina_infants_results['interpersonal_skills']['s']['value'] == '1') full-mark  {{ $carolina_infants_results['interpersonal_skills']['s']['color'] }} @endif">s</td>
+
+                <td colspan="1" onclick="updateInfantScore(event, this, 'interpersonal_skills','t')" data-main_index="interpersonal_skills" data-sub_index="t" class="@if(isset($carolina_infants_results['interpersonal_skills']['t']['value']) && $carolina_infants_results['interpersonal_skills']['t']['value'] == '0.5') half-mark {{ $carolina_infants_results['interpersonal_skills']['t']['color'] }} @elseif(isset($carolina_infants_results['interpersonal_skills']['t']['value']) && $carolina_infants_results['interpersonal_skills']['t']['value'] == '1') full-mark  {{ $carolina_infants_results['interpersonal_skills']['t']['color'] }} @endif">t</td>
+
+                <td colspan="1" onclick="updateInfantScore(event, this, 'interpersonal_skills','u')" data-main_index="interpersonal_skills" data-sub_index="u" class="@if(isset($carolina_infants_results['interpersonal_skills']['u']['value']) && $carolina_infants_results['interpersonal_skills']['u']['value'] == '0.5') half-mark {{ $carolina_infants_results['interpersonal_skills']['u']['color'] }} @elseif(isset($carolina_infants_results['interpersonal_skills']['u']['value']) && $carolina_infants_results['interpersonal_skills']['u']['value'] == '1') full-mark  {{ $carolina_infants_results['interpersonal_skills']['u']['color'] }} @endif">u</td>
+
+                <td colspan="1" onclick="updateInfantScore(event, this, 'interpersonal_skills','v')" data-main_index="interpersonal_skills" data-sub_index="v" class="@if(isset($carolina_infants_results['interpersonal_skills']['v']['value']) && $carolina_infants_results['interpersonal_skills']['v']['value'] == '0.5') half-mark {{ $carolina_infants_results['interpersonal_skills']['v']['color'] }} @elseif(isset($carolina_infants_results['interpersonal_skills']['v']['value']) && $carolina_infants_results['interpersonal_skills']['v']['value'] == '1') full-mark  {{ $carolina_infants_results['interpersonal_skills']['v']['color'] }} @endif">v</td>
+
+                <td colspan="4" onclick="updateInfantScore(event, this, 'interpersonal_skills','w')" data-main_index="interpersonal_skills" data-sub_index="w" class="@if(isset($carolina_infants_results['interpersonal_skills']['w']['value']) && $carolina_infants_results['interpersonal_skills']['w']['value'] == '0.5') half-mark {{ $carolina_infants_results['interpersonal_skills']['w']['color'] }} @elseif(isset($carolina_infants_results['interpersonal_skills']['w']['value']) && $carolina_infants_results['interpersonal_skills']['w']['value'] == '1') full-mark  {{ $carolina_infants_results['interpersonal_skills']['w']['color'] }} @endif">w</td>
+
+                <td colspan="3" onclick="updateInfantScore(event, this, 'interpersonal_skills','x')" data-main_index="interpersonal_skills" data-sub_index="x" class="@if(isset($carolina_infants_results['interpersonal_skills']['x']['value']) && $carolina_infants_results['interpersonal_skills']['x']['value'] == '0.5') half-mark {{ $carolina_infants_results['interpersonal_skills']['x']['color'] }} @elseif(isset($carolina_infants_results['interpersonal_skills']['x']['value']) && $carolina_infants_results['interpersonal_skills']['x']['value'] == '1') full-mark  {{ $carolina_infants_results['interpersonal_skills']['x']['color'] }} @endif">x</td>
+
+                <td colspan="3" onclick="updateInfantScore(event, this, 'interpersonal_skills','y')" data-main_index="interpersonal_skills" data-sub_index="y" class="@if(isset($carolina_infants_results['interpersonal_skills']['y']['value']) && $carolina_infants_results['interpersonal_skills']['y']['value'] == '0.5') half-mark {{ $carolina_infants_results['interpersonal_skills']['y']['color'] }} @elseif(isset($carolina_infants_results['interpersonal_skills']['y']['value']) && $carolina_infants_results['interpersonal_skills']['y']['value'] == '1') full-mark  {{ $carolina_infants_results['interpersonal_skills']['y']['color'] }} @endif">y</td>
+
+                <td colspan="2" onclick="updateInfantScore(event, this, 'interpersonal_skills','z')" data-main_index="interpersonal_skills" data-sub_index="z" class="@if(isset($carolina_infants_results['interpersonal_skills']['z']['value']) && $carolina_infants_results['interpersonal_skills']['z']['value'] == '0.5') half-mark {{ $carolina_infants_results['interpersonal_skills']['z']['color'] }} @elseif(isset($carolina_infants_results['interpersonal_skills']['z']['value']) && $carolina_infants_results['interpersonal_skills']['z']['value'] == '1') full-mark  {{ $carolina_infants_results['interpersonal_skills']['z']['color'] }} @endif">z</td>
+
+                <td colspan="1" onclick="updateInfantScore(event, this, 'interpersonal_skills','aa')" data-main_index="interpersonal_skills" data-sub_index="aa" class="@if(isset($carolina_infants_results['interpersonal_skills']['aa']['value']) && $carolina_infants_results['interpersonal_skills']['aa']['value'] == '0.5') half-mark {{ $carolina_infants_results['interpersonal_skills']['aa']['color'] }} @elseif(isset($carolina_infants_results['interpersonal_skills']['aa']['value']) && $carolina_infants_results['interpersonal_skills']['aa']['value'] == '1') full-mark  {{ $carolina_infants_results['interpersonal_skills']['aa']['color'] }} @endif">aa</td>
+
+                <td colspan="1" onclick="updateInfantScore(event, this, 'interpersonal_skills','bb')" data-main_index="interpersonal_skills" data-sub_index="bb" class="@if(isset($carolina_infants_results['interpersonal_skills']['bb']['value']) && $carolina_infants_results['interpersonal_skills']['bb']['value'] == '0.5') half-mark {{ $carolina_infants_results['interpersonal_skills']['bb']['color'] }} @elseif(isset($carolina_infants_results['interpersonal_skills']['bb']['value']) && $carolina_infants_results['interpersonal_skills']['bb']['value'] == '1') full-mark  {{ $carolina_infants_results['interpersonal_skills']['bb']['color'] }} @endif">bb</td>
+            </tr>
+
+            <tr>
+                <td class="not-score"><strong>3. Self-Concept</strong></td>
+                <td colspan="6" class="not-score"></td>
+                <td colspan="6" class="not-score"></td>
+                <td colspan="5" class="not-score"></td>
+                <td colspan="3" onclick="updateInfantScore(event, this, 'self_concept','a')" data-main_index="self_concept" data-sub_index="a" class="@if(isset($carolina_infants_results['self_concept']['a']['value']) && $carolina_infants_results['self_concept']['a']['value'] == '0.5') half-mark {{ $carolina_infants_results['self_concept']['a']['color'] }}  @elseif(isset($carolina_infants_results['self_concept']['a']['value']) && $carolina_infants_results['self_concept']['a']['value'] == '1') full-mark  {{ $carolina_infants_results['self_concept']['a']['color'] }} @endif">a</td>
+
+                <td colspan="2" onclick="updateInfantScore(event, this, 'self_concept','b')" data-main_index="self_concept" data-sub_index="b" class="@if(isset($carolina_infants_results['self_concept']['b']['value']) && $carolina_infants_results['self_concept']['b']['value'] == '0.5') half-mark {{ $carolina_infants_results['self_concept']['b']['color'] }} @elseif(isset($carolina_infants_results['self_concept']['b']['value']) && $carolina_infants_results['self_concept']['b']['value'] == '1') full-mark  {{ $carolina_infants_results['self_concept']['b']['color'] }} @endif">b</td>
+
+
+                <td colspan="3" onclick="updateInfantScore(event, this, 'self_concept','c')" data-main_index="self_concept" data-sub_index="c" class="@if(isset($carolina_infants_results['self_concept']['c']['value']) && $carolina_infants_results['self_concept']['c']['value'] == '0.5') half-mark {{ $carolina_infants_results['self_concept']['c']['color'] }} @elseif(isset($carolina_infants_results['self_concept']['c']['value']) && $carolina_infants_results['self_concept']['c']['value'] == '1') full-mark  {{ $carolina_infants_results['self_concept']['c']['color'] }} @endif">c</td>
+
+                <td colspan="2" onclick="updateInfantScore(event, this, 'self_concept','d')" data-main_index="self_concept" data-sub_index="d" class="@if(isset($carolina_infants_results['self_concept']['d']['value']) && $carolina_infants_results['self_concept']['d']['value'] == '0.5') half-mark {{ $carolina_infants_results['self_concept']['d']['color'] }} @elseif(isset($carolina_infants_results['self_concept']['d']['value']) && $carolina_infants_results['self_concept']['d']['value'] == '1') full-mark  {{ $carolina_infants_results['self_concept']['d']['color'] }} @endif">d</td>
+
+                <td colspan="2" onclick="updateInfantScore(event, this, 'self_concept','e')" data-main_index="self_concept" data-sub_index="e" class="@if(isset($carolina_infants_results['self_concept']['e']['value']) && $carolina_infants_results['self_concept']['e']['value'] == '0.5') half-mark {{ $carolina_infants_results['self_concept']['e']['color'] }} @elseif(isset($carolina_infants_results['self_concept']['e']['value']) && $carolina_infants_results['self_concept']['e']['value'] == '1') full-mark  {{ $carolina_infants_results['self_concept']['e']['color'] }} @endif">e</td>
+
+                <td colspan="1" onclick="updateInfantScore(event, this, 'self_concept','f')" data-main_index="self_concept" data-sub_index="f" class="@if(isset($carolina_infants_results['self_concept']['f']['value']) && $carolina_infants_results['self_concept']['f']['value'] == '0.5') half-mark {{ $carolina_infants_results['self_concept']['f']['color'] }} @elseif(isset($carolina_infants_results['self_concept']['f']['value']) && $carolina_infants_results['self_concept']['f']['value'] == '1') full-mark  {{ $carolina_infants_results['self_concept']['f']['color'] }} @endif">f</td>
+
+                <td colspan="1" onclick="updateInfantScore(event, this, 'self_concept','g')" data-main_index="self_concept" data-sub_index="g" class="@if(isset($carolina_infants_results['self_concept']['g']['value']) && $carolina_infants_results['self_concept']['g']['value'] == '0.5') half-mark {{ $carolina_infants_results['self_concept']['g']['color'] }} @elseif(isset($carolina_infants_results['self_concept']['g']['value']) && $carolina_infants_results['self_concept']['g']['value'] == '1') full-mark  {{ $carolina_infants_results['self_concept']['g']['color'] }} @endif">g</td>
+
+                <td colspan="1" onclick="updateInfantScore(event, this, 'self_concept','h')" data-main_index="self_concept" data-sub_index="h" class="@if(isset($carolina_infants_results['self_concept']['h']['value']) && $carolina_infants_results['self_concept']['h']['value'] == '0.5') half-mark {{ $carolina_infants_results['self_concept']['h']['color'] }} @elseif(isset($carolina_infants_results['self_concept']['h']['value']) && $carolina_infants_results['self_concept']['h']['value'] == '1') full-mark  {{ $carolina_infants_results['self_concept']['h']['color'] }} @endif">h</td>
+
+                <td colspan="1" onclick="updateInfantScore(event, this, 'self_concept','i')" data-main_index="self_concept" data-sub_index="i" class="@if(isset($carolina_infants_results['self_concept']['i']['value']) && $carolina_infants_results['self_concept']['i']['value'] == '0.5') half-mark {{ $carolina_infants_results['self_concept']['i']['color'] }} @elseif(isset($carolina_infants_results['self_concept']['i']['value']) && $carolina_infants_results['self_concept']['i']['value'] == '1') full-mark  {{ $carolina_infants_results['self_concept']['i']['color'] }} @endif">i</td>
+
+                <td colspan="2" onclick="updateInfantScore(event, this, 'self_concept','j')" data-main_index="self_concept" data-sub_index="j" class="@if(isset($carolina_infants_results['self_concept']['j']['value']) && $carolina_infants_results['self_concept']['j']['value'] == '0.5') half-mark {{ $carolina_infants_results['self_concept']['j']['color'] }} @elseif(isset($carolina_infants_results['self_concept']['j']['value']) && $carolina_infants_results['self_concept']['j']['value'] == '1') full-mark  {{ $carolina_infants_results['self_concept']['j']['color'] }} @endif">j</td>
+
+                <td colspan="1" onclick="updateInfantScore(event, this, 'self_concept','k')" data-main_index="self_concept" data-sub_index="k" class="@if(isset($carolina_infants_results['self_concept']['k']['value']) && $carolina_infants_results['self_concept']['k']['value'] == '0.5') half-mark {{ $carolina_infants_results['self_concept']['k']['color'] }} @elseif(isset($carolina_infants_results['self_concept']['k']['value']) && $carolina_infants_results['self_concept']['k']['value'] == '1') full-mark  {{ $carolina_infants_results['self_concept']['k']['color'] }} @endif">k</td>
+
+                <td colspan="1" onclick="updateInfantScore(event, this, 'self_concept','l')" data-main_index="self_concept" data-sub_index="l" class="@if(isset($carolina_infants_results['self_concept']['l']['value']) && $carolina_infants_results['self_concept']['l']['value'] == '0.5') half-mark {{ $carolina_infants_results['self_concept']['l']['color'] }} @elseif(isset($carolina_infants_results['self_concept']['l']['value']) && $carolina_infants_results['self_concept']['l']['value'] == '1') full-mark  {{ $carolina_infants_results['self_concept']['l']['color'] }} @endif">l</td>
+
+                <td colspan="1" onclick="updateInfantScore(event, this, 'self_concept','m')" data-main_index="self_concept" data-sub_index="m" class="@if(isset($carolina_infants_results['self_concept']['m']['value']) && $carolina_infants_results['self_concept']['m']['value'] == '0.5') half-mark {{ $carolina_infants_results['self_concept']['m']['color'] }} @elseif(isset($carolina_infants_results['self_concept']['m']['value']) && $carolina_infants_results['self_concept']['m']['value'] == '1') full-mark  {{ $carolina_infants_results['self_concept']['m']['color'] }} @endif">m</td>
+
+                <td colspan="3" onclick="updateInfantScore(event, this, 'self_concept','n')" data-main_index="self_concept" data-sub_index="n" class="@if(isset($carolina_infants_results['self_concept']['n']['value']) && $carolina_infants_results['self_concept']['n']['value'] == '0.5') half-mark {{ $carolina_infants_results['self_concept']['n']['color'] }} @elseif(isset($carolina_infants_results['self_concept']['n']['value']) && $carolina_infants_results['self_concept']['n']['value'] == '1') full-mark  {{ $carolina_infants_results['self_concept']['n']['color'] }} @endif">n</td>
+
+                <td colspan="3" onclick="updateInfantScore(event, this, 'self_concept','o')" data-main_index="self_concept" data-sub_index="o" class="@if(isset($carolina_infants_results['self_concept']['o']['value']) && $carolina_infants_results['self_concept']['o']['value'] == '0.5') half-mark {{ $carolina_infants_results['self_concept']['o']['color'] }} @elseif(isset($carolina_infants_results['self_concept']['o']['value']) && $carolina_infants_results['self_concept']['o']['value'] == '1') full-mark  {{ $carolina_infants_results['self_concept']['o']['color'] }} @endif">o</td>
+
+                <td colspan="1" onclick="updateInfantScore(event, this, 'self_concept','p')" data-main_index="self_concept" data-sub_index="p" class="@if(isset($carolina_infants_results['self_concept']['p']['value']) && $carolina_infants_results['self_concept']['p']['value'] == '0.5') half-mark {{ $carolina_infants_results['self_concept']['p']['color'] }} @elseif(isset($carolina_infants_results['self_concept']['p']['value']) && $carolina_infants_results['self_concept']['p']['value'] == '1') full-mark  {{ $carolina_infants_results['self_concept']['p']['color'] }} @endif">p</td>
+
+                <td colspan="2" onclick="updateInfantScore(event, this, 'self_concept','q')" data-main_index="self_concept" data-sub_index="q" class="@if(isset($carolina_infants_results['self_concept']['q']['value']) && $carolina_infants_results['self_concept']['q']['value'] == '0.5') half-mark {{ $carolina_infants_results['self_concept']['q']['color'] }} @elseif(isset($carolina_infants_results['self_concept']['q']['value']) && $carolina_infants_results['self_concept']['q']['value'] == '1') full-mark  {{ $carolina_infants_results['self_concept']['q']['color'] }} @endif">q</td>
+
+                <td colspan="2" onclick="updateInfantScore(event, this, 'self_concept','r')" data-main_index="self_concept" data-sub_index="r" class="@if(isset($carolina_infants_results['self_concept']['r']['value']) && $carolina_infants_results['self_concept']['r']['value'] == '0.5') half-mark {{ $carolina_infants_results['self_concept']['r']['color'] }} @elseif(isset($carolina_infants_results['self_concept']['r']['value']) && $carolina_infants_results['self_concept']['r']['value'] == '1') full-mark  {{ $carolina_infants_results['self_concept']['r']['color'] }} @endif">r</td>
+
+                <td colspan="2" onclick="updateInfantScore(event, this, 'self_concept','s')" data-main_index="self_concept" data-sub_index="s" class="@if(isset($carolina_infants_results['self_concept']['s']['value']) && $carolina_infants_results['self_concept']['s']['value'] == '0.5') half-mark {{ $carolina_infants_results['self_concept']['s']['color'] }} @elseif(isset($carolina_infants_results['self_concept']['s']['value']) && $carolina_infants_results['self_concept']['s']['value'] == '1') full-mark  {{ $carolina_infants_results['self_concept']['s']['color'] }} @endif">s</td>
+
+                <td colspan="1" onclick="updateInfantScore(event, this, 'self_concept','t')" data-main_index="self_concept" data-sub_index="t" class="@if(isset($carolina_infants_results['self_concept']['t']['value']) && $carolina_infants_results['self_concept']['t']['value'] == '0.5') half-mark {{ $carolina_infants_results['self_concept']['t']['color'] }} @elseif(isset($carolina_infants_results['self_concept']['t']['value']) && $carolina_infants_results['self_concept']['t']['value'] == '1') full-mark  {{ $carolina_infants_results['self_concept']['t']['color'] }} @endif">t</td>                       
+            </tr>
+
+
+             <tr>
+                <td class="not-score"><strong>4-I. Self Help: Eating</strong></td>
+                <td colspan="3" onclick="updateInfantScore(event, this, 'self_help_eating','a')" data-main_index="self_help_eating" data-sub_index="a" class="@if(isset($carolina_infants_results['self_help_eating']['a']['value']) && $carolina_infants_results['self_help_eating']['a']['value'] == '0.5') half-mark {{ $carolina_infants_results['self_help_eating']['a']['color'] }} @elseif(isset($carolina_infants_results['self_help_eating']['a']['value']) && $carolina_infants_results['self_help_eating']['a']['value'] == '1') full-mark  {{ $carolina_infants_results['self_help_eating']['a']['color'] }} @endif">a</td>
+
+                <td colspan="3" onclick="updateInfantScore(event, this, 'self_help_eating','b')" data-main_index="self_help_eating" data-sub_index="b" class="@if(isset($carolina_infants_results['self_help_eating']['b']['value']) && $carolina_infants_results['self_help_eating']['b']['value'] == '0.5') half-mark {{ $carolina_infants_results['self_help_eating']['b']['color'] }} @elseif(isset($carolina_infants_results['self_help_eating']['b']['value']) && $carolina_infants_results['self_help_eating']['b']['value'] == '1') full-mark  {{ $carolina_infants_results['self_help_eating']['b']['color'] }} @endif">b</td>
+
+                <td colspan="2" onclick="updateInfantScore(event, this, 'self_help_eating','c')" data-main_index="self_help_eating" data-sub_index="c" class="@if(isset($carolina_infants_results['self_help_eating']['c']['value']) && $carolina_infants_results['self_help_eating']['c']['value'] == '0.5') half-mark {{ $carolina_infants_results['self_help_eating']['c']['color'] }} @elseif(isset($carolina_infants_results['self_help_eating']['c']['value']) && $carolina_infants_results['self_help_eating']['c']['value'] == '1') full-mark  {{ $carolina_infants_results['self_help_eating']['c']['color'] }} @endif">c</td>
+
+                <td colspan="1" onclick="updateInfantScore(event, this, 'self_help_eating','d')" data-main_index="self_help_eating" data-sub_index="d" class="@if(isset($carolina_infants_results['self_help_eating']['d']['value']) && $carolina_infants_results['self_help_eating']['d']['value'] == '0.5') half-mark {{ $carolina_infants_results['self_help_eating']['d']['color'] }} @elseif(isset($carolina_infants_results['self_help_eating']['d']['value']) && $carolina_infants_results['self_help_eating']['d']['value'] == '1') full-mark  {{ $carolina_infants_results['self_help_eating']['d']['color'] }} @endif">d</td>
+
+                <td colspan="1" onclick="updateInfantScore(event, this, 'self_help_eating','e')" data-main_index="self_help_eating" data-sub_index="e" class="@if(isset($carolina_infants_results['self_help_eating']['e']['value']) && $carolina_infants_results['self_help_eating']['e']['value'] == '0.5') half-mark {{ $carolina_infants_results['self_help_eating']['e']['color'] }} @elseif(isset($carolina_infants_results['self_help_eating']['e']['value']) && $carolina_infants_results['self_help_eating']['e']['value'] == '1') full-mark  {{ $carolina_infants_results['self_help_eating']['e']['color'] }} @endif">e</td>
+
+                <td colspan="1" onclick="updateInfantScore(event, this, 'self_help_eating','f')" data-main_index="self_help_eating" data-sub_index="f" class="@if(isset($carolina_infants_results['self_help_eating']['f']['value']) && $carolina_infants_results['self_help_eating']['f']['value'] == '0.5') half-mark {{ $carolina_infants_results['self_help_eating']['f']['color'] }} @elseif(isset($carolina_infants_results['self_help_eating']['f']['value']) && $carolina_infants_results['self_help_eating']['f']['value'] == '1') full-mark  {{ $carolina_infants_results['self_help_eating']['f']['color'] }} @endif">f</td>
+
+                <td colspan="1" onclick="updateInfantScore(event, this, 'self_help_eating','g')" data-main_index="self_help_eating" data-sub_index="g" class="@if(isset($carolina_infants_results['self_help_eating']['g']['value']) && $carolina_infants_results['self_help_eating']['g']['value'] == '0.5') half-mark {{ $carolina_infants_results['self_help_eating']['g']['color'] }} @elseif(isset($carolina_infants_results['self_help_eating']['g']['value']) && $carolina_infants_results['self_help_eating']['g']['value'] == '1') full-mark  {{ $carolina_infants_results['self_help_eating']['g']['color'] }} @endif">g</td>
+
+                <td colspan="1" onclick="updateInfantScore(event, this, 'self_help_eating','h')" data-main_index="self_help_eating" data-sub_index="h" class="@if(isset($carolina_infants_results['self_help_eating']['h']['value']) && $carolina_infants_results['self_help_eating']['h']['value'] == '0.5') half-mark {{ $carolina_infants_results['self_help_eating']['h']['color'] }} @elseif(isset($carolina_infants_results['self_help_eating']['h']['value']) && $carolina_infants_results['self_help_eating']['h']['value'] == '1') full-mark  {{ $carolina_infants_results['self_help_eating']['h']['color'] }} @endif">h</td>
+
+                <td colspan="1" onclick="updateInfantScore(event, this, 'self_help_eating','i')" data-main_index="self_help_eating" data-sub_index="i" class="@if(isset($carolina_infants_results['self_help_eating']['i']['value']) && $carolina_infants_results['self_help_eating']['i']['value'] == '0.5') half-mark {{ $carolina_infants_results['self_help_eating']['i']['color'] }} @elseif(isset($carolina_infants_results['self_help_eating']['i']['value']) && $carolina_infants_results['self_help_eating']['i']['value'] == '1') full-mark  {{ $carolina_infants_results['self_help_eating']['i']['color'] }} @endif">i</td>
+
+                <td colspan="1" onclick="updateInfantScore(event, this, 'self_help_eating','j')" data-main_index="self_help_eating" data-sub_index="j" class="@if(isset($carolina_infants_results['self_help_eating']['j']['value']) && $carolina_infants_results['self_help_eating']['j']['value'] == '0.5') half-mark {{ $carolina_infants_results['self_help_eating']['j']['color'] }} @elseif(isset($carolina_infants_results['self_help_eating']['j']['value']) && $carolina_infants_results['self_help_eating']['j']['value'] == '1') full-mark  {{ $carolina_infants_results['self_help_eating']['j']['color'] }} @endif">j</td>
+
+                <td colspan="1" onclick="updateInfantScore(event, this, 'self_help_eating','k')" data-main_index="self_help_eating" data-sub_index="k" class="@if(isset($carolina_infants_results['self_help_eating']['k']['value']) && $carolina_infants_results['self_help_eating']['k']['value'] == '0.5') half-mark {{ $carolina_infants_results['self_help_eating']['k']['color'] }} @elseif(isset($carolina_infants_results['self_help_eating']['k']['value']) && $carolina_infants_results['self_help_eating']['k']['value'] == '1') full-mark  {{ $carolina_infants_results['self_help_eating']['k']['color'] }} @endif">k</td>
+
+                <td colspan="1" onclick="updateInfantScore(event, this, 'self_help_eating','l')" data-main_index="self_help_eating" data-sub_index="l" class="@if(isset($carolina_infants_results['self_help_eating']['l']['value']) && $carolina_infants_results['self_help_eating']['l']['value'] == '0.5') half-mark {{ $carolina_infants_results['self_help_eating']['l']['color'] }} @elseif(isset($carolina_infants_results['self_help_eating']['l']['value']) && $carolina_infants_results['self_help_eating']['l']['value'] == '1') full-mark  {{ $carolina_infants_results['self_help_eating']['l']['color'] }} @endif">l</td>
+
+                <td colspan="5" onclick="updateInfantScore(event, this, 'self_help_eating','m')" data-main_index="self_help_eating" data-sub_index="m" class="@if(isset($carolina_infants_results['self_help_eating']['m']['value']) && $carolina_infants_results['self_help_eating']['m']['value'] == '0.5') half-mark {{ $carolina_infants_results['self_help_eating']['m']['color'] }} @elseif(isset($carolina_infants_results['self_help_eating']['m']['value']) && $carolina_infants_results['self_help_eating']['m']['value'] == '1') full-mark  {{ $carolina_infants_results['self_help_eating']['m']['color'] }} @endif">m</td>
+
+                <td colspan="2" onclick="updateInfantScore(event, this, 'self_help_eating','n')" data-main_index="self_help_eating" data-sub_index="n" class="@if(isset($carolina_infants_results['self_help_eating']['n']['value']) && $carolina_infants_results['self_help_eating']['n']['value'] == '0.5') half-mark {{ $carolina_infants_results['self_help_eating']['n']['color'] }} @elseif(isset($carolina_infants_results['self_help_eating']['n']['value']) && $carolina_infants_results['self_help_eating']['n']['value'] == '1') full-mark  {{ $carolina_infants_results['self_help_eating']['n']['color'] }} @endif">n</td>
+
+                <td colspan="1" onclick="updateInfantScore(event, this, 'self_help_eating','o')" data-main_index="self_help_eating" data-sub_index="o" class="@if(isset($carolina_infants_results['self_help_eating']['o']['value']) && $carolina_infants_results['self_help_eating']['o']['value'] == '0.5') half-mark {{ $carolina_infants_results['self_help_eating']['o']['color'] }} @elseif(isset($carolina_infants_results['self_help_eating']['o']['value']) && $carolina_infants_results['self_help_eating']['o']['value'] == '1') full-mark  {{ $carolina_infants_results['self_help_eating']['o']['color'] }} @endif">o</td>
+
+                <td colspan="2" onclick="updateInfantScore(event, this, 'self_help_eating','p')" data-main_index="self_help_eating" data-sub_index="p" class="@if(isset($carolina_infants_results['self_help_eating']['p']['value']) && $carolina_infants_results['self_help_eating']['p']['value'] == '0.5') half-mark {{ $carolina_infants_results['self_help_eating']['p']['color'] }} @elseif(isset($carolina_infants_results['self_help_eating']['p']['value']) && $carolina_infants_results['self_help_eating']['p']['value'] == '1') full-mark  {{ $carolina_infants_results['self_help_eating']['p']['color'] }} @endif">p</td>
+
+                <td colspan="1" onclick="updateInfantScore(event, this, 'self_help_eating','q')" data-main_index="self_help_eating" data-sub_index="q" class="@if(isset($carolina_infants_results['self_help_eating']['q']['value']) && $carolina_infants_results['self_help_eating']['q']['value'] == '0.5') half-mark {{ $carolina_infants_results['self_help_eating']['q']['color'] }} @elseif(isset($carolina_infants_results['self_help_eating']['q']['value']) && $carolina_infants_results['self_help_eating']['q']['value'] == '1') full-mark  {{ $carolina_infants_results['self_help_eating']['q']['color'] }} @endif">q</td>
+
+                <td colspan="1" onclick="updateInfantScore(event, this, 'self_help_eating','r')" data-main_index="self_help_eating" data-sub_index="r" class="@if(isset($carolina_infants_results['self_help_eating']['r']['value']) && $carolina_infants_results['self_help_eating']['r']['value'] == '0.5') half-mark {{ $carolina_infants_results['self_help_eating']['r']['color'] }} @elseif(isset($carolina_infants_results['self_help_eating']['r']['value']) && $carolina_infants_results['self_help_eating']['r']['value'] == '1') full-mark  {{ $carolina_infants_results['self_help_eating']['r']['color'] }} @endif">r</td>
+
+                <td colspan="2" onclick="updateInfantScore(event, this, 'self_help_eating','s')" data-main_index="self_help_eating" data-sub_index="s" class="@if(isset($carolina_infants_results['self_help_eating']['s']['value']) && $carolina_infants_results['self_help_eating']['s']['value'] == '0.5') half-mark {{ $carolina_infants_results['self_help_eating']['s']['color'] }} @elseif(isset($carolina_infants_results['self_help_eating']['s']['value']) && $carolina_infants_results['self_help_eating']['s']['value'] == '1') full-mark  {{ $carolina_infants_results['self_help_eating']['s']['color'] }} @endif">s</td>
+
+                <td colspan="2" onclick="updateInfantScore(event, this, 'self_help_eating','t')" data-main_index="self_help_eating" data-sub_index="t" class="@if(isset($carolina_infants_results['self_help_eating']['t']['value']) && $carolina_infants_results['self_help_eating']['t']['value'] == '0.5') half-mark {{ $carolina_infants_results['self_help_eating']['t']['color'] }} @elseif(isset($carolina_infants_results['self_help_eating']['t']['value']) && $carolina_infants_results['self_help_eating']['t']['value'] == '1') full-mark  {{ $carolina_infants_results['self_help_eating']['t']['color'] }} @endif">t</td>
+
+                <td colspan="3" onclick="updateInfantScore(event, this, 'self_help_eating','u')" data-main_index="self_help_eating" data-sub_index="u" class="@if(isset($carolina_infants_results['self_help_eating']['u']['value']) && $carolina_infants_results['self_help_eating']['u']['value'] == '0.5') half-mark {{ $carolina_infants_results['self_help_eating']['u']['color'] }} @elseif(isset($carolina_infants_results['self_help_eating']['u']['value']) && $carolina_infants_results['self_help_eating']['u']['value'] == '1') full-mark  {{ $carolina_infants_results['self_help_eating']['u']['color'] }} @endif">u</td>
+
+                <td colspan="2" onclick="updateInfantScore(event, this, 'self_help_eating','v')" data-main_index="self_help_eating" data-sub_index="v" class="@if(isset($carolina_infants_results['self_help_eating']['v']['value']) && $carolina_infants_results['self_help_eating']['v']['value'] == '0.5') half-mark {{ $carolina_infants_results['self_help_eating']['v']['color'] }} @elseif(isset($carolina_infants_results['self_help_eating']['v']['value']) && $carolina_infants_results['self_help_eating']['v']['value'] == '1') full-mark  {{ $carolina_infants_results['self_help_eating']['v']['color'] }} @endif">v</td>
+
+                <td colspan="3" onclick="updateInfantScore(event, this, 'self_help_eating','w')" data-main_index="self_help_eating" data-sub_index="w" class="@if(isset($carolina_infants_results['self_help_eating']['w']['value']) && $carolina_infants_results['self_help_eating']['w']['value'] == '0.5') half-mark {{ $carolina_infants_results['self_help_eating']['w']['color'] }} @elseif(isset($carolina_infants_results['self_help_eating']['w']['value']) && $carolina_infants_results['self_help_eating']['w']['value'] == '1') full-mark  {{ $carolina_infants_results['self_help_eating']['w']['color'] }} @endif">w</td>
+
+                <td colspan="3" onclick="updateInfantScore(event, this, 'self_help_eating','x')" data-main_index="self_help_eating" data-sub_index="x" class="@if(isset($carolina_infants_results['self_help_eating']['x']['value']) && $carolina_infants_results['self_help_eating']['x']['value'] == '0.5') half-mark {{ $carolina_infants_results['self_help_eating']['x']['color'] }} @elseif(isset($carolina_infants_results['self_help_eating']['x']['value']) && $carolina_infants_results['self_help_eating']['x']['value'] == '1') full-mark  {{ $carolina_infants_results['self_help_eating']['x']['color'] }} @endif">x</td>
+
+                <td colspan="1" onclick="updateInfantScore(event, this, 'self_help_eating','y')" data-main_index="self_help_eating" data-sub_index="y" class="@if(isset($carolina_infants_results['self_help_eating']['y']['value']) && $carolina_infants_results['self_help_eating']['y']['value'] == '0.5') half-mark {{ $carolina_infants_results['self_help_eating']['y']['color'] }} @elseif(isset($carolina_infants_results['self_help_eating']['y']['value']) && $carolina_infants_results['self_help_eating']['y']['value'] == '1') full-mark  {{ $carolina_infants_results['self_help_eating']['y']['color'] }} @endif">y</td>
+
+                <td colspan="7" onclick="updateInfantScore(event, this, 'self_help_eating','z')" data-main_index="self_help_eating" data-sub_index="z" class="@if(isset($carolina_infants_results['self_help_eating']['z']['value']) && $carolina_infants_results['self_help_eating']['z']['value'] == '0.5') half-mark {{ $carolina_infants_results['self_help_eating']['z']['color'] }} @elseif(isset($carolina_infants_results['self_help_eating']['z']['value']) && $carolina_infants_results['self_help_eating']['z']['value'] == '1') full-mark  {{ $carolina_infants_results['self_help_eating']['z']['color'] }} @endif">z</td>
+            </tr>
+
+            <tr>
+                <td class="not-score"><strong>4-II. Self Help: Dressing</strong></td>
+                <td colspan="6" class="not-score"></td>
+                <td colspan="6" class="not-score"></td>
+                <td colspan="5" class="not-score"></td>
+                <td colspan="3" onclick="updateInfantScore(event, this, 'self_help_dressing','a')" data-main_index="self_help_dressing" data-sub_index="a" class="@if(isset($carolina_infants_results['self_help_dressing']['a']['value']) && $carolina_infants_results['self_help_dressing']['a']['value'] == '0.5') half-mark {{ $carolina_infants_results['self_help_dressing']['a']['color'] }} @elseif(isset($carolina_infants_results['self_help_dressing']['a']['value']) && $carolina_infants_results['self_help_dressing']['a']['value'] == '1') full-mark  {{ $carolina_infants_results['self_help_dressing']['a']['color'] }} @endif">a</td>
+
+                <td colspan="2" onclick="updateInfantScore(event, this, 'self_help_dressing','b')" data-main_index="self_help_dressing" data-sub_index="b" class="@if(isset($carolina_infants_results['self_help_dressing']['b']['value']) && $carolina_infants_results['self_help_dressing']['b']['value'] == '0.5') half-mark {{ $carolina_infants_results['self_help_dressing']['b']['color'] }} @elseif(isset($carolina_infants_results['self_help_dressing']['b']['value']) && $carolina_infants_results['self_help_dressing']['b']['value'] == '1') full-mark  {{ $carolina_infants_results['self_help_dressing']['b']['color'] }} @endif">b</td>
+                <td colspan="3" onclick="updateInfantScore(event, this, 'self_help_dressing','c')" data-main_index="self_help_dressing" data-sub_index="c" class="@if(isset($carolina_infants_results['self_help_dressing']['c']['value']) && $carolina_infants_results['self_help_dressing']['c']['value'] == '0.5') half-mark {{ $carolina_infants_results['self_help_dressing']['c']['color'] }} @elseif(isset($carolina_infants_results['self_help_dressing']['c']['value']) && $carolina_infants_results['self_help_dressing']['c']['value'] == '1') full-mark  {{ $carolina_infants_results['self_help_dressing']['c']['color'] }} @endif">c</td>
+                <td colspan="4" onclick="updateInfantScore(event, this, 'self_help_dressing','d')" data-main_index="self_help_dressing" data-sub_index="d" class="@if(isset($carolina_infants_results['self_help_dressing']['d']['value']) && $carolina_infants_results['self_help_dressing']['d']['value'] == '0.5') half-mark {{ $carolina_infants_results['self_help_dressing']['d']['color'] }} @elseif(isset($carolina_infants_results['self_help_dressing']['d']['value']) && $carolina_infants_results['self_help_dressing']['d']['value'] == '1') full-mark  {{ $carolina_infants_results['self_help_dressing']['d']['color'] }} @endif">d</td>
+                <td colspan="2" onclick="updateInfantScore(event, this, 'self_help_dressing','e')" data-main_index="self_help_dressing" data-sub_index="e" class="@if(isset($carolina_infants_results['self_help_dressing']['e']['value']) && $carolina_infants_results['self_help_dressing']['e']['value'] == '0.5') half-mark {{ $carolina_infants_results['self_help_dressing']['e']['color'] }} @elseif(isset($carolina_infants_results['self_help_dressing']['e']['value']) && $carolina_infants_results['self_help_dressing']['e']['value'] == '1') full-mark  {{ $carolina_infants_results['self_help_dressing']['e']['color'] }} @endif">e</td>
+                <td colspan="2" onclick="updateInfantScore(event, this, 'self_help_dressing','f')" data-main_index="self_help_dressing" data-sub_index="f" class="@if(isset($carolina_infants_results['self_help_dressing']['f']['value']) && $carolina_infants_results['self_help_dressing']['f']['value'] == '0.5') half-mark {{ $carolina_infants_results['self_help_dressing']['f']['color'] }} @elseif(isset($carolina_infants_results['self_help_dressing']['f']['value']) && $carolina_infants_results['self_help_dressing']['f']['value'] == '1') full-mark  {{ $carolina_infants_results['self_help_dressing']['f']['color'] }} @endif">f</td>
+                <td colspan="5" onclick="updateInfantScore(event, this, 'self_help_dressing','g')" data-main_index="self_help_dressing" data-sub_index="g" class="@if(isset($carolina_infants_results['self_help_dressing']['g']['value']) && $carolina_infants_results['self_help_dressing']['g']['value'] == '0.5') half-mark {{ $carolina_infants_results['self_help_dressing']['g']['color'] }} @elseif(isset($carolina_infants_results['self_help_dressing']['g']['value']) && $carolina_infants_results['self_help_dressing']['g']['value'] == '1') full-mark  {{ $carolina_infants_results['self_help_dressing']['g']['color'] }} @endif">g</td>
+                <td colspan="3" onclick="updateInfantScore(event, this, 'self_help_dressing','h')" data-main_index="self_help_dressing" data-sub_index="h" class="@if(isset($carolina_infants_results['self_help_dressing']['h']['value']) && $carolina_infants_results['self_help_dressing']['h']['value'] == '0.5') half-mark {{ $carolina_infants_results['self_help_dressing']['h']['color'] }} @elseif(isset($carolina_infants_results['self_help_dressing']['h']['value']) && $carolina_infants_results['self_help_dressing']['h']['value'] == '1') full-mark  {{ $carolina_infants_results['self_help_dressing']['h']['color'] }} @endif"> h</td>
+                <td colspan="3" onclick="updateInfantScore(event, this, 'self_help_dressing','i')" data-main_index="self_help_dressing" data-sub_index="i" class="@if(isset($carolina_infants_results['self_help_dressing']['i']['value']) && $carolina_infants_results['self_help_dressing']['i']['value'] == '0.5') half-mark {{ $carolina_infants_results['self_help_dressing']['i']['color'] }} @elseif(isset($carolina_infants_results['self_help_dressing']['i']['value']) && $carolina_infants_results['self_help_dressing']['i']['value'] == '1') full-mark  {{ $carolina_infants_results['self_help_dressing']['i']['color'] }} @endif">i</td>
+                <td colspan="1" onclick="updateInfantScore(event, this, 'self_help_dressing','j')" data-main_index="self_help_dressing" data-sub_index="j" class="@if(isset($carolina_infants_results['self_help_dressing']['j']['value']) && $carolina_infants_results['self_help_dressing']['j']['value'] == '0.5') half-mark {{ $carolina_infants_results['self_help_dressing']['j']['color'] }} @elseif(isset($carolina_infants_results['self_help_dressing']['j']['value']) && $carolina_infants_results['self_help_dressing']['j']['value'] == '1') full-mark  {{ $carolina_infants_results['self_help_dressing']['j']['color'] }} @endif">j</td>
+                <td colspan="4" onclick="updateInfantScore(event, this, 'self_help_dressing','k')" data-main_index="self_help_dressing" data-sub_index="k" class="@if(isset($carolina_infants_results['self_help_dressing']['k']['value']) && $carolina_infants_results['self_help_dressing']['k']['value'] == '0.5') half-mark {{ $carolina_infants_results['self_help_dressing']['k']['color'] }} @elseif(isset($carolina_infants_results['self_help_dressing']['k']['value']) && $carolina_infants_results['self_help_dressing']['k']['value'] == '1') full-mark  {{ $carolina_infants_results['self_help_dressing']['k']['color'] }} @endif">k</td>
+                <td colspan="3" onclick="updateInfantScore(event, this, 'self_help_dressing','l')" data-main_index="self_help_dressing" data-sub_index="l" class="@if(isset($carolina_infants_results['self_help_dressing']['l']['value']) && $carolina_infants_results['self_help_dressing']['l']['value'] == '0.5') half-mark {{ $carolina_infants_results['self_help_dressing']['l']['color'] }} @elseif(isset($carolina_infants_results['self_help_dressing']['l']['value']) && $carolina_infants_results['self_help_dressing']['l']['value'] == '1') full-mark  {{ $carolina_infants_results['self_help_dressing']['l']['color'] }} @endif">l</td>
+            </tr>
+
+            <tr>
+                <td class="not-score"><strong>4-III. Self Help: Grooming</strong></td>
+                <td colspan="6" class="not-score"></td>
+                <td colspan="6" class="not-score"></td>
+                <td colspan="5" onclick="updateInfantScore(event, this, 'self_help_grooming','a')" data-main_index="self_help_grooming" data-sub_index="a" class="@if(isset($carolina_infants_results['self_help_grooming']['a']['value']) && $carolina_infants_results['self_help_grooming']['a']['value'] == '0.5') half-mark {{ $carolina_infants_results['self_help_grooming']['a']['color'] }} @elseif(isset($carolina_infants_results['self_help_grooming']['a']['value']) && $carolina_infants_results['self_help_grooming']['a']['value'] == '1') full-mark  {{ $carolina_infants_results['self_help_grooming']['a']['color'] }} @endif">a</td>
+                <td colspan="5" onclick="updateInfantScore(event, this, 'self_help_grooming','b')" data-main_index="self_help_grooming" data-sub_index="b" class="@if(isset($carolina_infants_results['self_help_grooming']['b']['value']) && $carolina_infants_results['self_help_grooming']['b']['value'] == '0.5') half-mark {{ $carolina_infants_results['self_help_grooming']['b']['color'] }} @elseif(isset($carolina_infants_results['self_help_grooming']['b']['value']) && $carolina_infants_results['self_help_grooming']['b']['value'] == '1') full-mark  {{ $carolina_infants_results['self_help_grooming']['b']['color'] }} @endif">b</td>
+                <td colspan="3" onclick="updateInfantScore(event, this, 'self_help_grooming','c')" data-main_index="self_help_grooming" data-sub_index="c" class="@if(isset($carolina_infants_results['self_help_grooming']['c']['value']) && $carolina_infants_results['self_help_grooming']['c']['value'] == '0.5') half-mark {{ $carolina_infants_results['self_help_grooming']['c']['color'] }} @elseif(isset($carolina_infants_results['self_help_grooming']['c']['value']) && $carolina_infants_results['self_help_grooming']['c']['value'] == '1') full-mark  {{ $carolina_infants_results['self_help_grooming']['c']['color'] }} @endif">c</td>
+                <td colspan="4" onclick="updateInfantScore(event, this, 'self_help_grooming','d')" data-main_index="self_help_grooming" data-sub_index="d" class="@if(isset($carolina_infants_results['self_help_grooming']['d']['value']) && $carolina_infants_results['self_help_grooming']['d']['value'] == '0.5') half-mark {{ $carolina_infants_results['self_help_grooming']['d']['color'] }} @elseif(isset($carolina_infants_results['self_help_grooming']['d']['value']) && $carolina_infants_results['self_help_grooming']['d']['value'] == '1') full-mark  {{ $carolina_infants_results['self_help_grooming']['d']['color'] }} @endif">d</td>
+                <td colspan="4" onclick="updateInfantScore(event, this, 'self_help_grooming','e')" data-main_index="self_help_grooming" data-sub_index="e" class="@if(isset($carolina_infants_results['self_help_grooming']['e']['value']) && $carolina_infants_results['self_help_grooming']['e']['value'] == '0.5') half-mark {{ $carolina_infants_results['self_help_grooming']['e']['color'] }} @elseif(isset($carolina_infants_results['self_help_grooming']['e']['value']) && $carolina_infants_results['self_help_grooming']['e']['value'] == '1') full-mark  {{ $carolina_infants_results['self_help_grooming']['e']['color'] }} @endif">e</td>
+                <td colspan="3" onclick="updateInfantScore(event, this, 'self_help_grooming','f')" data-main_index="self_help_grooming" data-sub_index="f" class="@if(isset($carolina_infants_results['self_help_grooming']['f']['value']) && $carolina_infants_results['self_help_grooming']['f']['value'] == '0.5') half-mark {{ $carolina_infants_results['self_help_grooming']['f']['color'] }} @elseif(isset($carolina_infants_results['self_help_grooming']['f']['value']) && $carolina_infants_results['self_help_grooming']['f']['value'] == '1') full-mark  {{ $carolina_infants_results['self_help_grooming']['f']['color'] }} @endif">f</td>
+                <td colspan="2" onclick="updateInfantScore(event, this, 'self_help_grooming','g')" data-main_index="self_help_grooming" data-sub_index="g" class="@if(isset($carolina_infants_results['self_help_grooming']['g']['value']) && $carolina_infants_results['self_help_grooming']['g']['value'] == '0.5') half-mark {{ $carolina_infants_results['self_help_grooming']['g']['color'] }} @elseif(isset($carolina_infants_results['self_help_grooming']['g']['value']) && $carolina_infants_results['self_help_grooming']['g']['value'] == '1') full-mark  {{ $carolina_infants_results['self_help_grooming']['g']['color'] }} @endif">g</td>
+                <td colspan="7" onclick="updateInfantScore(event, this, 'self_help_grooming','h')" data-main_index="self_help_grooming" data-sub_index="h" class="@if(isset($carolina_infants_results['self_help_grooming']['h']['value']) && $carolina_infants_results['self_help_grooming']['h']['value'] == '0.5') half-mark {{ $carolina_infants_results['self_help_grooming']['h']['color'] }} @elseif(isset($carolina_infants_results['self_help_grooming']['h']['value']) && $carolina_infants_results['self_help_grooming']['h']['value'] == '1') full-mark  {{ $carolina_infants_results['self_help_grooming']['h']['color'] }} @endif">h</td>
+                <td colspan="4" onclick="updateInfantScore(event, this, 'self_help_grooming','i')" data-main_index="self_help_grooming" data-sub_index="i" class="@if(isset($carolina_infants_results['self_help_grooming']['i']['value']) && $carolina_infants_results['self_help_grooming']['i']['value'] == '0.5') half-mark {{ $carolina_infants_results['self_help_grooming']['i']['color'] }} @elseif(isset($carolina_infants_results['self_help_grooming']['i']['value']) && $carolina_infants_results['self_help_grooming']['i']['value'] == '1') full-mark  {{ $carolina_infants_results['self_help_grooming']['i']['color'] }} @endif">i</td>
+                <td colspan="3" onclick="updateInfantScore(event, this, 'self_help_grooming','j')" data-main_index="self_help_grooming" data-sub_index="j" class="@if(isset($carolina_infants_results['self_help_grooming']['j']['value']) && $carolina_infants_results['self_help_grooming']['j']['value'] == '0.5') half-mark {{ $carolina_infants_results['self_help_grooming']['j']['color'] }} @elseif(isset($carolina_infants_results['self_help_grooming']['j']['value']) && $carolina_infants_results['self_help_grooming']['j']['value'] == '1') full-mark  {{ $carolina_infants_results['self_help_grooming']['j']['color'] }} @endif">j</td>
+
+            </tr>
+
+                <tr>
+                    <td class="not-score"><strong>4-III. Self Help: Tioleting</strong></td>
+                    <td colspan="6" class="not-score"></td>
+                    <td colspan="6" class="not-score"></td>
+                    <td colspan="5" class="not-score"></td>
+                    <td colspan="5" class="not-score"></td>
+                    <td colspan="3" class="not-score"></td>
+                    <td colspan="4" onclick="updateInfantScore(event, this, 'self_help_tioleting','a')" data-main_index="self_help_tioleting" data-sub_index="a" class="@if(isset($carolina_infants_results['self_help_tioleting']['a']['value']) && $carolina_infants_results['self_help_tioleting']['a']['value'] == '0.5') half-mark {{ $carolina_infants_results['self_help_tioleting']['a']['color'] }} @elseif(isset($carolina_infants_results['self_help_tioleting']['a']['value']) && $carolina_infants_results['self_help_tioleting']['a']['value'] == '1') full-mark  {{ $carolina_infants_results['self_help_tioleting']['a']['color'] }} @endif">a</td>
+
+                    <td colspan="4" onclick="updateInfantScore(event, this, 'self_help_tioleting','b')" data-main_index="self_help_tioleting" data-sub_index="b" class="@if(isset($carolina_infants_results['self_help_tioleting']['b']['value']) && $carolina_infants_results['self_help_tioleting']['b']['value'] == '0.5') half-mark {{ $carolina_infants_results['self_help_tioleting']['b']['color'] }} @elseif(isset($carolina_infants_results['self_help_tioleting']['b']['value']) && $carolina_infants_results['self_help_tioleting']['b']['value'] == '1') full-mark  {{ $carolina_infants_results['self_help_tioleting']['b']['color'] }} @endif">b</td>
+
+                    <td colspan="5" onclick="updateInfantScore(event, this, 'self_help_tioleting','c')" data-main_index="self_help_tioleting" data-sub_index="c" class="@if(isset($carolina_infants_results['self_help_tioleting']['c']['value']) && $carolina_infants_results['self_help_tioleting']['c']['value'] == '0.5') half-mark {{ $carolina_infants_results['self_help_tioleting']['c']['color'] }} @elseif(isset($carolina_infants_results['self_help_tioleting']['c']['value']) && $carolina_infants_results['self_help_tioleting']['c']['value'] == '1') full-mark  {{ $carolina_infants_results['self_help_tioleting']['c']['color'] }} @endif">c</td>
+
+                    <td colspan="4" onclick="updateInfantScore(event, this, 'self_help_tioleting','d')" data-main_index="self_help_tioleting" data-sub_index="d" class="@if(isset($carolina_infants_results['self_help_tioleting']['d']['value']) && $carolina_infants_results['self_help_tioleting']['d']['value'] == '0.5') half-mark {{ $carolina_infants_results['self_help_tioleting']['d']['color'] }} @elseif(isset($carolina_infants_results['self_help_tioleting']['d']['value']) && $carolina_infants_results['self_help_tioleting']['d']['value'] == '1') full-mark  {{ $carolina_infants_results['self_help_tioleting']['d']['color'] }} @endif">d</td>
+
+                    <td colspan="3" onclick="updateInfantScore(event, this, 'self_help_tioleting','e')" data-main_index="self_help_tioleting" data-sub_index="e" class="@if(isset($carolina_infants_results['self_help_tioleting']['e']['value']) && $carolina_infants_results['self_help_tioleting']['e']['value'] == '0.5') half-mark {{ $carolina_infants_results['self_help_tioleting']['e']['color'] }} @elseif(isset($carolina_infants_results['self_help_tioleting']['e']['value']) && 
+                    $carolina_infants_results['self_help_tioleting']['e']['value'] == '1') full-mark  {{
+                    $carolina_infants_results['self_help_tioleting']['e']['color'] }} @endif">e</td>
+
+                    <td colspan="4" onclick="updateInfantScore(event, this, 'self_help_tioleting','f')" data-main_index="self_help_tioleting" data-sub_index="f" class="@if(isset($carolina_infants_results['self_help_tioleting']['f']['value']) && $carolina_infants_results['self_help_tioleting']['f']['value'] == '0.5') half-mark {{ $carolina_infants_results['self_help_tioleting']['f']['color'] }} @elseif(isset($carolina_infants_results['self_help_tioleting']['f']['value']) && $carolina_infants_results['self_help_tioleting']['f']['value'] == '1') full-mark  {{ $carolina_infants_results['self_help_tioleting']['f']['color'] }} @endif">f</td>
+
+                    <td colspan="3" onclick="updateInfantScore(event, this, 'self_help_tioleting','g')" data-main_index="self_help_tioleting" data-sub_index="g" class="@if(isset($carolina_infants_results['self_help_tioleting']['g']['value']) && $carolina_infants_results['self_help_tioleting']['g']['value'] == '0.5') half-mark {{ $carolina_infants_results['self_help_tioleting']['g']['color'] }} @elseif(isset($carolina_infants_results['self_help_tioleting']['g']['value']) && $carolina_infants_results['self_help_tioleting']['g']['value'] == '1') full-mark  {{ $carolina_infants_results['self_help_tioleting']['g']['color'] }} @endif">g</td>
+                </tr>
+
+                <tr>
+                    <td rowspan="6" class="row-head" style="border-bottom: none">COGNITION</td>
+
+                    <td class="not-score"><strong>5. Attention & Memory: Visual/Spatial</strong></td>
+                    <td colspan="1" onclick="updateInfantScore(event, this, 'attention_memory','a')" data-main_index="attention_memory" data-sub_index="a" class="@if(isset($carolina_infants_results['attention_memory']['a']['value']) && $carolina_infants_results['attention_memory']['a']['value'] == '0.5') half-mark {{ $carolina_infants_results['attention_memory']['a']['color'] }} @elseif(isset($carolina_infants_results['attention_memory']['a']['value']) && $carolina_infants_results['attention_memory']['a']['value'] == '1') full-mark  {{ $carolina_infants_results['attention_memory']['a']['color'] }} @endif">a</td>
+
+                    <td colspan="1" onclick="updateInfantScore(event, this, 'attention_memory','b')" data-main_index="attention_memory" data-sub_index="b" class="@if(isset($carolina_infants_results['attention_memory']['b']['value']) && $carolina_infants_results['attention_memory']['b']['value'] == '0.5') half-mark {{ $carolina_infants_results['attention_memory']['b']['color'] }} @elseif(isset($carolina_infants_results['attention_memory']['b']['value']) && $carolina_infants_results['attention_memory']['b']['value'] == '1') full-mark  {{ $carolina_infants_results['attention_memory']['b']['color'] }} @endif">b</td>
+
+                    <td colspan="1" onclick="updateInfantScore(event, this, 'attention_memory','c')" data-main_index="attention_memory" data-sub_index="c" class="@if(isset($carolina_infants_results['attention_memory']['c']['value']) && $carolina_infants_results['attention_memory']['c']['value'] == '0.5') half-mark {{ $carolina_infants_results['attention_memory']['c']['color'] }} @elseif(isset($carolina_infants_results['attention_memory']['c']['value']) && $carolina_infants_results['attention_memory']['c']['value'] == '1') full-mark  {{ $carolina_infants_results['attention_memory']['c']['color'] }} @endif">c</td>
+                    <td colspan="1" onclick="updateInfantScore(event, this, 'attention_memory','d')" data-main_index="attention_memory" data-sub_index="d" class="@if(isset($carolina_infants_results['attention_memory']['d']['value']) && $carolina_infants_results['attention_memory']['d']['value'] == '0.5') half-mark {{ $carolina_infants_results['attention_memory']['d']['color'] }} @elseif(isset($carolina_infants_results['attention_memory']['d']['value']) && $carolina_infants_results['attention_memory']['d']['value'] == '1') full-mark  {{ $carolina_infants_results['attention_memory']['d']['color'] }} @endif">d</td>
+                    <td colspan="1" onclick="updateInfantScore(event, this, 'attention_memory','e')" data-main_index="attention_memory" data-sub_index="e" class="@if(isset($carolina_infants_results['attention_memory']['e']['value']) && $carolina_infants_results['attention_memory']['e']['value'] == '0.5') half-mark {{ $carolina_infants_results['attention_memory']['e']['color'] }} @elseif(isset($carolina_infants_results['attention_memory']['e']['value']) && $carolina_infants_results['attention_memory']['e']['value'] == '1') full-mark  {{ $carolina_infants_results['attention_memory']['e']['color'] }} @endif">e</td>
+                    <td colspan="1" onclick="updateInfantScore(event, this, 'attention_memory','f')" data-main_index="attention_memory" data-sub_index="f" class="@if(isset($carolina_infants_results['attention_memory']['f']['value']) && $carolina_infants_results['attention_memory']['f']['value'] == '0.5') half-mark {{ $carolina_infants_results['attention_memory']['f']['color'] }} @elseif(isset($carolina_infants_results['attention_memory']['f']['value']) && $carolina_infants_results['attention_memory']['f']['value'] == '1') full-mark  {{ $carolina_infants_results['attention_memory']['f']['color'] }} @endif">f</td>
+                    <td colspan="2" onclick="updateInfantScore(event, this, 'attention_memory','g')" data-main_index="attention_memory" data-sub_index="g" class="@if(isset($carolina_infants_results['attention_memory']['g']['value']) && $carolina_infants_results['attention_memory']['g']['value'] == '0.5') half-mark {{ $carolina_infants_results['attention_memory']['g']['color'] }} @elseif(isset($carolina_infants_results['attention_memory']['g']['value']) && $carolina_infants_results['attention_memory']['g']['value'] == '1') full-mark  {{ $carolina_infants_results['attention_memory']['g']['color'] }} @endif">g</td>
+                    <td colspan="2" onclick="updateInfantScore(event, this, 'attention_memory','h')" data-main_index="attention_memory" data-sub_index="h" class="@if(isset($carolina_infants_results['attention_memory']['h']['value']) && $carolina_infants_results['attention_memory']['h']['value'] == '0.5') half-mark {{ $carolina_infants_results['attention_memory']['h']['color'] }} @elseif(isset($carolina_infants_results['attention_memory']['h']['value']) && $carolina_infants_results['attention_memory']['h']['value'] == '1') full-mark  {{ $carolina_infants_results['attention_memory']['h']['color'] }} @endif">h</td>
+                    <td colspan="1" onclick="updateInfantScore(event, this, 'attention_memory','i')" data-main_index="attention_memory" data-sub_index="i" class="@if(isset($carolina_infants_results['attention_memory']['i']['value']) && $carolina_infants_results['attention_memory']['i']['value'] == '0.5') half-mark {{ $carolina_infants_results['attention_memory']['i']['color'] }} @elseif(isset($carolina_infants_results['attention_memory']['i']['value']) && $carolina_infants_results['attention_memory']['i']['value'] == '1') full-mark  {{ $carolina_infants_results['attention_memory']['i']['color'] }} @endif">i</td>
+                    <td colspan="1" onclick="updateInfantScore(event, this, 'attention_memory','j')" data-main_index="attention_memory" data-sub_index="j" class="@if(isset($carolina_infants_results['attention_memory']['j']['value']) && $carolina_infants_results['attention_memory']['j']['value'] == '0.5') half-mark {{ $carolina_infants_results['attention_memory']['j']['color'] }} @elseif(isset($carolina_infants_results['attention_memory']['j']['value']) && $carolina_infants_results['attention_memory']['j']['value'] == '1') full-mark  {{ $carolina_infants_results['attention_memory']['j']['color'] }} @endif">j</td>
+                    <td colspan="2" onclick="updateInfantScore(event, this, 'attention_memory','k')" data-main_index="attention_memory" data-sub_index="k" class="@if(isset($carolina_infants_results['attention_memory']['k']['value']) && $carolina_infants_results['attention_memory']['k']['value'] == '0.5') half-mark {{ $carolina_infants_results['attention_memory']['k']['color'] }} @elseif(isset($carolina_infants_results['attention_memory']['k']['value']) && $carolina_infants_results['attention_memory']['k']['value'] == '1') full-mark  {{ $carolina_infants_results['attention_memory']['k']['color'] }} @endif">k</td>
+                    <td colspan="1" onclick="updateInfantScore(event, this, 'attention_memory','l')" data-main_index="attention_memory" data-sub_index="l" class="

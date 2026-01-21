@@ -1,0 +1,914 @@
+@page {
+    margin: 0.5cm 0px;
+}
+body.print {
+    margin-top: 0.1cm !important;
+    margin-bottom: 0.1cm !important;
+    margin-left: 1cm !important;
+    margin-right: 1cm !important;
+    line-height: 1.1;
+    color: black;
+}
+body.print > .row {
+    margin-bottom: 0.15cm !important;
+}
+body.print th, body.print td, body.print tr {
+    color: #2d2d2d;
+}
+.print-tool-bar {
+    position: fixed;
+    height: 50px;
+    /*opacity: .8;*/
+    top: 1%;
+    right: 2%;
+    z-index: 1030;
+    border-radius: 28px 28px 28px 28px;
+    text-align: center;
+    padding-top: 3px;    
+}
+.print-tool-bar > .btn {
+    background-color: #FFB3B3;
+    border-radius: 50%;
+    /*transform: rotate(-90deg);*/
+    padding: 4px 7.5px;
+    margin: 5px;
+    color: #03324c;
+    text-align: center;
+    border-radius: 50%;
+    background-image: linear-gradient(#b1ccda 49%, #b1ccda 51%);
+    box-shadow: 0 2px 2px #888888;
+    transition: color 0.3s, background-image 0.5s, ease-in-out;
+}
+.print-tool-bar > .btn:hover {
+    background-image: linear-gradient(#335b71 45%, #03324c 55%);
+    color: white;
+}
+body.print .content-block {
+    margin-top: 15px;
+}
+body.print .content-block table {
+    margin-bottom: 0px;
+}
+body.print .form-group {
+    margin: 4px 0;
+    display: flow-root;
+}
+.form-group .print-label, .form-group .print-value {
+    width: 50%;
+}
+.form-group .print-label, .form-group .print-value {
+    /*font-size: 13px;*/
+    /*margin: 0px 0px 3px 0px;*/
+    margin: 0px 0px 0px 0px;
+}
+.print .print-value, .print td {
+    /*font-weight: bold;*/
+}
+.print th, .print td, .print tr, .print .form-group .print-label, .print .form-group .print-value, .op-container {
+    font-size: 12px;
+}
+.print th {
+    /*font-weight: normal;*/
+}
+.print .table>thead>tr>th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #ddd;
+}
+.baby-print td, .nicu-discharge-report td, .nicu-summary td, .postnatal-summary td  {
+    font-weight: normal;
+}
+.print-label-text {
+    /*color: red;*/
+}
+.nicu-summary .print-label-text, .nicu-discharge-report .print-label-text,
+.postnatal-summary .print-label-text, .op-container .print-label-text,
+.culture-registry .print-label-text, .quality-indicator .print-label-text  {
+    font-weight: bold;
+}
+.nicu-summary .print-label-value, .nicu-discharge-report .print-label-value,
+.postnatal-summary .print-label-value, .op-container .print-label-value,
+.carnial-ultra .print-label-value, .cardiac-assessment .print-label-value,
+.culture-registry .print-label-value, .quality-indicator .print-label-value {
+    /*font-weight: bold;*/
+}
+.print .custom-padding-0 {
+    padding: 0px !important;
+}
+
+/*nicu*/
+.print table th.custom-padding {
+    padding: 5px 15px !important;
+}
+/*nicu*/
+
+/*nicu summary*/
+.nicu-dis-print .header-down {
+    margin-top: 100px !important;
+}
+#project {
+    padding-left: 15px;
+    padding-right: 15px;    
+}
+#project p {
+    margin: 0px 0px 5px 0px;
+}
+#company {
+    float: right;
+    text-align: left;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+#company div {
+    /*line-height: 1.7;*/
+    line-height: 1;
+}
+#project div, #company div {
+    white-space: nowrap;
+    /*font-weight: 600;*/
+}
+.summary-hr {
+    margin-top: 0px;
+    border-top: 2px solid #000;
+    margin-bottom: 10px;
+}
+.customTableSelector > thead > tr > td, .customTableSelector > tbody > tr > td, .customTableSelector > tfoot > tr > td {
+    border-top: none !important;
+}
+.print .baby-basic-details td {
+    padding: 0px 5px !important;
+}
+.print table:not(.ui-datepicker-calendar) td, .print table:not(.ui-datepicker-calendar) th {
+    /*padding: 0px 10px !important;*/
+}
+.nicu-summary table:not(.ui-datepicker-calendar) td, .nicu-summary table:not(.ui-datepicker-calendar) th {
+    padding: 0px 10px !important;
+}
+.discharge-bottom {
+    margin-bottom: 15px;
+}
+.op-report, .discharge-report, .report, .neo-summary-report {
+    text-decoration: underline;
+    font-size: 1em;
+}
+.mother-detail {
+    padding-top: 30px;
+    display: block;
+    page-break-before: always;
+}
+/*nicu summary*/
+
+/*Postnatal admission*/
+.print table th.pl-must-15 {
+    padding-left: 15px !important;
+}
+/*Postnatal admission*/
+
+/*Quality Indicator*/
+.print .quality-indicator .custom table td, .print .quality-indicator .custom table th {
+    padding: 5px 4px !important;
+}
+.print .quality-indicator .custom .print-label {
+    width: 80%;
+}
+.print .quality-indicator .custom .print-value {
+    width: 20%;
+}
+.print .quality-indicator .custom2 .print-label {
+    width: 70%;
+}
+.print .quality-indicator .custom2 .print-value {
+    width: 30%;
+}
+.pull-right-flex {
+    display: flex;
+    justify-content: flex-end;
+}
+.print .quality-indicator .custom-font {
+    font-size: 12px;
+}
+/*Quality Indicator*/
+
+/*Daycare */
+.margin-left-neg {
+    margin-left: -24px;
+}
+/*Daycare */
+.print .postnatal-summary table td, .print .postnatal-summary table th {
+    padding: 0px 7px !important;
+}
+.print .postnatal-summary div.print-label-value ol {
+    padding-left: 30px;
+}
+.print .postnatal-summary td.print-label-value ul {
+    padding-left: 0px;
+}
+.print .postnatal-summary td.print-label-value ol {
+    padding-left: 12px;
+}
+.print .postnatal-summary .table {
+    margin-bottom: 10px;
+}
+.print .postnatal-summary h5 {
+    margin-top: 0px;
+}
+.print .postnatal-summary table td.plr-must-0 {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+.print .postnatal-summary table td.plr-must-15 {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+}
+.print .apply-border td {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+}
+
+.print .apply-border td input[type=checkbox] {
+    left: 10px;
+    margin-top: -9px;
+}
+.print .weekly-observation-table th, .print .weekly-observation-table td {
+    font-size: 14px;
+    padding: 15px !important;
+}
+
+.barcode {
+    border: 1px solid black;
+    width: 230px;
+    float: right;
+}
+
+.barcode table {
+    display: flex;
+    justify-content: center;
+    margin: 0px 15px 0px 5px;
+    line-height: 1.2;
+    border: 0px !important;
+}
+
+.barcode table td {
+    font-weight: normal !important;
+}
+
+.barcode .empty {
+    padding: 40px 20px;
+    display: block;
+}
+.barcode .barcode-content {
+    display: block;
+    margin-left: 5px;
+}
+
+.nurse-sheet .barcode tr, .nurse-sheet .barcode td {
+    border: 0px !important;
+}
+
+.barcode tr, .barcode td {
+    border: 0px !important;
+}
+
+.barcode .hosptial-name {
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    background-color: black;
+    color: white !important;
+    padding: 2px 2px;
+    vertical-align: middle;
+    font-size: 10px
+}
+
+.barcode .baby-mrn {
+    display: unset;
+    float: right;
+    padding: 2px 0px;
+}
+
+.print-btn {
+    background-color: blue !important;
+    background-image: linear-gradient(#1e1ed1 49%, #2020b9c7 51%) !important;
+    color: white !important;
+    padding: 6.5px 8px !important;
+}
+.print-btn:hover {
+    opacity: 0.8;
+}
+
+.back-close-btn {
+    background-color: #bd362f !important;
+    background-image: linear-gradient(#e11b10 49%, #e32015 51%) !important;
+    color: white !important;
+    padding: 6.5px 10px !important;
+}
+.back-close-btn:hover {
+    opacity: 0.8;
+}
+
+.approval-btn {
+    background-color: #eea236 !important;
+    background-image: linear-gradient(#f09008 49%, #ec9416 51%) !important;
+    color: white !important;
+    padding: 6.5px 11px !important;
+}
+.approval-btn:hover {
+    opacity: 0.8;
+}
+.approval-btn.cursor-disabled {
+    padding: 6.5px 7px !important
+}
+.approval-btn.btn-success {
+    background-color: #5cb85c !important;
+    background-image: linear-gradient(#5cb85c 49%, #5cb85c 51%) !important;
+}
+
+.unapproval-btn {
+    background-color: #5cb85c !important;
+    background-image: linear-gradient(#5cb85c 49%, #5cb85c 51%) !important;
+    color: white !important;
+    padding: 6.5px 7px !important;
+}
+.unapproval-btn:hover {
+    opacity: 0.8;
+}
+
+.issued-mark-btn {
+    font-size: 26px;
+    padding: 3px 10px !important;
+    background-color: #b85caf !important;
+    background-image: linear-gradient(#b75cb8 49%, #a65cb8 51%) !important;
+    color: white !important;
+    padding: 2.5px 10px !important;
+}
+.issued-mark-btn:hover {
+    opacity: 0.8;
+}
+#issued-modal .close {
+    font-size: 30px !important;
+    color: white;
+    opacity: 1;
+}
+#issued-modal .close:hover {
+    opacity: 0.5;
+}
+
+
+.save-btn {
+    background-color: green !important;
+    background-image: linear-gradient(#1b6f1b 49%, #187918 51%) !important;
+    color: white !important;
+    padding: 6.5px 10px !important;
+}
+.save-btn:hover {
+    opacity: 0.8;
+}
+
+.edit-btn {
+    background-color: yellow !important;
+    background-image: linear-gradient(#f4970e 49%, #ff9700 51%) !important;
+    color: white !important;
+    padding: 6px 8.6px !important;
+}
+.edit-btn:hover {
+    opacity: 0.8;
+}
+
+.nurse-day-nav {
+    padding: 6.5px 11px !important;
+    background-color: #795548 !important;
+    background-image: linear-gradient(#765448 49%, #795548 51%) !important;
+    color: white !important;
+}
+.nurse-day-nav:hover {
+    opacity: 0.8;
+}
+
+.ward-nav {    
+    padding: 8px 6px !important;
+    background-color: #34a7c8 !important;
+    background-image: linear-gradient(#34a7c8 49%, #34a7c8 51%) !important;
+    color: #ffffff !important;
+    font-size: 12px;
+}
+.ward-nav:hover {
+    background-color: #000000 !important;
+    background-image: linear-gradient(#000000 49%, #000000 51%) !important;
+    opacity: 0.8;
+}
+
+.printed-list-btn {
+    background-color: #34A7C8 !important;
+    background-image: linear-gradient(#23a0c3 49%, #2e9fbf 51%) !important;
+    color: white !important;
+    padding: 8px 9px !important;
+    font-size: 12px;
+}
+.printed-list-btn:hover {
+    opacity: 0.8;
+}
+.printed-list-btn.close-btn {
+    padding: 8px 11.6px !important;
+}
+.pr-45-must {
+    padding-right: 45px !important;
+}
+
+.op-container .print-head {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.op-container .header-img {
+    padding-left: 8px;
+}
+
+@media screen {
+    body.print {
+        background-color: #00000036;
+        /*display: flex;*/
+        /*flex-direction: column;        */
+    }
+    body.print .container {    
+        padding-left: 2em;
+        padding-right: 2em;  
+        padding-top: 1em;
+        padding-bottom: 1em;
+        background-color: white;
+        box-shadow: 0px 0px 8px -1px #000;
+        width: unset !important;
+        min-height: 100vh;        
+        /*min-width: 50vw;*/
+        margin-left: 5vw;
+        margin-right: 5vw;
+        display: block;
+    }
+    body.print .container-fluid {    
+        padding-left: 2em;
+        padding-right: 2em;  
+        padding-top: 1em;
+        padding-bottom: 1em;
+        background-color: white;
+        box-shadow: 0px 0px 8px -1px #000;
+        width: unset !important;
+        min-height: 100%;        
+        /* min-width: 50vw;*/
+        margin-left: 5vw;
+        margin-right: 5vw;
+        display: block;
+    }
+    /*pediatric*/
+    .pediatric .split3-1 .print-label {
+        width: 24.3%;
+    }
+    .pediatric .split3-1 .print-value {
+        width: 75.7%;
+    }
+    /*pediatric*/
+    .error {
+        color: red;
+    }
+}
+@media only screen {
+    /*neonatal*/
+    .neonatal .overflow-auto {
+        overflow: auto;
+    }
+    /*neonatal*/
+
+    /*nicu*/
+    .nicu-proforma .overflow-auto {
+        overflow: auto;
+    }
+    /*nicu*/
+
+    /*nicu summary*/
+    .nicu-summary .overflow-auto {
+        overflow: auto;
+    }
+    /*nicu summary*/
+
+    /*postnatal admission*/
+    .post-proforma .overflow-auto {
+        overflow: auto;
+    }
+    /*postnatal admission*/
+
+    /*Postnatal summary*/
+    .postnatal-summary .overflow-auto {
+        overflow: auto;
+    }
+    /*Postnatal summary*/
+
+    /*Quality Indicator*/
+    .quality-indicator .custom-padding {
+        padding-left: 8px;
+        padding-right: 0px;
+    }   
+    .print .quality-indicator .overflow-auto {
+        overflow: auto;
+    }
+    /*Quality Indicator*/
+    .overflow-auto-screen {
+        overflow: auto;
+    }
+
+
+}
+@media only screen and (max-width: 400px) {    
+    .nicu-dis-print .button-row .col-xs-3 {
+        width: 50% !important;
+    }
+}
+@media only screen and (min-width: 641px) {
+    /*OP print*/
+    .op-pull-left {
+        float: left;
+    }
+    .op-pull-right {
+        float: right;
+    }
+    /*OP print*/  
+}
+@media only screen and (max-width: 576px) {  
+    /*Nicu Discharge Summary*/
+    .nicu-dis-print #patient-list.nicu-pull-left, .nicu-dis-print #doctor-list.nicu-pull-left {
+        float: left
+    }
+    .nicu-dis-print .discharge-bottom .col-xs-3, .nicu-dis-print .discharge-bottom .col-xs-9 {
+        width: 100%;
+        float: left;
+    }
+    .nicu-dis-print .customTableSelector, .nicu-dis-print .customTableSelector tbody {
+        /*display: block;*/
+    }
+    .customTableSelector, .nicu-dis-print .not-affect-parent, .nicu-dis-print .baby-basic-details {
+        width: 100%;
+        float: left;        
+    }
+    .print .nicu-dis-print table td, .print .nicu-dis-print table th {
+        padding: 5px 5px !important;
+    }
+    .customTableSelector .not-affect-parent tr > td:first-child {
+        width: 50%;
+    }
+    .discharge-print .col-md-3 {
+        width: 100%;
+    }
+    .discharge-print .col-md-3.pull-right .list-none {
+        width: 50%;
+        float: right;
+    }
+    .custom-sm tr, .custom-sm td, .custom-sm table, .custom-sm table tbody {
+        display: inline-block;
+        width: 100%;
+    }
+    .baby-basic-details td {
+        width: 50%;
+        float: left;
+    }
+    /*Nicu Discharge Summary*/
+    /*Nicu Summary*/
+    .nicu-summary #patient-list.nicu-pull-left, .nicu-summary #doctor-list.nicu-pull-left, 
+    .nicu-discharge-report #patient-list #company, .nicu-discharge-report #doctor-list #project {
+        float: left
+    }
+    .nicu-summary table.table-layout-fixed > tbody  > tr > td {
+        width: 100%;
+        float: left;
+    }
+    .nicu-summary .custom-width {
+        width: 100%;
+        float: left;
+        padding: 0px !important;
+    }
+    /*Nicu Summary*/
+    /*Postnatal summary*/
+    .postnatal-summary #patient-list.postnatal-pull-left, .postnatal-summary #doctor-list.postnatal-pull-left {
+        float: left
+    }
+    .postnatal-summary .col-xs-5.col-sm-5.col-md-5.pull-right .pull-right {
+        float: unset !important;
+    }
+    .postnatal-summary .col-xs-5.col-sm-5.col-md-5, .postnatal-summary table.table-layout-fixed > tbody  > tr > td {
+        width: 100%;
+        float: left;
+    }
+    .postnatal-summary .custom-width {
+        width: 100%;
+        float: left;
+        padding: 0px !important;
+    }
+    /*Postnatal summary*/
+    .plr-sm-0 {
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }  
+    .pr-sm-0 {
+        padding-right: 0px !important;
+    }  
+    /*Quality Indicator*/
+    .print .quality-indicator .col-xs-12 table {
+        width: 700px;
+    }
+    .col-xs-12 .overflow-auto {
+        overflow-x: auto;
+    } 
+    /*Quality Indicator*/
+
+    /*OP*/
+    .op-container .col-xs-4, .op-container .col-xs-3, .op-container .col-xs-5 {
+        width: 100%;
+    }
+    /*OP*/
+}
+@media only screen and (max-width: 768px) {  
+    /*Nicu Discharge Summary*/
+    .discharge-print .col-md-3 .list-none {
+        padding: 0px;
+    }
+    /*Nicu Discharge Summary*/
+}
+@media only screen and (min-width: 768px) and (max-width: 992px) {   
+    /*postnatal daycare*/
+    .post-daycare .custom-print .form-group .print-label {
+        width: 66%;
+    }
+    .post-daycare .custom-print .form-group .print-value {
+        width: 34%;
+    }
+    /*postnatal daycare*/
+}
+@media print {
+    /*neonatal, nicu, nicu daycare*/
+    .neonatal .col-md-6, .nicu-proforma .col-md-6, .post-proforma .col-md-6, .post-daycare .col-md-6 {
+        width: 50%;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .nicu-proforma .col-md-12, .daycare .col-md-12, .daycare .col-md-4 {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    /*neonatal, nicu, nicu daycare*/
+
+    /*neonatal, nicu*/
+    .form-group .print-label.label-increase {
+        width: 65%;
+    }
+    .form-group .print-value.value-decrease {
+        width: 35%;
+    }
+    /*neonatal, nicu*/
+
+    /*daycare*/
+    .daycare .col-md-4, .post-daycare .col-md-4 {
+        width: 33.33%;
+    }
+    .daycare .custom-print .form-group .print-label {
+        width: 65%;
+    }
+    .daycare .custom-print .form-group .print-value {
+        width: 35%;
+    }
+    /*daycare*/
+
+    /*postnatal daycare*/
+    .post-daycare .custom-print .form-group .print-label {
+        width: 66%;
+    }
+    .post-daycare .custom-print .form-group .print-value {
+        width: 34%;
+    }
+    /*postnatal daycare*/
+
+    body.print .op-container .form-group {
+        margin: 0px;
+    }
+    
+    .carnial.col-xs-12 {
+        width: 50%;
+    }
+
+    /*pediatric*/
+    .pediatric .col-xs-12 {
+        width: 50%;
+    }
+    .pediatric .col-3 .col-xs-12 {
+        width: 33.33%;
+    }
+    /*pediatric*/
+
+    /*Lab Request*/
+    .lab-request .col-xs-12 {
+        width: 33.33%;
+    }
+    /*Lab Request*/ 
+
+    /*Cardiac Assessment*/
+    .cardiac-assessment .col-xs-12:first-child, .cardiac-assessment .col-xs-12:nth-child(2),
+    .cardiac-assessment .col-xs-12:nth-child(3) {
+        width: 33.33%;
+    }
+    /*Cardiac Assessment*/
+    
+    /*Carnial Ultrasonography*/
+    .carnial-ultra .section-set .col-xs-12:first-child, .carnial-ultra .section-set .col-xs-12:nth-child(2),
+    .carnial-ultra .section-set .col-xs-12:nth-child(3) {
+        width: 33.33%;
+    }
+    /*Carnial Ultrasonography*/    
+
+    /*Culture Registry*/
+    .culture-registry .col-xs-12 {
+        width: 33.33%;
+    }
+    /*Culture Registry*/
+    /*OP print*/
+    .print .op-container table.medicine td, .print .op-container table.medicine th {
+        padding: 5px !important;
+    }
+    .print .op-container table.medicine td {
+        /*font-size: 10px;*/
+        font-size: 1.1vmin;
+    }
+    .op-container > .temp-row > .col-sm-11, .op-container > .temp-row > .col-sm-11 > .col-sm-12, .op-container > .temp-row > div > .col-sm-11, .op-container > .temp-row > div > .col-sm-11 > div {
+        padding: 0px;
+    }
+    .op-container .header-img {
+        position: relative;
+        left: -7px;
+    }
+    /*OP print*/
+}
+@media only print {
+    /*Quality Indicator*/
+    .print .quality-indicator .custom table td, .print .quality-indicator .custom table th {
+        padding: 5px 0px !important;
+    }
+    .quality-indicator .col-xs-12.col-sm-6.col-md-6 {
+        width: 50%;
+    }
+    /*Quality Indicator*/
+    .nurse-sheet .col-xs-12 {
+        width: 33.33%;
+    }
+}
+@media only print and (min-width: 541px) {
+    /*OP print*/
+    .op-pull-left {
+        float: left;
+    }
+    .op-pull-right {
+        float: right;
+    }
+    /*OP print*/  
+}
+@media only screen {
+    .print .container {
+        /*width: 80vw;     */
+        margin: auto;    
+    }
+}
+@media (min-width: 1200px) {
+    .print .container {
+        /*width: 65vw;     */
+        margin: auto; 
+    }
+    body.print {        
+        /*align-items: center;*/
+    }
+}
+
+.page-break-page {
+    page-break-before: unset;
+    page-break-inside: unset;
+}
+.back-discharge {
+    padding: 10px 9.5px !important;
+    background-color: var(--theme-color) !important;
+    background-image: linear-gradient(var(--theme-color) 49%, var(--theme-color) 51%) !important;
+}
+
+.back-discharge i {
+    font-size: 1.6em;
+}
+#btn-refresh-lab-report, #btn-assessment-reset {
+    padding: 6.5px 9px !important;
+    background-color: #E31C79 !important;
+    background-image: linear-gradient(#E31C79 49%, #E31C79 51%) !important;
+    color: white !important;
+}
+#btn-refresh-lab-report:hover, #btn-assessment-reset:hover {
+    background-color: var(--theme-color) !important;
+    background-image: linear-gradient(var(--theme-color) 49%, var(--theme-color) 51%) !important;    
+}
+
+#btn-export {
+    padding: 8.5px 11px !important;
+    background-color: #4cae4c !important;
+    background-image: linear-gradient(#4cae4c 49%, #4cae4c 51%) !important;
+    color: white !important;
+}
+#btn-export i {
+    font-size: 1.7em;
+}
+#btn-export:hover {
+    opacity: 0.8;
+}
+
+.disabled-property {
+    pointer-events: none;
+    cursor: not-allowed;
+    user-select: none;
+    opacity: 0.8;
+}
+
+#btn-op-page-custom a {
+    background-color: var(--theme-color);
+    color: white;
+    border-radius: 50%;
+    padding: 7.5px 8px;
+    margin: 5px;
+    box-shadow: 0 2px 2px #888888;
+}
+
+#btn-op-page-custom a:hover {
+    background: none;
+    background-color: #0f000024;
+    color: black;
+}
+
+#btn-op-page-custom .dropdown-menu {
+    top: 75%;
+    left: -217px;
+    min-width: 250px;
+    padding: 0px;
+}
+
+#btn-op-page-custom table {
+    margin-bottom: 0px;
+}
+
+#btn-op-page-custom tbody td {
+    border: none;
+}
+
+.whitespace-nowrap {
+    white-space: nowrap;
+}
+
+
+.font-size-12 {
+    font-size: 12px;
+}
+
+.vertical-align-center {
+    vertical-align: middle !important;
+}
+
+.vertical-align-end {
+    vertical-align: bottom;
+}
+
+.medicine td, .temp-medicine td {
+    text-transform: uppercase;
+}
+
+.hospital_selection_container {
+    background-color: #80808026;
+    padding: 0px 0px 15px 0px;
+}
+
+.pediatric-schedule td {
+    border-color: black !important;
+}
+
+.print ul.nicu-ward-menu > li > a {
+    padding: 12px 19px;
+    height: unset;
+    width: unset;
+    border-radius: 50%;
+ }
+.print ul.nicu-ward-menu > li > a:focus {
+    padding: 12px 19px;
+    height: unset;
+    width: unset;
+    border-radius: 50%;
+ }
+ .row-left-margin-20 {
+    margin-left: -20px;
+ }
+.nabh-logo {
+    width: 78px;
+}
+.logo-align {
+    margin-left: -7px;
+}
+#discharge-edit-btn {
+    background-color: #2f96b4 !important;
+    background-image: linear-gradient(#2f96b4 49%, #2f96b4 51%) !important;
+    color: white !important;
+    padding: 7px 9px !important;
+}
+#discharge-edit-btn:hover {
+    opacity: 0.8;
+}

@@ -1,0 +1,16 @@
+#patient-detail {
+	background-color: #4d7496;
+  float: right;
+}
+
+.myCalendar {
+  /*width: 1250px;*/
+    height: 800px;
+    margin: 0px auto;
+    font-size: 14px;
+}
+.cdvEventTitle {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

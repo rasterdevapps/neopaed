@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="44px" height="51px" viewBox="0 0 44 51" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>1.18</title>
+    <desc>Created with Sketch.</desc>
+    <g id="IP" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="10.1.1---OP---EMR---OP-Case-Sheet---Examination" transform="translate(-759.000000, -1022.000000)">
+            <g id="1.18" transform="translate(760.000000, 1022.000000)">
+                <path d="M0.568965517,11.6551724 C0.568965517,6.89409698 4.42857974,3.03448276 9.18965517,3.03448276 C13.9507306,3.03448276 17.8103448,6.89409698 17.8103448,11.6551724 C17.8103448,16.4162478 13.9507306,20.2758621 9.18965517,20.2758621 C4.42857974,20.2758621 0.568965517,16.4162478 0.568965517,11.6551724" id="Path" fill="#FFFFFF"></path>
+                <circle id="Oval" stroke="#000000" stroke-width="2" stroke-linecap="square" cx="9.20689655" cy="11.6551724" r="8.63793103"></circle>
+                <path d="M24.3275862,14.2241379 C24.3275862,9.4630625 28.1872004,5.60344828 32.9482759,5.60344828 C37.7093513,5.60344828 41.5689655,9.4630625 41.5689655,14.2241379 C41.5689655,18.9852134 37.7093513,22.8448276 32.9482759,22.8448276 C28.1872004,22.8448276 24.3275862,18.9852134 24.3275862,14.2241379" id="Path" fill="#FFFFFF"></path>
+                <circle id="Oval" stroke="#000000" stroke-width="2" stroke-linecap="square" cx="32.9655172" cy="14.2241379" r="8.63793103"></circle>
+                <path d="M13.3792941,10.3275862 C13.3723375,6.5936419 15.6171669,3.22380983 19.0655519,1.79166831 C22.513937,0.359526781 26.4855807,1.14760849 29.1258827,3.78791043 C31.7661846,6.42821237 32.5542663,10.3998562 31.1221248,13.8482412 C29.6899833,17.2966262 26.3201512,19.5414556 22.5862069,19.534499 C20.1429824,19.539071 17.7985055,18.5705349 16.0708818,16.8429113 C14.3432582,15.1152876 13.3747221,12.7708107 13.3792941,10.3275862" id="Path" fill="#FFFFFF"></path>
+                <circle id="Oval" stroke="#000000" stroke-width="2" stroke-linecap="square" cx="22.6034483" cy="10.362069" r="9.20689655"></circle>
+                <path d="M18.862069,18.1551724 L12.8103448,48.1551724" id="Path" stroke="#000000" stroke-width="2" stroke-linecap="square"></path>
+                <path d="M12.8103448,48.1551724 L24.8965517,42.5862069" id="Path" stroke="#000000" stroke-width="2" stroke-linecap="square"></path>
+                <path d="M24.8965517,42.1551724 L36.137931,49.4482759" id="Path" stroke="#000000" stroke-width="2" stroke-linecap="square"></path>
+                <path d="M36.137931,49.4482759 L38.2931034,46.4482759" id="Path" stroke="#000000" stroke-width="2" stroke-linecap="square"></path>
+                <path d="M16.2586207,31.862069 L22.3103448,39.5862069" id="Path" stroke="#000000" stroke-width="2" stroke-linecap="square"></path>
+                <path d="M22.7413793,39.5862069 L26.2068966,37.0172414" id="Path" stroke="#000000" stroke-width="2" stroke-linecap="square"></path>
+                <rect id="Rectangle" fill="#FFFFFF" fill-rule="nonzero" x="24.1896552" y="6.72413793" width="3.44827586" height="3.86206897"></rect>
+                <rect id="Rectangle" stroke="#000000" stroke-width="2" stroke-linecap="square" x="24.1896552" y="6.72413793" width="3.44827586" height="3.86206897"></rect>
+                <rect id="Rectangle" fill="#FFFFFF" fill-rule="nonzero" x="29.362069" y="9.72413793" width="3.87931034" height="3.86206897"></rect>
+                <rect id="Rectangle" stroke="#000000" stroke-width="2" stroke-linecap="square" x="29.362069" y="9.72413793" width="3.87931034" height="3.86206897"></rect>
+                <path d="M18,23.7241379 L26.637931,19.862069" id="Path" stroke="#000000" stroke-width="2" stroke-linecap="square"></path>
+                <path d="M13.6724138,18.1551724 L18,25.4310345" id="Path" stroke="#000000" stroke-width="2" stroke-linecap="square"></path>
+                <rect id="Rectangle" fill="#FFFFFF" fill-rule="nonzero" x="39.0172414" y="17.5862069" width="2.31034483" height="3.56896552"></rect>
+                <rect id="Rectangle" stroke="#000000" stroke-width="2" stroke-linecap="square" x="39.0172414" y="17.5862069" width="2.31034483" height="3.56896552"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

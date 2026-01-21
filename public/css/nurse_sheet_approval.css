@@ -1,0 +1,495 @@
+.stepper {
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 20%), 0 1px 3px 0 rgb(0 0 0 / 10%);
+    /*border: 1px solid black;*/
+
+}
+
+.stepper .nav-tabs {
+    position: relative;
+    top: 0px;
+    z-index: 2;
+    background-color: var(--white);
+}
+
+.stepper .nav-tabs>li {
+    width: 25%;
+    position: relative;
+    background-color: var(--theme-color);
+    border-right: 1px solid white;
+}
+
+
+.stepper .nav-tabs>li:after {
+    content: '';
+    position: absolute;
+    /*background: #f1f1f1;*/
+    display: block;
+    width: 100%;
+    height: 1px;
+    top: 30px;
+    left: 50%;
+    z-index: 1;
+}
+
+.stepper .nav-tabs>li:hover {
+    background-color: #ffb3b3;
+    color: #444;
+    transition: 0.5s all ease;
+}
+
+.stepper .nav-tabs>li:last-child::after {
+    background: transparent;
+}
+
+.stepper .nav-tabs>li.active:last-child .round-tab {
+    /*background: #4d77cc;*/
+    /*color: white;*/
+}
+
+.stepper .nav-tabs [data-toggle='tab'] {
+    width: 25px;
+    height: 25px;
+    margin: 20px auto;
+    border-radius: 100%;
+    border: none;
+    padding: 0;
+    color: #f1f1f1;
+    display: inline;
+}
+
+.stepper .nav-tabs [data-toggle='tab']:hover {
+    background: transparent;
+    border: none;
+}
+
+.stepper .nav-tabs>.active>[data-toggle='tab'],
+.stepper .nav-tabs>.active>[data-toggle='tab']:hover,
+.stepper .nav-tabs>.active>[data-toggle='tab']:focus {
+    color: #4d77cc;
+    cursor: default;
+    border: none;
+}
+
+.stepper .tab-pane {
+    position: relative;
+}
+
+.stepper .round-tab {
+   /* width: 25px;
+    height: 25px;
+    line-hei*/ght: 22px;
+    /*display: inline-block;*/
+    /*border-radius: 25px;*/
+    /*background: #fff;*/
+    /*border: 2px solid #707070;*/
+    color: white;
+    z-index: 2;
+   /* position: absolute;
+    left: 0;
+    text-align: center;
+    font-size: 14px;*/
+    display: flex;
+}
+.round-tab i {
+    font-size: 20px;
+    padding: 10px 15px;
+}
+.round-tab b {
+    padding-top: 10px;
+}
+
+.stepper .nav-tabs li.active {
+    background: #ffb3b3;
+    /*border: 2px solid #4d77cc;*/
+    color: white;
+}
+
+.stepper .active .round-tab:hover {
+    /*background: #4d77cc;*/
+    /*border: 2px solid #4d77cc;*/
+}
+
+.stepper .active .round-tab::after {
+    display: none;
+}
+
+.close-alt {
+    position: relative;
+    right: 10px;
+    color: white;
+    box-shadow: unset !important;
+    opacity: 1;
+}
+
+.close-alt span {
+    font-size: 36px !important;
+}
+
+.approve-table {
+    width: 100%;
+}
+
+.approve-table th,
+.approve-table td {
+    padding: 5px 5px;
+}
+
+.btn-area {
+    padding: 15px;
+    background: #8080800d;
+}
+
+.panel {
+    /*background-color: #ff960075;*/
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 20%), 0 1px 3px 0 rgb(0 0 0 / 10%);
+}
+
+.panel thead {
+    background-color: #f2efef59;
+}
+.panel-body {
+    padding: 0px;
+}
+
+.tab-content {
+    height: 500px;
+    overflow: hidden;
+    z-index: 0;
+}
+/*
+#approval-modal thead tr th {
+    position: sticky;
+    top: 0px;
+    background-color: #e8eef6;
+    z-index: 2;
+    border: 0px;
+    font-weight: bold;
+    vertical-align: top;
+    box-shadow: 0px 2px #e4e8ed;
+    padding-top: 15px !important;
+}
+*/
+#approval-modal .table>thead>tr>th {
+    background-color: darkgrey;
+}
+#approval-modal .table>tbody>tr>td {
+    vertical-align: middle;
+    /*border-top: 1px solid black;*/
+    line-height: 1;
+    color: black;    
+    padding: 8px !important;
+    /*white-space: nowrap;*/
+}
+#approval-modal .table>tbody>tr>td.label-danger {
+    color: white;
+}
+#approval-modal .table>tbody>tr>td.label-danger:hover, #approval-modal .table>tbody>tr>td.label-info:hover {
+    opacity: 0.7;
+}
+
+#approval-modal {
+    line-height: 0px;
+}
+
+#approval-modal .close-alt {
+    z-index: 3;
+}
+
+#approval-modal .tab-pane {
+    overflow: auto;
+    height: 100%;
+    position: relative;
+}
+
+#approval-modal .action-icons {
+    position: absolute;
+    top: 80px;
+    right: 30px;
+}
+
+.approval-done {
+    border: 2px solid #51a351 !important;
+    color: #51a351 !important;
+}
+
+.tab-footer {
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+}
+
+.list-inline {
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+.display-flex-must {
+    display: flex !important;
+}
+
+.edit-machine-data-design {
+    border: 0px;
+    box-shadow: 0px 0px 7px #0000001c;
+    padding: 15px;
+    width: 38%;
+    height: 86%;
+    margin-top: 2%;
+}
+
+.edit-machine-data-design input, .edit-machine-data-design textarea {
+    background-color: unset;
+    color: black;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    box-shadow: unset;
+    border-radius: 0px;
+}
+
+.edit-machine-data-design input:focus, .edit-machine-data-design textarea:focus {
+    border-color: #3968C6;
+    box-shadow: unset;
+}
+
+.machine-data i {
+    font-size: 16px;
+    color: grey;
+}
+
+.active-color {
+    background-color: var(--theme-color);
+    color: white !important;
+    opacity: 0.5;
+}
+
+.empty-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 89.6%;
+    position: relative;
+}
+
+#approval-modal #modal-loader {
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    overflow: hidden;
+}
+
+.cursor-disabled {
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.close-update {
+    width: 71px;
+}
+
+#approval-screen.btn-success {
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.tab-sub-content {
+    height: 86%;
+    padding: 0px;
+    overflow-y: auto;
+    box-shadow: 0px 0px 7px #0000001c;
+    margin-top: 2%;
+}
+
+.tab-sub-content.col-sm-7 {
+    margin-left: 2%;
+}
+
+.modal-content,
+.panel {
+    border-radius: 0px;
+}
+
+.modal-body {
+    padding: 15px 30px 0px 30px;
+}
+
+.display-none-must {
+    display: none !important;
+}
+
+#approval-modal .table>thead>tr>th {
+    font-weight: bold;
+}
+
+.modal-header {
+    background-color: var(--theme-color);
+}
+
+.border-right {
+    border-right: 1px solid black;
+}
+
+.machine-data-edit .col-xs-6 {
+    padding: 0px;
+}
+
+.machine-data-edit > td > div {
+    padding-top: 5px;
+}
+.machine-data-edit > td > div.col-xs-4 {
+    padding: 8px 0px;
+}
+
+.machine-data-date {
+    background: var(--theme-color);
+    opacity: 0.5;
+}
+
+.machine-data-date th {
+    color: white !important;    
+}
+.machine-data-date th b {
+    position: relative;
+    top: -3px;
+}
+
+.bg-image {
+    display: none;
+}
+
+.check-all-btn {
+    position: sticky; 
+    top: 0px;
+    right: 0px;
+    width: 100%;
+    background-color: white;
+    display: inline-block;
+    padding: 2px;
+    z-index: 1;
+}
+
+.check-all-btn a {
+    padding: 5px 8px;
+}
+
+.uncheck_all i {
+    color: white;
+}
+
+.uncheck_all:hover i {
+    color: #ebebeb;
+}
+
+.check_all i {
+    color: white;
+}
+
+.no-data-msg {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    border-radius: 0px;
+}
+
+input[type=checkbox] {
+    margin-top: 0 !important;
+    line-height: normal;
+    width: 16px;
+    height: 16px;
+    border-radius: 0px;
+}
+
+.btn-primary {
+    background-color: #3968c6;
+}
+
+.btn-info {
+    background-color: #2f96b4;
+}
+
+.btn-default {
+    background-color: #ccc;
+}
+
+@media screen and (max-width: 961px) {
+    .edit-update.mtb-15 {
+        margin: 15px;
+    }
+    .edit-machine-data-design {
+        position: sticky;
+        top: 30px;
+    }
+}
+
+.table-container {
+    /*overflow: auto;*/
+}
+
+.table-container thead > tr > th {
+    position: sticky;
+    top: -1px;
+    background-color: white;
+    z-index: 1;
+}
+
+.table-container tr > th:first-child, .table-container tr > td:first-child {
+    position: sticky;
+    left: -1px;
+    background-color: white;
+    z-index: 2;
+    width: 100px;
+}
+
+.table-container tr > th:nth-child(2), .table-container tr > td:nth-child(2) {
+    position: sticky;
+    left: 41px;
+    background-color: white;    
+    z-index: 2;
+}
+
+.table-container tr > th:first-child, .table-container tr > th:nth-child(2) {
+    z-index: 3;
+}
+
+.table-container tr > th:nth-child(2), .table-container tr > td:nth-child(2)  {
+    min-width: 250px;
+    width: 250px;
+}
+
+input[name="edited_val"].has-error {
+    border-color: red;
+}
+
+.approve_by_param i,  .approve_all i, .column_approve i {
+    border: 1px solid black;
+    border-radius: 50%;
+    font-size: 14px;
+    padding: 3px;
+    color: black;
+}
+
+.approve_by_param i:hover, .approve_all i:hover, .column_approve i:hover, .approve_by_param.active i, .approve_all.active i, .column_approve.active i {
+    background: green;
+    color: white;
+}
+
+.machine-data-edit.active {
+    background-color: black !important;
+}
+
+.time_based_approve {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
+
+#approval-modal .table>tbody>tr>td.machine-data-edit {
+    /*padding-left: 35px !important;*/
+}
+
+.column_width {
+    width: 100px;
+}

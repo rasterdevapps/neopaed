@@ -1,0 +1,64 @@
+body {
+	line-height: 0.8;
+}
+
+table, tr {
+	border: none;
+}
+th, td {
+	border-color: black;
+}
+.print table.score-form > thead > tr > th:not(:first-child) {
+	text-align: center;
+}
+.print table.score-form > tbody > tr > td:not(:first-child) {
+	padding: 0px !important;
+}
+.print table.score-form > tbody > tr > td:first-child {
+	white-space: nowrap;
+}
+.score-select {
+	cursor: default;
+}
+.empty-cell {
+	border: none;
+}
+.empty-cell .score-select {
+	height: 49px;
+}
+
+.ballard-value-block {
+	font-weight: bold;
+	font-size: 14px;
+}
+
+.score-select{
+	width: 73px;
+	height: 45px;
+	padding: 3px 5px;
+}
+
+.score-form img {
+	height: 40px;
+	margin: auto;
+}
+body.print .content-block {
+	margin-top: 8px;
+}
+.print table td, .print table th {
+	padding: 2px 5px !important;
+	line-height: 0.9;
+}
+h4 {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+.print-head {
+	margin-bottom: 0px;
+}
+#physical-sign .score-select {
+	width: 80px;
+}
+h3 {
+	margin-top: 10px;
+}

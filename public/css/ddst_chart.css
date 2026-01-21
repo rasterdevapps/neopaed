@@ -1,0 +1,70 @@
+#create-neuro #ddst_tab {
+    /*display: none;*/
+}
+#chart-container {
+    margin: auto;
+    width: 1024px;
+    height: 1500px;
+}
+.temp-layer {
+    width: 100vw; 
+    height: 100vh; 
+    z-index: 10; 
+    background-color: #f9f9f9;
+}
+#chartdiv {
+    float: left;
+    width: 100%;
+    height: 100%;
+}
+.bootbox.bootbox-chart .bootbox-body {
+    display: none;
+}
+.bootbox.bootbox-chart .modal-footer {
+    margin-top: 0px;
+}
+.bootbox.bootbox-chart .modal-dialog {
+    width: 150px;
+}
+.bootbox.bootbox-chart .modal-dialog button {
+    width: 100%;
+    margin-bottom: 10px !important;
+    margin-left: 0px !important;
+}
+.bootbox.bootbox-chart .close {
+    position: relative;
+    top: -14px !important;
+    right: 4px;
+    width: 0px !important;
+    font-size: 32px !important;
+    color: black;
+    opacity: 1;
+}
+.print .hide-logo {
+    background-color: #FFFFFF;
+}
+.am5exporting-menu {
+    display: none;
+}
+#ddst_form button[type="button"].btn-primary {
+    float: right;
+    padding: 10px 13px;
+    background-color: transparent;
+    color: #000000;
+    box-shadow: unset;
+}
+@media screen and (max-width: 1140px) {
+    .container {
+        display: inline-table !important;
+    }
+}
+@media print {
+    body {
+        /*transform: scaleX(0.7);*/
+        /*zoom: 0.7;*/
+    }
+    @page {
+        margin-left: 0cm;
+        margin-right: 0.5cm;
+    }        
+}

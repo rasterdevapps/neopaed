@@ -1,0 +1,1158 @@
+#ddst_form {
+    overflow: auto;
+}
+.nav.navbar-nav.ddst-chart-indications {
+     margin: 0px; 
+}
+.chart-wrap {
+    min-height: 600px;
+    font-family: monospace;
+    width: 1105px;
+    height: 1578px;
+    word-spacing: -3px;
+    font-weight: bold;
+    margin: auto;
+}
+
+.chart-wrap .title {
+    text-align: center;
+}
+
+.grid.horizontal {
+    flex-direction: column;
+    border-bottom: none;
+    padding-top: 3%;
+    padding-bottom: 4%;
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    background-size: 100% 100%;
+}
+
+.grid .bar {
+    width: 45px;
+    height: var(--bar-value);
+    align-self: flex-end;
+    margin: 0 auto;
+    border-radius: 3px 3px 0 0;
+    position: relative;
+}
+
+.grid.horizontal .bar p {
+    padding: 0px;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 0px !important;
+    line-height: 22px !important;
+}
+
+.grid.horizontal .bar {
+    height: 24px;
+    width: auto;
+    align-self: flex-start;
+    margin: auto 0 auto 0;
+    border-radius: 0 3px 3px 0;
+    display: inline-block;
+    margin-top: -5px;
+    font-size: 10px;
+}
+
+.grid .bar::after {
+    content: '';
+    top: -3em;
+    padding: 10px;
+    display: inline-block;
+    white-space: nowrap;
+    position: absolute;
+    transform: rotate(-45deg);
+}
+
+.grid.horizontal .bar::after {
+    top: initial;
+    left: 100%;
+    padding: 0 10px;
+    display: inline-block;
+    white-space: nowrap;
+    position: absolute;
+    transform: rotate(0deg);
+}
+
+.bar {
+    background-color: #5555558c;
+}
+
+.bg-danger {
+    background-color: #f75858;
+}
+
+.bg-success {
+    background-color: #7fb36a;
+}
+
+.bg-warning {
+    background-color: #ecad3a;
+}
+
+.traffic-light {
+    position: absolute;
+    display: block;
+    left: 50%;
+    background-color: #000;
+    width: 150px;
+    height: 50px;
+    border-radius: 30px;
+    box-shadow: 0px 0px 10px #999;
+}
+
+.traffic-light input {
+    appearance: none;
+    position: relative !important;
+    left: 8% !important;
+    width: 30px !important;
+    height: 30px !important;
+    vertical-align: middle !important;
+    border-radius: 100% !important;
+    display: inline-block !important;
+    margin-top: 10px !important;
+    margin-left: 10px !important;
+}
+
+.traffic-light input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.traffic-light input.color1 {
+    background-color: #b30000;
+}
+
+.traffic-light input.color2 {
+    background-color: #b2b300;
+}
+
+.traffic-light input.color3 {
+    background-color: #00b300;
+}
+
+.traffic-light input.color1 {
+    background-color: #b30000;
+}
+
+.traffic-light input.color2 {
+    background-color: #b2b300;
+}
+
+.traffic-light input.color3 {
+    background-color: #00b300;
+}
+
+.traffic-light input.color1:checked {
+    background-color: #FF0000;
+    box-shadow: 0 0 25px #ff3333;
+}
+
+.traffic-light input.color2:checked {
+    background-color: #FFFF00;
+    box-shadow: 0 0 25px #ffff33;
+}
+
+.traffic-light input.color3:checked {
+    background-color: #00FF00;
+    box-shadow: 0 0 25px #33ff33;
+}
+
+.ddst-chart-indications .open a,
+.ddst-chart-indications>li>a:hover,
+.ddst-chart-indications>li>a:focus {
+    text-decoration: none;
+    color: #555;
+}
+
+.ddst-chart-indications>li>a {
+    padding: 2px 10px 0px;
+    color: #fff;
+}
+
+.ddst-chart-indications .dropdown-menu {
+    padding: 0px !important;
+    margin: 0px !important;
+    min-width: 0px !important;
+    min-width: 0px !important;
+    left: 100%;
+    top: -10px;
+    overflow: inherit !important;
+}
+
+#regard_face_label,
+#smile_responsively_label,
+#simle_spantaneously_label,
+#regard_own_hand_label,
+#work_for_toy_label,
+#feed_self_label,
+#play_pat_a_cake_label,
+#indicate_wants_label,
+#wave_bye_bye_label,
+#play_ball_with_examiner_label,
+#imitate_activities_label,
+#drink_from_cup_label,
+#help_in_house_label,
+#use_spoon_fork_label,
+#remove_garment_label,
+#feed_doll_label,
+#put_on_clothing_label,
+#brush_teeth_with_help_label,
+#wash_dry_hands_label,
+#name_friend_label,
+#put_on_t_shirt_label,
+#dreff_no_help_label,
+#play_board_card_games_label,
+#brush_teeth_no_help_label,
+#prepare_cereal_label {
+    position: relative;
+}
+
+#follow_to_midline_label,
+#follow_past_midline_label,
+#grasp_rattle_label,
+#hands_together_label,
+#follow_180_deg_label,
+#regard_raisin_label,
+#reaches_label,
+#look_for_yarn_label,
+#rake_raisin_label,
+#pass_cube_label,
+#take_2_cubes_label,
+#thumb_finger_grasp_label,
+#bang_2_cubes_held_in_hands_label,
+#put_block_in_cup_label,
+#scribbles_label,
+#dump_raisin_demonstrated_label,
+#tower_of_2_cubes_label,
+#tower_of_4_cubes_label,
+#tower_of_6_cubes_label,
+#imitate_vertical_line_label,
+#tower_of_8_cubes_label,
+#thumb_wiggle_label,
+#copy_circle_label,
+#draw_person_3_pts_label,
+#copy_plus_label,
+#pick_longer_line_label,
+#copy_square_demonstr_label,
+#draw_person_6_pts_label,
+#copy_square_label {
+    position: relative;
+    top: -18px;
+}
+
+#respond_to_bell_label,
+#vocalizes_label,
+#ooo_aah_label,
+#laughes_label,
+#squeals_label,
+#trun_to_rattling_sound_label,
+#trun_to_voice_label,
+#single_syllables_label,
+#imitate_speech_sounds_label,
+#dada_mama_non_specific_label,
+#common_syllables_label,
+#jabbers_label,
+#dada_mama_specific_label,
+#one_word_label,
+#two_words_label,
+#three_words_label,
+#six_words_label,
+#point_2_pictures_label,
+#combine_words_label,
+#name_1_picture_label,
+#body_parts_6_label,
+#point_4_picutres_label,
+#speech_half_understandable_label,
+#name_4_picutres_label,
+#know_2_actions_label,
+#know_2_adjectives_label,
+#name_1_color_label,
+#use_of_2_objects_label,
+#count_1_block_label,
+#use_of_3_objects_label,
+#know_4_actions_label,
+#speech_all_understandable_label,
+#understand_4_prepositions_label,
+#name_4_colors_label,
+#define_5_words_label,
+#know_3_adjectives_label,
+#count_5_blocks_label,
+#opposites_2_label,
+#define_7_words_label {
+    position: relative;
+    top: -15px;
+}
+
+#equal_movements_label,
+#lift_head_label,
+#head_up_45_deg_label,
+#head_up_90_deg_label,
+#sit_head_steady_label,
+#bear_weight_on_legs_label,
+#chest_up_arm_support_label,
+#roll_over_label,
+#pull_to_sit_no_head_lag_label,
+#sit_no_support_label,
+#stand_holding_on_label,
+#pull_to_stand_label,
+#get_to_sitting_label,
+#stand_2_seconds_label,
+#stand_alone_label,
+#stoop_and_recover_label,
+#walk_well_label,
+#walk_backwards_label,
+#runs_label,
+#walk_up_steps_label,
+#kick_ball_forward_label,
+#jump_up_label,
+#throw_ball_overhead_label,
+#board_jump_label,
+#balance_each_food_1_second_label,
+#balance_each_food_2_seconds_label,
+#hops_label,
+#balance_each_food_3_seconds_label,
+#balance_each_food_4_seconds_label,
+#balance_each_food_5_seconds_label,
+#hell_to_toe_walk_label,
+#balance_each_food_6_seconds_label {
+    position: relative;
+    top: 13px;
+}
+
+#prepare_cereal_label {
+    margin-top: 3px;
+}
+
+#balance_each_food_6_seconds_label .ddst-chart-indications>li>a {
+    padding: 2px 6px 0px;
+}
+
+@media screen and (max-width: 991px) {
+    body {
+        line-height: 1.15;
+    }
+    .chart-wrap {
+        width: 606px;
+        height: unset;
+    }
+    .ddst-chart-indications>li>a {
+        padding: 2px 2px 0px;
+        letter-spacing: 0px;
+        line-height: 10px;
+    }
+    .grid.horizontal .bar {
+        font-size: 9px;
+        height: 14px;
+        margin-top: -3px;
+    }
+    #prepare_cereal_label {
+        margin-top: 7px;
+    }
+    #regard_face_label,
+    #smile_responsively_label,
+    #simle_spantaneously_label,
+    #regard_own_hand_label,
+    #work_for_toy_label,
+    #feed_self_label,
+    #play_pat_a_cake_label,
+    #indicate_wants_label,
+    #wave_bye_bye_label,
+    #play_ball_with_examiner_label,
+    #imitate_activities_label,
+    #drink_from_cup_label,
+    #help_in_house_label,
+    #use_spoon_fork_label,
+    #remove_garment_label,
+    #feed_doll_label,
+    #put_on_clothing_label,
+    #brush_teeth_with_help_label,
+    #wash_dry_hands_label,
+    #name_friend_label,
+    #put_on_t_shirt_label,
+    #dreff_no_help_label,
+    #play_board_card_games_label,
+    #brush_teeth_no_help_label,
+    #prepare_cereal_label {
+        top: -2px;
+    }
+    #follow_to_midline_label,
+    #follow_past_midline_label,
+    #grasp_rattle_label,
+    #hands_together_label,
+    #follow_180_deg_label,
+    #regard_raisin_label,
+    #reaches_label,
+    #look_for_yarn_label,
+    #rake_raisin_label,
+    #pass_cube_label,
+    #take_2_cubes_label,
+    #thumb_finger_grasp_label,
+    #bang_2_cubes_held_in_hands_label,
+    #put_block_in_cup_label,
+    #scribbles_label,
+    #dump_raisin_demonstrated_label,
+    #tower_of_2_cubes_label,
+    #tower_of_4_cubes_label,
+    #tower_of_6_cubes_label,
+    #imitate_vertical_line_label,
+    #tower_of_8_cubes_label,
+    #thumb_wiggle_label,
+    #copy_circle_label,
+    #draw_person_3_pts_label,
+    #copy_plus_label,
+    #pick_longer_line_label,
+    #copy_square_demonstr_label,
+    #draw_person_6_pts_label,
+    #copy_square_label {
+        top: -17px;
+    }
+    #respond_to_bell_label,
+    #vocalizes_label,
+    #ooo_aah_label,
+    #laughes_label,
+    #squeals_label,
+    #trun_to_rattling_sound_label,
+    #trun_to_voice_label,
+    #single_syllables_label,
+    #imitate_speech_sounds_label,
+    #dada_mama_non_specific_label,
+    #common_syllables_label,
+    #jabbers_label,
+    #dada_mama_specific_label,
+    #one_word_label,
+    #two_words_label,
+    #three_words_label,
+    #six_words_label,
+    #point_2_pictures_label,
+    #combine_words_label,
+    #name_1_picture_label,
+    #body_parts_6_label,
+    #point_4_picutres_label,
+    #speech_half_understandable_label,
+    #name_4_picutres_label,
+    #know_2_actions_label,
+    #know_2_adjectives_label,
+    #name_1_color_label,
+    #use_of_2_objects_label,
+    #count_1_block_label,
+    #use_of_3_objects_label,
+    #know_4_actions_label,
+    #speech_all_understandable_label,
+    #understand_4_prepositions_label,
+    #name_4_colors_label,
+    #define_5_words_label,
+    #know_3_adjectives_label,
+    #count_5_blocks_label,
+    #opposites_2_label,
+    #define_7_words_label {
+        top: 2px;
+    }
+    #equal_movements_label,
+    #lift_head_label,
+    #head_up_45_deg_label,
+    #head_up_90_deg_label,
+    #sit_head_steady_label,
+    #bear_weight_on_legs_label,
+    #chest_up_arm_support_label,
+    #roll_over_label,
+    #pull_to_sit_no_head_lag_label,
+    #sit_no_support_label,
+    #stand_holding_on_label,
+    #pull_to_stand_label,
+    #get_to_sitting_label,
+    #stand_2_seconds_label,
+    #stand_alone_label,
+    #stoop_and_recover_label,
+    #walk_well_label,
+    #walk_backwards_label,
+    #runs_label,
+    #walk_up_steps_label,
+    #kick_ball_forward_label,
+    #jump_up_label,
+    #throw_ball_overhead_label,
+    #board_jump_label,
+    #balance_each_food_1_second_label,
+    #balance_each_food_2_seconds_label,
+    #hops_label,
+    #balance_each_food_3_seconds_label,
+    #balance_each_food_4_seconds_label,
+    #balance_each_food_5_seconds_label,
+    #hell_to_toe_walk_label,
+    #balance_each_food_6_seconds_label {
+        top: 3px;
+    }
+    #imitate_activities_label {
+        margin-left: 37.5% !important;
+    }
+    #put_on_clothing_label {
+        margin-left: 62.5% !important;
+        width: 66px;
+        height: unset;
+    }
+    #imitate_activities_label {
+        margin-left: 37.5% !important;
+    }
+    #copy_square_label {
+        margin-left: 9% !important;
+    }
+    #draw_person_6_pts_label {
+        margin-left: 10.3% !important;
+    }
+    #copy_square_demonstr_label {
+        margin-left: 10.8% !important;
+    }
+    #pick_longer_line_label {
+        margin-left: 0.6% !important;
+    }
+    #copy_plus_label {
+        margin-left: 18.5% !important;
+    }
+    #draw_person_3_pts_label {
+        margin-left: 18.8% !important;
+    }
+    #copy_circle_label {
+        margin-left: 18.2% !important;
+    }
+    #thumb_wiggle_label {
+        margin-left: 15.5% !important;
+        width: 40px;
+        height: unset;
+    }
+    #tower_of_8_cubes_label {
+        margin-left: 19.4% !important;
+        width: 55px;
+        height: unset;
+    }
+    #imitate_vertical_line_label {
+        margin-left: 14.3% !important;
+        width: 65px;
+        height: unset;
+    }
+    #tower_of_6_cubes_label {
+        margin-left: 4.8% !important;
+        width: 40px;
+        height: unset;
+    }
+    #tower_of_4_cubes_label {
+        margin-left: 15.2% !important;
+    }
+    #tower_of_2_cubes_label {
+        margin-left: 3.4% !important;
+    }
+    #dump_raisin_demonstrated_label {
+        margin-left: 2.3% !important;
+    }
+    #scribbles_label {
+        margin-left: 2.2% !important;
+    }
+    #put_block_in_cup_label {
+        margin-left: 7.2% !important;
+    }
+    #bang_2_cubes_held_in_hands_label {
+        margin-left: 9.5% !important;
+    }
+    #thumb_finger_grasp_label {
+        margin-left: 10% !important;
+    }
+    #take_2_cubes_label {
+        margin-left: 4% !important;
+    }
+    #pass_cube_label {
+        margin-left: 10% !important;
+    }
+    #define_7_words_label {
+        margin-left: 0% !important;
+    }
+    #opposites_2_label {
+        margin-left: 0.5% !important;
+    }
+    #count_5_blocks_label {
+        margin-left: 0% !important;
+    }
+    #know_3_adjectives_label {
+        margin-left: -0.8% !important;
+    }
+    #define_5_words_label {
+        margin-left: 5% !important;
+    }
+    #name_4_colors_label {
+        margin-left: 10% !important;
+    }
+    #understand_4_prepositions_label {
+        margin-left: 2% !important;
+    }
+    #speech_all_understandable_label {
+        margin-left: 8.8% !important;
+    }
+    #know_4_actions_label {
+        margin-left: 18% !important;
+    }
+    #use_of_3_objects_label {
+        margin-left: 19.1% !important;
+    }
+    #count_1_block_label {
+        margin-left: 21.7% !important;
+    }
+    #use_of_2_objects_label {
+        margin-left: 29.7% !important;
+    }
+    #know_2_adjectives_label {
+        margin-left: 35.5% !important;
+    }
+    #know_2_actions_label {
+        margin-left: 32% !important;
+    }
+    #name_4_picutres_label {
+        margin-left: 38.6% !important;
+    }
+    #name_4_picutres_label {
+        margin-left: 38.9% !important;
+    }
+    #speech_half_understandable_label {
+        margin-left: 30.5% !important;
+        width: 120px;
+        height: unset;
+    }
+    #point_4_picutres_label {
+        margin-left: 39.6% !important;
+    }
+    #body_parts_6_label {
+        margin-left: 35.5% !important;
+        width: 50px;
+        height: unset;
+    }
+    #name_1_picture_label {
+        margin-left: 35.5% !important;
+    }
+    #combine_words_label {
+        margin-left: 34.5% !important;
+        width: 50px;
+        height: unset;
+    }
+    #point_2_pictures_label {
+        margin-left: 39.8% !important;
+        width: 42px;
+        height: unset;
+    }
+    #three_words_label {
+        margin-left: 41.5% !important;
+    }
+    #ooo_aah_label {
+        margin-left: 4.5% !important;
+    }
+    #balance_each_food_6_seconds_label {
+        margin-left: 2% !important;
+        width: 86px !important;
+        height: unset !important;
+    }
+    #hell_to_toe_walk_label {
+        margin-left: 1% !important;
+    }
+    #balance_each_food_5_seconds_label {
+        margin-left: 0% !important;
+        width: 85px !important;
+        height: unset !important;
+    }
+    #balance_each_food_4_seconds_label {
+        margin-left: -0.3% !important;
+    }
+    #balance_each_food_3_seconds_label {
+        margin-left: 0.5% !important;
+    }
+    #hops_label {
+        margin-left: 1.4% !important;
+    }
+    #balance_each_food_2_seconds_label {
+        margin-left: 0.5% !important;
+    }
+    #balance_each_food_1_second_label {
+        margin-left: -0.3% !important;
+    }
+    #board_jump_label {
+        margin-left: 3.8% !important;
+    }
+    #throw_ball_overhead_label {
+        margin-left: 4.5% !important;
+    }
+    #jump_up_label {
+        margin-left: 15.2% !important;
+    }
+    #kick_ball_forward_label {
+        margin-left: 8.5% !important;
+    }
+    #walk_up_steps_label {
+        margin-left: 3% !important;
+    }
+    #runs_label {
+        margin-left: 14% !important;
+    }
+    #walk_backwards_label {
+        margin-left: 2.6% !important;
+    }
+    #walk_well_label {
+        margin-left: 0% !important;
+    }
+    #stoop_and_recover_label {
+        margin-left: 1.5% !important;
+    }
+    #stand_alone_label {
+        margin-left: 1.5% !important;
+    }
+    #stand_2_seconds_label {
+        margin-left: 7% !important;
+    }
+    #get_to_sitting_label {
+        margin-left: 1.5% !important;
+    }
+    #pull_to_stand_label {
+        margin-left: 7.4% !important;
+    }
+    #stand_holding_on_label {
+        margin-left: 13% !important;
+    }
+    #sit_no_support_label {
+        margin-left: 12% !important;
+    }
+    #pull_to_sit_no_head_lag_label {
+        margin-left: 2% !important;
+    }
+    #roll_over_label {
+        margin-left: -0.2% !important;
+    }
+    #dada_mama_non_specific_label {
+        width: 84px;
+        height: unset;
+    }
+    #imitate_speech_sounds_label {
+        width: 140px;
+        height: unset;
+    }
+    #trun_to_rattling_sound_label {
+        width: 90px;
+        height: unset;
+    }
+    #respond_to_bell_label {
+        width: 45px;
+        height: unset;
+    }
+
+    #help_in_house_label {
+        top: -10px;
+    }
+    #drink_from_cup_label {
+        top: -18px;
+    }
+    #imitate_activities_label {
+        top: -36px;
+    }
+    #play_ball_with_examiner_label,
+    #wave_bye_bye_label,
+    #indicate_wants_label,
+    #play_pat_a_cake_label,
+    #feed_self_label,
+    #work_for_toy_label,
+    #regard_own_hand_label,
+    #simle_spantaneously_label,
+    #smile_responsively_label,
+    #regard_face_label {
+        top: -54px;
+    }
+    #copy_square_demonstr_label,
+    #draw_person_6_pts_label,
+    #copy_square_label {
+        top: -9px;
+    }
+    #look_for_yarn_label,
+    #reaches_label {
+        top: -25px;
+    }
+    #regard_raisin_label,
+    #follow_180_deg_label {
+        top: -33px;
+    }
+    #hands_together_label,
+    #grasp_rattle_label {
+        top: -41px;
+    }
+    #follow_past_midline_label {
+        top: -49px;
+    }
+    #follow_to_midline_label {
+        top: -57px;
+    }
+    #know_2_adjectives_label,
+    #name_1_color_label,
+    #use_of_2_objects_label,
+    #count_1_block_label,
+    #use_of_3_objects_label,
+    #know_4_actions_label,
+    #speech_all_understandable_label,
+    #understand_4_prepositions_label,
+    #name_4_colors_label,
+    #define_5_words_label,
+    #know_3_adjectives_label {
+        top: 10px;
+    }
+    #count_5_blocks_label {
+        top: 28px;
+    }
+    #opposites_2_label {
+        top: 46px;
+    }
+    #define_7_words_label {
+        top: 54px;
+    }
+    #pull_to_sit_no_head_lag_label,
+    #sit_no_support_label,
+    #stand_holding_on_label,
+    #pull_to_stand_label,
+    #get_to_sitting_label {
+        top: 11px;   
+    }
+    #stand_2_seconds_label,
+    #stand_alone_label,
+    #stoop_and_recover_label {
+        top: 19px;
+    }
+    #walk_well_label {
+        top: 27px;
+    }
+    #walk_backwards_label,
+    #runs_label,
+    #walk_up_steps_label,
+    #kick_ball_forward_label,
+    #jump_up_label,
+    #throw_ball_overhead_label,
+    #board_jump_label,
+    #balance_each_food_1_second_label {
+        top: 35px;
+    }
+    #balance_each_food_2_seconds_label {
+        top: 43px;
+    }
+    #hops_label,
+    #balance_each_food_3_seconds_label {
+        top: 51px;
+    }
+    #balance_each_food_4_seconds_label,
+    #balance_each_food_5_seconds_label,
+    #hell_to_toe_walk_label,
+    #balance_each_food_6_seconds_label {
+        top: 59px;
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+    body {
+        line-height: 1.4;
+    }
+    .chart-wrap {
+        width: 860px;
+        height: unset;
+    }
+    .grid.horizontal .bar {
+        height: unset;
+    }
+    .ddst-chart-indications>li>a {
+        padding: 2px 2px;
+        line-height: 1.4;
+        letter-spacing: -0.5px;
+    }
+    #regard_face_label,
+    #smile_responsively_label,
+    #simle_spantaneously_label,
+    #regard_own_hand_label,
+    #work_for_toy_label,
+    #feed_self_label,
+    #play_pat_a_cake_label,
+    #indicate_wants_label,
+    #wave_bye_bye_label,
+    #play_ball_with_examiner_label,
+    #imitate_activities_label,
+    #drink_from_cup_label,
+    #help_in_house_label,
+    #use_spoon_fork_label,
+    #remove_garment_label,
+    #feed_doll_label,
+    #put_on_clothing_label,
+    #brush_teeth_with_help_label,
+    #wash_dry_hands_label,
+    #name_friend_label,
+    #put_on_t_shirt_label,
+    #dreff_no_help_label,
+    #play_board_card_games_label,
+    #brush_teeth_no_help_label,
+    #prepare_cereal_label {
+        top: 0px;
+    }
+    #follow_to_midline_label,
+    #follow_past_midline_label,
+    #grasp_rattle_label,
+    #hands_together_label,
+    #follow_180_deg_label,
+    #regard_raisin_label,
+    #reaches_label,
+    #look_for_yarn_label,
+    #rake_raisin_label,
+    #pass_cube_label,
+    #take_2_cubes_label,
+    #thumb_finger_grasp_label,
+    #bang_2_cubes_held_in_hands_label,
+    #put_block_in_cup_label,
+    #scribbles_label,
+    #dump_raisin_demonstrated_label,
+    #tower_of_2_cubes_label,
+    #tower_of_4_cubes_label,
+    #tower_of_6_cubes_label,
+    #imitate_vertical_line_label,
+    #tower_of_8_cubes_label,
+    #thumb_wiggle_label,
+    #copy_circle_label,
+    #draw_person_3_pts_label,
+    #copy_plus_label,
+    #pick_longer_line_label,
+    #copy_square_demonstr_label,
+    #draw_person_6_pts_label,
+    #copy_square_label {
+        top: -14px;
+    }
+    #respond_to_bell_label,
+    #vocalizes_label,
+    #ooo_aah_label,
+    #laughes_label,
+    #squeals_label,
+    #trun_to_rattling_sound_label,
+    #trun_to_voice_label,
+    #single_syllables_label,
+    #imitate_speech_sounds_label,
+    #dada_mama_non_specific_label,
+    #common_syllables_label,
+    #jabbers_label,
+    #dada_mama_specific_label,
+    #one_word_label,
+    #two_words_label,
+    #three_words_label,
+    #six_words_label,
+    #point_2_pictures_label,
+    #combine_words_label,
+    #name_1_picture_label,
+    #body_parts_6_label,
+    #point_4_picutres_label,
+    #speech_half_understandable_label,
+    #name_4_picutres_label,
+    #know_2_actions_label,
+    #know_2_adjectives_label,
+    #name_1_color_label,
+    #use_of_2_objects_label,
+    #count_1_block_label,
+    #use_of_3_objects_label,
+    #know_4_actions_label,
+    #speech_all_understandable_label,
+    #understand_4_prepositions_label,
+    #name_4_colors_label,
+    #define_5_words_label,
+    #know_3_adjectives_label,
+    #count_5_blocks_label,
+    #opposites_2_label,
+    #define_7_words_label {
+        top: -14px;
+    }
+    #equal_movements_label,
+    #lift_head_label,
+    #head_up_45_deg_label,
+    #head_up_90_deg_label,
+    #sit_head_steady_label,
+    #bear_weight_on_legs_label,
+    #chest_up_arm_support_label,
+    #roll_over_label,
+    #pull_to_sit_no_head_lag_label,
+    #sit_no_support_label,
+    #stand_holding_on_label,
+    #pull_to_stand_label,
+    #get_to_sitting_label,
+    #stand_2_seconds_label,
+    #stand_alone_label,
+    #stoop_and_recover_label,
+    #walk_well_label,
+    #walk_backwards_label,
+    #runs_label,
+    #walk_up_steps_label,
+    #kick_ball_forward_label,
+    #jump_up_label,
+    #throw_ball_overhead_label,
+    #board_jump_label,
+    #balance_each_food_1_second_label,
+    #balance_each_food_2_seconds_label,
+    #hops_label,
+    #balance_each_food_3_seconds_label,
+    #balance_each_food_4_seconds_label,
+    #balance_each_food_5_seconds_label,
+    #hell_to_toe_walk_label,
+    #balance_each_food_6_seconds_label {
+        top: 9px;
+    }
+    #balance_each_food_6_seconds_label,
+    #balance_each_food_5_seconds_label {
+        width: 110px;
+    }
+    #drink_from_cup_label {
+        margin-left: 34%;
+    }
+    #imitate_activities_label {
+        margin-left: 37.4%;
+    }
+    #copy_square_label {
+        margin-left: 12%;
+    }
+    #copy_square_demonstr_label {
+        margin-left: 16.4%;
+    }
+    #pick_longer_line_label {
+        margin-left: 2.5%;
+    }
+    #copy_plus_label {
+        margin-left: 20.8%;
+    }
+    #tower_of_6_cubes_label {
+        margin-left: 10.5%;
+    }
+    #scribbles_label {
+        margin-left: 7.5%;
+    }
+    #put_block_in_cup_label {
+        margin-left: 10.2%;
+    }
+    #thumb_finger_grasp_label {
+        margin-left: 14.8%;
+    }
+    #follow_past_midline_label {
+        margin-left: 4.5%;
+    }
+    #count_5_blocks_label {
+        margin-left: 2.5%;
+    }
+    #know_3_adjectives_label {
+        margin-left: 2.4%;
+    }
+    #understand_4_prepositions_label {
+        margin-left: 12%;
+    }
+    #speech_all_understandable_label {
+        margin-left: 15.9%;
+    }
+    #use_of_3_objects_label {
+        margin-left: 28.8%;
+    }
+    #count_1_block_label {
+        margin-left: 31.2%;
+    }
+    #use_of_2_objects_label {
+        margin-left: 37.7%;
+    }
+    #name_1_color_label {
+        margin-left: 41%;
+    }
+    #know_2_adjectives_label {
+        margin-left: 38.6%;
+    }
+    #combine_words_label {
+        margin-left: 39%;
+    }
+    #point_2_pictures_label {
+        margin-left: 43.2%;
+    }
+    #three_words_label {
+        margin-left: 41.5%;
+    }
+    #one_word_label {
+        margin-left: 36.2%
+    }
+    #ooo_aah_label {
+        margin-left: 4.2%;
+    }
+    #hell_to_toe_walk_label {
+        margin-left: 7.4%;
+    }
+    #balance_each_food_5_seconds_label {
+        margin-left: 7.7%;
+    }
+    #balance_each_food_2_seconds_label {
+        margin-left: 6%
+    }
+    #balance_each_food_1_second_label {
+        margin-left: 1.3%;
+    }
+    #board_jump_label {
+        margin-left: 9%;
+    }
+    #jump_up_label {
+        margin-left: 18%;
+    }
+    #kick_ball_forward_label {
+        margin-left: 11%;
+    }
+    #runs_label {
+        margin-left: 16.8%;
+    }
+    #walk_backwards_label {
+        margin-left: 6.8%;
+    }
+    #walk_well_label {
+        margin-left: 0.8%;
+    }
+    #stoop_and_recover_label {
+        margin-left: 5.3%;
+    }
+    #get_to_sitting_label {
+        margin-left: 3%;
+    }
+    #pull_to_stand_label {
+        margin-left: 12.5%;
+    }
+    #stand_holding_on_label {
+        margin-left: 15%;
+    }
+    #sit_no_support_label {
+        margin-left: 14%;
+    }
+    #bear_weight_on_legs_label {
+        margin-left: 9%;
+    }
+
+
+    #know_2_actions_label {
+        top: -26px;
+    }
+    #name_4_picutres_label {
+        top: -26px;
+    }
+    #speech_half_understandable_label, 
+    #point_4_picutres_label,
+    #body_parts_6_label,
+    #name_1_picture_label,
+    #combine_words_label,
+    #point_2_pictures_label,
+    #six_words_label,
+    #three_words_label,
+    #two_words_label,
+    #one_word_label,
+    #dada_mama_specific_label,
+    #jabbers_label,
+    #common_syllables_label,
+    #dada_mama_non_specific_label,
+    #imitate_speech_sounds_label,
+    #single_syllables_label,
+    #trun_to_voice_label,
+    #trun_to_rattling_sound_label,
+    #squeals_label,
+    #laughes_label,
+    #ooo_aah_label,
+    #vocalizes_label,
+    #respond_to_bell_label {
+        top: -40px;
+    }
+}

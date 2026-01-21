@@ -1,0 +1,775 @@
+@media only screen {    
+    .overflow-auto {
+        overflow: auto;
+    }
+}
+@media screen and (min-width: 300px) and (max-width: 375px) {
+    body {
+        font-size: 10px;
+    }
+    th, td, h4, label, span, .dropdown-menu {
+        font-size: 10px !important;
+    }
+    h3 {
+        font-size: 12px;
+    }
+    h4 {
+        font-size: 11px;
+    }   
+    .table-view .print-label {
+        margin: 0px 9px 9px 0px !important;
+        width: 50%;
+    }
+    .custom-class > h4 {
+        font-size: 16px !important;
+    }       
+    .content-info > .dataTables_filter {
+        margin: 0 0 0 50px;
+    }
+
+    /*op_edit*/
+    /*.op-head-main .mobile-input-width-mini {
+        width: 40px !important; 
+    }*/
+    .op-head-main tr > th {
+        padding: 3px !important;
+    }
+    /*.op-head-main .mobile-input-width-medium {
+        width: 110px !important;
+    }*/
+    .op-head-main .input-width-small {
+        width: 60px !important; 
+    }
+    /*op_edit*/
+
+    /* ANNUAL REPORT */
+    .block-table>table>thead> tr>th,
+    .block-table>table>tbody>tr> td {
+        display:block !important;
+        width:100%;
+    }
+    /* ANNUAL REPORT */
+
+    /*daycare_mainlist*/
+    .daycare-main th,.daycare-main td,.daycare-main h4,.daycare-main span,.daycare-main label {
+        font-size: 10px !important;
+    }  
+    .daycare-main .dataTables_filter {
+        margin: 0 0 0 50px;
+    }
+    /*daycare_mainlist*/
+
+    /*Master*/    
+    .table.master-list > thead > tr > th, .table.master-list > tbody > tr > td {
+        padding: 8px 4px;
+    }
+    /*Master*/
+}
+@media screen and (min-width: 376px) and (max-width: 414px) {
+    body {
+        font-size: 10px;
+    }
+    th, td, h4, span, label, .dropdown-menu {
+        font-size: 10px !important;
+    }
+    h3 {
+        font-size: 13px;
+    }
+    h4 {
+        font-size: 12px;
+    }
+    .table-view .print-label {
+        margin:0px 9px 9px 0px !important;
+        width:50%;
+    }
+    .form-group .print-value {    
+        float:none !important;
+    }
+    .index-table {
+        margin-left: 10px;
+    }
+    .annual-report-content {                             
+        margin-left:0px !important;                      
+    }      
+    .dataTables_filter {
+        margin-left: 50px;     
+    }
+    .content-info > .dataTables_filter {
+        margin-left: 50px;
+        margin-top: 0px;
+    }
+
+    /* ANNUAL REPORT */    
+    .block-table>table>thead> tr>th,
+    .block-table>table>tbody>tr>  td {
+        display:block !important;
+        width:100%;
+    }  
+    /* ANNUAL REPORT */
+
+    /*daycare_mainlist*/    
+    .daycare-main th,.daycare-main td,.daycare-main h4,.daycare-main span,.daycare-main label {
+        font-size:10px !important;
+    }   
+    .daycare-main .dataTables_filter {
+        margin-left:50px;
+        margin-top:0px;
+    }        
+    /*daycare_mainlist*/
+}
+@media only screen and (min-width: 320px) and (max-width: 480px) and (orientation: portrait) {
+    .table-view .print-label {
+        margin:0px 9px 9px 0px !important;
+        width:50%;
+    }
+    /*.col-xs-12 {
+        padding-left:0px !important;
+    }*/
+    .print-label {
+        float: left;
+        margin: 0px 0px 10px 10px;
+        width: 50% !important;   
+    }            
+    .print-head,h3 {
+        font-size: 16px !important;
+    }
+    h4 {
+        font-size: 14px !important;
+    }
+    p {
+        font-size: 12px !important;
+    }
+    /*body.print
+    .content-block {
+        padding: 0px !important;
+    }*/
+}
+@media screen and (min-width: 320px) and (max-width: 567px) {
+    table .table-striped .table-bordered .table-responsive th,td,.odd-parent-node:not,.even-parent-node:not, {
+        /*display: block !important;*/
+        overflow-x: scroll;
+    }
+    .table.nurse-daycare > thead > tr > th, .table.nurse-daycare > tbody > tr > td {
+        padding: 8px 6px;
+    }
+    .form-control.width-125 {
+        width: 75px;
+    }
+}
+@media screen and (min-width: 320px) and (max-width: 568px) {
+    table .table-striped .table-bordered .table-responsive th,td,.odd-parent-node:not,.even-parent-node:not, {
+        /*display: block !important;*/
+        overflow-x: scroll;
+    }
+}
+@media screen and (min-width:320px) and (max-width:568px) and (orientation:landscape) {
+    th,td,h4,span,label {
+        font-size: 10px;
+    }       
+    .dataTables_filter {
+        margin-left: 50px;     
+    }
+}
+
+@media screen and (max-width:400px) {
+    /* ANNUAL REPORT */
+    .block-table>table>thead> tr>th,
+    .block-table>table>tbody>tr> td{
+        display:block !important;
+        width:100%; 
+    }
+    /* ANNUAL REPORT */
+
+    .print-label { 
+        width: 50%;
+    }
+    .print-head,h3 {
+        font-size: 16px !important;
+    }
+    p {
+        font-size: 12px !important;
+    }             
+    h4 {
+        font-size: 14px !important;
+    }
+}
+
+@media screen and (max-width: 414px) {
+    .search-button-mrno, .search-bmrno-button {
+        margin-top: 19px;
+    }
+    .input-width-small {
+        width: 60px !important;
+    }
+    .input-width-medium {
+        width: 100px !important;        
+    }
+    .input-width-xlarge-minis {
+        width: 160px !important;
+    }
+    .nurse-sheet-edit #observation table > thead > tr > th:first-child, .nurse-sheet-edit #observation table > tbody > tr > td:first-child, .nurse-sheet-edit #respiratory_support table > thead > tr > th:first-child, .nurse-sheet-edit #respiratory_support table > tbody > tr > td:first-child, .nurse-sheet-edit #milk_feeds_output table > thead > tr > th:first-child, .nurse-sheet-edit #milk_feeds_output table > tbody > tr > td:first-child, .nurse-sheet-edit #important-blood-values table > thead > tr > th:first-child, .nurse-sheet-edit #important-blood-values table > tbody > tr > td:first-child, .nurse-sheet-edit #gluco-meter table > thead > tr > th:first-child, .nurse-sheet-edit #gluco-meter table > tbody > tr > td:first-child {
+        min-width: 125px;
+    }
+}
+@media screen and (min-width: 414px) and (max-width:736px) {
+    .table-view .print-label{
+        margin:0px 9px 9px 0px !important;
+        width:50%;
+    }
+}
+@media screen and (min-width: 415px) and (max-width: 780px) {
+    body {
+        font-size:12px;
+    }
+    h3 {
+        font-size:15px;
+    }
+    h4 {
+        font-size:13px;
+    }       
+    .form-group .print-value {      
+        float:none !important;
+    }
+    .table-value table {
+        overflow-x:auto;
+    }       
+    .index-table {
+        margin-left: 10px;
+    } 
+    .annual-report-content {                            
+        margin-left:0px !important;
+    }
+    .font-size-sm-14 {
+        font-size: 14px;
+    }
+
+    /* ANNUAL REPORT */
+    .block-table>table>thead> tr>th,
+    .block-table>table>tbody>tr>  td {
+        display:block !important;
+        width:100%;
+    }
+    /* ANNUAL REPORT */    
+}
+@media screen and (max-width: 576px) {   
+    .plr-sm-0 {
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
+    .hover-fx {
+        margin: 11px 12px 0px !important;
+    }
+}
+@media screen and (min-width: 576px) and (max-width: 991px) {   
+    .multi-search .col-md-2 {
+        width: 25%;
+        float: left;
+    }
+    .width-sm-50 {
+        width: 50%;
+    }
+    .display-sm-flex {
+        display: flex;
+    }
+}
+/* mother registration page */
+@media screen and (min-width:600px) and (max-width:960px) {       
+    td,th,h4,label,span {
+        font-size: 12px !important;
+    }
+}
+/* mother registration page */
+@media screen and(min-width:600px) and (max-width:960px) and (orientation:landscape){
+    .user-id {
+        -moz-column-count: 2;
+        -webkit-column-count: 2;
+        column-count: 2;
+        -webkit-column-gap: 30px; 
+        -moz-column-gap: 30px;
+        column-gap: 30px;         
+    }
+    h4 {
+        font-size: 14px !important;
+    }
+}
+@media only screen and (max-width: 767px) {
+    div.dataTables_paginate {
+        float: unset; 
+        padding-top: 10px;
+    }
+    /*.pagination-xs {
+        text-align: center;
+    }*/
+    .inpatient-list, .inpatient-list-inner, .inpatient-list-inner-first {
+        padding-left: 12px !important;
+        padding-right: 12px !important;
+    }
+    .episode-status {
+        display: block;
+        margin-top: 10px;
+    }
+    .episode-status-title {
+        padding-bottom: 20px;
+    }
+    .nurse-baby-basic-details-label, .nurse-baby-basic-details-input {
+        width: 50% !important;
+        float: left;
+        padding-left: 0px !important;
+        padding-bottom: 0px !important;
+    }
+    .nurse-baby-basic-details-input .form-group {
+        margin-bottom: 0px;
+    }
+    #nurse-form .nurse-sheet-date-time td {
+        width: 25%;
+        float: left;
+    }
+    #nurse-form .nurse-sheet-date-time td:last-child {
+        width: 75%;
+        float: left;
+    }
+    .prescription-header .nurse-sheet-date-time td:nth-child(2) input {
+        width: 100px;
+    }
+
+    .pagination_info {
+        margin-left: 0px !important;
+    }
+    .pagination_footer {
+        margin-right: 0px !important;
+    }
+   /* .pagination-xs .pull-right {
+        float: unset !important;
+    }*/
+    .dataTables_footer, .pagination-list {
+        text-align: center;
+    }
+    .pagination-list .pull-right {
+        float: unset !important;
+    }
+    .full-width-xs {
+        width: 100%;
+    }
+    .create-btn-spacing > span {
+        vertical-align: middle;
+    }
+    .btn.btn-info.visible-xs {
+        display: inline-block !important;
+    }
+    /*Master*/    
+    .master-layout {
+        padding: 0px
+    }
+    .master-layout td {
+        overflow: unset;
+    }
+    .master-layout .input-width-medium {
+        width: 100% !important;
+    }
+    .master-layout .multi-row td, .master-layout .multi-row th {
+       padding: 5px 2px;
+    }
+    .master-layout select.input-width-medium {
+        width: 80px !important;
+    }
+    .master-layout form {
+        margin: 0px;
+    }
+    .master-layout .input-width-large {
+        width: 210px !important;
+    }
+    /*Master*/ 
+    .navbar-nav .open .dropdown-menu > li > a {
+        /*line-height: 10px;*/
+    }
+
+    #lab-request-form .lab-package-title, #lab-request-form .lab-package-content {
+        padding-left: 0px;
+    }
+    .xs-mb-10 {
+        margin-bottom: 10px;
+    }
+
+    .ui-datepicker {
+        width: unset;
+    }
+    .custom-table-padding {
+        padding: 8px 4px !important;
+    }
+    .custom-table-padding1 {
+        padding: 8px 1px !important;
+    }
+    .display-status-block {
+        display: block;
+        padding: 10px 0;
+    }       
+}
+@media screen and (max-width: 757px) {
+    .active > .side-bar {
+        margin-left: -350px;
+    }
+    #content {
+        margin-left: 0px;
+    }
+    .side-bar ul .menu li.submenu.open:before {
+        display: none;
+    }
+    .side-bar {
+        box-shadow: unset;
+    }
+    .master-drop-down .title {
+        padding: 5px 10px;
+    }
+    .wrapper.active .side-bar ul li ul {
+        display: none !important;
+    }
+}
+/*@media screen and (max-height: 875px) {
+    .active > .side-bar {
+        margin-left: -350px;
+    }
+    #content {
+        margin-left: 0px;
+    }
+    .side-bar ul .menu li.submenu.open:before {
+        display: none;
+    }
+    .side-bar {
+        box-shadow: unset;
+    }
+    .master-drop-down .title {
+        padding: 5px 10px;
+    }
+    .wrapper.active .side-bar ul li ul {
+        display: none !important;
+    }
+}*/
+@media screen and (min-height: 875px) {
+    .wrapper.active .side-bar ul #report-nav ul {
+        top: -350px;
+    }
+    .wrapper.active .side-bar ul #calc-nav ul {
+        top: -125px;
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+   /* .custom-pagination-xs {
+        text-align: center;
+    }*/
+   /* div.dataTables_paginate {
+        float: unset; 
+        padding-top: 10px;        
+    }*/
+    .search_form {
+        margin-left: -6px;
+    }
+    .nurse-baby-basic-details-label {
+        width: 25% !important;
+        float: left;
+    }
+    #sidebar {
+         top: 0px; 
+    }
+    .full-width-sm {
+        width: 50%;
+        float: left;
+    }
+    .btn.btn-info.visible-sm {
+        display: inline-block !important;
+    }
+    .bootstrap-duallistbox-container .box2 {
+        margin-top: 15px;
+    }
+    .bootstrap-duallistbox-container .box1, .bootstrap-duallistbox-container .box2 {
+        width: 50%;
+        display: table-cell;
+    }
+    .fixedWidth h6 {
+        font-size: 10px;
+        min-width: unset;
+    }
+    .daile-pade-box .odd-server {
+        width: 35px;
+        height: 35px;
+    }
+}
+@media screen and (min-width:768px) and (max-width:1024px) {
+    body {
+        font-size: 13px !important;
+    }
+    .print table td {
+        padding: 5px 10px 0px 83px !important;
+        font-size: 12px !important;
+    }   
+    /*u { 
+        padding: 5px 10px 0px 194px !important;
+    }*/
+    .print table class {
+        padding: 5px 10px 0px 100px !important;
+    }
+    .annual-report-content {
+        margin-left: 0px !important;
+    }
+    .label-control .add_master_data
+    {
+        position: absolute;
+        /*content: '';*/
+        /*left: 0px;*/
+        right: 0px;
+        margin-left: 10px; 
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) and (orientation:portrait) {
+    .user-id {                         
+        -moz-column-count: 2;
+        -webkit-column-count: 2;
+        column-count: 2;
+        -webkit-column-gap: 30px;
+        -moz-column-gap: 30px; 
+        column-gap: 30px !important;                             
+    } 
+    .form-group .print-label,.print-value {
+        width: 50%;
+    }   
+    td,th,h4,span,label {
+        font-size: 12px !important;
+    }
+
+    /*daycare_mainlist*/
+    .daycare-main td,.daycare-main th,.daycare-main h4,.daycare-main span,.daycare-main label {
+        font-size:12px !important;
+    }   
+    /*daycare_mainlist*/
+}
+@media screen and (min-width:768px) and (max-width:1125px) and (orientation:landscape)  {
+    .user-id{
+        -moz-column-count: 2;
+        -webkit-column-count: 2;
+        column-count: 2;
+        -webkit-column-gap: 30px; 
+        -moz-column-gap: 30px;
+        column-gap: 30px;         
+    }
+    .form-group .print-label{
+        width:50%;
+    }
+    .form-group .print-value{
+        width: 250px !important;
+        word-wrap: break-word !important; 
+        clear: left;
+    }
+}
+@media screen and (min-width:1024px) and (max-width:1136px) {
+    .table-value table td {
+        padding: 5px 10px 0px 97px;
+    }
+    .annual-report-content {
+        margin-left: 0px !important;
+    }
+}
+
+@media print {  
+    /*#inborn-baby-compare-charts {
+        width: 80%;
+        height: 500px;
+    } */
+    .copyright-content {        
+        margin: 100% 0px 0px 130px !important;
+    }     
+    .annual-report-content {
+        margin-top: 1.3em !important;
+        /*margin-top: 5em !important;        */
+        /*margin-left: 66px  !important;*/
+    }   
+    .annual-report-graph {
+        margin-top: 1.3em !important;
+        /*margin-top: 5em !important;*/
+        margin-left: 2%  !important;
+    } 
+    tr, td, th {
+        font-size: 1em !important;
+    }
+    .form-group .print-label, .form-group .print-value {
+        font-size: 1.05em !important;
+    } 
+}
+@media print and (min-width: 481px) and (max-width: 767px) { 
+    td, th, h4, span, label {
+        font-size: 10px !important;
+    }     
+
+    /*daycare_mainlist*/
+    .daycare-main td,.daycare-main th,.daycare-main h4,.daycare-main span,.daycare-main label {
+        font-size:10px !important;
+    }
+    /*daycare_mainlist*/
+}
+@media print and (min-width: 595px) and (max-width: 900px)  {
+    .content-block > h4,
+    .topbar1 > h4 {
+        font-size: 16px !important;
+    }
+    .section-set > .text {   
+        display:inline-block !important;
+        width: 350px !important;  
+        white-space: nowrap;    
+        text-overflow: ellipsis;
+        vertical-align: top;      
+        box-sizing: border-box;           
+    }
+    .form-group  >.print-label {
+        font-weight: bold !important;
+        width: 42% !important;
+        margin: 0px 0px 10px 10px;
+        overflow-wrap: break-word;
+    }    
+    .row .text {
+        display:inline-block;
+       /* width: 350px; */
+        white-space:wrap;
+        text-overflow: ellipsis;
+        vertical-align:top;
+        word-wrap: break-word;
+        box-sizing: border-box;
+    }
+    .content-section > .value {
+        display:inline-block;
+       /* width: 360px; */
+        white-space:wrap;
+        text-overflow: ellipsis;
+        vertical-align:top;
+        word-wrap: break-word;
+        box-sizing: border-box; 
+        overflow-wrap: initial;          
+    }
+    .print-content .ngcontent {
+        width:500px;
+        display:inline-block;               
+        white-space: nowrap;             
+        text-overflow: ellipsis;
+        vertical-align:top;
+        word-wrap: break-word;
+        box-sizing: border-box;
+    }
+    .form-group .print-value {
+        max-width:250px;
+        word-wrap: break-word !important;
+    }
+
+    /* ANNUAL REPORT */
+    .block-table>table>thead> tr>th,
+    .block-table>table>tbody>tr> td {
+        left:10px !important; 
+    }
+    /* ANNUAL REPORT */
+}
+
+@media print , screen  and (min-width: 595px) and (max-width : 900px) { 
+    .neonatal-summary .class {
+        height: 200px;   
+        width: 1100px;   
+    }
+}
+
+@media (max-width: 991px) {
+    .master-layout .col-md-12 {
+        overflow: auto;
+    }
+    .btn.save-button-shadow.btn-block {
+        margin: 5px 0px;
+    }
+    #neonatalPerforma-form #obform .form-control {
+        width: unset;
+    }
+    #neonatalPerforma-form #obform .form-control.input-width-xlarge {
+        min-width: 100px !important;
+    }
+    .complication-disable .input-width-large {
+        min-width: 120px;
+    }
+    .overflow-auto-sm {
+        overflow: auto;
+    } 
+    .pediatric .drugs .form-control {
+        min-width: 100px;
+    }
+    .op-create .drugs .form-control, .op-head-main .drugs .form-control {
+        min-width: 100px;
+    }
+    .custom-input-parent {
+        clear: both;
+    }
+}
+@media (max-width: 992px) {
+    .btn-block {
+        margin:10px 0px;
+    }
+    .toastr-full-width {
+        width: 100%;
+    }
+    .bootstrap-duallistbox-container .box2 {
+        margin-top: 15px;
+    }
+}
+@media (max-width: 979px) {
+    .navbar {
+        position: fixed;
+    }
+    table .btn-view, table .btn-danger {
+        margin-top: 0px;
+    }
+}
+@media (max-width: 1023px) {
+    .update-bed-log {
+        margin: 8px 30px;
+    }
+}
+@media screen and (min-width:1024px) and (max-width:1136px) {
+    .table-value table td {
+        padding: 5px 10px 0px 97px;
+    }
+    .annual-report-content {
+        margin-left: 0px !important;
+    }
+}
+@media print {  
+    /*#inborn-baby-compare-charts {
+        width: 80%;
+        height: 500px;
+    } */
+    .copyright-content {        
+        margin: 100% 0px 0px 130px !important;
+    }     
+    .annual-report-content {
+        margin-top: 1.3em !important;
+        /*margin-top: 5em !important;        */
+        /*margin-left: 66px  !important;*/
+    }   
+    .annual-report-graph {
+        margin-top: 1.3em !important;
+        /*margin-top: 5em !important;*/
+        margin-left: 2%  !important;
+    } 
+    tr, td, th {
+        font-size: 1em !important;
+    }
+    .form-group .print-label, .form-group .print-value {
+        font-size: 1.05em !important;
+    } 
+}
+
+@media screen and (max-width: 1024px) {
+    .notification-title {
+        font-size: 12px !important;
+        white-space: pre;
+    }
+    .warning-content a {
+        font-size: 16px;
+    }
+    .bed-notification {        
+        padding: 6px;
+        font-size: 15px !important;
+        width: 30px;
+        height: 30px;
+    }
+}

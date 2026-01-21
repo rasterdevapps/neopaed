@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW 2023 -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="0.394795in" height="0.396433in" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 116.27 116.75"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ xmlns:xodm="http://www.corel.com/coreldraw/odm/2003">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .str0 {stroke:#231F20;stroke-width:4.09;stroke-miterlimit:3.864}
+    .str1 {stroke:#231F20;stroke-width:4.09;stroke-miterlimit:3.864;stroke-dasharray:9.815909 9.815909}
+    .fil0 {fill:none}
+    .fil1 {fill:#231F20}
+   ]]>
+  </style>
+ </defs>
+ <g id="Layer_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <g id="_3061485631168">
+   <g>
+    <polygon class="fil0 str0" points="31.82,71.31 26.09,64.89 45.99,69.32 28.09,79.07 "/>
+    <polygon id="_1" class="fil1" points="31.82,71.31 26.09,64.89 45.99,69.32 28.09,79.07 "/>
+   </g>
+   <g>
+    <line class="fil0 str0" x1="0.28" y1="75.73" x2="31.82" y2= "71.31" />
+   </g>
+   <g>
+    <line class="fil0 str1" x1="73.57" y1="40.51" x2="73.57" y2= "115.6" />
+   </g>
+   <g>
+    <path class="fil0 str0" d="M91.56 30.77c1.94,21.36 5.6,60.88 5.6,60.88m-39.63 -61.55c-1.13,4.46 -7.03,61.36 -7.03,61.36m46.74 -0.12c0,12.91 -10.46,23.38 -23.37,23.38 -12.91,0 -23.38,-10.47 -23.38,-23.38m5.06 -69.99c0,-10.65 8.64,-19.3 19.3,-19.3 10.66,0 19.3,8.64 19.3,19.3 0,10.66 -8.64,19.29 -19.3,19.29 -10.66,0 -19.3,-8.63 -19.3,-19.29z"/>
+   </g>
+   <g>
+    <path class="fil0 str0" d="M72.1 21.34c0,-1.52 1.24,-2.76 2.76,-2.76 1.52,0 2.76,1.23 2.76,2.76 0,1.52 -1.24,2.76 -2.76,2.76 -1.52,0 -2.76,-1.23 -2.76,-2.76z"/>
+    <path id="_1_0" class="fil1" d="M72.1 21.34c0,-1.52 1.24,-2.76 2.76,-2.76 1.52,0 2.76,1.23 2.76,2.76 0,1.52 -1.24,2.76 -2.76,2.76 -1.52,0 -2.76,-1.23 -2.76,-2.76z"/>
+   </g>
+   <g>
+    <polyline class="fil0 str0" points="115.56,63.53 74.14,78.87 64.94,37.97 "/>
+   </g>
+  </g>
+ </g>
+</svg>

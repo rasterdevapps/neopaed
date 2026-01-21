@@ -1,0 +1,389 @@
+<?xml version="1.0"?>
+<ClinicalDocument classCode="DOCCLIN" moodCode="EVN" xmlns="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<realmCode code="IN"/>
+	<typeId extension="POCD_HD000040" root="2.16.840.1.113883.1.3"/>
+	<templateId root="2.16.840.1.113883.6.96"/>
+	<id extension="Test CCDA" root="2.16.840.1.113883.6.96"/>
+	<code code="371534008" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Summary report"/>
+	<title mediaType="text/plain" representation="TXT">THE Health Summary</title>
+	<effectiveTime value="20190220100012.225"/>
+	<confidentialityCode code="N" codeSystem="2.16.840.1.113883.5.25" displayName="normal"/>
+	<languageCode code="en-US"/>
+	<recordTarget contextControlCode="OP" typeCode="RCT">
+		<patientRole>
+			<id extension="2fde2b21-519b-428f-8c20-b94b6963774c" root="2.16.840.1.113883.6.96"/>
+			<id extension="AadharNumber" root=""/>
+			<id extension="NeopaedPatientId" root="2fde2b21-519b-428f-8c20-b94b6963774c"/>
+			<id extension="RecipientPatientId" root="2000000100000529"/>
+			<telecom use="MC" value="8956329812"/>
+			<addr use="HP">
+				<streetAddressLine partType="SAL">1120 </streetAddressLine>
+				<city partType="CTY">N Street</city>
+				<state partType="STA">Bangalore</state>
+				<postalCode partType="ZIP">956238</postalCode>
+				<country partType="CNT"/>
+			</addr>
+			<patient classCode="PSN" determinerCode="INSTANCE" type="POCD_MT000040.Patient">
+				<name>
+					<given partType="GIV">B/O Harini Sridhar</given>
+					<family partType="FAM"/>
+				</name>
+				<administrativeGenderCode code="248152002" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Female" value="Female"/>
+				<birthTime value="20190223"/>
+				<maritalStatusCode code="" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName=""/>
+			</patient>
+		</patientRole>
+	</recordTarget>
+	<author contextControlCode="OP" typeCode="AUT">
+		<time value="1551247016"/>
+		<assignedAuthor classCode="ASSIGNED">
+			<id extension="1A82FAD8-ECD7-4656-8EC1-AFE88419C09F" root="2.16.840.1.113883.6.96"/>
+			<id extension="ClinicId" root="1A82FAD8-ECD7-4656-8EC1-AFE88419C09F"/>
+			<code code="22232009" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Raster Hospital"/>
+			<addr>
+				<streetAddressLine partType="SAL">#23, Raster Hospital Road, Alagapuram,</streetAddressLine>
+				<city partType="CTY">chennai</city>
+				<state partType="STA">Tamilnadu</state>
+				<postalCode partType="ZIP">600 001</postalCode>
+				<country partType="CNT">india</country>
+			</addr>
+			<telecom use="WP" value="+91-427-403-3333"/>
+			<assignedPerson classCode="PSN" determinerCode="INSTANCE">
+				<name>
+					<given partType="GIV">raja</given>
+					<family partType="FAM"/>
+					<suffix partType="SFX">Dr</suffix>
+				</name>
+			</assignedPerson>
+		</assignedAuthor>
+	</author>
+	<dataEnterer contextControlCode="OP" typeCode="ENT">
+		<assignedEntity classCode="ASSIGNED">
+			<id extension="678910" root="2.16.840.1.113883.6.96"/>
+			<code code="22232009" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Raster Hospital"/>
+			<addr>
+				<streetAddressLine partType="SAL">#23, Raster Hospital Road, Alagapuram,</streetAddressLine>
+				<city partType="CTY">chennai</city>
+				<state partType="STA">Tamilnadu</state>
+				<postalCode partType="ZIP">600 001</postalCode>
+				<country partType="CNT">india</country>
+			</addr>
+			<telecom use="WP" value="+91-427-403-3333"/>
+			<assignedPerson classCode="PSN" determinerCode="INSTANCE">
+				<name>
+					<given partType="GIV">raja</given>
+					<family partType="FAM"/>
+					<suffix partType="SFX">Dr</suffix>
+				</name>
+			</assignedPerson>
+		</assignedEntity>
+	</dataEnterer>
+	<custodian typeCode="CST">
+		<assignedCustodian classCode="ASSIGNED">
+			<representedCustodianOrganization classCode="ORG" determinerCode="INSTANCE">
+				<id extension="1A82FAD8-ECD7-4656-8EC1-AFE88419C09F" root="2.16.840.1.113883.6.96"/>
+				<name>Raster Hospital</name>
+				<telecom use="WP" value="+91-427-403-3333"/>
+				<addr>
+					<streetAddressLine partType="SAL">#23, Raster Hospital Road, Alagapuram,</streetAddressLine>
+					<city partType="CTY">Salem</city>
+					<state partType="STA">Tamilnadu</state>
+					<postalCode partType="ZIP">636 004</postalCode>
+					<country partType="CNT">india</country>
+				</addr>
+			</representedCustodianOrganization>
+		</assignedCustodian>
+	</custodian>
+	<informationRecipient>
+		<intendedRecipient>
+			<id extension="23456" root="2.16.840.1.113883.6.96"/>
+			<informationRecipient classCode="PSN" determinerCode="INSTANCE">
+				<name>
+					<given partType="GIV">arun</given>
+					<family partType="FAM"/>
+					<suffix partType="SFX">Dr</suffix>
+				</name>
+			</informationRecipient>
+			<receivedOrganization classCode="ORG" determinerCode="INSTANCE">
+				<name>Raster</name>
+				<telecom use="MC" value="9790123880"/>
+				<addr>
+					<streetAddressLine partType="SAL">#23, Raster Hospital Road, Alagapuram,</streetAddressLine>
+					<city partType="CTY">Salem</city>
+					<state partType="STA">Tamilnadu</state>
+					<postalCode partType="ZIP">636 004</postalCode>
+					<country partType="CNT">india</country>
+				</addr>
+				<standardIndustryClassCode code="28411006" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName=" Neonatologist"/>
+			</receivedOrganization>
+		</intendedRecipient>
+	</informationRecipient>
+	<legalAuthenticator contextControlCode="OP" typeCode="LA">
+		<time value="1551247016"/>
+		<signatureCode code="S"/>
+		<assignedEntity classCode="ASSIGNED">
+			<id extension="1A82FAD8-ECD7-4656-8EC1-AFE88419C09F" root="2.16.840.1.113883.6.96"/>
+			<code code="22232009" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Raster Hospital"/>
+			<addr>
+				<streetAddressLine partType="SAL">#23, Raster Hospital Road, Alagapuram,</streetAddressLine>
+				<city partType="CTY">Salem</city>
+				<state partType="STA">Tamilnadu</state>
+				<postalCode partType="ZIP">636 004</postalCode>
+				<country partType="CNT">india</country>
+			</addr>
+			<telecom use="WP" value="9790123880"/>
+			<assignedPerson classCode="PSN" determinerCode="INSTANCE">
+				<name>
+					<given partType="GIV">raja</given>
+					<family partType="FAM"/>
+					<suffix partType="SFX">Dr</suffix>
+				</name>
+			</assignedPerson>
+		</assignedEntity>
+	</legalAuthenticator>
+	<component contextConductionInd="true" typeCode="COMP">
+		<structuredBody classCode="DOCBODY" moodCode="EVN">
+			<component contextConductionInd="true" typeCode="COMP">
+				<section classCode="DOCSECT" moodCode="EVN">
+					<templateId root="2.16.840.1.113883.6.96"/>
+					<code code="33962009" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="PROBLEM LIST"/>
+					<title mediaType="text/plain" representation="TXT">PROBLEM LIST</title>
+					<text language="en-US" mediaType="text/x-hl7-text+xml">
+						<content ID="problems"/>
+						<list listType="ordered">
+							<item>
+								<content ID="problem1">Neonatal jaundice</content>
+							</item>
+							<item>
+								<content ID="problem2">maternal fever</content>
+							</item>
+						</list>
+					</text>
+					<entry contextConductionInd="true">
+						<act classCode="ACT" moodCode="EVN">
+							<templateId root="2.16.840.1.113883.6.96"/>
+							<id root="00000000-0000-0000-0000-000000000000"/>
+							<code code="33962009" codeSystem="2.16.840.1.113883.6.96" displayName="Chief Complaint"/>
+							<statusCode code="active"/>
+							<effectiveTime>
+								<low value="20190220152458"/>
+							</effectiveTime>
+							<entryRelationship contextConductionInd="true" typeCode="SUBJ">
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="2.16.840.1.113883.6.96"/>
+									<id root="00000000-0000-0000-0000-000000000000"/>
+									<code code="409586006" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Complaint"/>
+									<text representation="TXT">
+										<reference value="#problem1"/>
+									</text>
+									<statusCode code="completed"/>
+									<effectiveTime>
+										<low value="20190220152458"/>
+									</effectiveTime>
+									<value code="387712008" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Neonatal jaundice" xmlns:xsi="xsi" xsi:type="CD"/>
+								</observation>
+							</entryRelationship>
+						</act>
+					</entry>
+					<entry contextConductionInd="true">
+						<act classCode="ACT" moodCode="EVN">
+							<templateId root="2.16.840.1.113883.6.96"/>
+							<id root="00000000-0000-0000-0000-000000000000"/>
+							<code code="33962009" codeSystem="2.16.840.1.113883.6.96" displayName="Chief Complaint"/>
+							<statusCode code="active"/>
+							<effectiveTime>
+								<low value="20190220152458"/>
+							</effectiveTime>
+							<entryRelationship contextConductionInd="true" typeCode="SUBJ">
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="2.16.840.1.113883.6.96"/>
+									<id root="00000000-0000-0000-0000-000000000000"/>
+									<code code="409586006" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Complaint"/>
+									<text representation="TXT">
+										<reference value="#problem2"/>
+									</text>
+									<statusCode code="completed"/>
+									<effectiveTime>
+										<low value="20190220152458"/>
+									</effectiveTime>
+									<value code="386661006" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="maternal fever" xmlns:xsi="xsi" xsi:type="CD"/>
+								</observation>
+							</entryRelationship>
+						</act>
+					</entry>
+				</section>
+			</component>
+			<component contextConductionInd="true" typeCode="COMP">
+				<section classCode="DOCSECT" moodCode="EVN">
+					<templateId root="2.16.840.1.113883.10.20.22.2.43.2"/>
+					<code code="439401001" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="DIAGNOSIS LIST"/>
+					<title mediaType="text/plain" representation="TXT">DIAGNOSIS LIST</title>
+					<text language="en-US" mediaType="text/x-hl7-text+xml">
+						<content ID="diagnosis"/>
+						<list listType="ordered">
+							<item>
+								<content ID="diagnosis0">Dengue</content>
+							</item>
+							<item>
+								<content ID="diagnosis1">neonatal sepsis</content>
+							</item>
+						</list>
+					</text>
+					<entry contextConductionInd="true">
+						<act classCode="ACT" moodCode="EVN">
+							<templateId root="2.16.840.1.113883.6.96"/>
+							<id root="00000000-0000-0000-0000-000000000000"/>
+							<code code="439401001" codeSystem="2.16.840.1.113883.6.96" displayName="Diagnosis"/>
+							<statusCode code="active"/>
+							<effectiveTime>
+								<low value="20190220152458"/>
+							</effectiveTime>
+							<entryRelationship contextConductionInd="true" typeCode="SUBJ">
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="2.16.840.1.113883.6.96"/>
+									<id root="00000000-0000-0000-0000-000000000000"/>
+									<code code="439401001" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="DIAGNOSIS"/>
+									<text representation="TXT">
+										<reference value="#diagnosis0"/>
+									</text>
+									<statusCode code="completed"/>
+									<effectiveTime>
+										<low value="20190220152458"/>
+									</effectiveTime>
+									<value code="38362002" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName=" Dengue" xmlns:xsi="xsi" xsi:type="CD"/>
+								</observation>
+							</entryRelationship>
+						</act>
+					</entry>
+					<entry contextConductionInd="true">
+						<act classCode="ACT" moodCode="EVN">
+							<templateId root="2.16.840.1.113883.6.96"/>
+							<id root="00000000-0000-0000-0000-000000000000"/>
+							<code code="439401001" codeSystem="2.16.840.1.113883.6.96" displayName="Diagnosis"/>
+							<statusCode code="active"/>
+							<effectiveTime>
+								<low value="20190220152458"/>
+							</effectiveTime>
+							<entryRelationship contextConductionInd="true" typeCode="SUBJ">
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="2.16.840.1.113883.6.96"/>
+									<id root="00000000-0000-0000-0000-000000000000"/>
+									<code code="439401001" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="DIAGNOSIS"/>
+									<text representation="TXT">
+										<reference value="#diagnosis1"/>
+									</text>
+									<statusCode code="completed"/>
+									<effectiveTime>
+										<low value="20190220152458"/>
+									</effectiveTime>
+									<value code="276669000" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName=" neonatal sepsis" xmlns:xsi="xsi" xsi:type="CD"/>
+								</observation>
+							</entryRelationship>
+						</act>
+					</entry>
+				</section>
+			</component>
+			<component contextConductionInd="true" typeCode="COMP">
+				<section classCode="DOCSECT" moodCode="EVN">
+					<templateId root="2.16.840.1.113883.10.20.22.2.1"/>
+					<code displayName="HISTORY OF MEDICATION USE"/>
+					<title mediaType="text/plain" representation="TXT">MEDICATIONS LIST</title>
+					<text language="en-US" mediaType="text/x-hl7-text+xml">
+						<list listType="ordered">
+							<item>
+								<content ID="medication0">Cefotaxime 2 ml once daily for 5days</content>
+							</item>
+							<item>
+								<content ID="medication1">Amikacin 0.5 ml once daily for 15days</content>
+							</item>
+							<item>
+								<content ID="medication2">Hifital drops 0.5 ml once daily for 1 year</content>
+							</item>
+						</list>
+					</text>
+					<entry contextConductionInd="true">
+						<substanceAdministration classCode="SBADM" moodCode="EVN">
+							<templateId root="2.16.840.1.113883.10.20.22.4.16"/>
+							<id root="00000000-0000-0000-0000-000000000000"/>
+							<text representation="TXT">
+								<reference value="#medication0"/>
+							</text>
+							<statusCode code="active"/>
+							<effectiveTime>
+								<low value="20190220152842"/>
+							</effectiveTime>
+							<routeCode displayName="Cefotaxime 2 ml once daily for 5days"/>
+							<doseQuantity unit="ml" value="2"/>
+							<consumable typeCode="CSM">
+								<manufacturedProduct classCode="MANU">
+									<templateId root="2.16.840.1.113883.10.20.22.4.23"/>
+									<manufacturedMaterial classCode="MMAT">
+										<code displayName="Cefotaxime 2 ml once daily for 5days">
+											<originalText mediaType="text/x-hl7-text+xml">
+												<reference value="#medication0"/>
+											</originalText>
+										</code>
+									</manufacturedMaterial>
+								</manufacturedProduct>
+							</consumable>
+						</substanceAdministration>
+					</entry>
+					<entry contextConductionInd="true">
+						<substanceAdministration classCode="SBADM" moodCode="EVN">
+							<templateId root="2.16.840.1.113883.10.20.22.4.16"/>
+							<id root="00000000-0000-0000-0000-000000000000"/>
+							<text representation="TXT">
+								<reference value="#medication1"/>
+							</text>
+							<statusCode code="active"/>
+							<effectiveTime>
+								<low value="20190220152842"/>
+							</effectiveTime>
+							<routeCode displayName="Amikacin 0.5 ml once daily for 15days"/>
+							<doseQuantity unit="ml" value="0.5"/>
+							<consumable typeCode="CSM">
+								<manufacturedProduct classCode="MANU">
+									<templateId root="2.16.840.1.113883.10.20.22.4.23"/>
+									<manufacturedMaterial classCode="MMAT">
+										<code displayName="Amikacin 0.5 ml once daily for 15days">
+											<originalText mediaType="text/x-hl7-text+xml">
+												<reference value="#medication1"/>
+											</originalText>
+										</code>
+									</manufacturedMaterial>
+								</manufacturedProduct>
+							</consumable>
+						</substanceAdministration>
+					</entry>
+					<entry contextConductionInd="true">
+						<substanceAdministration classCode="SBADM" moodCode="EVN">
+							<templateId root="2.16.840.1.113883.10.20.22.4.16"/>
+							<id root="00000000-0000-0000-0000-000000000000"/>
+							<text representation="TXT">
+								<reference value="#medication2"/>
+							</text>
+							<statusCode code="active"/>
+							<effectiveTime>
+								<low value="20190220152842"/>
+							</effectiveTime>
+							<routeCode displayName="Hifital drops 0.5 ml once daily for 1 year"/>
+							<doseQuantity unit="ml" value="0.5"/>
+							<consumable typeCode="CSM">
+								<manufacturedProduct classCode="MANU">
+									<templateId root="2.16.840.1.113883.10.20.22.4.23"/>
+									<manufacturedMaterial classCode="MMAT">
+										<code displayName="Hifital drops 0.5 ml once daily for 1 year">
+											<originalText mediaType="text/x-hl7-text+xml">
+												<reference value="#medication2"/>
+											</originalText>
+										</code>
+									</manufacturedMaterial>
+								</manufacturedProduct>
+							</consumable>
+						</substanceAdministration>
+					</entry>
+				</section>
+			</component>
+		</structuredBody>
+	</component>
+</ClinicalDocument>

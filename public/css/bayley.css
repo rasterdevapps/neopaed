@@ -1,0 +1,215 @@
+#bayley_form .panel-group {
+    background: #fff none repeat scroll 0 0;
+    border-radius: 3px;
+    box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.04);
+    margin-bottom: 0;
+    padding: 30px;
+}
+#bayley_form #bayleyaccordion .panel {
+    border: medium none;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 10px 0 15px 26px;
+}
+#bayley_form #bayleyaccordion .panel-heading {
+    border-radius: 30px;
+    padding: 0;
+}
+#bayley_form #bayleyaccordion .panel-title a {
+    background: #ffb900 none repeat scroll 0 0;
+    border: 1px solid transparent;
+    border-radius: 30px;
+    color: #fff;
+    display: block;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 12px 20px 12px 50px;
+    position: relative;
+    transition: all 0.3s ease 0s;
+}
+#bayley_form #bayleyaccordion .panel-title a.collapsed {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #ddd;
+    color: #333;
+}
+#bayley_form #bayleyaccordion .panel-title a::after, #bayleyaccordion .panel-title a.collapsed::after {
+    background: #ffb900 none repeat scroll 0 0;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.58);
+    color: #fff;
+    content: "";
+    font-family: fontawesome;
+    font-size: 25px;
+    height: 55px;
+    left: -20px;
+    line-height: 55px;
+    position: absolute;
+    text-align: center;
+    top: -5px;
+    transition: all 0.3s ease 0s;
+    width: 55px;
+}
+#bayley_form #bayleyaccordion .panel-title a.collapsed::after {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #ddd;
+    box-shadow: none;
+    color: #333;
+    content: "";
+}
+#bayley_form #bayleyaccordion .panel-body {
+    background: transparent none repeat scroll 0 0;
+    border-top: medium none;
+    padding: 20px 25px 10px 9px;
+    position: relative;
+}
+#bayley_form #bayleyaccordion .panel-body p {
+    border-left: 1px dashed #8c8c8c;
+    padding-left: 25px;
+}
+#bayley_form .score-bg-cg {
+    background-color: #DBE1F4;
+}
+#bayley_form .score-bg-rc, #bayley_form .score-bg-ec {
+    background-color: #C0E9DD;
+}
+#bayley_form .score-bg-fm, #bayley_form .score-bg-gm {
+    background-color: #C0E4B7;
+}
+#bayley_form .score-bg-se {
+    background-color: #F9DCE9;    
+}
+#bayley_form .score-bg-ab {
+    background-color: #FEE7CA;    
+}
+#bayley_form table {
+    border: 0px !important;
+}
+#bayley_form td {
+    border-color: black !important;
+}
+#bayley_form .checkbox_view {
+    display: inline-block;
+    padding-left: 15px;
+}
+#bayley_form .border-0 {
+    border: 0px !important;
+}
+#bayley_form .border-top-0 {
+    border-top: 0px;
+}
+#bayley_form .border-bottom-0 {
+    border-bottom: 0px;
+}
+#bayley_form .position-highligher {
+    position: relative;
+    display: flex;
+    width: 50px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: #022183;
+    font-weight: bold;
+    border-radius: 50%;
+}
+#bayley_form .position-highligher b {
+    position: absolute;
+    z-index: 0;
+    top: 14px;
+    color: #022183;
+    font-size: 16px;
+}
+#bayley_form .background-transparent {
+    background: transparent !important;
+}
+
+#bayley_form .arrow-5 {
+  width:40px;
+  height:45px;
+  margin-left: 5px;
+  display: grid;
+  overflow: hidden;
+}
+#bayley_form .arrow-5:before,
+#bayley_form .arrow-5:after {
+  content: "";
+  grid-area: 1/1;
+  background: currentColor;
+  clip-path: polygon(0 10px,calc(100% - 25px) 10px,calc(100% - 25px) 0,100% 50%,calc(100% - 25px) 100%,calc(100% - 25px) calc(100% - 10px),0 calc(100% - 10px));
+}
+
+#bayley_form .active-block {
+    background-color: green !important;
+    color: white;
+}
+
+#bayley_form-score table, #bayley_form-score-2 table, #bayley_form-score-3 table {
+    width: 617px;
+    margin: auto;
+    margin-top: 15px;
+}
+
+.border-none {
+    border: none !important;
+}
+
+.bookmark { 
+    position: absolute;
+    left: -26px;
+    width: 53px;
+    padding: 0px;
+    transform: rotate(0deg) skew(0deg);
+    border-top: 25px solid red;
+    border-bottom: 25px solid red;
+    border-right: 25px solid transparent;
+}
+
+#bayley_form-score-2 .display-flex {
+    justify-content: center;
+    align-items: center;
+}
+
+.category-block {
+    position: fixed;
+    top: 35%;
+    background-color: #ffb900;
+    border-radius: 32px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    padding: 15px;
+}
+
+.stop-bg td {
+    background-color: #E3028C !important;
+    color: white;
+}
+
+.score-disabled {
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+/*.tabbable-custom>.tab-content {
+    height: 84vh;
+    overflow: auto;
+}
+.tab-content>.active {
+    height: 75vh;
+    overflow: auto;
+}*/
+#scale-score .table>thead>tr>th, #scale-score .table>tbody>tr>td, #scale-score-2 .table>thead>tr>th, #scale-score-2 .table>tbody>tr>td {
+    padding: 3px 8px;
+    vertical-align: middle;
+}
+#scale-score .form-control, #scale-score-2 .form-control {
+    height: 30px;
+}
+@media(max-width: 637px)
+{
+    #bayley_form .panel-group
+    {
+        padding: 0px !important;
+    }
+}

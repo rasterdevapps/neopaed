@@ -1,0 +1,133 @@
+
+.modal-header .close {
+    opacity: 1;
+    margin-top: 0px;
+}
+.modal-header .close:hover {
+    opacity: 0.5;
+}
+.btn.close:hover {
+    color: black !important;
+}
+.flow-control-modal .modal-header, .problem-properties .modal-header, #status-modal .modal-header, .baby-bed-modal .modal-header {
+    /*border-top-left-radius: 15px;*/
+    /*border-top-right-radius: 15px;*/
+    color: white;
+}
+.modal-header .modal-title.color-white  {
+    color: white;
+}
+.flow-control-modal .modal-footer, .problem-properties .modal-footer, #status-modal .modal-footer {    
+    /*border-bottom-left-radius: 15px;*/
+    /*border-bottom-right-radius: 15px;*/
+}
+.flow-control-modal .modal-header .close, #status-modal .modal-header .close, #collecton-site-modal .modal-header .btn.close,
+#mas-collecton-method-modal .modal-header .close, #mas-diagnosis-modal .modal-header .close, #exportModal .modal-header .close, 
+#dsn-modal .modal-header .close, #filter-modal .modal-header .close, #complaints .modal-header .close, #live-param-modal .close  {
+    font-size: 30px !important;
+    color: white;
+}
+.flow-control-modal .modal-header .close, #drug-master-modal .modal-header .close, #collecton-site-modal .modal-header .btn.close,
+#mas-collecton-method-modal .modal-header .close, #mas-diagnosis-modal .modal-header .close, #filter-modal .modal-header .close {
+    margin-top: 15px;
+}
+#exportModal .modal-header .close {
+    margin-top: -45px;
+}
+.flow-control-modal .center-window {
+    text-align: center;
+    margin: 30px 0px;
+}
+.flow-control-modal .question-option, .flow-control-modal .multiple-preg {
+    margin: 5px 40px;
+}
+.flow-control-modal .daily-care-option {
+    text-align: center;
+    margin: 50px auto;
+}
+.flow-control-modal .daily-discharge-option {
+    text-align: center;
+    margin: 50px 50px;
+}
+.flow-control-modal .daily-option {
+    margin: 10px 50px;
+}
+.flow-control-modal .discharge-option {
+    margin: 7px 5px;
+}
+.flow-control-modal .finish-btn {
+    margin: 10px;
+    border-radius: 5px;
+}
+.flow-control-modal .wizard-nav {
+    background: #azure;
+    margin: 0px 140px;
+}
+
+#export-baby .modal-header, #create_baby .modal-header, #exportModal .modal-header {
+    border-bottom: 0px solid #e5e5e5;
+}
+#export-baby .close-font, #create_baby .close-font, #exportModal .close-font,
+#drug-master-modal .modal-header .btn.close span {
+    font-size: 25px !important;
+}
+#export-baby .modal-footer, #create_baby .modal-footer, #exportModal .modal-footer {
+    border-top: 0 solid #e5e5e5;
+}
+
+.problem-modal-header {
+    padding-bottom: 3em !important;
+    margin-bottom: 10px;
+}
+
+.problem-properties .modal-header h4, .problem-properties .modal-header button, #collecton-site-modal .modal-header,
+#mas-diagnosis-modal .modal-header, #mas-collecton-method-modal .modal-header, .iv-fluides-master-modal .modal-header h3, 
+.iv-fluides-master-modal .modal-header button, #complaints .modal-header h3 {
+    color: white; 
+}
+#complaints .close {
+    top: -37px;
+}
+body.modal-open {
+    margin-right: unset; 
+}
+#exportModal .modal-body, #export-baby .modal-body {
+    padding: 15px 0px;
+}
+
+.iv-fluides-master-modal .modal-header .close {
+    margin-top: 13px !important;
+    font-size: 30px !important;
+    color: white;
+}
+#create-drug-modal .modal-header .close, #edit-drug-modal .modal-header .close, 
+#iv-fluids-master-modal .modal-header .close, #frequency-master-modal .modal-header .close, 
+#cancel-modal .modal-header .close, #stop-modal .modal-header .close, #confirm-modal .modal-header .close, #resend-modal .modal-header .close,
+#terminate-modal .modal-header .close, #review-update-modal .modal-header .close, #baby-info .modal-header .close, 
+#pump-info .modal-header .close, #edit-data-modal .modal-header .close, #edit-info-modal .modal-header .close {
+    margin-top: 0px;
+    margin-right: 0px;
+}
+#pump-info .close span {
+    color: black;
+    font-size: 30px !important;
+}
+
+@media screen and (max-width: 1024px) {
+    .flow-control-modal .modal-header .close, #drug-master-modal .modal-header .close {
+        margin-top: 12px;
+    }
+    #collecton-site-modal .modal-header .btn.close, #mas-diagnosis-modal .modal-header .btn.close,
+    #mas-collecton-method-modal .modal-header .btn.close {
+        margin-top: 20px !important;
+    }
+    .flow-control-modal .modal-header .close span, #status-modal .modal-header .close span,
+    #collecton-site-modal .modal-header .close span, #mas-diagnosis-modal .modal-header .close span,
+    #mas-collecton-method-modal .modal-header .close span {
+        font-size: 20px !important;
+    }
+
+    #status-modal .modal-header .close {
+        margin-top: 5px;
+    }
+}

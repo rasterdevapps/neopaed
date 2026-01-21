@@ -1,0 +1,34 @@
+.baby-print table th strong {
+    font-size: 40px;
+}
+.baby-print table th span {
+    text-decoration: underline;
+    text-align: center;
+    display: inline-block;
+    font-size: 12px;
+    width: 100%;
+}
+.baby-print table th, .baby-print table td {
+    border: none !important;
+}
+
+@media screen and (max-width: 411px) {
+    .baby-print table th strong {
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-width: 412px) and (max-width: 640px) {
+    .baby-print table th strong {
+        font-size: 30px;
+    }
+}
+
+@media print {
+	.baby-print table {
+	    font-size: 24px;
+	}
+	.baby-print tr, .baby-print td, .baby-print th {
+	    font-size: 1em !important;
+	}	
+}

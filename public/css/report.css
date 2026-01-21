@@ -1,0 +1,123 @@
+.custom-date {
+    min-width: 90px;
+}
+
+/*Inpatient List*/
+.inpatient-list {
+    page-break-inside: avoid;
+    display: flex;
+}
+.inpatient-list-head, .dataTables_empty {
+    text-align: center;
+}
+.inpatient-list-inner-first {
+    border: 1px solid;
+    min-height: 125px !important;
+    margin: 5px 0px;
+}
+.inpatient-list-inner {
+    border: 1px solid;
+    min-height: 125px !important;
+    margin: 5px 0px;
+    border-left-width: 0;
+}
+.inpatient-header-line {
+    margin-top:0px;
+    border-top: 1px solid gray;
+    margin-bottom:10px;
+}
+@media screen and (max-width: 414px) {
+    .in-patient-print h2 {
+        font-size: 20px;
+    }    
+    .in-patient-print h3 {
+        font-size: 14px;
+    }
+    .in-patient-print h5 {
+        font-size: 12px;
+    }
+    .in-patient-print div {
+        font-size: 10px;
+    }
+}
+@media screen and (max-width: 640px) {
+    .in-patient-print h4, .in-patient-print h5, .in-patient-print h6 {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    .in-patient-print .inpatient-list-inner-first, .in-patient-print .inpatient-list-inner {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+/*Inpatient List*/
+
+/*NICU Report*/
+.print .nicu-report table td, .print .nicu-report table th {
+    padding: 5px 4px !important;
+}
+.print .nicu-report.overflow-auto {
+    overflow: auto;
+}
+/*NICU Report*/
+
+/*OP Report*/
+.print .opreport.overflow-auto {
+    overflow: auto;
+}
+/*OP Report*/
+
+/*Pediatric Report*/
+/*Pediatric Report*/
+
+/*Newborn Report*/
+.print .nb-report.overflow-auto {
+    overflow: auto;
+}
+/*Newborn Report*/
+
+/*Culture Report*/
+/*Culture Report*/
+
+/*Live Birth Report*/
+.print .birth-report.overflow-auto {
+    overflow: auto;
+}
+/*Live Birth Report*/
+
+/*Echo Report*/
+.print .echo-report.overflow-auto {
+    overflow: auto;
+}
+/*Echo Report*/
+
+/*Cranial Report*/
+.print .carnial-ultrasound-report.overflow-auto {
+    overflow: auto;
+}
+/*Cranial Report*/
+
+/*OP Activity Report*/
+.print table.op-activity-report td, .print table.op-activity-report th {
+    padding: 5px !important;
+}
+.print .op-activity-report.overflow-auto {
+    overflow: auto;
+    padding: 0px;
+}
+/*OP Activity Report*/
+
+/*Annual Report*/
+.charts-width-height {
+    width: 100%;
+    height: 500px;
+}
+.annual-report-print .overflow-auto {
+    overflow: auto;
+}
+@media screen and (max-width: 576px) {
+    .index-table {
+         margin-left: unset; 
+    }
+}
+/*Annual Report*/

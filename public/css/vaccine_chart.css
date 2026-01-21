@@ -1,0 +1,133 @@
+.print .vaccine-container table td,
+.print .vaccine-container table th {
+    padding: 2px 0px !important;
+}
+
+.print-head {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.vaccine-container .form-group span {
+    font-weight: normal;
+}
+
+.vaccine-container .mt-10 {
+    margin-top: 5px;
+}
+
+.vaccine-container thead {
+    display: table-row-group
+}
+
+.vaccine-container table,
+.vaccine-container th,
+.vaccine-container td {
+    border-collapse: collapse;
+}
+
+.vaccine-container thead {
+    background-color: #d3d3d3
+}
+
+.vaccine-container table {
+    border-collapse: collapse;
+    border-spacing: 0 !important;
+}
+
+.vaccine-container th {
+    border-bottom: 1px solid #e6e6e6;
+    border-left: 1px solid #e6e6e6;
+    font-size: 12px;
+    font-weight: 700;
+    text-align: center;
+    padding: 12px 12px
+}
+
+.vaccine-container th:last-child {
+    border-right: 1px solid #e6e6e6
+}
+
+.vaccine-container thead>tr:first-child {
+    border-top: 1px solid #e6e6e6
+}
+
+.vaccine-container td {
+    border-bottom: 1px solid #e6e6e6;
+    border-top: 1px solid #e6e6e6;
+    border-left: 1px solid #e6e6e6;
+    font-size: 12px;
+    font-weight: 400;
+    padding: 8px 12px
+}
+
+.vaccine-container h4 {
+    margin: 0px !important;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.vaccine-container .col-md-12 {
+    padding: 0px !important;
+}
+
+body.print .content-block {
+    margin-top: 5px !important;
+}
+
+.vaccine-container p {
+    margin: 0 0 3px !important;
+}
+
+
+body.print .content-block.no-border-at-print {
+    padding-bottom: 0px;
+}
+
+@media print {
+    .vaccine-container .col-md-3 {
+        width: 25% !important;
+    }
+
+    .vaccine-container .table-bordered th,
+    .vaccine-container .table-bordered td {
+        border: 1px solid #444 !important;
+    }
+
+    html,
+    body {
+        height: 99%;
+    }
+
+    .vaccine-container table {
+        page-break-after: auto !important
+    }
+
+    .vaccine-container tr {
+        page-break-inside: avoid !important;
+        page-break-after: auto !important
+    }
+
+    .vaccine-container td {
+        page-break-inside: avoid !important;
+        page-break-after: auto !important;
+        font-size: 10px !important;
+    }
+
+    .vaccine-container th {
+        page-break-inside: avoid !important;
+        page-break-after: auto !important;
+        font-size: 10px !important;
+    }
+
+    .vaccine-container td h4,
+    .vaccine-container td label {
+        font-size: 10px !important;
+    }
+
+    /*thead { display:table-header-group !important}
+        tfoot { display:table-footer-group !important}*/
+    body.print .content-block.no-border-at-print {
+        border: 0px !important;
+    }
+}

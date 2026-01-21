@@ -1,0 +1,713 @@
+
+<form method="POST" action="http://localhost/neonatal-v-2/nicu-discharge-reports" accept-charset="UTF-8"><input name="_token" type="hidden" value="AtOsSu7UIgRyjcRjLIQBfCULpZwP70hoPLdhcak4">    
+<input name="flag" type="hidden" value="2">
+<input name="BabyId" type="hidden" value="eyJpdiI6IklWM1k3UXFrQ2tFTjd4R2JcL2NqckxRPT0iLCJ2YWx1ZSI6IlFpRW9iY094Tm5qdDJDK1VSeHZKMnc9PSIsIm1hYyI6IjZiNjRiOWQyNTdhYmFkZmFmM2Q1YTliNDQ2ZjU2NzUwZmFjMzk3MjAzNzIxMzA0NTUzMWM5YjA4NzAzYjZmNDkifQ==">
+<input name="status" type="hidden" value="0">
+<style type="text/css">
+ .header-down {
+    margin-top: 100px !important;
+}
+</style>
+<div class="temp-container">
+    <div class="temp-row">
+            <!-- BEGIN HEADER CONTENT -->
+            <div class="col-md-12 ">
+                   <img src="http://localhost/neonatal-v-2/public/img/header.png"  width="200px" height="50px">
+            </div>
+
+            
+      
+            <div class=""> 
+                                <h5 class="text-center"><strong>SKS HOSPITALS PVT LTD PHONE : 0422-4201000 (Ext. 6105, 6214)</strong> </h5>
+                            </div>
+            <div id="patient-list" class="">
+                <div id="company">
+                     <div><span style="text-decoration:underline;font-size:1em;"> CONSULTANTS</span></div>
+                      <div><span style="font-size:9px"><strong>DR S.RAMAKRISHNAN </strong></span><span style="font-size:8px">MRCPCH (UK), MRCP (IRE), DCH(UK), DIP PN (LON)</span></div>
+
+<div><span style="font-size:9px"><em>CONSULTANT NEONATAL PAEDIATRICIAN</em></span></div>
+
+<div><span style="font-size:9px"><strong><u>SPECIAL INTERESTS:</u></strong></span></div>
+
+<div><span style="font-size:9px"><em>NEONATAL FUNCTIONAL ECHOCARDIOGRAPHY</em></span></div>
+
+<div><span style="font-size:9px"><em>PAEDIATRIC NUTRITION </em></span></div>
+
+<div><span style="font-size:9px"><em>NEURODEVELOPMENTAL SCREENING</em></span></div>
+
+                </div>
+            </div>
+            <div id="doctor-list">
+                <div id="project">
+                    <div><span style="text-decoration:underline;font-size:1em;">CONSULTANTS</span></div>
+                      <p><span style="font-size:9px"><strong>DR D.V.SURESH </strong></span><span style="font-size:8px"><strong>DCH ,DNB(PED), MNAMS</strong></span></p><p><span style="font-size:9px"><em>(CONSULTANT PEDIATRICIAN &amp; NEONATAL INTENSIVIST)</em></span></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <h5 class="text-center"><strong>Neonatal Intensive Care Unit - Summary Of Stay</strong> </h5>
+                    <div class="row" style="margin-bottom:15px;">
+                        <span class="col-xs-3 col-sm-6 col-md-6">
+                            <span><b>Neonatal Paediatrician :</b></span>
+                        </span>
+                        <div class="col-xs-9 col-sm-12">
+                            Dr S Ramakrishnan MRCPCH, MRCPI
+                        </div>
+                                            </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <hr style="margin-top:0px;border-top:2px solid #000;margin-bottom:10px;">
+                </div>
+            </div>
+            <!-- END HEADER CONTENT -->
+          
+            <div class="">
+
+                <div class="">
+                    <table class="table col-xs-12 col-md-11 col-sm-9 customTableSelector" style="">
+                        <tbody>
+                            <tr><td colspan="2"><b> Baby Details: </b></td></tr>  
+                            <tr>
+                                <td class='not-affect-parent'>    
+                                    <table class="baby-basic-details">
+                                        <tr>
+                                            <td>MR Number : </td>
+                                            <td>416826</td>
+                                        </tr>
+                                        <tr>
+                                        <td><b>Name : </b></td>
+                                        <td><b>B/O Test Augest </b></td>
+                                        </tr>
+                                                                                                                        <tr>
+                                            <td> <b>Birth Date & Time :</b></td>
+                                            <td><b>25-08-2020 ; 01:10:PM </b></td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>Sex :</b></td>
+                                            <td><b>Male</b></td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>Gestation :</b></td>
+                                            <td><b>40</b></td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>Corrected Gestational Age :</b></td>
+                                            <td><b>40</b></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Day Of Life :</td>
+                                            <td>0</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Birth Status :</td>
+                                            <td>Intramural</td>
+                                        </tr>
+                                        <tr>
+                                            <td> Mode of delivery :</td>
+                                            <td> </td>
+                                        </tr>
+                                        <tr>
+                                            <td> Birth Order:</td>
+                                            <td>Singleton</td>
+                                        </tr>                                                              
+                                    </table>
+                                </td>
+                                <td class='not-affect-parent'>
+                                    <table class="baby-basic-details">
+                                        <tr>
+                                        <td>IP Number :</td>
+                                        <td>IP/20000650</td>
+                                        </tr>
+                                        <tr>
+                                        <td>Baby's Blood Group :</td>
+                                        <td>Not Known</td>
+                                        </tr>
+                                        <tr>
+                                        <td>Date of Admission :</td>
+                                        <td>01-01-1970</td>
+                                        </tr>
+                                                                                 <tr>
+                                            <td>Date of Discharge :</td>
+                                            <td>25-08-2020</td>
+                                        </tr>
+                                        
+                                        <tr>
+                                        <td>Birth Weight (g) :</td>
+                                        <td>2500 </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Birth OFC (cm) :</td>
+                                            <td>N/A </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Birth Length (cm) :</td>
+                                            <td>N/A </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Discharge Weight (g) :</td>
+                                            <td>N/A </td>
+                                        </tr>                                
+                                        <tr>
+                                            <td>Discharge OFC (cm) :</td>
+                                            <td>N/A</td>
+                                        </tr>
+                                        <tr>
+                                        <td>Discharge length (cm) :</td>
+                                        <td>N/A </td>
+                                        </tr>                                    
+                                    </table>    
+                                </td>   
+                            </tr>
+                            <tr>
+                                <td colspan="2" style="text-align:justify ;">
+                                <input name="Problems" type="hidden">
+                                <br/>
+                                    <b>Diagnosis :</b>
+                                   
+                                    <a href="javascript:" class="checkingtest hidden-print hide" style="float: right; cursor: pointer;" title="Edit">
+                                    <i class="fa fa-pencil-square-o problems-report-editing" aria-hidden="true"></i>
+                                    </a>
+
+                                <br/>
+                                <div class="problems-report-editor">
+                                                                    <ol>                           
+                                                                                             
+                                                                                        </ol>
+                                        
+                                </div>
+                                </td>
+                            </tr>
+
+                                                                                    <!-- <tr class="blank_row"><td colspan="2"></td></tr>
+                            <tr class="blank_row"><td colspan="2"></td></tr>
+                            <tr class="blank_row"><td colspan="2"></td></tr>
+                            <tr class="blank_row"><td colspan="2"></td></tr>
+                            <tr class="blank_row"><td colspan="2"></td></tr>
+                            <tr class="blank_row"><td colspan="2"></td></tr>
+                            <tr class="blank_row"><td colspan="2"></td></tr>
+                            <tr class="blank_row"><td colspan="2"></td></tr> -->
+                            <!-- <tr class="blank_row"><td colspan="2"></td></tr> -->
+                            <!-- <tr class="page-break"></tr> -->
+                            <tr class="page-break"></tr>
+                            <tr style="padding-top:30px;display:block;page-break-before: always;"><td colspan="2"><b>Mother Details :</b></td></tr>  
+                            <tr>
+                                <td>
+                                    <table class="baby-basic-details">
+                                        <tr>
+                                        <td>Mother's Name :</td>
+                                        <td>  Test Augest </td>
+                                        </tr>
+                                        <tr>
+                                        <td>Age :</td>
+                                        <td></td>
+                                        </tr>
+                                        <tr>
+                                        <td>Mother's Blood Group :</td>
+                                        <td>Not Known</td>
+                                        </tr>
+                                        
+                                    </table>
+                                </td>
+                                <td> 
+                                    
+                                    <table class="baby-basic-details">
+                                        <tr>
+                                        <td>EDD by dates :</td>
+                                        <td> N/A </td>
+                                        </tr>
+                                                                                <tr>
+                                            <td>Conception :</td>
+                                        <td> </td>
+                                        </tr>  
+                                    
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    Obstetric history: Gravida  0   Para  0  Live  0  Abortion  0                                 </td>
+                            </tr>
+                         
+
+                            <tr>
+                                <td colspan="2">
+                                    <b>Mother's Medical Problems :</b>
+                                    <br/>
+                                    <table class="table-condensed">
+                                        <tr>
+                                            <th style="font-size: 12px;">Problems</th>
+                                            <th style="font-size: 12px;">Medications</th>
+                                        </tr>
+                                          
+                                            <tr>
+                                            <td> Nil </td>
+                                            <td> Nil </td>
+                                            </tr> 
+                                                                            </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                <b>Pregnancy problems:</b>
+                                <br/>
+                                <table class="table-condensed">
+                                        <tr>
+                                            <th style="font-size: 12px;">Complications</th>
+                                            <th style="font-size: 12px;">Treatment</th>
+                                        </tr>
+                                                                                <tr>
+                                        <td> Nil </td>
+                                        <td> Nil </td> 
+                                        </tr>
+                                            
+                                </table>
+
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>Antenatal Ultrasound scan findings:</b>
+                                    <br/>
+                                    <table>
+                                        <tr>
+                                            <th style="font-size: 12px;">Gestations</th>
+                                            <th style="font-size: 12px;">Findings</th>  
+                                        </tr>
+                                                                                <tr>
+                                            <td></td>
+                                            <td></td> 
+                                        </tr>
+                                                                                <tr>
+                                            <td></td>
+                                            <td></td> 
+                                        </tr>
+                                                                            </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" style="text-align:justify ;">
+                                    <input name="Birth" type="hidden">
+                                    <br/>
+                                    <b>Birth:</b>
+                                    <a href="javascript:" class="checkingtest hidden-print hide" style="float: right; cursor: pointer;" title="Edit">
+                                    <i class="fa fa-pencil-square-o birth-report-editing" aria-hidden="true"></i>
+                                    </a>
+                                    <br/>
+                                    <div class="birth-report-editor">
+
+                                                                    Baby was born at 40 weeks of
+                                    gestation by   delivery.
+                                    
+                                    Indication : 
+
+                                                                            Mother did not receive antenatal steroids.
+                                                                                                                Baby did not require any resuscitation at birth.
+                                  
+                                    </div>
+                                </td>
+                            </tr>
+                        
+                        <tr class="page-break"></tr>
+ 
+
+                        <tr>
+                            <td colspan="2" style="text-align:justify ;">
+                            <input name="RespiratorySystem" type="hidden">
+                              <br/>
+                                <b>Respiratory system:</b>
+                                 <a href="javascript:" class="checkingtest hidden-print hide" style="float: right; cursor: pointer;" title="Edit">
+                                   <i class="fa fa-pencil-square-o respiratorysystem-report-editing" aria-hidden="true"></i>
+                                 </a>
+                              <br/>
+                                <div class="respiratorysystem-report-editor">
+                                                            He did not require ventilator support during the neonatal stay.
+                                
+                                
+
+                                
+                                
+                                                                    The baby did not require any respiratory support after admission to the Neonatal
+                                    unit.
+
+                                                              
+                                <br>
+                                <table style="width:auto; margin-top:10px;">
+                                    <tbody><tr>
+                                        <td>Invasive Ventilation</td>
+                                        <td>0 days</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Non Invasive Ventilation</td>
+                                        <td>0 days</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Other Respiratory Support</td>
+                                        <td>0 days</td>
+                                    </tr>
+                                </tbody></table>
+
+
+                                                                    He did not receive surfactant therapy.
+                                
+                                  </div>
+                            </td>
+                        </tr>
+                        <tr class="page-break-always" style="margin-top: : 100px !important;"></tr>
+
+                        <tr>
+                            
+                            <td colspan="2" style="text-align:justify ;">
+                                <input name="CardiovascularSystem" type="hidden">
+                              <br/>
+                                <b>Cardiovascular System:</b>
+                                <a href="javascript:" class="checkingtest hidden-print hide" style="float: right; cursor: pointer;" title="Edit">
+                                  <i class="fa fa-pencil-square-o cardiovascularsystem-report-editing" aria-hidden="true"></i>
+                                </a>
+                              <br/>
+                             <div class="cardiovascularsystem-report-editor">
+                                                             His blood pressure remained stable and did not require any inotropic support during his stay. The baby did not require an echocardiogram.
+                                
+                             </div>   
+                            </td>
+                        </tr>
+                        <tr class="page-break"></tr>
+
+                        <tr>
+                            <td colspan="2" style="text-align:justify ;">
+                              <input name="GastrointestinalSystem" type="hidden">
+                            <br/>
+                              <b>Gastrointestinal System:</b>
+                                <a href="javascript:" class="checkingtest hidden-print hide" style="float: right; cursor: pointer;" title="Edit">
+                                  <i class="fa fa-pencil-square-o gastrointestinalsystem-report-editing" aria-hidden="true"></i>
+                                </a>
+                            <br/>
+                             <div class="gastrointestinalsystem-report-editor">
+                                                            He did not receive parenteral nutrition. He did not develop NEC.
+                               
+                             </div>   
+                            </td>
+                        </tr>
+                        <tr class="page-break"></tr>
+
+                        <tr>
+                            <td colspan="2" style="text-align:justify ;">
+                              <input name="CentralNervousSystem" type="hidden">
+                            <br/>
+                              <b>Central Nervous System:</b>
+                               <a href="javascript:" class="checkingtest hidden-print hide" style="float: right; cursor: pointer;" title="Edit">
+                                  <i class="fa fa-pencil-square-o centralnervoussystem-report-editing" aria-hidden="true"></i>
+                              </a>
+                            <br/>
+                              <div class="centralnervoussystem-report-editor">
+                                                             He did not have any seizures.
+                               
+                              </div> 
+                            </td>
+                        </tr>
+                        <tr class="page-break"></tr>
+
+                        <tr>
+                            <td colspan="2" style="text-align:justify ;">
+                               <input name="Sepsis" type="hidden">
+                            <br/>
+                              <b>Sepsis:</b>
+                              <a href="javascript:" class="checkingtest hidden-print hide" style="float: right; cursor: pointer;" title="Edit">
+                                  <i class="fa fa-pencil-square-o sepsis-report-editing" aria-hidden="true"></i>
+                              </a>
+                            <br/>
+                                <div class="sepsis-report-editor">
+                                                                     He was treated for suspect sepsis. He did not develop meningitis. He was treated for probable viral meningitis/encephalitis. He received the following antibiotics<table><tbody><tr><th> Antibiotics </th><th> Day Of Life </th></tr><tr><td>Netilmycin</td><td> day 0</td></tr></tbody></table>Antibiotic were stopped on day 0.
+                                   
+                                </div> 
+                            </td>
+                        </tr>
+                        <tr class="page-break"></tr>
+
+                        <tr>
+                            <td colspan="2" style="text-align:justify ;">
+                              <input name="Ophthalmology" type="hidden">
+                            <br/>
+                              <b>Ophthalmology:</b>
+                               <a href="javascript:" class="checkingtest hidden-print hide" style="float: right; cursor: pointer;" title="Edit">
+                                  <i class="fa fa-pencil-square-o ophthalmology-report-editing" aria-hidden="true"></i>
+                              </a>
+                            <br/>
+                                <div class="ophthalmology-report-editor">
+                                                                     
+                                                                 </div> 
+                            </td>
+                        </tr>
+                        <tr class="page-break"></tr>
+
+                        <tr>
+                            <td colspan="2" style="text-align:justify ;">
+                             <input name="Hematology" type="hidden">
+                              <br/>
+                               <b> Renal, Hematology, electrolytes, Glucose and Jaundice:</b>
+                                <a href="javascript:" class="checkingtest hidden-print hide" style="float: right; cursor: pointer;" title="Edit">
+                                  <i class="fa fa-pencil-square-o hematology-report-editing" aria-hidden="true"></i>
+                                </a>
+                              <br/>
+                               <div class="hematology-report-editor">
+                                                                He did not receive any blood products. He did not have any episodes of significant hypo or hyperglycaemia/hypo or hypercalcemia/hypo or hypernatremia/hypo or hyperkalemia.
+                               
+                         
+                               
+                               </div>  
+                            </td>
+                        </tr>
+                        <tr class="page-break"></tr>
+
+                        <tr>
+                            <td colspan="2" style="text-align:justify ;">
+                            <input name="NewbornScreening" type="hidden">
+                            
+                            <br/>
+                              <b>Newborn Screening:</b>
+                               <a href="javascript:" class="checkingtest hidden-print hide" style="float: right; cursor: pointer;" title="Edit">
+                                  <i class="fa fa-pencil-square-o newbornscreening-report-editing" aria-hidden="true"></i>
+                               </a>
+                            <br/>
+                               <div class="newbornscreening-report-editor">
+                                                            The result of the newborn screen is .
+                                
+                               </div>
+                            </td>
+                        </tr>
+                        <tr class="page-break"></tr>
+
+                        <tr>
+                            <td colspan="2" style="text-align:justify ;">
+                             <input name="Communicationwithparents" type="hidden">
+                              <br/>
+                                <b>Communication with parents:</b>
+                                 <a href="javascript:" class="checkingtest hidden-print hide" style="float: right; cursor: pointer;" title="Edit">
+                                   <i class="fa fa-pencil-square-o communicationwithparents-report-editing" aria-hidden="true"></i>
+                                 </a>
+                              <br/>
+                               <div class="communicationwithparents-report-editor">
+                                                            Parents were fully updated regarding his daily progress in the
+                                neonatal unit and they were provided with sufficient opportunities to clarify their
+                                questions.<br>
+                                 
+                               </div> 
+                            </td>
+                        </tr>
+
+  
+                                          <tr class="page-break"></tr>
+
+                        <tr>
+                            <td colspan="2">
+                             <input name="DischargeMedications" type="hidden">
+                            <br/>
+                              <b>Discharge Medications:</b>
+                              <a href="javascript:" class="checkingtest hidden-print hide" style="float: right; cursor: pointer;" title="Edit">
+                                <i class="fa fa-pencil-square-o dischargemedications-report-editing" aria-hidden="true"></i>
+                              </a>
+                            <br/>
+                            <div class="dischargemedications-report-editor">
+                                                            <table class="table col-md-12">
+                                    <tbody><tr>
+                                        <td>DRUG</td>
+                                        <td>DOSE</td>
+                                        <td>FREQUENCY</td>
+                                        <td>DURATION</td>
+                                    </tr>
+                                                                       <tr>
+                                          <td colspan="4" style="text-align: center;">None Prescribed</td>
+                                     </tr>
+                                                                  </tbody></table>
+                                
+                             </div>   
+                            </td>
+                        </tr>
+                        <tr class="page-break"></tr>
+
+                        <tr>
+                            <td colspan="2">
+                                <input name="vaccine" type="hidden">
+                                <br/>
+                                <b>Vaccine:</b>
+                                <a href="javascript:void(0);" class="checkingtest hidden-print hide" style="float: right; cursor: pointer;" title="Edit">
+                                   <i class="fa fa-pencil-square-o vaccine-report-editing" aria-hidden="true"></i> 
+                                </a>
+                                <br/>
+                                <div class="vaccine-report-editor">
+                                                                   <table>
+                                        <thead>
+                                            <tr>
+                                                <th>Name</th>
+                                                <th>Date</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                                                      <tr>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                                                                   </tbody>
+                                    </table>    
+                                    
+                                </div> 
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td colspan="2">
+                               <input name="DischargeInstructions" type="hidden">
+                              <br/>
+                                <b>Discharge Instructions:</b>
+                                 <a href="javascript:" class="checkingtest hidden-print hide" style="float: right; cursor: pointer;" title="Edit">
+                                  <i class="fa fa-pencil-square-o dischargeinstructions-report-editing" aria-hidden="true"></i>
+                                </a>
+                              <br/>
+                             <div class="dischargeinstructions-report-editor">
+
+                                                            <p>&nbsp;Parents were given advice on the following: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<ol>
+	<li>&nbsp; General baby care instructions.</li>
+	<li>&nbsp; Paladai feeding, breast feeding and milk preparation methods.</li>
+	<li>&nbsp; Breast milk storage instructions.</li>
+	<li>&nbsp; Withdrawing and administering medications.</li>
+	<li>&nbsp; Emergency baby care instructions provided.</li>
+	<li>&nbsp; Immunisations to be administered as per current IAP schedule.</li>
+	<li>&nbsp; Contact numbers in case of emergency has been provided.</li>
+</ol>
+
+                               
+                               This summary is generated to understand the patient's details/medical conditions.
+                                <div>
+                                   
+                                </div>
+                                <div>
+                                   
+                                </div>
+                                <div>
+                                   
+                                </div>
+                                <div>
+                                   
+                                </div>
+                                <div>
+                                   
+                                </div>
+                                <div>
+                                   
+                                </div>  
+                                  
+                             </div> 
+                           
+                            </td>
+                        </tr>
+                        <tr class="page-break"></tr>
+                        <!-- <tr class="blank_row"><td colspan="2"></td></tr>
+                        <tr class="blank_row"><td colspan="2"></td></tr>
+                        <tr class="blank_row"><td colspan="2"></td></tr>
+                        <tr class="blank_row"><td colspan="2"></td></tr>
+                        <tr class="blank_row"><td colspan="2"></td></tr>
+                        <tr class="blank_row"><td colspan="2"></td></tr>
+                        <tr class="blank_row"><td colspan="2"></td></tr>
+                        <tr class="blank_row"><td colspan="2"></td></tr> -->
+                        <!-- <tr class="blank_row"><td colspan="2"></td></tr> -->
+                        <tr>
+                            <td colspan="2">
+                            <input name="Followup" type="hidden">
+                            <br/>
+                             <b>Follow Up:</b>
+                             <a href="javascript:" class="checkingtest hidden-print hide" style="float: right; cursor: pointer;" title="Edit">
+                                  <i class="fa fa-pencil-square-o followup-report-editing" aria-hidden="true"></i>
+                             </a>
+                            <br/>
+                              <div class="followup-report-editor">
+                                                            A neonatal follow up has not been arranged with us and we recommend local Paediatric
+                                    follow up.
+                                
+                               </div>  
+                            </td>
+                        </tr>
+                    
+                    <tr class="hidden-print hide">
+                      <td colspan="2"> 
+                       <table>
+                          <tr>
+                            <td><label for="is_completed">Is Summary Completed ? </label></td>  
+                            <td><input id="is_completed" name="is_completed" data-on="Completed" data-off="Not Completed" data-toggle="toggle" data-width="150" data-size="small"  type="checkbox"></td>
+                          </tr>  
+                         
+                       </table>      
+                      
+                      </td> 
+                    </tr>
+                    <tr class="hidden-print">
+                      <td colspan="2"> 
+                       <table>
+                          <tr>
+                            <td><label for="is_completed">Do you need to send a copy to Sudha Hospital team ? </label></td>  
+                            <td><input id="is_send" name="is_send" data-on="Send" data-off="Not Send" data-toggle="toggle" data-width="150" data-size="small"  type="checkbox"></td>
+                          </tr>  
+                         
+                       </table>      
+                      
+                      </td> 
+                    </tr>
+
+                    <tr>
+                       <td colspan="2">
+                             <div style="margin: 45px 0px 0px -33px;">
+                               <div class="col-md-3 pull-left"> 
+                                  <ul style="list-style: none;">
+                                    <li>Date : 25-08-2020 </li>
+                                    <li>Place :  </li>
+                                  </ul>
+                               </div>
+                                                             
+                                                                 <div class="col-md-3 pull-right">
+                                    <ul style="list-style: none; text-align: center;">
+                                        <li> Dr S Ramakrishnan MRCPCH </li>
+                                        <li><b>Signature</b></li>
+                                    </ul>
+                                  </div>
+                                  
+                                                                   
+                                                                 <div class="col-md-3 pull-right">
+                                    <ul style="list-style: none; text-align: center;">
+                                        <li>  MRCPI </li>
+                                        <li><b>Signature</b></li>
+                                    </ul>
+                                  </div>
+                                  
+                                                                    
+                          </div>
+
+                       </td> 
+                    </tr>
+
+                        </tbody>
+                    </table>
+
+                </div>
+
+                <div class="button-row hidden-print">
+                    <div class="col-md-1 col-sm-2">
+                        <a href="javascript:" onclick="window.print();" class="btn btn-primary hidden-print">
+                        <i class="fa fa-print"></i><span>Print</span></a>
+                    </div>
+                    <div class="col-md-1 col-sm-2 savebtn hide">
+                        <a href="javascript:" class="btn btn-primary hidden-print neonatal-intensive-care-save hide">
+                        <i class="fa fa-floppy-o" aria-hidden="true"></i><span>save</span></a>
+                    </div>
+                    <div class="col-md-1 col-sm-2 hide " >
+                        <a href="javascript:" class="btn btn-primary hidden-print neonatal-intensive-care-default">
+                        <i class="fa fa-undo" aria-hidden="true"></i> <span>Default</span></a>
+                    </div>
+                    <div class="col-md-1 col-sm-2">
+                        <a href="javascript:window.history.back(-1);" class="btn btn-default hidden-print">
+                        <i class="fa fa-exclamation-circle"></i><span>Back</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </form>
+

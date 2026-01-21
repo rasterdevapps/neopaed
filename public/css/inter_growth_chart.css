@@ -1,0 +1,57 @@
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+body.print .container {
+    display: inline-block;
+    margin: 0px;
+}
+body.print > .row {
+    display: grid;
+}
+.print-head {
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+#wt-container, #ht-container, #hc-container, #bmi-container {
+    width: 992px;
+    height: 650px;
+    page-break-inside: avoid;
+}
+#wt-chart-container, #ht-chart-container, #hc-chart-container, #bmi-chart-container {
+    max-width: 100%;
+    height: 605px;
+    page-break-inside: avoid;
+}
+
+.chart-title {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.plr-0 {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+  
+@page {
+    margin: 0.5cm 0.7cm 0 0;
+}
+
+@page:first {
+    margin-top: 0cm;
+}
+
+
+@media screen and (max-width: 960px) {
+    body.print .container {
+        display: inline-table;
+        width: 100% !important;
+    }
+}
+
+
+@media print {
+    body.print .container {
+        width: 100% !important;
+    }
+}

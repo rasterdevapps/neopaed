@@ -1,0 +1,669 @@
+table {
+    margin-bottom: 0px !important;
+}
+p {
+    white-space: normal;
+    margin: 0px !important;
+}
+h4 {
+    text-align: center;
+    font-size: 16px;
+}
+h3.mt-0 {
+    margin-bottom: 5px;
+}
+.print table th {
+    padding: 2px 10px !important;
+}
+.print table.table-bordered td {
+    padding: 0px 5px !important;
+    vertical-align: middle;
+    page-break-inside: avoid;
+}
+.print #hnne-container table.table-bordered td, .print #hine-container table.table-bordered td {
+    /*padding: 0px !important;*/
+}
+#hnne-container .row-head strong {
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    white-space: nowrap;
+}
+.basic-details table > tbody > tr > td {
+    width: auto !important;
+}
+#hnne-container table > tbody > tr > td:not(.table-custom-width, .row-head) {
+    width: 14%;
+} 
+#hnne-container table > tbody > tr > td.no-border {
+    width: 14%;
+} 
+#hinescreening1 table > tbody > tr > td:not(.table-custom-width, .row-head), #hinescreening2 table > tbody > tr > td:not(.table-custom-width, .row-head) , #hinescreening4 table > tbody > tr > td:not(.table-custom-width, .row-head), #hinescreening5 table > tbody > tr > td:not(.table-custom-width, .row-head) {
+    width: 20%;
+}
+#hinescreening3 table > tbody > tr > td:not(.table-custom-width, .row-head) {
+    width: 25%;
+} 
+#hinescreening6 table > tbody > tr > td:not(.table-custom-width, .row-head), #hinescreening7 table > tbody > tr > td:not(.table-custom-width, .row-head) {
+    width: 16.7%;
+} 
+#hnne-container .row-head {
+    width: 20px;
+}
+
+.table-custom-width {
+    max-width: 20px;
+}
+img:not(.expect) {
+    width: 60px;
+    height: 45px !important;
+}
+.sub-table strong {
+    white-space: nowrap;
+}
+.print table.table-bordered td.no-border, .print #hnne-container table.table-bordered td.no-border, .print #hine-container table.table-bordered td.no-border {
+    border: 0px !important;
+    padding: 5px 10px !important;
+}
+.image-container {
+    display: inline-block;
+    position: relative;
+}
+.print table.table-bordered td.no-border td, .print #hnne-container table.table-bordered td.no-border td, .print #hine-container table.table-bordered td.no-border td {
+    padding: 1px 3px !important;    
+}
+.print #m-chat-container table.table-bordered td {
+    padding: 10px !important;
+}
+.print #dasii-container table.table-bordered td {
+    padding: 2px 3px !important;
+}
+.table td.selected-score {
+    box-shadow: 0 0 1px 3px #5EAF5E inset !important;
+}
+i {
+    font-size: 14px;
+    font-weight: bold;
+}
+.table td.bg-secondary {
+    background-color: #d5d5d5 !important;
+}
+.print table.table-bordered td.added-info {
+    text-align: left !important;
+    padding: 0px 15px !important;
+    display: table-cell !important;
+    /*height: 13px;*/
+}
+div > table > tbody > tr > td:not(.row-head, .table-custom-width, #cc-infants-container table td, #cc-infants-container table th) {
+    min-width: 50px;
+}
+.table td.selected-cell {
+    background-color: red !important;
+    color: white !important;
+}
+td.bg-secondary.selected-cell {
+    background-color: green !important;
+    color: white;
+}
+.assessment-page-break {
+    margin-top: 15px;
+}
+.print .table>thead>tr>th.unset-bg {
+    background-color: unset;
+    color: black;
+}
+.rest-fail td {
+    background-color: red !important;
+    color: white !important;
+}
+.prior-pass td {
+    background-color: green !important;
+    color: white !important;
+}
+.vertical-align-middle {
+    vertical-align: middle !important;
+}
+
+.status-btn.label-success {
+    background-color: #5cb85c;
+    color: white;
+}
+.status-btn.label-info {
+    background-color: #2f96b4;
+    color: white;
+}
+.status-btn.label-warning {
+    background-color: #f0ad4e;
+    color: white;
+}
+#chart-container {
+    pointer-events: none;
+}
+body.print .table-bordered > thead > tr > th:not(.unset-bg) {
+    background-color: var(--theme-color) !important;
+}
+body.print .table-bordered > thead > tr > th.unset-bg {
+    font-weight: bold;
+}
+body.print .table-bordered > thead > tr > th > h4.m-0 strong, body.print .table-bordered > thead > tr > th h4.m-0 strong span,
+body.print .table-bordered > thead > tr > th > h4.m-0 b, body.print .table-bordered > thead > tr > th h4.m-0 span, 
+ body.print #cluster-container .table-bordered > thead > tr > th b, 
+ body.print #cbcl-container .table-bordered > thead > tr > th b,
+  body.print #mental-container .table-bordered > thead > tr > th b, 
+  body.print #motor-container .table-bordered > thead > tr > th b, 
+  body.print #m-chat-followup-container .table-bordered > thead > tr > th b,
+   body.print #cc-infants-container .table-bordered > thead > tr > th b, 
+   body.print #cc-preschoolers-container .table-bordered > thead > tr > th b, 
+   body.print #m-chat-container .table-bordered > thead > tr > th b {
+    color: #fff !important;
+}
+table {
+    background-color: white;
+}
+#hnne-container {
+    /*background-color: #d0fffe;*/
+    padding: 5px;
+}
+#hine-container {
+    /*background-color: #fffddb;*/
+    padding: 5px;
+}
+#m-chat-container {
+    /*background-color: #e4ffde;*/
+    padding: 5px;
+}
+#dasii-container {
+    /*background-color: #ffd3fd;*/
+    padding: 5px;
+}
+#ddst-container {
+    /*background-color: #ffe7d3;*/
+    padding: 5px;
+}
+#chart-container {
+    height: 1375px !important;
+}
+
+.header-align {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.print .basic-details {
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+.print .basic-details table td {
+    padding: 2px 10px !important;
+    font-size: 16px;
+}
+#hnne-container #title:after {
+    content: 'HNNE';
+    margin-left: 150px;
+}
+#hine-container #title:after {
+    content: 'HINE';
+    margin-left: 150px;
+}
+#m-chat-container #title:after {
+    content: 'M-CHAT';
+    margin-left: 150px;
+}
+#dasii-container #title:after {
+    content: 'DASII';
+    margin-left: 150px;
+}
+#ddst-container #title:after {
+    content: 'DDST';
+    margin-left: 150px;
+}
+#cbcl-container #title:after {
+    content: 'CBCL';
+    margin-left: 150px;
+}
+#cbcl-container {
+    padding: 5px;
+}
+#cc-infants-container #title:after {
+    content: 'Carolina Curriculum - Infants';
+}
+#cc-preschoolers-container #title:after {
+    content: 'Carolina Curriculum - Preschoolers';
+}
+input[type=checkbox] {
+    width: 25px;
+    height: 25px;
+}
+#assessment-modal td {
+    padding: 0px 10px !important;
+}
+.assessment-container {
+    display: none;
+}
+.assessement-header img, .assessement-header .basic-details {
+    display: none;
+}
+.image-container i {
+    display: block;
+    text-align: center;
+    font-size: 10px;
+}
+#hnne-container .table td {
+    /*position: relative;*/
+}
+.side-indication:before {
+    position: absolute;
+    bottom: 2px;
+    left: 50px;
+    content: 'L';
+    font-size: 9px;
+    font-weight: 600;
+}
+.side-indication:after {
+    position: absolute;
+    bottom: 2px;
+    right: 50px;
+    content: 'R';
+    font-size: 9px;
+    font-weight: 600;
+}
+.image-container .arrow-font-size {
+    font-size: 20px;
+}
+.leg-traction .side-indication:before {
+    bottom: -5px;
+    left: 60px;
+}
+.leg-traction .side-indication:after {
+    bottom: -5px;
+    right: 64px;
+}
+.leg-traction td[data-cell="leg_traction_score_1"] .side-indication:after {
+    right: 87px;
+}
+.leg_traction_score_field[data-cell="leg_traction_score_5"] .side-indication:after, .arm_traction_score_field[data-cell="arm_traction_score_5"] .side-indication:after {
+    right: 75px;
+}
+.arm-traction .side-indication:before {
+    bottom: -5px;
+    left: 90px;
+}
+.arm-traction .side-indication:after {
+    bottom: -5px;
+    right: 100px;
+}
+td p {
+    text-align: left;
+    /*padding-bottom: 5px;*/
+}
+td[data-cell="hine_head_1"] img, td[data-cell="hine_head_0"] img {
+    width: 80px !important;
+}
+td[data-cell="hine_trunk_0"] img {
+    width: 160px !important;
+}
+td[data-cell="hine_scraf_sign_3"] img, td[data-cell="hine_scraf_sign_1"] img, td[data-cell="hine_scraf_sign_0"] img, td[data-cell="hine_shoulder_elevation_3"] img, td[data-cell="hine_shoulder_elevation_1"] img, td[data-cell="hine_shoulder_elevation_0"] img, td[data-cell="hine_hip_adductors_3"] img, td[data-cell="hine_hip_adductors_2"] img, td[data-cell="hine_hip_adductors_1"] img, td[data-cell="hine_hip_adductors_0"] img, td[data-cell="hine_popliteal_angle_3"] img, td[data-cell="hine_popliteal_angle_1"] img, td[data-cell="hine_ankle_dorsiflexion_3"] img, td[data-cell="hine_ankle_dorsiflexion_1"] img, td[data-cell="hine_ankle_dorsiflexion_1"] img, td[data-cell="hine_pull_to_sit_3"] img, td[data-cell="hine_ventral_suspension_3"] img {
+    width: 100px;
+    height: 60px !important;
+}
+td[data-cell="hine_lateral_tilting_3"] img, td[data-cell="hine_lateral_tilting_2"] img, td[data-cell="hine_lateral_tilting_1"] img, td[data-cell="hine_lateral_tilting_0"] img, td[data-cell="hine_forward_parachute_3"] img, td[data-cell="hine_forward_parachute_1"] img {
+    width: 80px;
+    height: 50px !important;
+}
+.table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td {
+    line-height: 1;
+}
+.display-block-must {
+    display: block !important;
+}
+#assessment-modal .close {
+    color: black;
+    opacity: 1;
+    top: -29px;
+    left: -11px;
+    font-size: 8px !important;
+    box-shadow: unset;
+    padding: 0px;
+}
+.assessment-block {
+    border: 1px solid black;
+}
+#m-chat-container > table > thead > tr > th > h4 > strong, #m-chat-followup-container > table > thead > tr > th > h4 > strong,
+ #mental-container > table > thead > tr > th > h4 > strong, #motor-container > table > thead > tr > th > h4 > strong {
+    margin-top: 20px;
+    display: inline-block;
+}
+#m-chat-container h4 > span > h3, #m-chat-container h4 > strong > sup, #dasii-container h4 > span > h3 {
+    color: white !important;
+}
+#cbcl-container table.table-bordered td {
+    padding: 3px 5px !important;
+}
+@media only print {        
+    .print table.table-bordered td {
+        font-size: 10px;
+        border: 1px solid #444 !important;
+        border-collapse: collapse !important;
+    }
+    .assessment-page-break {
+        page-break-before: always;
+        page-break-inside: avoid;
+        margin-top: 5px;
+    }
+    #chart-container {
+        zoom: 70%;
+    }
+    #cc-infants-container table.table-bordered thead > tr > th,#cc-preschoolers-container table.table-bordered thead > tr > th {
+        font-size: 15px;
+        color: #fff !important;
+        
+    }s
+    .exeception-page-break {
+        page-break-inside: auto;
+    }
+    table tr td,
+    table tr th {
+        page-break-inside: avoid;
+    }
+    body.print {
+        margin-left: 0cm !important;
+        margin-right: 0cm !important;
+    }
+    .body.print .container.main {
+        padding: 0px; 
+        background-color: red !important;
+    }
+    #hnne-container table {
+        page-break-inside: avoid;
+    }
+
+}
+    @page {
+        margin: 0.5cm !important;
+    }
+    .carolina-infant-table{
+            overflow-x: scroll;
+        }
+    .carolina-infant-table{
+        border: 1px solid #444;
+        border-collapse: collapse;
+    }
+
+    table.table-bordered .row-head
+    {
+        /*vertical-align: middle !important;
+        transform: rotate(270deg);*/
+        -ms-writing-mode: tb-rl;
+        -webkit-writing-mode: vertical-rl;
+        writing-mode: vertical-rl;
+        transform: rotate(180deg);
+        white-space: nowrap;
+        text-transform: uppercase;
+        font-weight: 600;
+        max-width: 100px;
+        text-align: center;
+        overflow: visible;
+
+    }
+
+    #cc-infants-container thead th{
+        padding:   2px !important;
+    }
+    #cc-infants-container .table td:not(.no-border), #cc-infants-container .table th:not(.no-border)
+    {
+        border: 1px solid #888;
+        border-collapse: collapse;
+    }
+    #cc-infants-container .table th:not(.no-border)
+    {
+        border-top: 1px solid #888 !important;
+    }
+    #cc-infants-container .table td
+    {
+        position: relative;
+        vertical-align: middle;
+        text-align: center;
+
+    }
+    #cc-infants-container .table td strong
+    {
+        text-align: left;
+    }
+/*#cc-infants-container .image-container
+{
+    display: table-cell;
+    position: absolute;
+    bottom: 7px;
+    left: 15%;
+}
+#cc-infants-container .image-container img
+{
+    vertical-align: bottom;
+}
+#cc-infants-container .side-indication:before
+{
+    position: absolute;
+    bottom: -10px;
+    left: -13px;
+    content: 'R';
+    font-size: 13px;
+    font-weight: 600;
+}*/
+/*#cc-infants-container .side-indication:after
+{
+    position: absolute;
+    bottom: -10px;
+    right: -13px;
+    content: 'L';
+    font-size: 13px;
+    font-weight: 600;
+}*/
+/*#cc-infants-container .image-container i
+{
+    display: block;
+    text-align: center;
+    font-size: 20px;
+}
+#cc-infants-container .popliteal-angle .image-container
+{
+    bottom: 30% !important;
+    left: 30% !important;
+}
+#cc-infants-container .popliteal-angle .image-container i
+{
+    font-size: 13px;
+}
+#cc-infants-container .arm-recoil td img
+{
+    min-width: 125%;
+}
+#cc-infants-container .posture td p, .leg-recoil td p 
+{
+    padding-bottom: 30px !important;
+}
+#cc-infants-container .ventral-suspension td p
+{
+    padding-bottom: 40px !important;
+}
+#cc-infants-container .head-lag td p
+{
+    padding-bottom: 50px !important;
+}
+#cc-infants-container .arm-traction td p, #cc-infants-container .arm-recoil td p
+{
+    padding-bottom: 70px !important;
+}
+#cc-infants-container .bg-secondary
+{
+    background-color: #d5d5d5;
+}
+#cc-infants-container .no-border
+{
+    border: 0px !important;
+}
+#cc-infants-container .sub-table tbody td
+{
+    padding: 3px 5px !important;
+}
+#cc-infants-container .sub-table
+{
+    margin-bottom: 0px !important;
+}*/
+/*#cc-infants-container .selected-score
+{
+    background-color: #d4f5ff;
+    box-shadow: 0px 0px 10px #999;
+    transition: all .1s ease;
+}
+#cc-infants-container .valign-middle td
+{
+    vertical-align: middle !important;
+}*/
+/*#cc-infants-container .table-list
+{
+    padding-left: 5px !important;
+    padding-bottom: 80px;
+}*/
+#cc-infants-container .table-responsive {
+    border: 1px solid black;
+    margin-bottom: 15px;
+} 
+#cc-infants-container .table {
+    margin-bottom: 0px !important;
+} 
+#cc-infants-container h3 {
+    margin: 0px;
+    padding: 15px;
+}
+.half-mark.green{
+    height: 100%;
+    background: linear-gradient(90deg, #51a351 50%, #FFFFFF 50%);
+    }
+.full-mark.green{
+    height: 100%;
+    background: linear-gradient(90deg, #51a351 100%, #51a351 100%);
+    }
+.half-mark.red{
+    height: 100%;
+    background: linear-gradient(90deg, #bd362f 50%, #FFFFFF 50%);
+    color: #fff !important;
+    }
+.full-mark.red{
+    height: 100%;
+    background: linear-gradient(90deg, #bd362f 100%, #bd362f 100%);
+    color: #fff !important;
+    }
+.half-mark.orange{
+    height: 100%;
+    background: linear-gradient(90deg, #fa9f1e 50%, #FFFFFF 50%);
+    color: #fff !important;
+    }
+.full-mark.orange{
+    height: 100%;
+    background: linear-gradient(90deg, #fa9f1e 100%, #fa9f1e 100%);
+    color: #fff !important;
+    }
+.half-mark.blue{
+    height: 100%;
+    background: linear-gradient(90deg, #2f96b4 50%, #FFFFFF 50%);
+    color: #fff !important;
+    }
+.full-mark.blue{
+    height: 100%;
+    background: linear-gradient(90deg, #2f96b4 100%, #2f96b4 100%);
+    color: #fff !important;
+    }
+.carolina-infant-table td, .carolina-infant-table table th{
+    padding: 2px 2px !important !important;
+}
+#cc-infants-container table.table-bordered td:not(.row-head), #cc-infants-container table.table-bordered th,
+#cc-preschoolers-container table.table-bordered td:not(.row-head), #cc-preschoolers-container table.table-bordered th{
+    min-width: 0px !important;
+    padding: 2px 3px !important;
+    border: 1px solid #444;
+    border-collapse: collapse !important;
+}
+#cc-infants-container > table > thead > tr > th > h4 > strong, #cc-preschoolers-container > table > thead > tr > th > h4 > strong
+ {
+    color: #fff !important;
+    margin-top: 20px;
+    display: inline-block;
+}
+/*#cc-infants-container h4 > span > h3,  #cc-preschoolers-container h4 > span > h3 {
+    color: white !important;
+}*/
+/*.print table.table-bordered td.no-border, 
+.print #cc-infants-container table.table-bordered td.no-border
+ {
+    border: 0px !important;
+    padding: 5px 10px !important;
+}*/
+
+#cc-infants-container .table td[class*='second-half'] {
+    position: relative;
+    z-index: 0;
+}
+#cc-infants-container .table td[class*='second-half']:after {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    content: '';
+    width: 50%;
+    z-index: -1;
+    height: 100%;
+}
+#cc-infants-container .table td[class*='blue-second-half']:after{
+    background-color: #2f96b4;
+}
+#cc-infants-container .table td[class*='orange-second-half']:after{
+    background-color: #fa9f1e;
+}
+
+#cc-infants-container .table td[class*='green-second-half']:after{
+    background-color: #51a351;
+}
+
+
+.carolina-infant-table td, .carolina-infant-table table th{
+    padding: 2px 2px !important !important;
+}
+#cc-infants-container table.table-bordered td:not(.row-head), #cc-infants-container table.table-bordered th,
+#cc-preschoolers-container table.table-bordered td:not(.row-head), #cc-preschoolers-container table.table-bordered th{
+    min-width: 0px !important;
+    padding: 2px 3px !important;
+    border: 1px solid #444;
+    border-collapse: collapse !important;
+}
+#cc-infants-container > table > thead > tr > th > h4 > strong, #cc-preschoolers-container > table > thead > tr > th > h4 > strong {
+    color: #fff !important;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+#issa-container .table > tbody > tr > td {
+    padding: 5px !important;
+    min-width: 25px;
+}
+#issa-container .table > tbody > tr > td:nth-child(2):not(.text-center) {
+    text-align: left;
+}
+#issa-container .table > thead > tr > th {
+    padding: 10px !important;
+    color: white !important;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+#issa-container .table > tbody > tr > td > h4 {
+    margin: 1px !important;
+}
+#issa-container .table > tbody > tr > td > span.check:before {
+    content: '\2713';
+    font-weight: bold;
+}
+@media print {
+    #issa-container .table > thead > tr > th > b {
+        color: white !important;
+    }
+    #issa-container .table > tbody > tr > td {
+        padding: 1.7px !important;
+    }
+}

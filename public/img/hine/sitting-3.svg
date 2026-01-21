@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="56px" height="51px" viewBox="0 0 56 51" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>2.3.2</title>
+    <desc>Created with Sketch.</desc>
+    <g id="IP" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="10.1.4---OP---EMR---OP-Case-Sheet---Examination---2" transform="translate(-738.000000, -596.000000)">
+            <g id="2.3.2" transform="translate(738.000000, 597.000000)">
+                <path d="M27.0689655,13.5689655 C26.8957398,18.3232154 29.3332985,22.7923691 33.4241515,25.220912 C37.5150046,27.6494548 42.6056851,27.6494548 46.6965381,25.220912 C50.7873912,22.7923691 53.2249499,18.3232154 53.0517241,13.5689655 C53.2175944,10.0302577 51.9204907,6.57913293 49.464893,4.02570267 C47.0092954,1.47227241 43.6114514,0.0413997852 40.0689655,0.0689655172 C36.5358044,0.0760582536 33.1568832,1.51714893 30.7061305,4.0621614 C28.2553777,6.60717387 26.9427738,10.0380516 27.0689655,13.5689655 L27.0689655,13.5689655 Z" id="Path" fill="#FFFFFF"></path>
+                <path d="M27.0689655,13.5689655 C26.9763294,17.0873044 28.3010997,20.4953478 30.7456498,23.0274348 C33.1901999,25.5595219 36.5495452,27.0033277 40.0689655,27.0344859 C43.5975061,27.0369231 46.9750442,25.6030319 49.4241497,23.0628574 C51.8732552,20.5226829 53.1829324,17.0950666 53.0517241,13.5689655 C53.2175944,10.0302577 51.9204907,6.57913293 49.464893,4.02570267 C47.0092954,1.47227241 43.6114514,0.0413997852 40.0689655,0.0689655172 C36.5358044,0.0760582536 33.1568832,1.51714893 30.7061305,4.0621614 C28.2553777,6.60717387 26.9427738,10.0380516 27.0689655,13.5689655 L27.0689655,13.5689655 Z" id="Path" stroke="#000000" stroke-width="2" stroke-linejoin="round"></path>
+                <rect id="Rectangle" fill="#FFFFFF" fill-rule="nonzero" x="39.8448276" y="9.44827586" width="5.32758621" height="5.70689655"></rect>
+                <rect id="Rectangle" stroke="#000000" stroke-width="2" stroke-linejoin="round" x="39.8448276" y="9.44827586" width="5.32758621" height="5.70689655"></rect>
+                <rect id="Rectangle" fill="#FFFFFF" fill-rule="nonzero" x="48.8103448" y="18.3448276" width="5.53448276" height="6.39655172"></rect>
+                <rect id="Rectangle" stroke="#000000" stroke-width="2" stroke-linejoin="round" x="48.8103448" y="18.3448276" width="5.53448276" height="6.39655172"></rect>
+                <path d="M26.8448276,16.0689655 L1.29310345,43.4827586" id="Path" stroke="#000000" stroke-width="2" stroke-linejoin="round"></path>
+                <path d="M1.29310345,43.4827586 L47.9310345,43.4827586" id="Path" stroke="#000000" stroke-width="2" stroke-linejoin="round"></path>
+                <path d="M19.1896552,24.3103448 L23.6724138,35.2758621" id="Path" stroke="#000000" stroke-width="2" stroke-linejoin="round"></path>
+                <path d="M23.6724138,35.2758621 L40.9310345,48.3103448" id="Path" stroke="#000000" stroke-width="2" stroke-linejoin="round"></path>
+            </g>
+        </g>
+    </g>
+</svg>

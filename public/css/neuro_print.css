@@ -1,0 +1,634 @@
+.checkbox {
+    position: relative;
+    width: 20px;
+    height: 14px;
+    min-height: 14px;
+    border: 1px solid #929292;
+    display: inline-block;
+    margin: 0px !important;
+    top: 2px !important;
+}
+
+.checkbox.checked:after {
+    content: '';
+    display: block;
+    width: 6px;
+    height: 12px;
+    position: absolute;
+    top: -2px;
+    left: 7px;
+    border: solid #000;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.table tr td {
+    font-weight: 600;
+}
+
+.op-print-label {
+    font-weight: normal;
+    color: #333;
+}
+
+body.print {
+    line-height: 1.5;
+    color: #333;
+}
+
+.p-0 {
+    padding: 0px !important;
+}
+
+.design-pink {
+    /*box-shadow: 0px 0px 10px green !important;*/
+    padding: 10px 20px;
+    border-radius: 10px;
+    background: rgb(255, 179, 179);
+    background: linear-gradient(180deg, rgba(255, 179, 179, 0.5452381636248249) 0%, rgba(255, 179, 179, 0.4724090319721639) 48%, rgba(255, 179, 179, 1) 100%);
+    position: relative;
+}
+
+.design-pink:after {
+    content: '';
+    width: 100%;
+    bottom: -16px;
+    left: 0px;
+    height: 1px;
+    background-color: #000;
+    position: absolute;
+}
+
+.design-pink:before {
+    content: '';
+    width: 1px;
+    top: 100%;
+    left: 50%;
+    height: 15px;
+    background-color: #000;
+    position: absolute;
+}
+
+.arrow-for-design-blue {
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid #000;
+    left: 49.4%;
+    top: 24px;
+    position: absolute;
+}
+
+.design-blue {
+    box-shadow: 0px 0px 10px #44a5df !important;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-top: 30px;
+    position: relative;
+    padding: 20px 0px;
+}
+
+.design-blue-3 {
+    box-shadow: 0px 0px 10px #44a5df !important;
+    border-radius: 10px;
+    margin-top: 30px;
+    position: relative;
+    padding: 13px 0px 9px;
+}
+
+.design-blue tbody ul {
+    padding: 0px 0px 0px 10px;
+}
+
+.design-blue:before {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    width: 1px;
+    height: 25px;
+    content: '';
+    background-color: #000;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+.col-offset-3 {
+    margin-left: 25%;
+}
+
+.col-offset-20-per {
+    margin-left: 20%;
+}
+
+.col-offset-10-per {
+    margin-left: 15%;
+}
+
+.p-10-20 {
+    padding: 10px 20px;
+}
+
+.text-strong {
+    font-weight: 600;
+}
+
+ul {
+    margin-bottom: 0px;
+}
+
+ul li {
+    padding-bottom: 5px;
+}
+
+.design-red {
+    box-shadow: 0px 0px 4px 2px #ce5252 !important;
+    padding: 10px 0px 2px;
+    margin-top: 20px;
+    position: relative;
+}
+
+.design-red-2,
+.design-red-3 {
+    box-shadow: 0px 0px 4px 2px #ce5252 !important;
+    padding: 10px 0px 6px;
+    margin-top: 20px;
+    position: relative;
+}
+
+.design-green {
+    box-shadow: 0px 0px 4px 2px #a1e435 !important;
+    padding: 10px 0px 6px;
+    margin-top: 20px;
+    position: relative;
+}
+
+.design-red:after {
+    position: absolute;
+    top: 101%;
+    left: 50%;
+    width: 1px;
+    height: 27px;
+    content: '';
+    background-color: #000;
+}
+
+.design-blue-1:after {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    width: 1px;
+    height: 33px;
+    content: '';
+    background-color: #000;
+}
+
+.design-blue-2:after {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    width: 1px;
+    height: 187px;
+    content: '';
+    background-color: #000;
+}
+
+.arrow-for-design-red {
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid #000;
+    left: 49.4%;
+    top: 12px;
+    position: absolute;
+}
+
+.arrow-from-enrichment {
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid #000;
+    left: 6.9%;
+    top: 25px;
+    position: absolute;
+}
+
+.arrow-from-others {
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid #000;
+    right: 16.9%;
+    top: 25px;
+    position: absolute;
+}
+
+.design-blue-3:before {
+    content: '';
+    width: 1px;
+    top: 100%;
+    left: 50%;
+    height: 15px;
+    background-color: #000;
+    position: absolute;
+}
+
+.design-blue-3:after {
+    content: '';
+    width: 62.5%;
+    bottom: -16px;
+    left: 23.8%;
+    height: 1px;
+    background-color: #000;
+    position: absolute;
+}
+
+.design-green-1:before,
+.design-red-2:before {
+    content: '';
+    width: 1px;
+    bottom: -16px;
+    left: 50%;
+    height: 15px;
+    bottom: 100%;
+    background-color: #000;
+    position: absolute;
+}
+
+.design-green-1:after,
+.design-red-2:after,
+.design-green-2:after,
+.design-red-3:after {
+    content: '\21D3';
+    left: 48%;
+    top: 100%;
+    position: absolute;
+    font-size: 30px;
+}
+
+.design-green-2,
+.design-red-3 {
+    border-radius: 10px;
+}
+
+.design-red-2:after,
+.design-red-3:after {
+
+    color: #db8282;
+}
+
+.design-green-1:after,
+.design-green-2:after {
+    color: #87c81e;
+}
+
+/*.arrow-from-dasii
+{
+  position: relative;
+  }*/
+.arrow-from-dasii {
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid #000;
+    left: 49.2%;
+    top: 13px;
+    position: absolute;
+}
+
+.design-green-3 {
+    box-shadow: 0px 0px 10px #a1e435 !important;
+    border-radius: 5px;
+    margin-top: 17px;
+    position: relative;
+    padding: 13px 0px 9px;
+}
+
+.table-bordered th,
+.table-bordered td {
+    border: 1px solid black !important;
+    border-collapse: collapse;
+}
+
+.bg-blue {
+    background-color: #ddf6ff;
+}
+
+.bg-red {
+    background-color: #f7c2c2;
+}
+
+.age-report-details {
+    padding-left: 30px;
+}
+
+.age-wise-report {
+    padding-left: 50px;
+    list-style-type: none;
+    font-size: 16px;
+}
+
+.age-wise-report li {
+    padding: 5px 0px;
+}
+
+.overall-assessment td {
+    height: 30px;
+    vertical-align: middle;
+}
+
+.input-width-xlarge {
+    width: 270px !important;
+
+}
+
+.table-bordered:not(.dataTable)>thead>tr>th {
+    background-color: unset;
+    color: black;
+    font-weight: bold;
+    font-size: 14px;
+    vertical-align: top;
+}
+
+.table-bordered:not(.dataTable)>tbody>tr>td {
+    font-size: 14px;
+}
+
+#neuroform .required-label::after {
+    color: black;
+}
+
+#neuro-report-print .required-label::after {
+    color: black;
+}
+
+td {
+    font-size: 14px !important;
+    vertical-align: middle !important;
+}
+
+.screening tbody>tr>td:not(:first-child) {
+    font-weight: normal;
+}
+
+.scan tbody>tr>td:not(:first-child) {
+    font-weight: normal;
+}
+
+.muscle-tone-norms tbody>tr>td:not(:first-child):not(:nth-child(4)):not(:nth-child(6)):not(:nth-child(8)):not(:nth-child(10)) {
+    font-weight: normal;
+}
+
+.muscle-tone-norms tbody>tr:last-child>td:nth-child(10) {
+    font-weight: normal;
+}
+
+.overall-assessment tbody>tr>td {
+    font-weight: normal;
+}
+
+.formal-developmental-assessment tbody>tr>td:not(:first-child) {
+    font-weight: normal;
+}
+
+.formal-developmental-assessment tbody>tr>td:first-child,
+.muscle-tone-norms tbody>tr>td:first-child,
+.screening tbody>tr>td:first-child {
+    text-align: left !important;
+}
+
+.sub-examination {
+    padding-left: 25px;
+}
+
+.form-group span.print-label-value {
+    font-weight: normal;
+}
+
+body {
+    font-size: 14px;
+}
+
+.eligibility-table td,
+.eligibility-table th {
+    padding-top: 1px !important;
+    padding-bottom: 1px !important;
+}
+
+body.print .content-block {
+    page-break-after: auto;
+    margin-top: 15px;
+}
+
+.design-blue>tbody>tr>td {
+    border: none;
+}
+
+/* sup {
+      font-size: 12px;
+      top: 0px;
+    }*/
+.baby-info-table {
+    border: 1px solid black !important;
+}
+
+.baby-info-table table {
+    margin-bottom: 0px;
+}
+
+.baby-info-table>table>tbody>tr>td:not(:first-child) {
+    border-left: 1px solid #ddd;
+}
+
+.baby-info-table>table>tbody>tr>td {
+    border-bottom: 1px solid #ddd;
+}
+
+.baby-info-table .sub-table tr td {
+    border: none;
+}
+
+.baby-info-table .sub-table tr:first-child td {
+    border-bottom: 1px solid #ddd;
+}
+
+.eligibility-table tr:not(:last-child) td {
+    border-bottom: 1px solid #00000063;
+}
+
+.show-print {
+    display: none;
+}
+
+.row-title {
+    font-weight: bold;
+}
+
+.row-sub-title {
+    font-weight: bold !important;
+    text-align: left;
+}
+
+.container.main {
+    padding: 0px;
+}
+
+.age-container {
+    font-weight: normal;
+}
+
+.print table td.p-must-0 {
+    padding: 0px !important;
+}
+
+.print table tr td.p-must-0:first-child {
+    padding-left: 25px !important;
+}
+
+@media print {
+
+    .show-print {
+        display: block;
+    }
+
+    .print table td,
+    .print table th {
+        padding: 1px 5px !important;
+    }
+
+    /* .checkbox
+    {
+      padding: 5px !important;
+      height: 10px !important;
+      width: 10px !important;
+      min-height: 10px !important;
+      margin-top: 3px !important;
+    }
+    .checkbox.checked:after
+    {
+      top: -1px;
+      left: 3px;
+    }*/
+    .d-block {
+        display: block !important;
+    }
+
+    .page-break-after {
+        page-break-after: always !important;
+    }
+
+    .border-box {
+        -webkit-print-color-adjust: exact !important;
+        -webkit-filter: opacity(1) !important;
+    }
+
+    .arrow-for-design-pink {
+        left: 49.2% !important;
+    }
+
+    .arrow-for-design-blue {
+        left: 49% !important;
+    }
+
+    .arrow-for-design-red {
+        left: 48.6% !important;
+    }
+
+    .arrow-from-enrichment {
+        left: 33px !important;
+    }
+
+    .arrow-from-others {
+        right: 75px !important;
+    }
+
+    .design-blue-2:after {
+        height: 175px !important;
+    }
+
+    .arrow-from-dasii {
+        left: 48.7% !important;
+    }
+    #cc-infants-container table.table-bordered td > thead > tr > th {
+        font-size: 10px;
+        color: #fff !important;
+        border: 1px solid black !important;
+         border-collapse: collapse !important;
+
+    }
+   
+
+
+}
+
+@page {
+    margin: 2cm 0.5cm 1.5cm 0.5cm;
+}
+
+.vertical-top {
+    vertical-align: top !important;
+}
+
+.page-footer {
+    display: flex;
+    align-items: end;
+    width: 100%;
+}
+
+.pl-10-must {
+    padding-left: 10px !important;
+}
+
+.pl-30-must {
+    padding-left: 30px !important;
+}
+
+.remove-order li::marker {
+    display: none;
+}
+
+#clusters, #cars, #issa, #cc_infants, #cc_preschoolers{
+    table-layout: fixed;
+    width: auto;
+}
+
+#clusters td {
+    font-weight: normal;
+}
+
+ol,
+ul {
+    padding-left: 15px;
+}
+
+.pl-12 {
+    padding-left: 12px;
+}
+
+.pl-10-must {
+    padding-left: 10px !important;
+}
+
+
+.screening tbody > tr.previous_screening > td, tbody > tr.previous_screening > td {
+    font-weight: normal !important;
+    text-align: center !important;
+}
+
+h5 small {
+    color: #333;
+}
+
+.pl-25 {
+    padding-left: 25px;
+}
+
+.align-right-must {
+    text-align: right !important;
+}

@@ -1,0 +1,889 @@
+DROP TABLE IF EXISTS "alarm_data";
+DROP SEQUENCE IF EXISTS alarm_data_id_seq;
+CREATE SEQUENCE alarm_data_id_seq INCREMENT 1 MINVALUE 1 MAXVALUE 2147483647 CACHE 1;
+
+CREATE TABLE "public"."alarm_data" (
+    "id" integer DEFAULT nextval('alarm_data_id_seq') NOT NULL,
+    "created_time" timestamp,
+    "uhid" character varying(250),
+    "machine_details" character varying(250),
+    "result_date_time" timestamp,
+    "alarm_name" character varying(250),
+    "alarm_source" character varying(250),
+    "alarm_phase" character varying(250),
+    "alarm_state" character varying(250),
+    "alarm_priority" character varying(250),
+    "alarm_type" character varying(250),
+    "alarm_display_name" character varying,
+    "alarm_display_value" character varying,
+    "alarm_display_range" character varying,
+    "description" character varying,
+    "is_completed" boolean DEFAULT false,
+    "completed_time" timestamp,
+    "bed" character varying,
+    CONSTRAINT "alarm_data_pkey" PRIMARY KEY ("id")
+) WITH (oids = false);
+
+
+DROP TABLE IF EXISTS "alarm_data_history";
+DROP SEQUENCE IF EXISTS alarm_data_history_id_seq;
+CREATE SEQUENCE alarm_data_history_id_seq INCREMENT 1 MINVALUE 1 MAXVALUE 2147483647 CACHE 1;
+
+CREATE TABLE "public"."alarm_data_history" (
+    "id" integer DEFAULT nextval('alarm_data_history_id_seq') NOT NULL,
+    "created_time" timestamp,
+    "uhid" character varying(250),
+    "machine_details" character varying(250),
+    "result_date_time" timestamp,
+    "alarm_name" character varying(250),
+    "alarm_source" character varying(250),
+    "alarm_phase" character varying(250),
+    "alarm_state" character varying(250),
+    "alarm_priority" character varying(250),
+    "alarm_type" character varying(250),
+    "alarm_display_name" character varying,
+    "alarm_display_value" character varying,
+    "alarm_display_range" character varying,
+    "description" character varying,
+    "is_completed" boolean DEFAULT false,
+    "completed_time" timestamp,
+    "bed" character varying,
+    CONSTRAINT "alarm_data_history_pkey" PRIMARY KEY ("id")
+) WITH (oids = false);
+
+
+DROP TABLE IF EXISTS "bed_admission_details";
+DROP SEQUENCE IF EXISTS bed_admission_details_id_seq;
+CREATE SEQUENCE bed_admission_details_id_seq INCREMENT 1 MINVALUE 1 MAXVALUE 2147483647 CACHE 1;
+
+CREATE TABLE "public"."bed_admission_details" (
+    "id" integer DEFAULT nextval('bed_admission_details_id_seq') NOT NULL,
+    "bed" character varying,
+    "uhid" character varying,
+    "is_send" boolean DEFAULT false,
+    "updated_date_time" timestamp NOT NULL,
+    "sent_time" timestamp,
+    CONSTRAINT "bed_admission_details_pkey" PRIMARY KEY ("id")
+) WITH (oids = false);
+
+
+DROP TABLE IF EXISTS "cs5_seq_numbers";
+DROP SEQUENCE IF EXISTS cs5_seq_numbers_id_seq;
+CREATE SEQUENCE cs5_seq_numbers_id_seq INCREMENT 1 MINVALUE 1 MAXVALUE 2147483647 CACHE 1;
+
+CREATE TABLE "public"."cs5_seq_numbers" (
+    "id" integer DEFAULT nextval('cs5_seq_numbers_id_seq') NOT NULL,
+    "created_time" timestamp,
+    "neo_seq_number" character varying(250),
+    "cms_seq_number" integer,
+    "is_uploaded" boolean DEFAULT false,
+    CONSTRAINT "cs5_seq_numbers_pkey" PRIMARY KEY ("id")
+) WITH (oids = false);
+
+
+DROP TABLE IF EXISTS "e_and_n_series_pump_unit_details";
+DROP SEQUENCE IF EXISTS e_and_n_series_pump_unit_details_id_seq;
+CREATE SEQUENCE e_and_n_series_pump_unit_details_id_seq INCREMENT 1 MINVALUE 1 MAXVALUE 2147483647 CACHE 1;
+
+CREATE TABLE "public"."e_and_n_series_pump_unit_details" (
+    "id" integer DEFAULT nextval('e_and_n_series_pump_unit_details_id_seq') NOT NULL,
+    "unit" character varying,
+    "interface_unit_id" character varying,
+    "interface_unit_description" character varying,
+    CONSTRAINT "e_and_n_series_pump_unit_details_pkey" PRIMARY KEY ("id")
+) WITH (oids = false);
+
+
+DROP TABLE IF EXISTS "hero_score";
+DROP SEQUENCE IF EXISTS hero_score_id_seq;
+CREATE SEQUENCE hero_score_id_seq INCREMENT 1 MINVALUE 1 MAXVALUE 2147483647 CACHE 1;
+
+CREATE TABLE "public"."hero_score" (
+    "id" integer DEFAULT nextval('hero_score_id_seq') NOT NULL,
+    "created_time" timestamp,
+    "patient_mrn" character varying,
+    "patient_first_name" character varying,
+    "patient_last_name" character varying,
+    "patient_ward" character varying,
+    "patient_room" character varying,
+    "patient_bed" character varying(50),
+    "patient_visit_no" character varying,
+    "result_name" character varying,
+    "result_value" character varying,
+    "result_date_time" timestamp,
+    "is_uploaded" boolean DEFAULT false,
+    "sent_time" timestamp,
+    "bed" character varying,
+    CONSTRAINT "hero_score_pkey" PRIMARY KEY ("id")
+) WITH (oids = false);
+
+
+DROP TABLE IF EXISTS "ieee_mapping";
+DROP SEQUENCE IF EXISTS ieee_mapping_id_seq;
+CREATE SEQUENCE ieee_mapping_id_seq INCREMENT 1 MINVALUE 1 MAXVALUE 2147483647 CACHE 1;
+
+CREATE TABLE "public"."ieee_mapping" (
+    "id" integer DEFAULT nextval('ieee_mapping_id_seq') NOT NULL,
+    "ieee_code" character varying,
+    "snomed_code" character varying,
+    "active" boolean DEFAULT false,
+    "type" character varying,
+    "value" character varying,
+    "is_interval_based" boolean DEFAULT false,
+    "display_name" character varying,
+    "speaker" character varying(255),
+    CONSTRAINT "ieee_mapping_pkey" PRIMARY KEY ("id")
+) WITH (oids = false);
+
+INSERT INTO "ieee_mapping" ("id", "ieee_code", "snomed_code", "active", "type", "value", "is_interval_based", "display_name", "speaker") VALUES
+(3, 'MDC_LEN_BODY_ACTUAL',  NULL,   't',    'OBS',  NULL,   't',    NULL,   NULL),
+(4, 'MDC_MASS_BODY_ACTUAL', NULL,   't',    'OBS',  NULL,   't',    NULL,   NULL),
+(114,   'Inspiration/Expiration time Ratio',    '260915005;Inspiration - Expiration time Ratio',    't',    'SLE_VENTILATOR',   NULL,   'f',    NULL,   NULL),
+(116,   'Trigger Count',    '410658008+258734002;Trigger Count',    't',    'SLE_VENTILATOR',   NULL,   'f',    'Trigger Count',    NULL),
+(8, 'MDC_MASS_BODY_ACTUAL', NULL,   't',    'OBS',  NULL,   't',    NULL,   NULL),
+(9, 'MDC_LEN_BODY_ACTUAL',  NULL,   't',    'OBS',  NULL,   't',    NULL,   NULL),
+(10,    'MDC_ECG_V_P_C_RATE',   NULL,   't',    'OBS',  NULL,   't',    NULL,   NULL),
+(115,   'Ti Measured',  '258104002+250819002;Inspiratory time
+',  't',    'SLE_VENTILATOR',   NULL,   'f',    'Ti Measured',  NULL),
+(12,    'MDC_CONC_AWAY_CO2_ET', NULL,   't',    'OBS',  NULL,   't',    NULL,   NULL),
+(13,    'MDC_CONC_AWAY_CO2_INSP',   NULL,   't',    'OBS',  NULL,   't',    NULL,   NULL),
+(14,    'MDC_CONC_AWAY_ISOFL_ET',   NULL,   't',    'OBS',  NULL,   't',    NULL,   NULL),
+(15,    'MDC_CONC_AWAY_N2O_ET', NULL,   't',    'OBS',  NULL,   't',    NULL,   NULL),
+(16,    'MDC_CONC_AWAY_ISOFL_INSP', NULL,   't',    'OBS',  NULL,   't',    NULL,   NULL),
+(17,    'MDC_CONC_AWAY_N2O_INSP',   NULL,   't',    'OBS',  NULL,   't',    NULL,   NULL),
+(18,    'MDC_CONC_AWAY_O2_INSP',    NULL,   't',    'OBS',  NULL,   't',    NULL,   NULL),
+(19,    'MDC_CONC_AWAY_O2_ET',  NULL,   't',    'OBS',  NULL,   't',    NULL,   NULL),
+(20,    'MDC_CONC_MAC', NULL,   't',    'OBS',  NULL,   't',    NULL,   NULL),
+(55,    'CPAP', '250854009|Positive end expiratory pressure|',  't',    'SLE_VENTILATOR',   NULL,   'f',    NULL,   NULL),
+(76,    'RR',   '250876000|Ventilator rate|',   't',    'SLE_VENTILATOR',   NULL,   'f',    NULL,   NULL),
+(24,    'MDC_DIM_CENTI_M',  NULL,   't',    'OBS',  NULL,   't',    NULL,   NULL),
+(25,    'MDC_DIM_KILO_G',   NULL,   't',    'UNITS',    'kilograms (kg)',   't',    NULL,   NULL),
+(26,    'MDC_DIM_MMHG', NULL,   't',    'UNITS',    'mmHg', 't',    NULL,   NULL),
+(27,    'MDC_DIM_RESP_PER_MIN', NULL,   't',    'UNITS',    'Respirations*min-1',   't',    NULL,   NULL),
+(28,    'MDC_DIM_FAHR', NULL,   't',    'UNITS',    'degrees Fahrenheit (Â°F)', 't',    NULL,   NULL),
+(29,    'MDC_DIM_BEAT_PER_MIN', NULL,   't',    'UNITS',    'Rates',    't',    NULL,   NULL),
+(30,    'MDC_DIM_PERCENT',  NULL,   't',    'UNITS',    '%',    't',    NULL,   NULL),
+(130,   'MDC_O2_TCUT',  '250549007',    't',    'OBS',  NULL,   't',    NULL,   NULL),
+(51,    'Set HFO Rate', '243155002|High frequency oscillatory ventilation|+86290005| Respiratory frequency|',   't',    'SLE_VENTILATOR',   NULL,   't',    NULL,   NULL),
+(52,    'HFO Frequency',    '243155002|High frequency oscillatory ventilation|+86290005|Respiratory frequency|',    't',    'SLE_VENTILATOR',   NULL,   't',    NULL,   NULL),
+(53,    'HFO MAP',  '698821009 |Mean inspiratory airway pressure|', 't',    'SLE_VENTILATOR',   NULL,   'f',    NULL,   NULL),
+(54,    'DCO2', '31811003 |Carbon dioxide (substance)|',    't',    'SLE_VENTILATOR',   NULL,   't',    NULL,   NULL),
+(56,    'Ventilation Mode', '397814002|Mode of ventilation monitoring|',    'f',    'SLE_VENTILATOR',   NULL,   'f',    NULL,   NULL),
+(58,    'DCO 2',    '31811003 |Carbon dioxide (substance)|',    't',    'SLE_VENTILATOR',   NULL,   't',    NULL,   NULL),
+(59,    'HFO Delta P',  '243155002 |High frequency oscillatory ventilation|+698821009 |Mean inspiratory airway pressure+40885006 |Variant|',    't',    'SLE_VENTILATOR',   NULL,   'f',    NULL,   NULL),
+(60,    'Leak', '257462007 |Tracheal tube (physical object)|+38785003 |Air leakage (morphologic abnormality)|', 't',    'SLE_VENTILATOR',   NULL,   't',    NULL,   NULL),
+(61,    'Measured C20/C',   '9913005 |Arachidic acid (substance)|', 't',    'SLE_VENTILATOR',   NULL,   't',    NULL,   NULL),
+(62,    'Measured RR (Respiratory Rate)',   '86290005|Respiratory rate|',   't',    'SLE_VENTILATOR',   NULL,   't',    NULL,   NULL),
+(67,    'MDC_TEMP_DIFF',    '703421000|Temperature|+263735002 |Differential|',  't',    'OBS',  NULL,   't',    NULL,   NULL),
+(70,    'MDC_CONC_AWAY_CO2_ET', '250790007|End tidal carbon dioxide tension|',  't',    'OBS',  NULL,   't',    NULL,   NULL),
+(71,    'Measured HFO Delta P', '258104002|Measured|+243155002 |High frequency oscillatory ventilation|+698821009 |Mean inspiratory airway pressure+40885006 |Variant|',    't',    'SLE_VENTILATOR',   NULL,   't',    NULL,   NULL),
+(73,    'Measured Vte', '250874002|Ventilator delivered tidal volume|', 't',    'SLE_VENTILATOR',   NULL,   't',    NULL,   NULL),
+(74,    'O2',   '250774007 |Inspired oxygen concentration|',    't',    'SLE_VENTILATOR',   NULL,   'f',    NULL,   NULL),
+(75,    'PIP Pressure', '27913002|Maximum inspiratory pressure|',   't',    'SLE_VENTILATOR',   NULL,   'f',    NULL,   NULL),
+(77,    'Set BPM',  '250876000|Ventilator rate|',   't',    'SLE_VENTILATOR',   NULL,   't',    NULL,   NULL),
+(78,    'Set HFO Delta P',  '243155002 |High frequency oscillatory ventilation|+698821009 |Mean inspiratory airway pressure+40885006 |Variant|',    't',    'SLE_VENTILATOR',   NULL,   't',    NULL,   NULL),
+(79,    'Set HFO Mean', '698821009 |Mean inspiratory airway pressure|', 't',    'SLE_VENTILATOR',   NULL,   't',    NULL,   NULL),
+(80,    'Set Insp. Time',   '250819002|Inspiratory time|',  't',    'SLE_VENTILATOR',   NULL,   't',    NULL,   NULL),
+(81,    'Set O2%',  '250774007 |Inspired oxygen concentration|',    't',    'SLE_VENTILATOR',   NULL,   't',    NULL,   NULL),
+(82,    'Set PIP',  '27913002|Maximum inspiratory pressure|',   't',    'SLE_VENTILATOR',   NULL,   't',    NULL,   NULL),
+(83,    'Set Tidal',    '250817000|Mandatory tidal volume|',    't',    'SLE_VENTILATOR',   NULL,   't',    NULL,   NULL),
+(84,    'Ti',   '250819002|Inspiratory time|',  't',    'SLE_VENTILATOR',   NULL,   'f',    NULL,   NULL),
+(85,    'Tidal Volume', '250817000|Mandatory tidal volume|',    't',    'SLE_VENTILATOR',   NULL,   'f',    NULL,   NULL),
+(86,    'Measured Resistance',  '258104002|Measured|+6304003 |Airway resistance (observable entity)|',  't',    'SLE_VENTILATOR',   NULL,   't',    NULL,   NULL),
+(87,    'Measured Ti',  '258104002|Measured|+250819002 |Inspiratory time |',    't',    'SLE_VENTILATOR',   NULL,   't',    NULL,   NULL),
+(88,    'Measured Total BPM',   '86290005|Respiratory rate|',   't',    'SLE_VENTILATOR',   NULL,   't',    NULL,   NULL),
+(89,    'Resistance',   '258104002|Measured|+6304003 |Airway resistance (observable entity)|',  't',    'SLE_VENTILATOR',   NULL,   't',    NULL,   NULL),
+(41,    'MDC_INFSN_PUMP_STATUS',    '430033006+263490005',  't',    'PUMP', NULL,   'f',    NULL,   NULL),
+(42,    'MDC_INFSN_PROGRAME_MODE',  '430033006+418060005',  't',    'PUMP', NULL,   'f',    NULL,   NULL),
+(43,    'MDC_INFSN_RUNNING_RATE',   '430033006+118544000',  't',    'PUMP', NULL,   'f',    NULL,   NULL),
+(45,    'MDC_INFSN_PROGRAME_VTBI',  '430033006 + 118565006',    't',    'PUMP', NULL,   'f',    NULL,   NULL),
+(46,    'MDC_INFSN_RUNNING_DRUG_NAME',  '430033006+ 410942007', 't',    'PUMP', NULL,   'f',    NULL,   NULL),
+(47,    'MDC_INFSN_DOCTOR_ADVICE_ID',   '430033006+ 260885003 + 158965000+ 423901009',  't',    'PUMP', NULL,   'f',    NULL,   NULL),
+(48,    'MDC_INFSN_RUNNING_PRESS',  '430033006+257893003',  't',    'PUMP', NULL,   'f',    NULL,   NULL),
+(49,    'MDC_INFSN_PROGRAME_PRESS_LEVEL',   '430033006+386399006+257893003',    't',    'PUMP', NULL,   'f',    NULL,   NULL),
+(50,    'MDC_INFSN_RUNNING_REMAIN_VOL', '430033006+418060005+262095001+118565006',  't',    'PUMP', NULL,   'f',    NULL,   NULL),
+(72,    'Measured PIP', '27913002|Peak inspiratory pressure|+258104002|Measured|',  't',    'SLE_VENTILATOR',   NULL,   't',    NULL,   NULL),
+(32,    'MDC_PRESS_CUFF_MEAN',  '251074006|Non-invasive mean arterial pressure|',   't',    'OBS',  '', 'f',    'Sys-BP',   NULL),
+(33,    'MDC_PRESS_CUFF_DIA',   '174255007|Non-invasive diastolic arterial pressure|',  't',    'OBS',  '', 'f',    'Dia-BP',   NULL),
+(1, 'MDC_PULS_RATE_NON_INV',    NULL,   't',    'OBS',  NULL,   'f',    NULL,   NULL),
+(34,    'MDC_PRESS_CUFF_SYS',   '251070002|Non-invasive systolic arterial pressure|',   't',    'OBS',  '', 'f',    'Mean-BP',  NULL),
+(35,    'MDC_PRESS_BLD_ART_SYS',    NULL,   't',    NULL,   NULL,   'f',    'Sys-BP',   NULL),
+(36,    'MDC_PRESS_BLD_ART_MEAN',   NULL,   't',    NULL,   NULL,   'f',    'Dia-BP',   NULL),
+(37,    'MDC_PRESS_BLD_ART_DIA',    NULL,   't',    NULL,   NULL,   'f',    'Mean-BP',  NULL),
+(39,    'MNDRY_BLD_PULS_RATE_ART_ABP',  NULL,   't',    NULL,   NULL,   'f',    'Pulse Rate',   NULL),
+(63,    'MDC_TEMP', '276885007|Core body temperature|', 't',    'OBS',  NULL,   't',    'Temperature',  'Temperature'),
+(64,    'MDC_TEMP', '276886008|Peripheral body temperature |',  't',    'OBS',  NULL,   't',    'Temperature',  'Temperature'),
+(68,    'MDC_PULS_OXIM_PULS_RATE',  '364075005|Heart rate|',    't',    'OBS',  NULL,   't',    'Pulse Rate',   NULL),
+(65,    'MDC_PRESS_BLD_ART_ABP_DIA',    '271650006|Diastolic blood pressure |', 't',    'OBS',  NULL,   't',    'Dia-BP',   NULL),
+(66,    'MDC_PRESS_BLD_ART_ABP_MEAN',   '6797001|Mean blood pressure |',    't',    'OBS',  NULL,   't',    'Mean-BP',  NULL),
+(57,    'MDC_PRESS_BLD_ART_ABP_SYS',    '72313002|Systolic arterial pressure|', 't',    'OBS',  NULL,   't',    'Sys-BP',   NULL),
+(69,    'MDC_BLD_PERF_INDEX',   '404993004 |Peripheral tissue perfusion status (observable entity)|',   't',    'OBS',  NULL,   't',    'Purfusion Index',  NULL),
+(90,    'Set CPAP', '250854009|Positive end expiratory pressure|',  't',    'SLE_VENTILATOR',   NULL,   'f',    NULL,   NULL),
+(91,    'VTV Status',   '405609003|Volume controlled ventilation|', 'f',    'SLE_VENTILATOR',   NULL,   'f',    NULL,   NULL),
+(93,    'Measured Leak',    '257462007 |Tracheal tube (physical object)|+38785003 |Air leakage (morphologic abnormality)|', 't',    'SLE_VENTILATOR',   NULL,   'f',    NULL,   NULL),
+(94,    'Set Flow (O2 Mode)',   '250849000|Fresh gas flow|',    't',    'SLE_VENTILATOR',   NULL,   'f',    NULL,   NULL),
+(40,    'MDC_INFSN_PUMP_SN',    '430033006 + 246115007',    't',    'PUMP', NULL,   'f',    NULL,   NULL),
+(44,    'MDC_INFSN_RUNNING_ACC_VOL',    '430033006+260507000+118565006 ',   't',    'PUMP', NULL,   'f',    NULL,   NULL),
+(97,    'MDC_PRESS_BLD_MEAN',   '6797001 |Mean blood pressure|',    't',    'OBS',  NULL,   't',    'Mean-BP',  NULL),
+(96,    'MDC_PRESS_BLD_SYS',    '72313002 |Systolic arterial pressure|',    't',    'OBS',  NULL,   't',    'Sys-BP',   NULL),
+(95,    'MDC_PRESS_BLD_DIA',    '271650006 |Diastolic blood pressure|', 't',    'OBS',  NULL,   't',    'Dia-BP',   NULL),
+(117,   'MDC_PULS_OXIM_SAT_O2_II',  '78791008|Structure of right hand+113080007|Oxygen saturation measurement+19338005|two',    't',    'OBS',  NULL,   't',    NULL,   NULL),
+(126,   '101',  '364075005|Heart rate|',    't',    'CEATIVE_K15',  NULL,   'f',    'HR',   NULL),
+(98,    'Oxygen Concentration', '258104002|+250774007|Inspired oxygen concentration|',  't',    'SLE_VENTILATOR',   NULL,   't',    NULL,   NULL),
+(2, 'MDC_ECG_HEART_RATE',   '364075005',    't',    'OBS',  NULL,   't',    'Heart Rate',   NULL),
+(5, 'MDC_PRESS_BLD_ART_PULM_SYS',   NULL,   't',    'OBS',  NULL,   't',    'Sys-BP',   NULL),
+(6, 'MDC_PRESS_BLD_ART_PULM_DIA',   NULL,   't',    'OBS',  NULL,   't',    'Dia-BP',   NULL),
+(7, 'MDC_PRESS_BLD_ART_PULM_MEAN',  NULL,   't',    'OBS',  NULL,   't',    'Mean-BP',  NULL),
+(11,    'MDC_CO2_RESP_RATE',    NULL,   't',    'OBS',  NULL,   't',    'Resp Rate',    NULL),
+(21,    'MDC_PRESS_BLD_NONINV_SYS', '251070002|Non-invasive systolic arterial pressure|',   't',    'OBS',  NULL,   'f',    'Sys-BP',   NULL),
+(22,    'MDC_PRESS_BLD_NONINV_MEAN',    '251074006|Non-invasive mean arterial pressure|',   't',    'OBS',  NULL,   'f',    'Dia-BP',   NULL),
+(23,    'MDC_PRESS_BLD_NONINV_DIA', '174255007|Non-invasive diastolic arterial pressure|',  't',    'OBS',  NULL,   'f',    'Mean-BP',  NULL),
+(118,   'MNDRY_SAT_O2_REG', '786901003|Near-infrared spectroscopy +38112003|one',   't',    'OBS',  NULL,   't',    NULL,   NULL),
+(121,   'MNDRY_SAT_O2_REG_BASE_II', '786901003|Near-infrared spectroscopy + 128974000|Baseline state +19338005|two',    't',    'OBS',  NULL,   't',    NULL,   NULL),
+(123,   'MNDRY_SAT_O2_REG_AVG_II',  '786901003|Near-infrared spectroscopy+723232008|Average blood pressure +19338005|two',  't',    'OBS',  NULL,   't',    NULL,   NULL),
+(100,   'MDC_EVT_STAT_OFF', NULL,   't',    NULL,   NULL,   'f',    'SpO2 Sensor Off',  NULL),
+(99,    'MDC_EVT_LEAD_OFF', NULL,   't',    NULL,   NULL,   'f',    'Ecg Lead Off', NULL),
+(101,   'MNDRY_EVT_SEARCHING_PULSE',    NULL,   't',    NULL,   NULL,   'f',    'Searching Pulse',  NULL),
+(102,   'MDC_EVT_BATT_LO',  NULL,   't',    NULL,   NULL,   'f',    'Battery Low',  NULL),
+(127,   '160',  '78791008|Structure of right hand+113080007|Oxygen saturation measurement|  ',  't',    'CEATIVE_K15',  NULL,   'f',    'SPO2', NULL),
+(103,   'MNDRY_EVT_CRITICALLY_LOW_BATTERY', NULL,   't',    NULL,   NULL,   'f',    'Battery Critically Low',   NULL),
+(104,   'MNDRY_EVT_SPO2_NO_SENSOR', NULL,   't',    NULL,   NULL,   'f',    'No Spo2 Sensor',   NULL),
+(105,   'MNDRY_EVT_NIBP_LOSE_CUFF', NULL,   't',    NULL,   NULL,   'f',    'NIBP Lose Cuff',   NULL),
+(106,   'MNDRY_EVT_SPO2_LOW_PERFUSION', NULL,   't',    NULL,   NULL,   'f',    'Low Perfusion',    NULL),
+(107,   'MNDRY_EVT_NO_PLUSE',   NULL,   't',    NULL,   NULL,   'f',    'No Pulse', NULL),
+(108,   'MNDRY_EVT_NIBP_AIR_LEAK',  NULL,   't',    NULL,   NULL,   'f',    'NIBP Air Leak',    NULL),
+(109,   'MNDRY_EVT_SPO2_NO_PLUSE',  NULL,   't',    NULL,   NULL,   'f',    'Spo2 No Pulse',    NULL),
+(110,   'Measured Fresh Gas Flow',  '250849000|Fresh gas flow (observable entity)|+ 258104002|Measured (qualifier value)|', 't',    'SLE_VENTILATOR',   NULL,   'f',    NULL,   NULL),
+(111,   'Auto-O2 Status',   '24099007|Oxygen (substance)|+263490005|Status (attribute)|',   't',    'SLE_VENTILATOR',   NULL,   'f',    NULL,   NULL),
+(112,   'Set Auto-O2 target range', '336590007|Oxygen set (physical object)|',  't',    'SLE_VENTILATOR',   NULL,   'f',    NULL,   NULL),
+(113,   'Reference O2 value (Delivered O2)',    '16206004|Oxygen delivery (observable entity)|',    't',    'SLE_VENTILATOR',   NULL,   'f',    NULL,   NULL),
+(31,    'MDC_PULS_OXIM_SAT_O2', '78791008|Structure of right hand+113080007|Oxygen saturation measurement|',    't',    'OBS',  NULL,   't',    'Sp O2',    'Sp O2'),
+(120,   'MNDRY_SAT_O2_REG_BASE',    '786901003|Near-infrared spectroscopy + 128974000|Baseline state +38112003|one',    't',    'OBS',  NULL,   't',    NULL,   NULL),
+(122,   'MNDRY_SAT_O2_REG_AVG', '786901003|Near-infrared spectroscopy+723232008|Average blood pressure +38112003|one',  't',    'OBS',  NULL,   't',    NULL,   NULL),
+(124,   'MNDRY_SAT_O2_REG_CNG', '786901003|Near-infrared spectroscopy+255619001|total +38112003|one',   't',    'OBS',  NULL,   't',    NULL,   NULL),
+(125,   'MNDRY_SAT_O2_REG_CNG_II',  '786901003|Near-infrared spectroscopy+255619001|total +19338005|two',   't',    'OBS',  NULL,   't',    NULL,   NULL),
+(119,   'MNDRY_SAT_O2_REG_II',  '786901003|Near-infrared spectroscopy +19338005|two',   't',    'OBS',  NULL,   't',    NULL,   NULL),
+(92,    'C20/C',    '415775009 | Unit of compliance (qualifier value) |',   't',    'SLE_VENTILATOR',   NULL,   'f',    NULL,   NULL),
+(129,   'MDC_CO2_TCUT', '250568005',    't',    'OBS',  NULL,   't',    NULL,   NULL),
+(38,    'MDC_TTHOR_RESP_RATE',  '86290005 | Respiratory rate (observable entity)',  't',    'OBS',  NULL,   't',    NULL,   NULL);
+
+DROP TABLE IF EXISTS "mindray_e_and_n_series_pump_details";
+DROP SEQUENCE IF EXISTS mindray_e_and_n_series_pump_details_id_seq;
+CREATE SEQUENCE mindray_e_and_n_series_pump_details_id_seq INCREMENT 1 MINVALUE 1 MAXVALUE 2147483647 CACHE 1;
+
+CREATE TABLE "public"."mindray_e_and_n_series_pump_details" (
+    "id" integer DEFAULT nextval('mindray_e_and_n_series_pump_details_id_seq') NOT NULL,
+    "bed_number" character varying,
+    "device_id" character varying,
+    "status" character varying,
+    "pump_order" integer,
+    "updated_time" timestamp,
+    "running_prescription_id" character varying(100),
+    "is_send" boolean DEFAULT false NOT NULL,
+    "last_paused_date_time" timestamp,
+    "prescription_completed_time" timestamp,
+    "last_running_date_time" timestamp,
+    CONSTRAINT "mindray_e_and_n_series_pump_details_pkey" PRIMARY KEY ("id")
+) WITH (oids = false);
+
+
+DROP TABLE IF EXISTS "nicu_test_map";
+DROP SEQUENCE IF EXISTS nicu_test_map_id_seq;
+CREATE SEQUENCE nicu_test_map_id_seq INCREMENT 1 MINVALUE 1 MAXVALUE 2147483647 CACHE 1;
+
+CREATE TABLE "public"."nicu_test_map" (
+    "id" integer DEFAULT nextval('nicu_test_map_id_seq') NOT NULL,
+    "created_time" timestamp,
+    "modified_time" timestamp,
+    "machine_id" integer NOT NULL,
+    "machine_name" text NOT NULL,
+    "test_name" text NOT NULL,
+    "loinc_code" text NOT NULL,
+    "snomed_code" text NOT NULL,
+    "unit" text NOT NULL,
+    "index_position" integer NOT NULL,
+    "active" boolean DEFAULT false,
+    "multiple_code" boolean DEFAULT false,
+    "addon" text,
+    "manipulation" boolean DEFAULT false,
+    "multiplier" numeric(10,4) DEFAULT '1.0' NOT NULL,
+    "divisor" numeric(10,2) DEFAULT '1.0' NOT NULL,
+    CONSTRAINT "nicu_test_map_pkey" PRIMARY KEY ("id")
+) WITH (oids = false);
+
+INSERT INTO "nicu_test_map" ("id", "created_time", "modified_time", "machine_id", "machine_name", "test_name", "loinc_code", "snomed_code", "unit", "index_position", "active", "multiple_code", "addon", "manipulation", "multiplier", "divisor") VALUES
+(1, '2020-02-24 14:34:30.282224',   NULL,   1,  'SLE6000',  'Sigh RR',  '9279-1',   '86290005;Respiratory rate',    'Breaths/min',  9,  't',    'f',    '', 'f',    1.0000, 1.00),
+(2, '2020-02-24 14:34:30.30855',    NULL,   1,  'SLE6000',  'Sigh Ti',  '33435-9',  '250819002;Inspiratory time',   '0.01s',    10, 't',    'f',    '', 't',    0.0100, 1.00),
+(3, '2020-02-24 14:34:30.316677',   NULL,   1,  'SLE6000',  'Sigh P',   '20058-4',  '243155002;High frequency oscillatory ventilation;+698821009;Mean inspiratory airway pressure;+40885006;Variant',   'Pressure Unit',    11, 't',    'f',    '', 'f',    1.0000, 1.00),
+(4, '2020-02-24 14:34:30.325003',   NULL,   1,  'SLE6000',  'Termination Sensitivity',  'NA',   'NA',   '%',    14, 't',    'f',    '', 'f',    1.0000, 1.00),
+(5, '2020-02-24 14:34:30.333097',   NULL,   1,  'SLE6000',  'Breath Trigger Threshold', 'NA',   'NA',   '0.1l/min for low triggering. If Pressure triggered then 0.5%', 15, 't',    'f',    '', 't',    0.1000, 1.00),
+(6, '2020-02-24 14:34:30.341661',   NULL,   1,  'SLE6000',  'Rise Time',    'NA',   'NA',   '10ms', 16, 't',    'f',    '', 't',    0.0100, 1.00),
+(7, '2020-02-24 14:34:30.350037',   NULL,   1,  'SLE6000',  'Nebuliser Enabled',    'NA',   'NA',   'ON/OFF',   18, 't',    'f',    '', 'f',    1.0000, 1.00),
+(8, '2020-02-24 14:34:30.358195',   NULL,   1,  'SLE6000',  'Patient Leak alarm',   'NA',   'NA',   '%',    19, 't',    'f',    '', 'f',    1.0000, 1.00),
+(9, '2020-02-24 14:34:30.366703',   NULL,   1,  'SLE6000',  'Apnoea Alarm', 'NA',   'NA',   'Seconds',  20, 't',    'f',    '', 'f',    1.0000, 1.00),
+(10,    '2020-02-24 14:34:30.375035',   NULL,   1,  'SLE6000',  'Low pressure alarm',   'NA',   'NA',   '0.1 * Pressure Unit',  21, 't',    'f',    '', 't',    0.1000, 1.00),
+(11,    '2020-02-24 14:34:30.383392',   NULL,   1,  'SLE6000',  'High PEEP Alarm',  'NA',   'NA',   '0.1 * Pressure Unit',  22, 't',    'f',    '', 't',    0.1000, 1.00),
+(12,    '2020-02-24 14:34:30.391749',   NULL,   1,  'SLE6000',  'Cycle Fail /Low PIP alarm',    'NA',   'NA',   '0.1 * Pressure Unit',  23, 't',    'f',    '', 't',    0.1000, 1.00),
+(13,    '2020-02-24 14:34:30.400091',   NULL,   1,  'SLE6000',  'High PIP Alarm',   'NA',   'NA',   '0.1 * Pressure Unit',  24, 't',    'f',    '', 't',    0.1000, 1.00),
+(14,    '2020-02-24 14:34:30.408876',   NULL,   1,  'SLE6000',  'Low tidal volume alarm',   'NA',   'NA',   '0.1ml',    25, 't',    'f',    '', 't',    0.1000, 1.00),
+(15,    '2020-02-24 14:34:30.416755',   NULL,   1,  'SLE6000',  'High tidal volume alarm',  'NA',   'NA',   '0.1ml',    26, 't',    'f',    '', 't',    0.1000, 1.00),
+(16,    '2020-02-24 14:34:30.425096',   NULL,   1,  'SLE6000',  'Low minute volume alarm',  'NA',   'NA',   'ml',   27, 't',    'f',    '', 't',    0.0010, 1.00),
+(17,    '2020-02-24 14:34:30.439753',   NULL,   1,  'SLE6000',  'High minute volume alarm', 'NA',   'NA',   'ml',   28, 't',    'f',    '', 't',    0.0010, 1.00),
+(18,    '2020-02-24 14:34:30.458438',   NULL,   1,  'SLE6000',  'Low etCO2 Alarm',  'NA',   'NA',   'Units (as shown in paramet er 54)',    29, 't',    'f',    '', 'f',    1.0000, 1.00),
+(19,    '2020-02-24 14:34:30.46678',    NULL,   1,  'SLE6000',  'High etCO2 Alarm', 'NA',   'NA',   'Units (as shown in paramet er 54)',    30, 't',    'f',    '', 'f',    1.0000, 1.00),
+(20,    '2020-02-24 14:34:30.474978',   NULL,   1,  'SLE6000',  'Low spO2 Alarm',   'NA',   'NA',   '%',    31, 't',    'f',    '', 'f',    1.0000, 1.00),
+(21,    '2020-02-24 14:34:30.483485',   NULL,   1,  'SLE6000',  'High spO2 Alarm',  'NA',   'NA',   '%',    32, 't',    'f',    '', 'f',    1.0000, 1.00),
+(22,    '2020-02-24 14:34:30.491768',   NULL,   1,  'SLE6000',  'Low Pulse Rate Alarm', 'NA',   'NA',   'Beats/min',    33, 't',    'f',    '', 'f',    1.0000, 1.00),
+(23,    '2020-02-24 14:34:30.50011',    NULL,   1,  'SLE6000',  'High Pulse Rate Alarm',    'NA',   'NA',   'Beats/min',    34, 't',    'f',    '', 'f',    1.0000, 1.00),
+(24,    '2020-02-24 14:34:30.508444',   NULL,   1,  'SLE6000',  'Measured CPAP',    '20078-2',  '250854009;Positive end expiratory pressure',   '0.1 mbar', 36, 't',    'f',    '', 't',    0.1000, 1.00),
+(25,    '2020-02-24 14:34:30.516797',   NULL,   1,  'SLE6000',  'Measured PEEP',    'NA',   'NA',   '0.1 *Pressure Unit',   40, 't',    'f',    '', 't',    0.1000, 1.00),
+(28,    '2020-02-24 14:34:30.541822',   NULL,   1,  'SLE6000',  'Trigger Count',    'NA',   '410658008;Trigger;+258734002;Count',   'Breaths/min',  45, 't',    'f',    '', 'f',    1.0000, 1.00),
+(27,    '2020-02-24 14:34:30.533474',   NULL,   1,  'SLE6000',  'Measured HFO MAP', 'NA',   'NA',   '0.1 *Pressure Unit',   44, 't',    'f',    '', 't',    0.1000, 1.00),
+(29,    '2020-02-24 14:34:30.550098',   NULL,   1,  'SLE6000',  'Measured Minute Volume',   'NA',   'NA',   'ml',   46, 't',    'f',    '', 't',    0.0010, 1.00),
+(31,    '2020-02-24 14:34:30.566818',   NULL,   1,  'SLE6000',  'Measured Vinsp',   'NA',   'NA',   '0.1ml',    38, 't',    'f',    '', 't',    0.1000, 1.00),
+(32,    '2020-02-24 14:34:30.575151',   NULL,   1,  'SLE6000',  'etCO2',    'NA',   'NA',   'mmHg,Volume Percent age, kPa', 52, 't',    'f',    '', 'f',    1.0000, 1.00),
+(33,    '2020-02-24 14:34:30.583487',   NULL,   1,  'SLE6000',  'etCO2 Units',  'NA',   'NA',   'N/A',  53, 't',    'f',    '', 'f',    1.0000, 1.00),
+(34,    '2020-02-24 14:34:30.591809',   NULL,   1,  'SLE6000',  'SpO2', 'NA',   'NA',   '0.001',    54, 't',    'f',    '', 't',    0.1000, 1.00),
+(35,    '2020-02-24 14:34:30.600158',   NULL,   1,  'SLE6000',  'Pulse Rate',   'NA',   'NA',   'Beats/minute', 55, 't',    'f',    '', 'f',    1.0000, 1.00),
+(36,    '2020-02-24 14:34:30.608489',   NULL,   1,  'SLE6000',  'PCO2', 'NA',   'NA',   'mmHg', 56, 't',    'f',    '', 't',    0.1000, 1.00),
+(37,    '2020-02-24 14:34:30.61683',    NULL,   1,  'SLE6000',  'PO2',  'NA',   'NA',   'mmHg', 57, 't',    'f',    '', 't',    0.1000, 1.00),
+(44,    '2020-02-24 14:34:30.675091',   NULL,   2,  'SLE5000',  'VTV Status',   '20112-9',  '405609003;Volume controlled ventilation ', 'None', 10, 't',    'f',    '', 'f',    1.0000, 1.00),
+(45,    '2020-02-24 14:34:30.68355',    NULL,   2,  'SLE5000',  'Set Termination Sensitivity',  'NA',   'NA',   '%',    11, 't',    'f',    '', 'f',    1.0000, 1.00),
+(47,    '2020-02-24 14:34:30.700187',   NULL,   2,  'SLE5000',  'Set Waveshape',    'NA',   'NA',   'None', 13, 't',    'f',    '', 'f',    1.0000, 1.00),
+(48,    '2020-02-24 14:34:30.708553',   NULL,   2,  'SLE5000',  'Set Patient Leak Alarm',   'NA',   'NA',   '%',    14, 't',    'f',    '', 'f',    1.0000, 1.00),
+(49,    '2020-02-24 14:34:30.716869',   NULL,   2,  'SLE5000',  'Set Apnoea Alarm', 'NA',   'NA',   'seconds',  15, 't',    'f',    '', 'f',    1.0000, 1.00),
+(57,    '2020-02-24 14:34:30.783619',   NULL,   2,  'SLE5000',  'Measured CPAP',    'NA',   'NA',   'mbar', 24, 't',    'f',    '', 'f',    1.0000, 1.00),
+(61,    '2020-02-24 14:34:30.816898',   NULL,   2,  'SLE5000',  'Measured PEEP',    'NA',   'NA',   'mbar', 28, 't',    'f',    '', 'f',    1.0000, 1.00),
+(62,    '2020-02-24 14:34:30.82524',    NULL,   2,  'SLE5000',  'Measured PIP', 'NA',   '27913002;Peak inspiratory pressure;+258104002;Measured',   'mbar', 29, 't',    'f',    '', 'f',    1.0000, 1.00),
+(63,    '2020-02-24 14:34:30.834838',   NULL,   2,  'SLE5000',  'Measured O2%', 'NA',   'NA',   '%',    30, 't',    'f',    '', 'f',    1.0000, 1.00),
+(43,    '2020-02-24 14:34:30.6669', NULL,   2,  'SLE5000',  'Set HFO Rate', '19834-1',  '243155002;High frequency oscillatory ventilation;+86290005; Respiratory frequency',    '0.1 Hz',   8,  't',    'f',    '', 't',    0.1000, 1.00),
+(41,    '2020-02-24 14:34:30.649988',   NULL,   1,  'SLE6000',  'Measured % Spont', 'NA',   'NA',   '%',    61, 't',    'f',    '', 'f',    1.0000, 1.00),
+(42,    '2020-02-24 14:34:30.658557',   NULL,   1,  'SLE6000',  'Alarm Status', 'NA',   'NA',   'N/A',  62, 't',    'f',    '', 'f',    1.0000, 1.00),
+(38,    '2020-02-24 14:34:30.625164',   NULL,   1,  'SLE6000',  'Measured PI',  'NA',   'NA',   '%',    58, 't',    'f',    '', 'f',    1.0000, 1.00),
+(39,    '2020-02-24 14:34:30.633362',   NULL,   1,  'SLE6000',  'Measured SIQ', 'NA',   'NA',   '%',    59, 't',    'f',    '', 'f',    1.0000, 1.00),
+(40,    '2020-02-24 14:34:30.641725',   NULL,   1,  'SLE6000',  'Measured etCO2 Spont', 'NA',   'NA',   'mmHg', 60, 't',    'f',    '', 'f',    1.0000, 1.00),
+(64,    '2020-02-24 14:34:30.841933',   NULL,   2,  'SLE5000',  'Measured HFO Delta P', 'NA',   '258104002;Measured (qualifier value);+243155002;High frequency oscillatory ventilation (procedure);+698821009;Mean inspiratory airway pressure (observable entity)',   'mbar', 31, 't',    'f',    '', 'f',    1.0000, 1.00),
+(65,    '2020-02-24 14:34:30.850099',   NULL,   2,  'SLE5000',  'Measured HFO Mean',    'NA',   'NA',   'mbar', 32, 't',    'f',    '', 'f',    1.0000, 1.00),
+(66,    '2020-02-24 14:34:30.858583',   NULL,   2,  'SLE5000',  'Trigger Count',    'NA',   'NA',   'breaths/min',  33, 't',    'f',    '', 'f',    1.0000, 1.00),
+(69,    '2020-02-24 14:34:30.8836', NULL,   2,  'SLE5000',  'Current Alarm',    'NA',   'NA',   'None', 40, 't',    'f',    '', 'f',    1.0000, 1.00),
+(71,    '2020-02-24 14:34:30.900276',   NULL,   1,  'SLE6000',  'CPAP', '35410-0',  '250854009;Positive end expiratory pressure',   '0.1 * pressure units', 1,  't',    'f',    '', 't',    0.1000, 1.00),
+(72,    '2020-02-24 14:34:30.90865',    NULL,   1,  'SLE6000',  'Tidal Volume', '20112-9',  '250817000;Mandatory tidal volume', '0.2ml',    2,  't',    'f',    '', 't',    0.2000, 1.00),
+(73,    '2020-02-24 14:34:30.916988',   NULL,   1,  'SLE6000',  'Ti',   '76334-2',  '250819002;Inspiratory time',   '0.01s',    3,  't',    'f',    '', 't',    0.0100, 1.00),
+(74,    '2020-02-24 14:34:30.925333',   NULL,   1,  'SLE6000',  'PIP Pressure', '20058-4',  '27913002;Maximum inspiratory pressure',    'Unit(1 mbar or 1 cmH2O)',  4,  't',    'f',    '', 'f',    1.0000, 1.00),
+(75,    '2020-02-24 14:34:30.933683',   NULL,   1,  'SLE6000',  'O2',   '3150-0',   '250774007;Inspired oxygen concentration',  '%',    5,  't',    'f',    '', 'f',    1.0000, 1.00),
+(76,    '2020-02-24 14:34:31.00036',    NULL,   1,  'SLE6000',  'HFO Delta P',  '20058-4',  '243155002;High frequency oscillatory ventilation;+698821009;Mean inspiratory airway pressure+40885006;Variant',    'Pressure Unit',    6,  't',    'f',    '', 'f',    1.0000, 1.00),
+(77,    '2020-02-24 14:34:31.008689',   NULL,   1,  'SLE6000',  'HFO MAP',  '60949-5',  '698821009;Mean inspiratory airway pressure',   'Pressure Unit',    7,  't',    'f',    '', 'f',    1.0000, 1.00),
+(78,    '2020-02-24 14:34:31.017029',   NULL,   1,  'SLE6000',  'HFO Frequency',    '19834-1',  '243155002;High frequency oscillatory ventilation;+86290005;Respiratory frequency', '0.1Hz',    8,  't',    'f',    '', 't',    0.1000, 1.00),
+(79,    '2020-02-24 14:34:31.025407',   NULL,   1,  'SLE6000',  'VTV Status',   '20124-4',  '405609003;Volume controlled ventilation',  'N/A',  13, 't',    'f',    '', 'f',    1.0000, 1.00),
+(80,    '2020-02-24 14:34:31.033701',   NULL,   1,  'SLE6000',  'Set Flow (O2 Mode)',   '3151-8',   '250849000;Fresh gas flow', '0.1 l/min',    17, 't',    'f',    '', 't',    0.1000, 1.00),
+(81,    '2020-02-24 14:34:31.042027',   NULL,   1,  'SLE6000',  'Measured RR (Respiratory Rate)',   '9279-1',   '86290005;Respiratory rate',    'Breaths/min',  35, 't',    'f',    '', 'f',    1.0000, 1.00),
+(82,    '2020-02-24 14:34:31.050446',   NULL,   1,  'SLE6000',  'Measured Ti',  'NA',   '258104002;Measured;+250819002;Inspiratory time',   '0.01s',    37, 't',    'f',    '', 't',    0.0100, 1.00),
+(84,    '2020-02-24 14:34:31.067059',   NULL,   1,  'SLE6000',  'Measured HFO Delta P', 'NA',   '258104002;Measured;+243155002;High frequency oscillatory ventilation;+698821009;Mean inspiratory airway pressure+40885006;Variant',    'Pressure Unit',    43, 't',    'f',    '', 'f',    1.0000, 1.00),
+(85,    '2020-02-24 14:34:31.075379',   NULL,   1,  'SLE6000',  'Leak', 'NA',   '257462007;Tracheal tube (physical object);+38785003;Air leakage (morphologic abnormality)',    '%',    47, 't',    'f',    '', 'f',    1.0000, 1.00),
+(88,    '2020-02-24 14:34:31.100393',   NULL,   1,  'SLE6000',  'DCO2', 'NA',   '31811003;Carbon dioxide (substance)',  '1',    51, 't',    'f',    '', 'f',    1.0000, 1.00),
+(89,    '2020-02-24 14:34:31.108718',   NULL,   2,  'SLE5000',  'Set BPM',  '19834-1',  '250876000;Ventilator rate',    'breaths/minute',   0,  't',    'f',    '', 'f',    1.0000, 1.00),
+(90,    '2020-02-24 14:34:31.117064',   NULL,   2,  'SLE5000',  'Set CPAP', '20078-2',  '250854009;Positive end expiratory pressure',   'mbar', 1,  't',    'f',    '', 'f',    1.0000, 1.00),
+(93,    '2020-02-24 14:34:31.142076',   NULL,   2,  'SLE5000',  'Set PIP',  '20058-4',  '27913002;Maximum inspiratory pressure',    'mbar', 4,  't',    'f',    '', 'f',    1.0000, 1.00),
+(94,    '2020-02-24 14:34:31.150413',   NULL,   2,  'SLE5000',  'Set O2%',  '3150-0',   '250774007;Inspired oxygen concentration',  '%',    5,  't',    'f',    '', 'f',    1.0000, 1.00),
+(95,    '2020-02-24 14:34:31.158743',   NULL,   2,  'SLE5000',  'Set HFO Delta P',  '20058-4',  '243155002;High frequency oscillatory ventilation;+698821009;Mean inspiratory airway pressure+40885006;Variant',    'mbar', 6,  't',    'f',    '', 'f',    1.0000, 1.00),
+(96,    '2020-02-24 14:34:31.167079',   NULL,   2,  'SLE5000',  'Set HFO Mean', '60949-5',  '698821009;Mean inspiratory airway pressure',   'mbar', 7,  't',    'f',    '', 'f',    1.0000, 1.00),
+(98,    '2020-02-24 14:34:31.183772',   NULL,   2,  'SLE5000',  'Measured Leak',    'NA',   '257462007;Tracheal tube (physical object);+38785003;Air leakage (morphologic abnormality)',    '%',    35, 't',    'f',    '', 'f',    1.0000, 1.00),
+(101,   '2020-02-24 14:34:31.208802',   NULL,   2,  'SLE5000',  'DCO2', 'NA',   '31811003;Carbon dioxide (substance)',  '1',    39, 't',    'f',    '', 'f',    1.0000, 1.00),
+(102,   '2020-02-24 14:34:31.217223',   NULL,   1,  'SLE6000',  'Ventilation Mode', '20124-4',  '47545007;Continuous positive airway pressure ventilation treatment~243148004;Controlled mandatory ventilation~243150007;Assisted controlled mandatory ventilation~59427005;Synchronized intermittent mandatory ventilation~243155002;High frequency oscillatory ventilation~243155002;High frequency oscillatory ventilation;+243148004;Controlled mandatory ventilation~NA~243144002;Patient triggered inspiratory assistance~NA~47545007;Continuous positive airway pressure ventilation treatment~Data not required now~Data not required now~Data not required now~Data not required now~243142003;Dual pressure spontaneous ventilation support~NA~57485005;Oxygen therapy~Standby',  'n/a',  12, 't',    't',    '397814002;Mode of ventilation monitoring', 'f',    1.0000, 1.00),
+(103,   '2020-02-24 14:34:31.225558',   NULL,   2,  'SLE5000',  'Ventilation Mode', '20124-4',  '47545007;Continuous positive airway pressure ventilation treatment~243148004;Controlled mandatory ventilation~NA~59427005;Synchronized intermittent mandatory ventilation~243155002;High frequency oscillatory ventilation~243155002;High frequency oscillatory ventilation;+243148004;Controlled mandatory ventilation~NA~NA~NA~NA~NA~NA~NA~NA~NA~NA~NA~NA~NA~NA~NA~NA~NA~NA~NA~NA~NA~NA~NA~NA~NA~243150007;Assisted controlled mandatory ventilation~243144002;Patient triggered inspiratory assistance',    'None', 9,  't',    't',    '397814002;Mode of ventilation monitoring', 'f',    1.0000, 1.00),
+(104,   '2020-02-24 14:34:31.233824',   NULL,   1,  'SLE6000',  'Measured Vte', '75958-9',  '250874002;Ventilator delivered tidal volume',  '0.1ml',    39, 't',    'f',    '', 't',    0.1000, 1.00),
+(83,    '2020-02-24 14:34:31.058708',   NULL,   1,  'SLE6000',  'Measured PIP', 'NA',   '27913002;Peak inspiratory pressure;+258104002;Measured',   '0.1 *Pressure Unit',   41, 't',    'f',    '', 't',    0.1000, 1.00),
+(26,    '2020-02-24 14:34:30.52512',    NULL,   1,  'SLE6000',  'Oxygen Concentration', 'NA',   '258104002;+250774007;Inspired oxygen concentration',   '%',    42, 't',    'f',    '', 'f',    1.0000, 1.00),
+(97,    '2020-02-24 14:34:31.175463',   NULL,   2,  'SLE5000',  'Measured Total BPM',   'NA',   '86290005;Respiratory rate',    'breaths/min',  23, 't',    'f',    '', 'f',    1.0000, 1.00),
+(86,    '2020-02-24 14:34:31.083716',   NULL,   1,  'SLE6000',  'Resistance',   'NA',   '258104002;Measured;+6304003;Airway resistance (observable entity)',    '0.1(mbar or mmH20).s/litre',   48, 't',    'f',    '', 't',    0.1000, 1.00),
+(70,    '2020-02-24 14:34:30.891983',   NULL,   1,  'SLE6000',  'RR',   '19837-4',  '250876000;Ventilator rate',    'Breaths/min',  0,  't',    'f',    '', 'f',    1.0000, 1.00),
+(91,    '2020-02-24 14:34:31.125392',   NULL,   2,  'SLE5000',  'Set Tidal',    '20112-9',  '250817000;Mandatory tidal volume', 'Volume 0.2 ml',    2,  't',    'f',    '', 't',    0.2000, 1.00),
+(92,    '2020-02-24 14:34:31.133779',   NULL,   2,  'SLE5000',  'Set Insp. Time',   '76334-2',  '250819002;Inspiratory time',   '0.01 sec.',    3,  't',    'f',    '', 't',    0.0100, 1.00),
+(46,    '2020-02-24 14:34:30.691859',   NULL,   2,  'SLE5000',  'Set Breath Trig. Threshold',   'NA',   'NA',   'l/min for flow triggering. No units for pressure triggering.', 12, 't',    'f',    '', 't',    0.1000, 1.00),
+(50,    '2020-02-24 14:34:30.725207',   NULL,   2,  'SLE5000',  'Set Low Pressure Alarm',   'NA',   'NA',   '0.1 mbar', 16, 't',    'f',    '', 't',    0.1000, 1.00),
+(51,    '2020-02-24 14:34:30.733559',   NULL,   2,  'SLE5000',  'Set Cycle Fail Alarm', 'NA',   'NA',   '0.1 mbar', 17, 't',    'f',    '', 't',    0.1000, 1.00),
+(52,    '2020-02-24 14:34:30.741878',   NULL,   2,  'SLE5000',  'Set High Pressure Alarm',  'NA',   'NA',   '0.1 mbar', 18, 't',    'f',    '', 't',    0.1000, 1.00),
+(53,    '2020-02-24 14:34:30.750213',   NULL,   2,  'SLE5000',  'Set Low Tidal Vol. Alarm', 'NA',   'NA',   '0.1 ml',   19, 't',    'f',    '', 't',    0.1000, 1.00),
+(54,    '2020-02-24 14:34:30.758561',   NULL,   2,  'SLE5000',  'Set High Tidal Vol. Alarm',    'NA',   'NA',   '0.1 ml',   20, 't',    'f',    '', 't',    0.1000, 1.00),
+(55,    '2020-02-24 14:34:30.766885',   NULL,   2,  'SLE5000',  'Set Low Minute Vol. Alarm',    'NA',   'NA',   'ml',   21, 't',    'f',    '', 't',    0.0010, 1.00),
+(56,    '2020-02-24 14:34:30.775226',   NULL,   2,  'SLE5000',  'Set High Minute Vol. Alarm',   'NA',   'NA',   'ml',   22, 't',    'f',    '', 't',    0.0010, 1.00),
+(58,    '2020-02-24 14:34:30.792006',   NULL,   2,  'SLE5000',  'Measured Insp. Time',  'NA',   'NA',   '0.01 sec', 25, 't',    'f',    '', 't',    0.0100, 1.00),
+(59,    '2020-02-24 14:34:30.800234',   NULL,   2,  'SLE5000',  'Measured Insp. Volume',    'NA',   'NA',   '0.1ml',    26, 't',    'f',    '', 't',    0.0001, 1.00),
+(60,    '2020-02-24 14:34:30.808644',   NULL,   2,  'SLE5000',  'Measured Exp. Volume', 'NA',   '250874002;Ventilator delivered tidal volume',  '0.1ml',    27, 't',    'f',    '', 't',    0.0001, 1.00),
+(67,    '2020-02-24 14:34:30.86692',    NULL,   2,  'SLE5000',  'Measured Minute Vol.', 'NA',   'NA',   'ml',   34, 't',    'f',    '', 't',    0.0010, 1.00),
+(99,    '2020-02-24 14:34:31.192135',   NULL,   2,  'SLE5000',  'Measured Resistance',  'NA',   '258104002;Measured;+6304003;Airway resistance (observable entity)',    '0.1 mbar.sec/l',   36, 't',    'f',    '', 't',    0.1000, 1.00),
+(68,    '2020-02-24 14:34:30.875265',   NULL,   2,  'SLE5000',  'Measured Compliance',  'NA',   'NA',   '0.1 ml/mbar',  37, 't',    'f',    '', 't',    0.1000, 1.00),
+(105,   '2020-07-19 11:49:53.655924',   NULL,   1,  'SLE6000',  'Measured Fresh Gas Flow',  'NA',   '250849000;Fresh gas flow (observable entity);+ 258104002;Measured (qualifier value)',  'I/min',    63, 't',    'f',    NULL,   'f',    1.0000, 1.00),
+(106,   '2020-07-19 11:49:53.655924',   NULL,   1,  'SLE6000',  'High etCO2 Spont alarm',   'NA',   'NA',   'mmHg', 64, 't',    'f',    NULL,   'f',    1.0000, 1.00),
+(100,   '2020-02-24 14:34:31.20047',    NULL,   2,  'SLE5000',  'Measured C20/C',   'NA',   '258104002;Measured;+415775009;Unit of compliance', '0.1',  38, 't',    'f',    '', 't',    0.1000, 1.00),
+(107,   '2020-07-19 11:49:53.655924',   NULL,   1,  'SLE6000',  'Auto-O2 Status',   'NA',   '24099007;Oxygen (substance);+263490005;Status (attribute)',    '%',    65, 't',    'f',    NULL,   'f',    1.0000, 1.00),
+(108,   '2020-07-19 11:49:53.655924',   NULL,   1,  'SLE6000',  'Set Auto-O2 target range', 'NA',   '336590007;Oxygen set (physical object)',   '%',    66, 't',    'f',    NULL,   'f',    1.0000, 1.00),
+(109,   '2020-07-19 11:49:53.655924',   NULL,   1,  'SLE6000',  'Reference O2 value (Delivered O2)',    'NA',   '16206004;Oxygen delivery (observable entity)', '%',    67, 't',    'f',    NULL,   'f',    1.0000, 1.00),
+(110,   '2020-07-19 11:49:53.655924',   NULL,   1,  'SLE6000',  'Variance Co-Efficient (deferred)', 'NA',   'NA',   'TBC',  68, 't',    'f',    NULL,   'f',    1.0000, 1.00),
+(111,   '2020-07-19 11:49:53.655924',   NULL,   1,  'SLE6000',  'Time in Range (deferred)', 'NA',   'NA',   'TBC',  69, 't',    'f',    NULL,   'f',    1.0000, 1.00),
+(30,    '2020-02-24 14:34:30.558476',   NULL,   1,  'SLE6000',  'Compliance',   'NA',   '3863008;Lung compliance',  '0.1 ml/mbar(0.1 ml/Pressure Unit)',    49, 't',    'f',    '', 't',    0.1000, 1.00),
+(87,    '2020-02-24 14:34:31.092054',   NULL,   1,  'SLE6000',  'C20/C',    'NA',   '415775009;Unit of compliance', '0.1',  50, 't',    'f',    '', 't',    0.1000, 1.00);
+
+DROP TABLE IF EXISTS "patient_details";
+DROP SEQUENCE IF EXISTS patient_details_id_seq;
+CREATE SEQUENCE patient_details_id_seq INCREMENT 1 MINVALUE 1 MAXVALUE 2147483647 CACHE 1;
+
+CREATE TABLE "public"."patient_details" (
+    "id" integer DEFAULT nextval('patient_details_id_seq') NOT NULL,
+    "create_time" timestamp,
+    "patient_id" character varying,
+    "patient_start_name" character varying,
+    "patient_first_name" character varying,
+    "patient_last_name" character varying,
+    "date_of_birth" character varying,
+    "gender" character varying,
+    "ward" character varying,
+    "room" character varying,
+    "bed" character varying,
+    "visit_number" character varying,
+    "machine_id" character varying,
+    "machine_name" character varying,
+    "last_updated_time" timestamp,
+    CONSTRAINT "patient_details_pkey" PRIMARY KEY ("id")
+) WITH (oids = false);
+
+
+DROP TABLE IF EXISTS "patient_tables";
+DROP SEQUENCE IF EXISTS patient_tables_id_seq;
+CREATE SEQUENCE patient_tables_id_seq INCREMENT 1 MINVALUE 1 MAXVALUE 2147483647 CACHE 1;
+
+CREATE TABLE "public"."patient_tables" (
+    "id" integer DEFAULT nextval('patient_tables_id_seq') NOT NULL,
+    "uhid" character varying,
+    "table_name" character varying,
+    "start_time" timestamp,
+    "end_time" timestamp,
+    "table_count" integer,
+    "created_time" timestamp,
+    CONSTRAINT "patient_tables_pkey" PRIMARY KEY ("id")
+) WITH (oids = false);
+
+
+DROP TABLE IF EXISTS "ping";
+DROP SEQUENCE IF EXISTS ping_id_seq;
+CREATE SEQUENCE ping_id_seq INCREMENT 1 MINVALUE 1 MAXVALUE 2147483647 CACHE 1;
+
+CREATE TABLE "public"."ping" (
+    "id" integer DEFAULT nextval('ping_id_seq') NOT NULL,
+    "created_time" timestamp,
+    "ip" character varying,
+    "status" character varying,
+    "others" character varying,
+    CONSTRAINT "ping_pkey" PRIMARY KEY ("id")
+) WITH (oids = false);
+
+
+DROP TABLE IF EXISTS "processed_test";
+DROP SEQUENCE IF EXISTS processed_test_id_seq;
+CREATE SEQUENCE processed_test_id_seq INCREMENT 1 MINVALUE 1 MAXVALUE 2147483647 CACHE 1;
+
+CREATE TABLE "public"."processed_test" (
+    "id" integer DEFAULT nextval('processed_test_id_seq') NOT NULL,
+    "created_time" timestamp,
+    "patient_id" integer,
+    "min" character varying,
+    "median1" character varying,
+    "median" character varying,
+    "median2" character varying,
+    "max" character varying,
+    "isuploaded" boolean DEFAULT false,
+    "sent_time" timestamp,
+    "descriptions" character varying,
+    "unit" character varying,
+    "result_time" character varying(50),
+    "result_date_time" timestamp,
+    "observation_name" character varying,
+    "uhid" character varying,
+    "machine_details" character varying,
+    "patient_first_name" character varying,
+    "patient_start_name" character varying,
+    "patient_last_name" character varying,
+    "date_of_birth" character varying,
+    "gender" character varying,
+    "room" character varying,
+    "bed" character varying,
+    "visit_number" character varying,
+    "ward" character varying,
+    "machine_model" character varying,
+    CONSTRAINT "processed_test_pkey" PRIMARY KEY ("id")
+) WITH (oids = false);
+
+
+DROP TABLE IF EXISTS "pump_admission";
+DROP SEQUENCE IF EXISTS pump_admission_id_seq;
+CREATE SEQUENCE pump_admission_id_seq INCREMENT 1 MINVALUE 1 MAXVALUE 2147483647 CACHE 1;
+
+CREATE TABLE "public"."pump_admission" (
+    "id" integer DEFAULT nextval('pump_admission_id_seq') NOT NULL,
+    "patient_first_name" character varying,
+    "patient_middle_name" character varying,
+    "patient_last_name" character varying,
+    "patient_vist_number" character varying,
+    "patient_gender" character varying,
+    "create_time" time without time zone,
+    "is_send" boolean DEFAULT false,
+    "transfer_type" character varying,
+    "ward" character varying,
+    "room" character varying,
+    "bed" character varying,
+    "patient_mrn" character varying,
+    "patient_dob" character varying,
+    "height" character varying,
+    "weight" character varying,
+    "blood_group" character varying,
+    "created_date" timestamp,
+    "order_pump_model" character varying,
+    "is_completed" boolean DEFAULT false NOT NULL,
+    "bed_side_monitor_device_id" character varying(30),
+    CONSTRAINT "pump_admission_pkey" PRIMARY KEY ("id")
+) WITH (oids = false);
+
+
+DROP TABLE IF EXISTS "pump_prescription";
+DROP SEQUENCE IF EXISTS pump_prescription_id_seq;
+CREATE SEQUENCE pump_prescription_id_seq INCREMENT 1 MINVALUE 1 MAXVALUE 2147483647 CACHE 1;
+
+CREATE TABLE "public"."pump_prescription" (
+    "id" integer DEFAULT nextval('pump_prescription_id_seq') NOT NULL,
+    "mrn" character varying,
+    "drug_name" character varying,
+    "seq_no" character varying,
+    "quantity_value" character varying,
+    "quantity_unit" character varying,
+    "dose_value" character varying,
+    "dose_unit" character varying,
+    "syringe_size" character varying,
+    "execution_time" character varying,
+    "pump_type" character varying,
+    "is_send" boolean,
+    "order_type" character varying,
+    "instruction" text,
+    "repeat_pattern" text,
+    "repeat_start_time" character varying,
+    "infusion_rate" character varying,
+    "created_date" timestamp,
+    "cm5_seq_number" character varying,
+    "cms_seq_number" character varying(250),
+    "is_cms_seq_uploaded" boolean DEFAULT false,
+    "exec_avenue" character varying(250),
+    "exec_status" character varying(250),
+    "exec_mode" character varying(250),
+    "exec_time" character varying(250),
+    "op_code" character varying(250),
+    "pres_type" character varying(250),
+    "exec_frequency" character varying(250),
+    "order_device_id" character varying(50),
+    "is_completed" boolean DEFAULT false,
+    "prescription_date_time" character varying(20),
+    "manual_completed_time" timestamp,
+    CONSTRAINT "pump_prescription_pkey" PRIMARY KEY ("id")
+) WITH (oids = false);
+
+
+DROP TABLE IF EXISTS "pump_results";
+DROP SEQUENCE IF EXISTS pump_results_id_seq;
+CREATE SEQUENCE pump_results_id_seq INCREMENT 1 MINVALUE 1 MAXVALUE 2147483647 CACHE 1;
+
+CREATE TABLE "public"."pump_results" (
+    "id" integer DEFAULT nextval('pump_results_id_seq') NOT NULL,
+    "dock_id" character varying(50),
+    "pump_id" character varying(50),
+    "ward_no" character varying(25),
+    "room_no" character varying(25),
+    "bed_no" character varying(25),
+    "patient_mrn" character varying(50),
+    "patient_name" character varying(255),
+    "prescription_id" character varying(50),
+    "drug_name" character varying,
+    "drug_concentration" character varying(50),
+    "infusion_status" character varying(255),
+    "stand_by_time" character varying(50),
+    "remaining_volume" character varying(25),
+    "remaining_time" character varying(50),
+    "bolus_volume" character varying(25),
+    "infused_volume" character varying(25),
+    "total_delivered_fluid_volume" character varying(25),
+    "fluid_pressure" character varying(25),
+    "fluid_delivery_rate" character varying(25),
+    "fluid_delivery_rate_prop" character varying(25),
+    "fluid_delivery_time" character varying(25),
+    "co2_pump_fault" character varying,
+    "co2_pump_abnormal" character varying,
+    "co2_need_replace_scrubber_and_pump" character varying,
+    "alarm_pumps" character varying,
+    "result_date_time" timestamp,
+    "created_date_time" timestamp,
+    CONSTRAINT "pump_results_pkey" PRIMARY KEY ("id")
+) WITH (oids = false);
+
+
+DROP TABLE IF EXISTS "pump_results_processed";
+DROP SEQUENCE IF EXISTS pump_results_processed_id_seq;
+CREATE SEQUENCE pump_results_processed_id_seq INCREMENT 1 MINVALUE 1 MAXVALUE 2147483647 CACHE 1;
+
+CREATE TABLE "public"."pump_results_processed" (
+    "id" integer DEFAULT nextval('pump_results_processed_id_seq') NOT NULL,
+    "prescription_id" character varying(50),
+    "infusion_status" character varying(255),
+    "remaining_volume" character varying(25),
+    "remaining_time" character varying(50),
+    "infused_volume" character varying(25),
+    "fluid_pressure" character varying(25),
+    "rate" character varying(25),
+    "result_date_time" timestamp,
+    "created_date_time" timestamp,
+    "is_send" boolean DEFAULT false,
+    CONSTRAINT "pump_results_processed_pkey" PRIMARY KEY ("id")
+) WITH (oids = false);
+
+
+DROP TABLE IF EXISTS "results";
+DROP SEQUENCE IF EXISTS results_id_seq;
+CREATE SEQUENCE results_id_seq INCREMENT 1 MINVALUE 1 MAXVALUE 2147483647 CACHE 1;
+
+CREATE TABLE "public"."results" (
+    "id" integer DEFAULT nextval('results_id_seq') NOT NULL,
+    "created_time" timestamp,
+    "patient_id" integer,
+    "serial_number" integer,
+    "local_code" character varying,
+    "observation_name" character varying,
+    "data_location" character varying,
+    "snomed_code" character varying,
+    "snomed_code_description" character varying,
+    "code_type" character varying,
+    "result_value" character varying,
+    "descriptions" character varying,
+    "unit" character varying,
+    "observation_status" character varying,
+    "result_time" character varying(50),
+    "is_processed" boolean DEFAULT false NOT NULL,
+    "is_solved" boolean DEFAULT false NOT NULL,
+    "uhid" character varying(250),
+    "machine_details" character varying(250),
+    "patient_start_name" character varying(250),
+    "patient_first_name" character varying(250),
+    "patient_last_name" character varying(250),
+    "date_of_birth" character varying(50),
+    "gender" character varying(50),
+    "ward" character varying(50),
+    "room" character varying(50),
+    "bed" character varying(50),
+    "visit_number" character varying(80),
+    "result_date_time" timestamp,
+    "machine_model" character varying(100),
+    "received_result" character varying,
+    "pump_status_processed" boolean DEFAULT false,
+    CONSTRAINT "results_pkey" PRIMARY KEY ("id")
+) WITH (oids = false);
+
+
+DELIMITER ;;
+
+CREATE TRIGGER "result_live_trigger" AFTER INSERT ON "public"."results" FOR EACH ROW EXECUTE FUNCTION results_live_trigger();;
+
+DELIMITER ;
+
+DROP TABLE IF EXISTS "results_history";
+DROP SEQUENCE IF EXISTS results_history_id_seq;
+CREATE SEQUENCE results_history_id_seq INCREMENT 1 MINVALUE 1 MAXVALUE 2147483647 CACHE 1;
+
+CREATE TABLE "public"."results_history" (
+    "id" integer DEFAULT nextval('results_history_id_seq') NOT NULL,
+    "created_time" timestamp,
+    "patient_id" integer,
+    "serial_number" integer,
+    "local_code" character varying,
+    "observation_name" character varying,
+    "data_location" character varying,
+    "snomed_code" character varying,
+    "snomed_code_description" character varying,
+    "code_type" character varying,
+    "result_value" character varying,
+    "descriptions" character varying,
+    "unit" character varying,
+    "observation_status" character varying,
+    "result_time" character varying(50),
+    "is_processed" boolean DEFAULT false NOT NULL,
+    "is_solved" boolean DEFAULT false NOT NULL,
+    "uhid" character varying(250),
+    "machine_details" character varying(250),
+    "patient_start_name" character varying(250),
+    "patient_first_name" character varying(250),
+    "patient_last_name" character varying(250),
+    "date_of_birth" character varying(50),
+    "gender" character varying(50),
+    "ward" character varying(50),
+    "room" character varying(50),
+    "bed" character varying(50),
+    "visit_number" character varying(80),
+    "result_date_time" timestamp,
+    "machine_model" character varying(100),
+    "received_result" character varying,
+    "pump_status_processed" boolean DEFAULT false,
+    "is_backuped" boolean DEFAULT false,
+    CONSTRAINT "results_history_pkey" PRIMARY KEY ("id")
+) WITH (oids = false);
+
+
+DROP TABLE IF EXISTS "results_lab";
+DROP SEQUENCE IF EXISTS results_lab_id_seq;
+CREATE SEQUENCE results_lab_id_seq INCREMENT 1 MINVALUE 1 MAXVALUE 2147483647 CACHE 1;
+
+CREATE TABLE "public"."results_lab" (
+    "id" integer DEFAULT nextval('results_lab_id_seq') NOT NULL,
+    "created_time" timestamp,
+    "mrn" character varying,
+    "patient_name" character varying,
+    "ip_number" character varying,
+    "isuploaded" boolean DEFAULT false,
+    "sent_time" timestamp,
+    "result_value" json NOT NULL,
+    CONSTRAINT "results_lab_pkey" PRIMARY KEY ("id")
+) WITH (oids = false);
+
+
+DROP TABLE IF EXISTS "results_live";
+DROP SEQUENCE IF EXISTS results_live_id_seq;
+CREATE SEQUENCE results_live_id_seq INCREMENT 1 MINVALUE 1 MAXVALUE 2147483647 CACHE 1;
+
+CREATE TABLE "public"."results_live" (
+    "id" integer DEFAULT nextval('results_live_id_seq') NOT NULL,
+    "created_time" timestamp,
+    "patient_id" integer,
+    "serial_number" integer,
+    "local_code" character varying,
+    "observation_name" character varying,
+    "data_location" character varying,
+    "snomed_code" character varying,
+    "snomed_code_description" character varying,
+    "code_type" character varying,
+    "result_value" character varying,
+    "descriptions" character varying,
+    "unit" character varying,
+    "observation_status" character varying,
+    "result_time" character varying(50),
+    "is_processed" boolean DEFAULT false NOT NULL,
+    "is_solved" boolean DEFAULT false NOT NULL,
+    "uhid" character varying(250),
+    "machine_details" character varying(250),
+    "patient_start_name" character varying(250),
+    "patient_first_name" character varying(250),
+    "patient_last_name" character varying(250),
+    "date_of_birth" character varying(50),
+    "gender" character varying(50),
+    "ward" character varying(50),
+    "room" character varying(50),
+    "bed" character varying(50),
+    "visit_number" character varying(80),
+    "result_date_time" timestamp,
+    "machine_model" character varying(100),
+    "received_result" character varying,
+    "pump_status_processed" boolean DEFAULT false,
+    CONSTRAINT "results_live_pkey" PRIMARY KEY ("id")
+) WITH (oids = false);
+
+
+DROP TABLE IF EXISTS "results_waveforms";
+DROP SEQUENCE IF EXISTS results_waveforms_id_seq1;
+CREATE SEQUENCE results_waveforms_id_seq1 INCREMENT 1 MINVALUE 1 MAXVALUE 2147483647 CACHE 1;
+
+CREATE TABLE "public"."results_waveforms" (
+    "id" integer DEFAULT nextval('results_waveforms_id_seq1') NOT NULL,
+    "created_time" timestamp,
+    "result_value" character varying,
+    "is_processed" boolean DEFAULT false NOT NULL,
+    "uhid" character varying(250),
+    "machine_details" character varying(250),
+    "ward" character varying(50),
+    "room" character varying(50),
+    "bed" character varying(50),
+    "result_date_time" timestamp,
+    "machine_model" character varying(100),
+    "result_value_count" integer,
+    "result_start_time" timestamp,
+    "result_end_time" timestamp,
+    "observation_name" character varying
+) WITH (oids = false);
+
+
+DROP TABLE IF EXISTS "slash_dr_patient";
+DROP SEQUENCE IF EXISTS slash_dr_patient_id_seq;
+CREATE SEQUENCE slash_dr_patient_id_seq INCREMENT 1 MINVALUE 1 MAXVALUE 2147483647 CACHE 1;
+
+CREATE TABLE "public"."slash_dr_patient" (
+    "id" integer DEFAULT nextval('slash_dr_patient_id_seq') NOT NULL,
+    "legacy_id" character varying,
+    "patient_mrn" character varying,
+    "patient_first_name" character varying,
+    "patient_last_name" character varying,
+    "patient_ward" character varying,
+    "patient_room" character varying,
+    "patient_bed" character varying,
+    "patient_visit_no" character varying,
+    "zip" character varying,
+    "place" character varying,
+    "address" character varying,
+    "phone_number" character varying,
+    "gender" character varying,
+    "dob" character varying,
+    "age" character varying,
+    "parent_name" character varying,
+    "state_name" character varying,
+    "country" character varying,
+    "occupation" character varying,
+    "patient_category" character varying,
+    "reffered_from" character varying,
+    "blood_group" character varying,
+    "sample_state" character varying,
+    "sample_date" character varying,
+    "sample_lab_name" character varying,
+    "sample_lab_place" character varying,
+    "sample_confirmation_date" character varying,
+    "other_lab_name" character varying,
+    "srf_id" character varying,
+    "covid_status" character varying,
+    "icmr_id" character varying,
+    "date_of_admission" timestamp,
+    "created_time" timestamp,
+    "is_uploaded" boolean DEFAULT false,
+    "sent_time" timestamp,
+    CONSTRAINT "slash_dr_patient_pkey" PRIMARY KEY ("id")
+) WITH (oids = false);
+
+
+DROP TABLE IF EXISTS "ventilator_raw_data_result";
+DROP SEQUENCE IF EXISTS ventilator_raw_data_result_id_seq;
+CREATE SEQUENCE ventilator_raw_data_result_id_seq INCREMENT 1 MINVALUE 1 MAXVALUE 2147483647 CACHE 1;
+
+CREATE TABLE "public"."ventilator_raw_data_result" (
+    "id" integer DEFAULT nextval('ventilator_raw_data_result_id_seq') NOT NULL,
+    "created_time" timestamp,
+    "machine_id" integer,
+    "machine_name" character varying,
+    "data_format" character varying,
+    "data_location" character varying,
+    "code_type" character varying,
+    "result_value" character varying,
+    "observation_status" character varying,
+    "result_time" character varying,
+    "patient_id" integer,
+    "patient_start_name" character varying,
+    "patient_first_name" character varying,
+    "patient_last_name" character varying,
+    "date_of_birth" timestamp,
+    "gender" character varying,
+    "ward" character varying,
+    "room" character varying,
+    "bed" character varying,
+    "visit_number" character varying,
+    "processed" boolean DEFAULT false,
+    "processed_time" timestamp,
+    "type" integer DEFAULT '0' NOT NULL,
+    CONSTRAINT "ventilator_raw_data_result_pkey" PRIMARY KEY ("id")
+) WITH (oids = false);

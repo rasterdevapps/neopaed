@@ -1,0 +1,9 @@
+ .cke_hidden {
+    display: none;
+ }
+ .hidden-print {
+ 	display: none;
+ }
+  .cke_show_borders table.cke_show_border > tbody > tr > td{
+  	border: 0px !important ;
+  }

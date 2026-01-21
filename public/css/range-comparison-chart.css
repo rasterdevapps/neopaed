@@ -1,0 +1,144 @@
+.comparison-chart {
+    width: 100%;
+    height: 300px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.daterangepicker select.monthselect,
+.daterangepicker select.yearselect,
+.daterangepicker select.hourselect,
+.daterangepicker select.minuteselect,
+.daterangepicker select.secondselect,
+.daterangepicker select.ampmselect {
+    height: 18px;
+    line-height: 1;
+    border: 1px solid #444 !important;
+}
+
+#date-range {
+    display: none;
+    border: 1px solid #ddd;
+    padding: 5px;
+}
+#ddate-range, #comparison-date-range {
+    border: 1px solid #ddd;
+    padding: 5px;   
+}
+
+#date-range.default,
+#ddate-range {
+    display: flex;
+    float: right;
+}
+select {
+    margin: 0px !important;
+}
+select.input-width-mini {
+    width: 48px !important;
+}
+
+.fa-calendar {
+    margin-top: 2px;
+}
+
+#comparison-date-range.custom {
+    display: block;
+    float: right;
+}
+
+#comparison-icon,
+#reset-icon,
+#apply-btn,
+#date-reset-icon,
+#date-apply-btn {
+    background: black;
+    color: white;
+    padding: 6.5px 10px;
+    float: right;
+    margin-left: 5px;
+}
+
+#comparison-icon i {
+    transform: rotate(90deg);
+}
+
+label {
+    margin: 5px;
+    margin-top: 0px;
+}
+
+.empty-container .row:after {
+    content: 'No records';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 0;
+    color: #e6e6e6;
+    font-size: 50px;
+    font-weight: bold;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+
+.empty-container .row {
+    font-size: 16px;
+    color: white;
+    font-weight: bolder;
+    margin: 15px 0px;
+}
+
+#table-container {
+    position: relative;
+}
+
+#table-container .tab-content .tab-pane {
+    position: relative;
+}
+
+#table-container table {
+    height: 772px;
+}
+
+#table-container table>tbody>tr>td:first-child {
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.time-bg {
+    background-color: transparent !important;
+    font-weight: bold;
+    color: #555555 !important;
+}
+
+.loader-view {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    background: url('../img/icons/preloader.gif') center no-repeat #F9F9F9;
+}
+
+#table-container table>thead>tr>th:not(.time-bg):first-child {
+    position: sticky;
+    left: -11px;
+    background-color: var(--theme-color) !important;
+    z-index: 3;
+}
+#table-container table>thead>tr>th.time-bg:first-child {
+    position: sticky;
+    left: -11px;
+    background-color: #F9F9F9 !important;
+    z-index: 3;
+}
+#table-container table>tbody>tr>td:first-child {
+    position: sticky;
+    left: -11px;
+    background-color: #F9F9F9 !important;
+    z-index: 3;
+}

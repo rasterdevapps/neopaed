@@ -1,0 +1,52 @@
+/*Admission*/
+/*Admission*/
+
+/*Daily Entry Form*/
+.postnatal_other_drugs_add {
+	margin-left: 0px;
+}
+/*Daily Entry Form*/
+
+/*Problem Base System*/
+.postnatal-problem-lists .edit-episode, .postnatal-problem-lists .remove-episode {
+	margin: 0px 10px;
+}
+.custom-table .dataTables_header {
+    margin: 0px; 
+}
+/*Problem Base System*/
+
+/*Discharge Detail*/
+/*.postnatal.discharge-color-code {
+	list-style: none;
+	display: inline-flex;
+}*/
+.postnatal.discharge-color-code {
+    display: inline-flex;
+}
+.postnatal.discharge-color-code > li {
+    padding: 10px;
+    display: flex;
+    align-items: flex-end;
+}
+.postnatal .drugs .form-control {
+    min-width: 100px;
+}
+/*.postnatal.discharge-color-code  > li {
+    padding: 14px 5px;
+}*/
+.postnatal.discharge-color-code > li {
+    padding-top: 8.5px;
+    padding-bottom: 8.5px;	
+}
+.postnatal.discharge-color-code > li:first-child {
+    padding-right: 20px;
+}
+.postnatal.discharge-color-code > li:last-child {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+/*Discharge Detail*/
+
+/*Discharge Summary*/
+/*Discharge Summary*/

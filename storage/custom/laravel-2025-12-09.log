@@ -1,0 +1,51 @@
+[2025-12-09 13:17:56] local.EMERGENCY: Nurse Time for this result 2025-11-16 14:59:53 ====== BABY ID: 11364 ====== ADMISSION ID: 16153  
+[2025-12-09 13:17:56] local.EMERGENCY: sheet log: nurse-date = 2025-11-16, baby-id = 11364, admission-id = 16153, nurse-time = 2025-11-16 14:59:53, Snomed code = 78791008+113080007, Local code = preductal_sao2  
+[2025-12-09 13:17:56] local.EMERGENCY: EMR LOG HDR ID...... :598914    DETAILS ID   3513842  
+[2025-12-09 13:17:56] local.EMERGENCY: LOG REFER ID 44 and VALUE IS==============97  
+[2025-12-09 13:18:22] local.EMERGENCY: Nurse Time for this result 2025-09-05 23:56:45 ====== BABY ID: 11364 ====== ADMISSION ID: 16153  
+[2025-12-09 13:18:22] local.EMERGENCY: sheet log: nurse-date = 2025-09-05, baby-id = 11364, admission-id = 16153, nurse-time = 2025-09-05 23:56:45, Snomed code = 250774007, Local code = fio2  
+[2025-12-09 13:18:22] local.EMERGENCY: LOG REFER ID 47 and VALUE IS==============NIPPV Tr  
+[2025-12-09 13:18:22] local.EMERGENCY: EMR LOG HDR ID...... :598915    DETAILS ID   2356367  
+[2025-12-09 13:18:22] local.EMERGENCY: LOG REFER ID 52 and VALUE IS==============21  
+[2025-12-09 13:26:27] local.EMERGENCY: Nurse Time for this result 2025-11-16 14:59:53 ====== BABY ID: 11364 ====== ADMISSION ID: 16153  
+[2025-12-09 13:26:27] local.EMERGENCY: sheet log: nurse-date = 2025-11-16, baby-id = 11364, admission-id = 16153, nurse-time = 2025-11-16 14:59:53, Snomed code = 250774007, Local code = fio2  
+[2025-12-09 13:26:27] local.EMERGENCY: LOG REFER ID 47 and VALUE IS==============NIPPV Tr  
+[2025-12-09 13:26:27] local.EMERGENCY: EMR LOG HDR ID...... :598914    DETAILS ID   2356372  
+[2025-12-09 13:26:27] local.EMERGENCY: LOG REFER ID 52 and VALUE IS==============21  
+[2025-12-09 13:26:59] local.EMERGENCY: Nurse Time for this result 2025-11-16 14:59:53 ====== BABY ID: 11364 ====== ADMISSION ID: 16153  
+[2025-12-09 13:26:59] local.EMERGENCY: sheet log: nurse-date = 2025-11-16, baby-id = 11364, admission-id = 16153, nurse-time = 2025-11-16 14:59:53, Snomed code = 250774007, Local code = fio2  
+[2025-12-09 13:26:59] local.EMERGENCY: LOG REFER ID 47 and VALUE IS==============NIPPV Tr  
+[2025-12-09 13:26:59] local.EMERGENCY: EMR LOG HDR ID...... :598914    DETAILS ID   2356372  
+[2025-12-09 13:26:59] local.EMERGENCY: LOG REFER ID 52 and VALUE IS==============21  
+[2025-12-09 13:27:11] local.EMERGENCY: Nurse Time for this result 2025-11-16 14:59:53 ====== BABY ID: 11364 ====== ADMISSION ID: 16153  
+[2025-12-09 13:27:11] local.EMERGENCY: sheet log: nurse-date = 2025-11-16, baby-id = 11364, admission-id = 16153, nurse-time = 2025-11-16 14:59:53, Snomed code = 78791008+113080007, Local code = preductal_sao2  
+[2025-12-09 13:27:11] local.EMERGENCY: EMR LOG HDR ID...... :598914    DETAILS ID   3513842  
+[2025-12-09 13:27:11] local.EMERGENCY: LOG REFER ID 44 and VALUE IS==============97  
+[2025-12-09 13:27:23] local.EMERGENCY: Nurse Time for this result 2025-11-16 14:59:53 ====== BABY ID: 11364 ====== ADMISSION ID: 16153  
+[2025-12-09 13:27:23] local.EMERGENCY: sheet log: nurse-date = 2025-11-16, baby-id = 11364, admission-id = 16153, nurse-time = 2025-11-16 14:59:53, Snomed code = 78791008+113080007, Local code = preductal_sao2  
+[2025-12-09 13:27:23] local.EMERGENCY: EMR LOG HDR ID...... :598914    DETAILS ID   3513842  
+[2025-12-09 13:27:23] local.EMERGENCY: LOG REFER ID 44 and VALUE IS==============97  
+[2025-12-09 13:27:33] local.EMERGENCY: Nurse Time for this result 2025-11-16 14:59:53 ====== BABY ID: 11364 ====== ADMISSION ID: 16153  
+[2025-12-09 13:27:33] local.EMERGENCY: sheet log: nurse-date = 2025-11-16, baby-id = 11364, admission-id = 16153, nurse-time = 2025-11-16 14:59:53, Snomed code = 250774007, Local code = fio2  
+[2025-12-09 13:27:33] local.EMERGENCY: LOG REFER ID 47 and VALUE IS==============NIPPV Tr  
+[2025-12-09 13:27:33] local.EMERGENCY: EMR LOG HDR ID...... :598914    DETAILS ID   2356372  
+[2025-12-09 13:27:33] local.EMERGENCY: LOG REFER ID 52 and VALUE IS==============21  
+[2025-12-09 13:29:05] local.EMERGENCY: Nurse Time for this result 2025-11-16 14:59:53 ====== BABY ID: 11364 ====== ADMISSION ID: 16153  
+[2025-12-09 13:29:05] local.EMERGENCY: sheet log: nurse-date = 2025-11-16, baby-id = 11364, admission-id = 16153, nurse-time = 2025-11-16 14:59:53, Snomed code = 78791008+113080007, Local code = preductal_sao2  
+[2025-12-09 13:29:05] local.EMERGENCY: EMR LOG HDR ID...... :598914    DETAILS ID   3513842  
+[2025-12-09 13:29:05] local.EMERGENCY: LOG REFER ID 44 and VALUE IS==============97  
+[2025-12-09 13:29:13] local.EMERGENCY: Nurse Time for this result 2025-11-16 14:59:53 ====== BABY ID: 11364 ====== ADMISSION ID: 16153  
+[2025-12-09 13:29:13] local.EMERGENCY: sheet log: nurse-date = 2025-11-16, baby-id = 11364, admission-id = 16153, nurse-time = 2025-11-16 14:59:53, Snomed code = 250774007, Local code = fio2  
+[2025-12-09 13:29:13] local.EMERGENCY: LOG REFER ID 47 and VALUE IS==============NIPPV Tr  
+[2025-12-09 13:29:13] local.EMERGENCY: EMR LOG HDR ID...... :598914    DETAILS ID   2356372  
+[2025-12-09 13:29:13] local.EMERGENCY: LOG REFER ID 52 and VALUE IS==============21  
+[2025-12-09 13:30:16] local.EMERGENCY: Nurse Time for this result 2025-11-16 14:59:53 ====== BABY ID: 11364 ====== ADMISSION ID: 16153  
+[2025-12-09 13:30:16] local.EMERGENCY: sheet log: nurse-date = 2025-11-16, baby-id = 11364, admission-id = 16153, nurse-time = 2025-11-16 14:59:53, Snomed code = 250774007, Local code = fio2  
+[2025-12-09 13:30:16] local.EMERGENCY: LOG REFER ID 47 and VALUE IS==============NIPPV Tr  
+[2025-12-09 13:30:16] local.EMERGENCY: EMR LOG HDR ID...... :598914    DETAILS ID   2356372  
+[2025-12-09 13:30:16] local.EMERGENCY: LOG REFER ID 52 and VALUE IS==============40  
+[2025-12-09 13:30:32] local.EMERGENCY: Nurse Time for this result 2025-11-16 14:59:53 ====== BABY ID: 11364 ====== ADMISSION ID: 16153  
+[2025-12-09 13:30:32] local.EMERGENCY: sheet log: nurse-date = 2025-11-16, baby-id = 11364, admission-id = 16153, nurse-time = 2025-11-16 14:59:53, Snomed code = 250774007, Local code = fio2  
+[2025-12-09 13:30:32] local.EMERGENCY: LOG REFER ID 47 and VALUE IS==============NIPPV Tr  
+[2025-12-09 13:30:32] local.EMERGENCY: EMR LOG HDR ID...... :598914    DETAILS ID   2356372  
+[2025-12-09 13:30:32] local.EMERGENCY: LOG REFER ID 52 and VALUE IS==============21  

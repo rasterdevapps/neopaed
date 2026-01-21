@@ -1,0 +1,2 @@
+INSERT INTO "baby_admission" ("AdmissionId", "BabyId", "BMrNo", "MotherId", "AdmissionDate", "AdmissionTime", "InOrOut", "AdmissionType", "Status", "UserAdded", "DateAdded", "DateModified", "episodes") VALUES
+(610,	564,	'500923',	660,	'2021-01-10',	'22:52:00',	'In',	'NICU',	'Inpatient',	22,	'2021-01-10 00:00:00',	'2021-01-10 00:00:00',	'Admission 2');

@@ -1,0 +1,17 @@
+.save_btn, .close_btn {
+    margin-left: 0;
+}
+.save_close_btn, .save_btn, .create_btn, .close_btn {
+    width: 100%;
+}
+
+@media only screen and (max-width: 420px) {
+    .form-group.search-button-mrno {
+        margin-top: 19px;
+    }
+}
+/*@media only screen and (max-width: 768px) {
+    .margin-left-hundred {
+        margin-left: 0 !important;
+    }
+}*/

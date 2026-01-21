@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="89px" height="37px" viewBox="0 0 89 37" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>1.32</title>
+    <desc>Created with Sketch.</desc>
+    <g id="IP" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="10.1.1---OP---EMR---OP-Case-Sheet---Examination" transform="translate(-915.000000, -1449.000000)">
+            <g id="1.32" transform="translate(915.000000, 1449.000000)">
+                <rect id="Rectangle" fill="#FFFFFF" fill-rule="nonzero" x="23.15" y="17.05" width="6.2" height="5.3"></rect>
+                <rect id="Rectangle" stroke="#000000" stroke-width="2" stroke-linecap="square" x="23.15" y="17.05" width="6.2" height="5.3"></rect>
+                <path d="M1.8,16.05 C1.58177947,10.8664005 4.22286074,5.98037865 8.67914427,3.323527 C13.1354278,0.666675356 18.6895722,0.666675356 23.1458557,3.323527 C27.6021393,5.98037865 30.2432205,10.8664005 30.025,16.05 C30.2432205,21.2335995 27.6021393,26.1196213 23.1458557,28.776473 C18.6895722,31.4333246 13.1354278,31.4333246 8.67914427,28.776473 C4.22286074,26.1196213 1.58177947,21.2335995 1.8,16.05" id="Path" fill="#FFFFFF"></path>
+                <ellipse id="Oval" stroke="#000000" stroke-width="2" stroke-linecap="square" cx="15.925" cy="16.05" rx="14.125" ry="14.25"></ellipse>
+                <rect id="Rectangle" fill="#FFFFFF" fill-rule="nonzero" x="14.2" y="16.375" width="6.2" height="5.975"></rect>
+                <rect id="Rectangle" stroke="#000000" stroke-width="2" stroke-linecap="square" x="14.2" y="16.375" width="6.2" height="5.975"></rect>
+                <rect id="Rectangle" fill="#FFFFFF" fill-rule="nonzero" x="10.75" y="26.975" width="6.2" height="5.975"></rect>
+                <rect id="Rectangle" stroke="#000000" stroke-width="2" stroke-linecap="square" x="10.75" y="26.975" width="6.2" height="5.975"></rect>
+                <path d="M31.875,13.5 L47.025,19.475" id="Path" stroke="#000000" stroke-width="2" stroke-linecap="square"></path>
+                <path d="M47.025,19.475 L33.95,33.375" id="Path" stroke="#000000" stroke-width="2" stroke-linecap="square"></path>
+                <path d="M33.25,14.175 L45.65,26.75" id="Path" stroke="#000000" stroke-width="2" stroke-linecap="square"></path>
+                <path d="M45.65,26.75 L35.325,35.375" id="Path" stroke="#000000" stroke-width="2" stroke-linecap="square"></path>
+                <path d="M77.325,14.175 L61.5,24.1" id="Path" stroke="#000000" stroke-width="2" stroke-linecap="square"></path>
+                <path d="M61.5,24.1 L76.65,30.075" id="Path" stroke="#000000" stroke-width="2" stroke-linecap="square"></path>
+                <path d="M77.325,14.825 L72.5,22.775" id="Path" stroke="#000000" stroke-width="2" stroke-linecap="square"></path>
+                <path d="M72.5,22.775 L87.65,30.725" id="Path" stroke="#000000" stroke-width="2" stroke-linecap="square"></path>
+                <path d="M28.425,13.5 L77.325,13.5" id="Path" stroke="#000000" stroke-width="2" stroke-linecap="square"></path>
+            </g>
+        </g>
+    </g>
+</svg>

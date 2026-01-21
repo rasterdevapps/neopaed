@@ -1,0 +1,197 @@
+    body.print .container.half-page {
+        width: 48% !important;
+        float: left;
+        margin-left: 0px; 
+        margin-right: 0px;
+    }
+    body.print .container.half-page.original {
+        margin-right: 15px;
+    }
+    #printed-content {
+        position: relative;
+    }
+    .printed-content-design {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        /*overflow: auto;*/
+        border: 1px solid black;
+        padding: 0px 0px 15px 0px;
+    }
+    #printed-content .temp-row, .disabled-content, .hide-customization {
+        /*display: inline-block;*/
+        cursor: not-allowed;
+        pointer-events: none;
+    }
+    .printed-list {
+        max-height: 120px;
+        overflow: auto;
+        margin-bottom: 5px;
+    }
+    .old-print, .approve-print, .already-approve {
+        margin: 5px;
+        border-radius: 0px;
+        padding: unset;
+        width: 25px !important;
+        height: 25px !important;
+    }
+    .approve-print .fa-check, .already-approve .fa-check {
+        font-size: 12px;
+        color: unset;
+        border: none;
+        float: unset;
+    }
+    #printed-content .print-tool-bar1 {
+        opacity: .8;
+        z-index: 1030;
+        border-radius: 28px 28px 28px 28px;
+        text-align: center;
+        padding-top: 3px;    
+    }
+    #printed-content .print-tool-bar1 > .btn {
+        background-color: #FFB3B3;
+        border-radius: 50%;
+        /*transform: rotate(-90deg);*/
+        padding: 4px 7.5px;
+        margin: 5px;
+        color: #03324c;
+        text-align: center;
+        border-radius: 50%;
+        background-image: linear-gradient(#b1ccda 49%, #b1ccda 51%);
+        box-shadow: 0 2px 2px #888888;
+        transition: color 0.3s, background-image 0.5s, ease-in-out;
+    }
+
+    #printed-content .print-tool-bar1 > .btn:hover {
+        background-image: linear-gradient(#335b71 45%, #03324c 55%);
+        color: white;
+    }
+    #printed-content .print-tool-bar1 > .approve-status {
+        background-color: #eea236 !important;
+        background-image: linear-gradient(#f09008 49%, #ec9416 51%) !important;
+        color: white !important;
+        padding: 6.5px 7px !important;
+        width: 44px !important;
+        height: 44px !important;
+        box-shadow: 0px 1px 5px #4444444f;
+    }
+    #printed-content .print-tool-bar1 > .approve-status[title="Approval completed"] {
+        background-color: #5cb85c !important;
+        background-image: linear-gradient(#5cb85c 49%, #5cb85c 51%) !important;
+        cursor: not-allowed;
+    }
+    #printed-content .print-tool-bar1 > .approve-status[title="Approval completed"] .fa-check {
+        color: unset;
+        border: none;
+        position: relative;
+        left: 2px;
+    }
+    .already-approve[title="Approval completed"] {
+        cursor: not-allowed;
+    }
+    #printed-content .print-tool-bar1 > .approve-status:hover {
+        opacity: 0.8;
+    }
+    #printed-content .print-tool-bar1 > .approve-status .fa-check {
+        font-size: 2em;
+    }
+    .print .printed-list table th {
+        padding: 5px 0px !important;
+    }
+
+    .print .printed-list table td {
+        vertical-align: middle !important;
+        padding: 0px !important;
+    }
+    body {
+        overflow-x: hidden;
+    }
+
+    .table-striped tbody > tr.bg-success:nth-child(odd) > td {
+        background-color: #dff0d8 !important;
+    }
+
+    .row {
+        overflow: hidden;
+    }
+
+    .vertical-align-bottom {
+        vertical-align: bottom;
+    }
+
+    .summary-display {
+        display: block !important;
+    }
+
+    .summary-display.discharge-date {
+        display: contents !important;
+    }
+
+    .summary-display-none {
+        display: none;
+    }
+
+    @media print {
+        /*.print-copy-body:before {
+            content: 'COPY';
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: -1;
+
+            color: #EBEAEA;
+            font-size: 100px;
+            font-weight: bold;
+            display: grid;
+            justify-content: center;
+            align-content: center;
+            opacity: 0.4;
+            transform: rotate(-45deg);
+        }*/
+    }
+
+    @media screen {
+        #printed-content:before {
+            content: 'COPY';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 0;
+            color: #EBEAEA;
+            font-size: 100px;
+            font-weight: bold;
+            display: grid;
+            justify-content: center;
+            align-content: center;
+            opacity: 0.4;
+            transform: rotate(-45deg);
+        }
+    }
+
+    @media screen and (max-width: 1300px) {
+        .container.half-page.original #patient-list #company, .container.half-page.original #doctor-list #project {
+            width: 100%;
+            float: left;
+        }
+        .container.half-page #printed-content #patient-list #company, .container.half-page #printed-content #doctor-list #project {
+            width: 100%;
+            float: left;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        #special-print > .row {
+            width: 1018px;
+        }
+    }
+
+    @media print {
+        body {
+            -webkit-print-color-adjust: exact !important; /*Chrome, Safari */
+            color-adjust: exact !important;  /*Firefox*/
+        }
+    }  

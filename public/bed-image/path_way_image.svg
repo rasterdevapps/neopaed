@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 134 513" width="134" height="513">
+	<defs>
+		<image width="86" height="512" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFYAAAIACAYAAAAYHps0AAADaklEQVR4nO3QSQ2AUBQAsceSrxEJ+DcAJuAwSQ810Nlnv4/tfPjOmnWNWLEZYsW2iBXbIlZsi1ixLWLFtogV2yJWbItYsS1ixbaIFdsiVmyLWLEtYsW2iBXbIlZsi1ixLWLFtogV2yJWbItYsS1ixbaIFdsiVmyLWLEtYsW2iBXbIlZsi1ixLWLFtogV2yJWbItYsS1ixbaIFdsiVmyLWLEtYsW2iBXbIlZsi1ixLWLFtogV2yJWbItYsS1ixbaIFdsiVmyLWLEtYsW2iBXbIlZsi1ixLWLFtogV2yJWbItYsS1ixbaIFdsiVmyLWLEtYsW2iBXbIlZsi1ixLWLFtogV2yJWbItYsS1ixbaIFdsiVmyLWLEtYsW2iBXbIlZsi1ixLWLFtogV2yJWbItYsS1ixbaIFdsiVmyLWLEtYsW2iBXbIlZsi1ixLWLFtogV2yJWbItYsS1ixbaIFdsiVmyLWLEtYsW2iBXbIlZsi1ixLWLFtogV2yJWbItYsS1ixbaIFdsiVmyLWLEtYsW2iBXbIlZsi1ixLWLFtogV2yJWbItYsS1ixbaIFdsiVmyLWLEtYsW2iBXbIlZsi1ixLWLFtogV2yJWbItYsS1ixbaIFdsiVmyLWLEtYsW2iBXbIlZsi1ixLWLFtogV2yJWbItYsS1ixbaIFdsiVmyLWLEtYsW2iBXbIlZsi1ixLWLFtogV2yJWbItYsS1ixbaIFdsiVmyLWLEtYsW2iBXbIlZsi1ixLWLFtogV2yJWbItYsS1ixbaIFdsiVmyLWLEtYsW2iBXbIlZsi1ixLWLFtogV2yJWbItYsS1ixbaIFdsiVmyLWLEtYsW2iBXbIlZsi1ixLWLFtogV2yJWbItYsS1ixbaIFdsiVmyLWLEtYsW2iBXbIlZsi1ixLWLFtogV2yJWbItYsS1ixbaIFdsiVmyLWLEtYsW2iBXbIlZsi1ixLWLFtogV2yJWbItYsS1ixbaIFdsiVmyLWLEtYsW2iBXbIlZsi1ixLWLFtogV2yJWbItYsS1ixbaIFdsiVmyLWLEtYsW2iBXbIlZsi1ixLWLFtogV2yJWbItYsS1ixbaIFdsiVmyLWLEtYsW2iBXbIlZsi1ixLWLFtogV2yJWbItYsS1ixbaIFdsiVmyLWLEtYsW2iBXbIvbH2BekdEIzu/XZGgAAAABJRU5ErkJggg=="/>
+		<image width="10" height="512" id="img2" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAIACAYAAAC7Nv3yAAAAYklEQVR4nO3KsQEAEBAEMDz9jW9bNlCoU6RLq7F29XlekqSJoiiKoiiKoiiKoiiKoiiKoiiKoiiKoiiKoiiKoiiKoiiKoiiKoiiKoiiKoiiKoiiKoiiKoiiKoiiKoiiKP/ECXMw1D4iCOogAAAAASUVORK5CYII="/>
+		<image width="10" height="512" id="img3" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAIACAYAAAC7Nv3yAAAAYklEQVR4nO3KsQEAEBAEMDz9jW9bNlCoU6RLq7F29XlekqSJoiiKoiiKoiiKoiiKoiiKoiiKoiiKoiiKoiiKoiiKoiiKoiiKoiiKoiiKoiiKoiiKoiiKoiiKoiiKoiiKP/ECXMw1D4iCOogAAAAASUVORK5CYII="/>
+	</defs>
+	<style>
+		tspan { white-space:pre }
+	</style>
+	<use id="Layer 2" href="#img1" x="24" y="0" />
+	<use id="Layer 2" href="#img2" x="119" y="0" />
+	<use id="Layer 2" href="#img3" x="9" y="0" />
+</svg>

@@ -1,0 +1,313 @@
+.sort {
+    padding-bottom: 20px;
+}
+
+table:not(.text-left)>tbody>tr>td:not(:first-child),
+table:not(.text-left)>thead>tr>th:not(:first-child) {
+    text-align: center;
+}
+
+.cell-height {
+    height: 50px;
+}
+
+.print .nurse-sheet table td:first-child.biochemisty-cell {
+    font-size: 14px !important;
+    letter-spacing: 12px;
+    width: 50px;
+    vertical-align: middle;
+}
+
+.print .nurse-sheet table td:first-child.haematology-cell {
+    font-size: 14px;
+    letter-spacing: 12px;
+    width: 50px;
+    vertical-align: middle;
+    vertical-align: middle;
+}
+
+.print .nurse-sheet table td:first-child.urine-cell {
+    font-size: 14px;
+    letter-spacing: 12px;
+    width: 50px;
+    vertical-align: middle;
+}
+
+.print .nurse-sheet table td:first-child.microbiology-cell {
+    font-size: 14px;
+    letter-spacing: 4px;
+    width: 50px;
+    vertical-align: middle;
+}
+
+.print .nurse-sheet table td:first-child.cap-cell {
+    font-size: 14px;
+    letter-spacing: -3px;
+    width: 50px;
+    vertical-align: middle;
+}
+
+.print .nurse-sheet table td:first-child.stool-cell {
+    font-size: 14px;
+    letter-spacing: -3px;
+    width: 50px;
+    vertical-align: middle;
+}
+
+.tabbable-custom {
+    margin-bottom: 0px;
+}
+
+.print .nurse-sheet table td:not(:first-child) {
+    vertical-align: middle;
+    font-weight: bold;
+}
+
+.sort-btn-lab {
+    position: absolute;
+    bottom: -41px;
+    right: -35px;
+    width: 172px;
+}
+
+.microbiology-report {
+    border-bottom: none;
+    padding-top: 2px;
+}
+
+.microbiology-report {
+    border-right: 1px solid #ddd;
+}
+
+.microbiology-report>li {
+    float: none;
+    margin-bottom: 2px;
+}
+
+.microbiology-report>li {
+    margin-right: -1px;
+    font-weight: 600;
+}
+
+.microbiology-report>li.active>a,
+.microbiology-report>li.active>a:hover,
+.microbiology-report>li.active>a:focus {
+    border-bottom-color: #ddd;
+    border-right-color: transparent;
+}
+
+.microbiology-report>li>a {
+    border-radius: 4px 0 0 4px;
+    margin-right: 0;
+    display: block;
+    background: #428bca;
+    color: #fff;
+    transition: .5s ease all;
+}
+
+.microbiology-report>li>a:hover,
+.microbiology-report>li.active>a {
+    background-color: #ffb3b3;
+    color: #777;
+}
+
+.text-left tr td {
+    text-align: left !important;
+    white-space: nowrap !important;
+}
+
+table.text-left>tbody>tr>td:not(:first-child),
+table.text-left>thead>tr>th:not(:first-child) {
+    text-align: left !important;
+}
+
+.print .nurse-sheet table td:not(:first-child) {
+    padding: 0px !important;
+}
+
+.print .nurse-sheet table td:first-child {
+    padding: 2px 2px !important;
+}
+
+.print-small {
+    font-size: 12px !important;
+}
+
+.nurse-sheet table td span.print-small {
+    display: inline;
+}
+
+
+#abg-table {
+    margin-top: 15px;
+}
+
+#abg-table th,
+#abg-table td {
+    padding: 8px !important;
+}
+
+
+#lab-print .request-count {
+    position: absolute;
+    top: -7px;
+    left: 90%;
+    background-color: #999;
+    color: #fff;
+    width: auto;
+    height: auto;
+    padding: 3px 5px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+#lab-print .pending-request-list {
+    list-style-type: none;
+    width: 50%;
+    margin: 0px auto;
+    padding: 0px !important;
+}
+
+#lab-print .pending-request-list li {
+    background-color: #eee;
+    color: #444;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+#lab-print .material-name {
+    font-size: 20px;
+}
+
+.print #lab-print table.table-layout-fixed>tbody>tr>td {
+    border: 0px !important;
+    padding: 1px 10px !important;
+}
+
+.print #overall-lab-print table.table-layout-fixed>tbody>tr>td>strong {
+    padding: 0px 10px;
+}
+
+#overall-lab-print #lab-report-table tbody td,
+#overall-lab-print #lab-report-table thead th,
+#overall-lab-print #ucs .table tbody td,
+#overall-lab-print #ucs .table thead th,
+#overall-lab-print #abg .table tbody td,
+#overall-lab-print #abg .table thead th {
+    border: 1px solid #000 !important;
+    border-collapse: collapse;
+}
+
+#overall-lab-print td {
+    line-height: 1;
+}
+
+#overall-lab-print .input-width-small {
+    width: auto !important;
+    min-width: 90px;
+}
+
+@media(max-width: 439px) {
+    #lab-print .pending-request-list {
+        width: 100%;
+    }
+}
+
+
+@media print {
+    .col-md-3 {
+        width: 25% !important;
+    }
+
+    /*.nurse-sheet .temp-row.mb-0 .col-md-12 {
+        margin-bottom: 0px !important;
+    }*/
+
+    .print-small {
+        font-size: 8px !important;
+    }
+
+    .table td,
+    .table th {
+        font-size: 11px !important;
+    }
+
+    .tabbable-custom>.tab-content {
+        padding: 0px
+    }
+
+    .print .nurse-sheet table td:first-child.haematology-cell {
+        letter-spacing: 2px;
+    }
+
+    .print .nurse-sheet table td:first-child,
+    .print .nurse-sheet table td:not(:first-child) {
+        padding: 1px 1px !important;
+    }
+
+    .print .nurse-sheet table#lab-report-table td:first-child,
+    .print .nurse-sheet table#lab-report-table td:not(:first-child),
+    .print .nurse-sheet table#urine-report-table td:first-child,
+    .print .nurse-sheet table#urine-report-table td:not(:first-child) {
+        padding: 2px 1px !important;
+    }
+
+    div.divFooter {
+        position: fixed;
+        bottom: -10px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .sort-btn-lab {
+        display: none !important;
+    }
+
+    .container.main {
+        padding: 0px !important;
+    }
+
+    .nurse-sheet {
+        page-break-after: avoid !important;
+    }
+
+    .nurse-sheet table th:not(.nurse-sheet .table th:first-child) {
+        width: 5px !important;
+    }
+
+    .print .nurse-sheet table td:first-child.cap-cell {
+        letter-spacing: 0px;
+    }
+
+    .print-full-width {
+        width: 100% !important;
+    }
+
+    .avoid-break {
+        page-break-inside: avoid !important;
+        page-break-inside: unset !important;
+    }
+
+    .cap-cell b {
+        letter-spacing: -0.6px !important
+    }
+
+    html,
+    body {
+        height: 99% !important;
+    }
+
+    #overall-lab-print thead th {
+        white-space: nowrap !important;
+    }
+
+    .print #overall-lab-print #abg table td,
+    .print #overall-lab-print #abg table th {
+        padding: 5px 4px !important;
+    }
+
+    #overall-lab-print .col-md-12 {
+        width: 100% !important;
+    }
+}
